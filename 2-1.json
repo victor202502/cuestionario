@@ -1,0 +1,312 @@
+[
+  {
+    "karten_nummer": 50,
+    "original_frage": "Was sind die Stakeholder eines Projektes?",
+    "original_antwort": "Projekt-Stakeholder sind Personen oder Personengruppen, welche aktiv am Projekt beteiligt oder von der Durchführung, bzw. dem Ergebnis eines Projektes betroffen sind.\nTypische Stakeholder eines Projektes sind zum Beispiel:\n- Kundinnen und Kunden\n- Auftraggebende\n- Lieferanten\n- Mitarbeitende im Projekt\n- Projektleitung",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie den Begriff 'Stakeholder' im Kontext von Projekten.",
+        "antwort": "Personen oder Gruppen, die ein Interesse am Projekt oder dessen Ergebnis haben.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche der folgenden Gruppen sind typischerweise *keine* Stakeholder eines Projekts?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Kunden",
+          "b": "Mitarbeiter des Unternehmens, die in keiner Verbindung zum Projekt stehen",
+          "c": "Lieferanten",
+          "d": "Die Projektleitung"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Warum ist es wichtig, die Stakeholder eines Projekts zu identifizieren und zu managen?",
+        "antwort": "Weil sie Einfluss auf den Projekterfolg haben können, sowohl positiv als auch negativ. Ihre Erwartungen und Bedürfnisse müssen berücksichtigt werden.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 51,
+    "original_frage": "Erklären Sie die vier Phasen der Teambildung Forming, Storming, Norming und Performing.",
+    "original_antwort": "Forming:\n- Einstiegs- und Findungsphase\n- Ein neues Team beginnt die Zusammenarbeit.\nStorming:\n- Es kommt zu Konflikten im Team und zu Störungen in der Zusammenarbeit.\nNorming:\n- Die Teammitglieder entwickeln Strategien und Taktiken zur Zusammenarbeit.\nPerforming:\n- Das Team hat gelernt, als Team zusammen zu arbeiten und sich gemeinsam auf die Erreichung der Ziele zu fokussieren.",
+    "alternativfragen": [
+      {
+        "frage": "Beschreiben Sie kurz die vier Phasen der Teamentwicklung nach Tuckman.",
+        "antwort": "Forming: Orientierung. Storming: Konflikt. Norming: Einigung. Performing: Leistung.",
+        "typ": "text"
+      },
+      {
+        "frage": "In welcher Phase der Teamentwicklung treten typischerweise die meisten Konflikte auf?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Forming",
+          "b": "Storming",
+          "c": "Norming",
+          "d": "Performing"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Was passiert in der 'Norming'-Phase?",
+        "antwort": "In der Norming-Phase entwickeln die Teammitglieder Regeln, Werte, Verhaltensweisen und Arbeitsmethoden, um effektiver zusammenzuarbeiten. Sie finden einen Konsens und etablieren eine Teamstruktur.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 52,
+    "original_frage": "Was ist der Unterschied zwischen einem Projektstrukturplan und einem Netzplan?",
+    "original_antwort": "Ein Projektstrukturplan zeigt ausschließlich die Arbeitspakete eines Projektes an. Diese werden hierarchisch in Form eines Baumdiagramms dargestellt. Er ist ohne Chronologie und lässt keine Abhängigkeiten erkennen.\nEin Netzplan zeigt die Abhängigkeiten zwischen den einzelnen Vorgängen. In ihm können vorhandenen Zeitpuffer und die Projektdauer ermittelt werden.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist der Hauptunterschied zwischen Projektstrukturplan (PSP) und Netzplan?",
+        "antwort": "PSP: Zeigt *was* getan wird (Aufgaben). Netzplan: Zeigt *wann* und *in welcher Beziehung* Dinge getan werden (zeitlicher Ablauf und Abhängigkeiten).",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Art von Diagramm wird typischerweise für einen Projektstrukturplan verwendet?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Netzplan",
+          "b": "Balkendiagramm (Gantt-Diagramm)",
+          "c": "Baumdiagramm",
+          "d": "Flussdiagramm"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Kann man aus einem Projektstrukturplan die Projektdauer ablesen?",
+        "antwort": "Nein, ein Projektstrukturplan zeigt keine zeitliche Abfolge oder Dauer der Aufgaben. Dafür benötigt man einen Netzplan oder ein Gantt-Diagramm.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 53,
+    "original_frage": "Was ist bei einem Netzplan der Unterschied zwischen dem Gesamtpuffer und dem freien Puffer?",
+    "original_antwort": "Der Gesamtpuffer bezeichnet die Zeitspanne, um die ein Vorgang gegenüber seinem frühesten Anfangszeitpunkt verschoben werden kann, ohne dass das Projektende verschoben werden muss.\nDer freie Puffer ist die Zeitspanne, um die ein Vorgang gegenüber seinem frühesten Anfangszeitpunkt verschoben werden kann, ohne dass der früheste Anfangszeitpunkt eines Nachfolgers verschoben werden muss.",
+    "alternativfragen": [
+      {
+        "frage": "Erklären Sie den Unterschied zwischen Gesamtpuffer und freiem Puffer im Netzplan.",
+        "antwort": "Gesamtpuffer: Spielraum bis Projektende. Freier Puffer: Spielraum bis zum nächsten Vorgang.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was passiert, wenn ein Vorgang um mehr als seinen Gesamtpuffer verzögert wird?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Nichts, der Gesamtpuffer ist dafür da.",
+          "b": "Das Projektende verzögert sich.",
+          "c": "Der freie Puffer des Vorgangs wird reduziert.",
+          "d": "Der früheste Anfangszeitpunkt des nächsten Vorgangs verschiebt sich."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Warum sind Pufferzeiten im Netzplan wichtig?",
+        "antwort": "Sie zeigen Flexibilitäten im Projektablauf auf und helfen, kritische Vorgänge zu identifizieren, die keine Verzögerung erlauben (kritischer Pfad).",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 54,
+    "original_frage": "Welches Merkmal charakterisiert den kritischen Pfad?",
+    "original_antwort": "Alle Vorgänge, welche auf dem kritischen Pfad liegen, haben einen Puffer von 0 Tagen. Die Verschiebung eines Vorganges, welcher sich auf dem kritischen Pfad befindet, führt automatisch zu einer Verschiebung des Projektendes.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist der 'kritische Pfad' in einem Projekt?",
+        "antwort": "Die längste Kette von abhängigen Vorgängen, die die kürzestmögliche Projektdauer bestimmt.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist das Hauptmerkmal von Vorgängen auf dem kritischen Pfad?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Sie haben immer einen großen Puffer.",
+          "b": "Sie haben keinen Puffer (Gesamtpuffer = 0).",
+          "c": "Sie sind unwichtig für den Projekterfolg.",
+          "d": "Sie können parallel zu anderen Vorgängen ausgeführt werden."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Warum ist es wichtig, den kritischen Pfad zu kennen?",
+        "antwort": "Weil jede Verzögerung eines Vorgangs auf dem kritischen Pfad direkt zu einer Verzögerung des gesamten Projekts führt. Er bestimmt also die Mindestdauer des Projekts.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 55,
+    "original_frage": "Nennen Sie zwei Merkmale, welche ein Gantt-Diagramm von einem Netzplan unterscheiden.",
+    "original_antwort": "- Das Gantt-Diagramm nutzt eine tabellarische Darstellung der Vorgänge.\n- Im Gantt-Diagramm werden konkrete Termine angegeben. In einem Netzplan hingegen wird nur die Zeitdauer eines Vorgangs aufgezeigt.\n- Die unterschiedliche Dauer von Vorgängen wird im Gantt-Diagramm durch die Balkenlänge visualisiert.\n- Pufferzeiten können im Gantt-Diagramm nicht direkt abgelesen werden.",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie zwei wesentliche Unterschiede zwischen einem Gantt-Diagramm und einem Netzplan.",
+        "antwort": "Gantt: Balken, zeigt Termine. Netzplan: Knoten und Pfeile, zeigt Abhängigkeiten.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Information ist typischerweise *nicht* direkt aus einem Gantt-Diagramm ersichtlich?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Die Dauer eines Vorgangs.",
+          "b": "Der Start- und Endtermin eines Vorgangs.",
+          "c": "Die logischen Abhängigkeiten zwischen Vorgängen.",
+          "d": "Welche Vorgänge parallel laufen."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Wozu eignet sich ein Gantt Diagramm besser als ein Netzplan?",
+        "antwort": "Ein Gantt Diagramm eignet sich besser für die visuelle Darstellung des Zeitplans und für die Kommunikation des Projektfortschritts, da es Termine und Dauern übersichtlich darstellt. Ein Netzplan ist besser geeignet, um die logischen Abhängigkeiten und den kritischen Pfad zu analysieren.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 56,
+    "original_frage": "Erläutern Sie was unter klassischen und agilen Vorgehensmodellen zu verstehen ist.",
+    "original_antwort": "Klassische Vorgehensmodelle sind sequenzielle und plangetriebene Modelle, die darauf abzielen, ein Projekt von der Konzeption bis zur Lieferung in einer klaren Abfolge von Phasen durchzuführen. Diese Modelle basieren auf einer umfassenden Planung, die im Vorfeld erstellt wird, und erfordern häufig eine umfangreiche Dokumentation.\nAgile Vorgehensmodelle hingegen sind iterativ und inkrementell, was bedeutet, dass sie sich auf die Zusammenarbeit und Flexibilität konzentrieren. Agile Modelle zielen darauf ab, schnell auf Änderungen und Anforderungen zu reagieren und arbeiten in kurzen Zeitrahmen, sogenannten Sprints.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist der Hauptunterschied zwischen klassischen und agilen Vorgehensmodellen?",
+        "antwort": "Klassisch: Sequenziell, plangetrieben. Agil: Iterativ, flexibel.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Aussage beschreibt agile Vorgehensmodelle am besten?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Sie folgen einem starren, vordefinierten Plan.",
+          "b": "Sie sind unflexibel und können nicht an Änderungen angepasst werden.",
+          "c": "Sie betonen die Zusammenarbeit, Flexibilität und schnelle Reaktion auf Änderungen.",
+          "d": "Sie erfordern eine umfangreiche Dokumentation am Anfang des Projekts."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Was ist ein 'Sprint' in agilen Vorgehensmodellen?",
+        "antwort": "Ein Sprint ist ein kurzer, festgelegter Zeitraum (typischerweise 1-4 Wochen), in dem ein Entwicklungsteam an einem bestimmten Satz von Aufgaben arbeitet, um ein funktionsfähiges Inkrement des Produkts zu liefern.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 57,
+    "original_frage": "Nennen Sie jeweils ein Beispiel für ein klassisches und ein agiles Vorgehensmodell.",
+    "original_antwort": "Klassische Vorgehensmodelle:\n- Wasserfallmodell\n- V-Modell\n- Spiralmodell\nAgile Vorgehensmodelle:\n- Scrum\n- Extreme Programming",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie ein Beispiel für ein klassisches und ein Beispiel für ein agiles Vorgehensmodell.",
+        "antwort": "Klassisch: Wasserfall. Agil: Scrum.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welches der folgenden Modelle ist ein *agiles* Vorgehensmodell?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Wasserfallmodell",
+          "b": "V-Modell",
+          "c": "Scrum",
+          "d": "Spiralmodell"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+          "frage": "Nenne ein Beispiel für ein klassisches Vorgehensmodell und erkläre, warum es als klassisch bezeichnet wird.",
+          "antwort": "Ein Beispiel ist das Wasserfallmodell. Es wird als klassisch bezeichnet, weil es einen sequenziellen, linearen Ansatz verfolgt, bei dem jede Phase des Projekts nacheinander abgeschlossen werden muss, bevor die nächste beginnen kann. Es ist stark planungsgetrieben.",
+          "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 58,
+    "original_frage": "Welchem Ansatz folgen die iterativen Vorgehensmodelle?",
+    "original_antwort": "Ein iteratives Vorgehensmodell ist ein Ansatz, bei dem der Entwicklungsprozess in wiederholenden Iterationen stattfindet. Anstatt alle Anforderungen und Aufgaben auf einmal zu definieren und abzuschließen, werden sie in kleinere, wiederholbare Phasen aufgeteilt. Jede Iteration umfasst eine Planungs-, Implementierungs- und Bewertungsphase. Das Feedback aus jeder Iteration wird genutzt, um das Produkt kontinuierlich zu verbessern und neue Anforderungen zu berücksichtigen. Dies ermöglicht Flexibilität, schnellere Reaktionen auf Änderungen und die Möglichkeit, auf frühzeitiges Feedback von Personen, die das Produkt nutzen, einzugehen.",
+    "alternativfragen": [
+      {
+        "frage": "Beschreiben Sie den Grundgedanken iterativer Vorgehensmodelle.",
+        "antwort": "Wiederholte Zyklen (Iterationen) von Entwicklung, Test und Verbesserung.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist der Vorteil eines iterativen Ansatzes in der Softwareentwicklung?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Er macht das Projekt schneller.",
+          "b": "Er reduziert die Kosten.",
+          "c": "Er ermöglicht Flexibilität und Anpassung an sich ändernde Anforderungen.",
+          "d": "Er macht das Projekt einfacher zu managen."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Wie unterscheidet sich ein iteratives Vorgehensmodell von einem linearen Modell wie dem Wasserfallmodell?",
+        "antwort": "Ein lineares Modell durchläuft jede Phase nur einmal in einer festen Reihenfolge, während ein iteratives Modell die Phasen in Schleifen wiederholt und sich so schrittweise dem fertigen Produkt annähert.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 59,
+    "original_frage": "Was ist das Wasserfallmodell in der Softwareentwicklung?",
+    "original_antwort": "Das Wasserfallmodell ist ein lineares Vorgehensmodell in der Softwareentwicklung, das den Entwicklungsprozess in aufeinanderfolgende Phasen unterteilt.\nDiese Phasen sind: Anforderungsanalyse, Systemdesign, Implementierung, Integration und Testen, Bereitstellung und Wartung. Jede Phase muss vollständig abgeschlossen sein, bevor zur nächsten übergegangen wird, ähnlich einem Wasserfall, der von oben nach unten fließt. Es eignet sich besonders für Projekte mit klaren und stabilen Anforderungen.",
+    "alternativfragen": [
+      {
+        "frage": "Beschreiben Sie das Wasserfallmodell.",
+        "antwort": "Lineares Vorgehensmodell mit sequenziellen Phasen.",
+        "typ": "text"
+      },
+      {
+        "frage": "Nennen Sie die typischen Phasen des Wasserfallmodells.",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Planung, Analyse, Design, Implementierung, Test.",
+          "b": "Anforderungsanalyse, Systemdesign, Implementierung, Integration und Testen, Bereitstellung, Wartung.",
+          "c": "Initiierung, Planung, Ausführung, Überwachung, Abschluss.",
+          "d": "Definition, Design, Entwicklung, Test, Deployment."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Für welche Art von Projekten eignet sich das Wasserfallmodell besonders gut?",
+        "antwort": "Das Wasserfallmodell eignet sich am besten für Projekte mit klaren, stabilen und gut verstandenen Anforderungen, bei denen sich die Anforderungen im Laufe des Projekts voraussichtlich nicht wesentlich ändern werden.",
+        "typ": "text"
+      }
+    ]
+  }
+]

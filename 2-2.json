@@ -1,0 +1,312 @@
+[
+  {
+    "karten_nummer": 60,
+    "original_frage": "Wie unterscheidet sich das Spiralmodell vom Wasserfallmodell?",
+    "original_antwort": "Das Wasserfallmodell ist ein lineares Vorgehensmodell, das den Entwicklungsprozess in feste, sequentielle Phasen unterteilt. Änderungen sind schwierig, sobald eine Phase abgeschlossen ist.\nDas Spiralmodell ist ein iteratives Modell, das den Entwicklungsprozess als sich wiederholende Spirale darstellt, die sich mit jeder Iteration erweitert. Es beinhaltet Risikomanagement und erlaubt Flexibilität und Anpassungen während des gesamten Projekts. Es eignet sich gut für komplexe Projekte und wenn die Anforderungen unsicher oder veränderlich sind.",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie den Hauptunterschied zwischen Spiralmodell und Wasserfallmodell.",
+        "antwort": "Wasserfall: Linear, sequenziell. Spiral: Iterativ, risikoorientiert.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welches Modell eignet sich besser für Projekte mit unsicheren Anforderungen?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Wasserfallmodell",
+          "b": "Spiralmodell",
+          "c": "V-Modell",
+          "d": "Beide sind gleich gut geeignet."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Was ist ein wesentlicher Vorteil des Spiralmodells gegenüber dem Wasserfallmodell?",
+        "antwort": "Das Spiralmodell bietet mehr Flexibilität und die Möglichkeit, auf Änderungen während des Projekts zu reagieren, da es iterative Zyklen durchläuft und Risikobewertung integriert.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 61,
+    "original_frage": "Was sind die Hauptmerkmale des V-Modells in der Softwareentwicklung und wie unterscheidet es sich von anderen Vorgehensmodellen?",
+    "original_antwort": "Das V-Modell ist ein sequenzielles Vorgehensmodell in der Softwareentwicklung, bei dem jede Entwicklungsphase (linke Seite des „V\") einer Testphase (rechte Seite des „V\") zugeordnet ist. Es betont die Qualitätssicherung, indem für jede Entwicklungsphase gleichzeitig ein Testplan erstellt wird. Es ist weniger flexibel als iterative Modelle, aber ideal für Projekte mit klar definierten Anforderungen und hohem Qualitätsanspruch.",
+    "alternativfragen": [
+      {
+        "frage": "Beschreiben Sie das V-Modell.",
+        "antwort": "Sequenzielles Modell, bei dem Entwicklungsphasen entsprechenden Testphasen gegenüberstehen.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist das Besondere am V-Modell im Vergleich zu anderen sequenziellen Modellen wie dem Wasserfallmodell?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Es ist flexibler.",
+          "b": "Es betont die iterative Entwicklung.",
+          "c": "Es integriert Testaktivitäten von Anfang an in den Entwicklungsprozess.",
+          "d": "Es ist schneller."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Für welche Art von Projekten eignet sich das V-Modell gut?",
+        "antwort": "Das V-Modell eignet sich gut für Projekte, bei denen die Anforderungen klar definiert sind und hohe Qualitätsstandards eingehalten werden müssen, z. B. in sicherheitskritischen Bereichen.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 62,
+    "original_frage": "Beschreiben Sie die Grundelemente von Scrum.",
+    "original_antwort": "Scrum ist ein agiles Framework für Projektmanagement. Es basiert auf kurzen Arbeitszyklen, genannt „Sprints\", die normalerweise 2-4 Wochen dauern. Ein Scrum-Team besteht aus einem Product Owner, der die Arbeit priorisiert, einem Scrum-Master, der den Prozess überwacht, und dem Entwicklungsteam, das die Arbeit ausführt. Nach jedem Sprint wird das Erreichte überprüft und das weitere Vorgehen geplant.",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie die drei Hauptrollen in Scrum.",
+        "antwort": "Product Owner, Scrum Master, Entwicklungsteam.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist ein 'Sprint' in Scrum?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Ein Meeting am Anfang des Projekts.",
+          "b": "Ein kurzer, festgelegter Arbeitszyklus (typischerweise 2-4 Wochen).",
+          "c": "Die Dokumentation des Projekts.",
+          "d": "Die Testphase am Ende des Projekts."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Was passiert am Ende eines Sprints in Scrum?",
+        "antwort": "Am Ende eines Sprints gibt es ein Sprint Review, in dem das Entwicklungsteam die Ergebnisse des Sprints präsentiert, und eine Sprint Retrospektive, in der das Team den Prozess reflektiert und Verbesserungen für den nächsten Sprint plant.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 63,
+    "original_frage": "Was ist ein MVP (Minimum Viable Product)?",
+    "original_antwort": "Ein MVP (Minimum Viable Product) ist ein grundlegendes, funktionsfähiges Produkt oder eine Dienstleistung, das/die mit minimalen Funktionen und Merkmalen entwickelt wird, um frühzeitig Feedback von Benutzern und Kunden zu erhalten. Es wird oft in agilen Entwicklungsmethoden eingesetzt und ermöglicht es Unternehmen, schnell eine erste Version ihres Produkts auf den Markt zu bringen, um die Reaktionen und Bedürfnisse der Nutzer zu verstehen und das Produkt iterativ weiterzuentwickeln.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie 'Minimum Viable Product' (MVP).",
+        "antwort": "Ein Produkt mit minimalen, aber ausreichenden Funktionen, um frühes Feedback zu erhalten.",
+        "typ": "text"
+      },
+      {
+        "frage": "Warum entwickeln Unternehmen ein MVP?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Um ein perfektes Produkt auf den Markt zu bringen.",
+          "b": "Um Geld zu sparen.",
+          "c": "Um schnell Feedback von Nutzern zu erhalten und das Produkt iterativ zu verbessern.",
+          "d": "Um die Konkurrenz zu übertreffen."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Was ist der Unterschied zwischen einem MVP und einem Prototyp?",
+        "antwort": "Ein Prototyp ist oft ein nicht funktionsfähiges Modell, das dazu dient, ein Konzept zu visualisieren oder zu testen. Ein MVP ist eine funktionsfähige, wenn auch reduzierte, Version des Produkts, die tatsächlich von Benutzern verwendet werden kann.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 64,
+    "original_frage": "Was versteht man im Bereich der Softwareentwicklung unter einer User Story?",
+    "original_antwort": "Eine User Story ist eine Technik in der agilen Softwareentwicklung, um Anforderungen an eine Software in einer benutzerzentrierten und verständlichen Weise zu erfassen. Sie beschreibt eine bestimmte Funktionalität oder ein Feature aus der Sicht des Endbenutzers. Eine typische User Story folgt einem einfachen Format: „Als [Benutzerrolle] möchte ich [Funktion], damit ich [Ziel] erreichen kann.\"\nUser Stories fokussieren sich auf den Wert, den eine Funktion für den Benutzer bietet, anstatt sich auf technische Details zu konzentrieren. Sie dienen dazu, Anforderungen klar zu kommunizieren.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist eine User Story?",
+        "antwort": "Eine kurze Beschreibung einer Anforderung aus der Sicht des Benutzers.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welchem Format folgt eine typische User Story?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Wenn [Bedingung], dann [Aktion].",
+          "b": "Als [Benutzerrolle] möchte ich [Funktion], damit ich [Ziel] erreichen kann.",
+          "c": "Das System muss [Funktion] ausführen.",
+          "d": "[Funktion] muss implementiert werden."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Warum werden User Stories in der agilen Softwareentwicklung verwendet?",
+        "antwort": "User Stories helfen, Anforderungen aus der Benutzerperspektive zu formulieren, fördern die Kommunikation im Team und stellen sicher, dass die Entwicklung auf den tatsächlichen Benutzerbedürfnissen basiert.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 65,
+    "original_frage": "Beschreiben Sie den Unterschied zwischen statischen und dynamischen Testverfahren und nennen Sie jeweils zwei Beispiele.",
+    "original_antwort": "Statische Testverfahren:\nDie Programmkomponenten werden nicht ausgeführt. Die Überprüfung und Fehlersuche erfolgt anhand des Quellcodes oder anderen Dokumenten.\n- Schreibtischtest\n- Review von Anforderungen, Architektur, Design und Quellcode\nDynamische Testverfahren:\nDas Testen der Programmkomponenten erfolgt durch die Ausführung in einer Testumgebung.\n- Black-Box-Test\n- White-Box-Test\n- Extremwertetest",
+    "alternativfragen": [
+      {
+        "frage": "Was ist der Hauptunterschied zwischen statischen und dynamischen Testverfahren?",
+        "antwort": "Statisch: Code wird *nicht* ausgeführt (Analyse). Dynamisch: Code wird ausgeführt (Test).",
+        "typ": "text"
+      },
+      {
+        "frage": "Welches der folgenden Verfahren ist ein *statisches* Testverfahren?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Black-Box-Test",
+          "b": "White-Box-Test",
+          "c": "Code Review",
+          "d": "Unit-Test"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Nennen Sie zwei Beispiele für dynamische Testverfahren.",
+        "antwort": "Zwei Beispiele für dynamische Testverfahren sind Black-Box-Tests (z.B. Äquivalenzklassentests, Grenzwerttests) und White-Box-Tests (z.B. Anweisungsüberdeckung, Zweigüberdeckung).",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 66,
+    "original_frage": "Was ist unter einem Extremwertetest zu verstehen?",
+    "original_antwort": "Fehler treten häufig bei extremen Eingabewerten auf. Daher liegt beim Extremwertetest der Fokus auf dem Testen der Werte, welche Nahe an den Extremwerten liegen.\nZiel dieses Tests ist es, das Systemverhalten an oder jenseits seiner Spezifikationsgrenzen zu beobachten und zu verstehen, ob das System unter diesen Bedingungen korrekt funktioniert oder wie und wann es versagt. Es hilft, Fehler, Schwachstellen oder Begrenzungen der Software aufzudecken, die nur unter extremen Bedingungen sichtbar werden.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie den Begriff 'Extremwertetest'.",
+        "antwort": "Testen mit Eingabewerten an den Grenzen des gültigen Bereichs.",
+        "typ": "text"
+      },
+      {
+        "frage": "Warum sind Extremwertetests wichtig?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Weil sie einfach durchzuführen sind.",
+          "b": "Weil Fehler häufig an den Grenzen von Eingabebereichen auftreten.",
+          "c": "Weil sie alle möglichen Fehler aufdecken.",
+          "d": "Weil sie die Performance des Systems testen."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Geben Sie ein Beispiel für einen Extremwertetest.",
+        "antwort": "Wenn ein Eingabefeld Zahlen von 1 bis 100 akzeptiert, würde ein Extremwertetest die Eingabe von 0, 1, 100 und 101 umfassen (und ggf. auch negative Zahlen, sehr große Zahlen, Buchstaben, Sonderzeichen, etc. um zu prüfen, wie das System mit ungültigen Eingaben umgeht)",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 67,
+    "original_frage": "Wie können Äquivalenzklassen genutzt werden, um eine effiziente und repräsentative Auswahl von Testfällen für ein System oder eine Funktion zu definieren?",
+    "original_antwort": "Äquivalenzklassen dienen der repräsentativen Auswahl von Testfällen. Dabei werden Eingabedaten in Gruppen aufgeteilt, die ähnliche Verhaltensweisen oder Eigenschaften aufweisen. Durch die Auswahl eines Testfalls aus jeder Äquivalenzklasse wird eine breite Abdeckung der verschiedenen Szenarien erreicht, ohne alle möglichen Kombinationen von Eingabewerten zu testen.\nDie Idee ist, dass, wenn ein Testfall aus einer Äquivalenzklasse erfolgreich besteht oder scheitert, die anderen Testfälle derselben Klasse wahrscheinlich ein ähnliches Ergebnis liefern.",
+    "alternativfragen": [
+      {
+        "frage": "Erklären Sie das Prinzip der Äquivalenzklassenbildung.",
+        "antwort": "Eingabewerte mit erwartetem gleichen Verhalten werden in Klassen gruppiert.",
+        "typ": "text"
+      },
+      {
+        "frage": "Warum verwendet man Äquivalenzklassen beim Testen?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Um das Testen schneller zu machen.",
+          "b": "Um sicherzustellen, dass alle möglichen Eingabewerte getestet werden.",
+          "c": "Um die Anzahl der Testfälle zu reduzieren und trotzdem eine gute Abdeckung zu erreichen.",
+          "d": "Um das Testen einfacher zu machen."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Geben Sie ein Beispiel für Äquivalenzklassen.",
+        "antwort": "Wenn ein Eingabefeld positive ganze Zahlen akzeptiert, könnten Äquivalenzklassen sein: negative Zahlen, Null, positive Zahlen (innerhalb des gültigen Bereichs), sehr große Zahlen (außerhalb des gültigen Bereichs), Buchstaben/Sonderzeichen.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 68,
+    "original_frage": "Erklären Sie die Testverfahren Black-Box- und White-Box-Test.",
+    "original_antwort": "Beim Black-Box-Test kennen die Testpersonen die interne Funktionsweise der Software nicht. Stattdessen konzentrieren sie sich auf die Eingaben und Ausgaben der Software, um zu prüfen, ob sie wie erwartet funktioniert. Der Black-Box-Test wird durchgeführt, um die Funktionalität und Benutzerfreundlichkeit einer Software zu überprüfen.\nDer White-Box-Test ist ein Testverfahren, bei dem Testende Kenntnisse über die interne Funktionsweise der Software haben und die Struktur und das Design der Software untersuchen. Der White-Box-Test wird durchgeführt, um sicherzustellen, dass der Code einer Software den Anforderungen entspricht und effizient funktioniert.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist der Hauptunterschied zwischen Black-Box- und White-Box-Tests?",
+        "antwort": "Black-Box: Test ohne Kenntnis des Codes. White-Box: Test mit Kenntnis des Codes.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Art von Test konzentriert sich auf die Funktionalität aus Benutzersicht?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "White-Box-Test",
+          "b": "Black-Box-Test",
+          "c": "Unit-Test",
+          "d": "Code Review"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Was wird beim White-Box-Test typischerweise überprüft?",
+        "antwort": "Beim White-Box-Test werden typischerweise die interne Logik, die Struktur des Codes, die Pfade, Schleifen, Bedingungen und die Datenflüsse innerhalb der Software überprüft.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 69,
+    "original_frage": "Was versteht man unter einem Code Review?",
+    "original_antwort": "Ein Code Review ist eine systematische Untersuchung von 69\nProgrammcode und wird den statischen Testverfahren zugeordnet. Hierbei kann der Code unter anderem auf folgende Aspekte geprüft werden:\n- Funktionalität\n- Lesbarkeit und Verständlichkeit\n- Wartbarkeit\n- Best Practices und Standards\nNachteile:\n- Code Reviews erfordern Zeit und Ressourcen\n- Code Reviews können subjektiv sein, da die Meinungen der Reviewer variieren können\n- der Programmcode wird nicht ausgeführt",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie den Begriff 'Code Review'.",
+        "antwort": "Systematische Überprüfung von Quellcode durch andere Personen als den Autor.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was sind die Ziele eines Code Reviews?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Fehler finden, Codequalität verbessern, Wissenstransfer.",
+          "b": "Den Code schneller machen.",
+          "c": "Den Code verschlüsseln.",
+          "d": "Den Code dokumentieren."
+        },
+        "korrekte_antworten": [
+          "a"
+        ]
+      },
+      {
+        "frage": "Ist ein Code Review ein statisches oder dynamisches Testverfahren",
+        "antwort": "Ein Code Review ist ein *statisches* Testverfahren, da der Code nicht ausgeführt, sondern nur gelesen und analysiert wird.",
+        "typ": "text"
+      }
+    ]
+  }
+]

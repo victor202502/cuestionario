@@ -1,0 +1,312 @@
+[
+  {
+    "karten_nummer": 21,
+    "original_frage": "Was ist OAuth2 und wofür wird es in der Authentifizierung und Autorisierung verwendet?",
+    "original_antwort": "OAuth 2.0 ist ein offenes Protokoll zur sicheren Delegierung von Zugriffsrechten im Internet. Es ermöglicht Benutzern, Drittanbieter-Apps Zugriff auf ihre Daten zu gewähren, ohne dabei ihre Anmeldeinformationen preiszugeben.\nHierbei gibt es mehrere Rollen:\n- Der Ressourcenbesitzer besitzt die Daten und kann anderen den Zugriff auf diese Daten gewähren.\n- Der Client ist die Anwendung, die den Zugriff auf die Ressource des Benutzers anfordert.\n- Der Autorisierungsserver überprüft die Identität des Benutzers und erteilt Zugriffstoken.\n- Der Ressourcenserver hält die Benutzerdaten und gewährt den Zugriff auf sie, wenn er ein gültiges Token erhält.",
+    "alternativfragen": [
+      {
+        "frage": "Erklären Sie kurz, was OAuth2 ist.",
+        "antwort": "OAuth2 ist ein Protokoll, das es Apps erlaubt, auf Benutzerdaten zuzugreifen, ohne dass der Benutzer sein Passwort preisgeben muss.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche der folgenden Aussagen beschreibt OAuth2 am besten?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Ein System zur Verschlüsselung von Daten.",
+          "b": "Ein Protokoll zur sicheren Übertragung von Passwörtern.",
+          "c": "Ein offenes Protokoll zur sicheren Delegierung von Zugriffsrechten.",
+          "d": "Eine Methode zur Anonymisierung von Benutzerdaten."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Nennen Sie die vier Hauptrollen in OAuth2.",
+        "antwort": "Ressourcenbesitzer, Client (Anwendung), Autorisierungsserver, Ressourcenserver.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 22,
+    "original_frage": "Beschreiben Sie den Autorisierungs-Prozess von OAuth2.",
+    "original_antwort": "Die folgenden Schritte werden im Autorisierungs-Prozess von OAuth 2.0 durchlaufen:\n- Eine Anwendung (der „Client\") fordert den Zugriff auf Benutzerdaten an, die auf einem anderen Server (dem „Ressourcenserver\") gespeichert sind.\n- Der Benutzer (der „Ressourcenbesitzer\") stimmt zu, dem Client den Zugriff zu gewähren.\n- Der Client erhält ein Zugriffstoken vom „Autorisierungsserver\".\n- Der Client verwendet das Zugriffstoken, um auf die Benutzerdaten auf dem Ressourcenserver zuzugreifen",
+    "alternativfragen": [
+      {
+        "frage": "In welcher Reihenfolge laufen die Schritte im OAuth2-Autorisierungsprozess ab?",
+        "antwort": "1. Client fordert Zugriff an. 2. Benutzer stimmt zu. 3. Client erhält Token. 4. Client greift mit Token auf Daten zu.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist die Rolle des Zugriffstokens im OAuth2-Prozess?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Es speichert das Passwort des Benutzers.",
+          "b": "Es identifiziert den Benutzer gegenüber dem Ressourcenserver.",
+          "c": "Es erlaubt dem Client, auf die Benutzerdaten zuzugreifen.",
+          "d": "Es verschlüsselt die Kommunikation zwischen Client und Server."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Wer erteilt im OAuth2-Prozess das Zugriffstoken?",
+        "antwort": "Der Autorisierungsserver erteilt das Zugriffstoken, nachdem der Benutzer seine Zustimmung gegeben hat.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 23,
+    "original_frage": "Beschreiben Sie den Unterschied zwischen Zugangskontrolle und Zugriffskontrolle.",
+    "original_antwort": "Das Konzept der Zugangskontrolle (Access Control) bezieht sich auf die Möglichkeit, den physischen oder virtuellen Zugang zu einer Ressource zu kontrollieren. Die Zugangskontrolle bestimmt, wer oder was Zugang zu einer Ressource hat.\nDie Zugriffskontrolle (Authorization Control) regelt, was ein Benutzer oder System nach dem Zugang machen darf. Nachdem jemand Zugang zu einer Ressource erlangt hat, kann die Zugriffskontrolle festlegen, welche Operationen er auf dieser Ressource ausführen darf. Sie regelt die Befugnisse oder Berechtigungen, die einem Benutzer oder System gewährt werden, nachdem der Zugang gewährt wurde.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist der Unterschied zwischen Zugangs- und Zugriffskontrolle?",
+        "antwort": "Zugangskontrolle regelt, *wer* Zugang hat. Zugriffskontrolle regelt, *was* man mit dem Zugang machen darf.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche der folgenden Aussagen ist korrekt?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Zugangskontrolle ist ein Synonym für Zugriffskontrolle.",
+          "b": "Zugangskontrolle regelt die Berechtigungen, Zugriffskontrolle den physischen Zugang.",
+          "c": "Zugangskontrolle bestimmt, wer Zugang erhält, Zugriffskontrolle, welche Aktionen erlaubt sind.",
+          "d": "Zugriffskontrolle ist ein Teilbereich der Zugangskontrolle."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Warum sind sowohl Zugangs- als auch Zugriffskontrolle wichtig für die Sicherheit?",
+        "antwort": "Zugangskontrolle verhindert unbefugten Zugang, während Zugriffskontrolle sicherstellt, dass auch berechtigte Benutzer nur die Aktionen ausführen, die sie dürfen, und schützt so vor Missbrauch.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 24,
+    "original_frage": "Was ist in Bezug auf die Systemsicherheit unter dem Begriff der „Betriebssystemhärtung\" zu verstehen?",
+    "original_antwort": "Betriebssystemhärtung bezieht sich auf eine Reihe von Maßnahmen, die darauf abzielen, die Sicherheit eines Betriebssystems zu erhöhen, indem dessen Anfälligkeiten reduziert und potenzielle Angriffspunkte minimiert werden.\nBeispiele für wirksame Maßnahmen sind:\n- nur die absolut notwendigen Softwarekomponenten und -dienste installieren\n- Patch-Management\n- Einschränkung von Systemzugriffsrechten\n- Aktivieren der verfügbaren Sicherheitsfunktionen\n- Nutzung von Firewall und Antivirensoftware\n- Verwendung von Verschlüsselung",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie den Begriff 'Betriebssystemhärtung'.",
+        "antwort": "Maßnahmen zur Erhöhung der Sicherheit eines Betriebssystems durch Reduzierung von Schwachstellen.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche der folgenden Maßnahmen ist *kein* Beispiel für Betriebssystemhärtung?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Installation aller verfügbaren Software-Updates.",
+          "b": "Deaktivierung unnötiger Dienste.",
+          "c": "Installation beliebiger Software ohne Überprüfung.",
+          "d": "Verwendung starker Passwörter."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Warum ist Betriebssystemhärtung wichtig?",
+        "antwort": "Weil sie die Angriffsfläche eines Systems reduziert und es widerstandsfähiger gegen Angriffe macht.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 25,
+    "original_frage": "Die IT-Infrastruktur eines Unternehmens ist verschiedenen Gefahren ausgesetzt. Erläutern Sie die folgenden Angriffsmethoden:\n- Trojaner\n- Ransomware\n- Phishing\n- Distributed Denial of Service (DDoS)",
+    "original_antwort": "Trojaner: Ein Programm, das als nützliche Anwendung getarnt ist, im Hintergrund aber ohne das Wissen des Anwenders eine andere Funktion erfüllt.\nRansomware: Die Nutzung von Daten und Systemen wird z. B. durch Verschlüsselung verhindert, um Lösegeld vom Geschädigten zu erpressen.\nPhishing: Abfrage von Anmeldeinformationen per E-Mail oder über gefälschte Websites, um sich später den unerlaubten Zugriff auf die Systeme zu ermöglichen.\nDistributed Denial of Service (DDoS): Überlastung eines Computersystems durch Massenabfragen, die von einer großen Anzahl anderer Computersysteme verursacht wird.",
+    "alternativfragen": [
+      {
+        "frage": "Beschreiben Sie kurz die vier genannten Angriffsmethoden.",
+        "antwort": "Trojaner: Getarnte Schadsoftware. Ransomware: Erpressersoftware. Phishing: Datendiebstahl durch Täuschung. DDoS: Dienstblockade durch Überlastung.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche dieser Angriffsmethoden zielt darauf ab, Lösegeld zu erpressen?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Trojaner",
+          "b": "Ransomware",
+          "c": "Phishing",
+          "d": "DDoS"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Wie funktioniert ein DDoS-Angriff?",
+        "antwort": "Ein DDoS-Angriff überlastet ein System mit einer Flut von Anfragen von vielen verschiedenen Quellen, wodurch es für legitime Benutzer nicht mehr erreichbar ist.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 26,
+    "original_frage": "Unter welchen Voraussetzungen ist es einem Spamfilter oder dem Administrator eines Unternehmens erlaubt, E-Mails auf unerwünschte Inhalte zu überprüfen?",
+    "original_antwort": "Der Inhalt von E-Mails fällt unter das Briefgeheimnis und Datenschutzbestimmungen, was bedeutet, dass sie nicht ohne weiteres eingesehen oder überwacht werden dürfen. Die Mitarbeitenden müssen über die mögliche Überwachung ihrer E-Mails informiert werden.\nDie Überwachung von E-Mails kann nur dann erfolgen, wenn die E-Mail-Dienste ausschließlich beruflich genutzt werden. Wenn die Mitarbeitenden ihre geschäftlichen E-Mail-Konten auch für private Zwecke nutzen dürfen, ist eine Kontrolle der Inhalte in der Regel nicht zulässig.",
+    "alternativfragen": [
+      {
+        "frage": "Darf ein Unternehmen die E-Mails seiner Mitarbeiter überwachen?",
+        "antwort": "Nur unter bestimmten Bedingungen, insbesondere wenn die E-Mail-Nutzung rein beruflich ist und die Mitarbeiter informiert wurden.",
+        "typ": "text"
+      },
+      {
+        "frage": "Wann ist die Überwachung von Mitarbeiter-E-Mails in der Regel *nicht* zulässig?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Wenn die Mitarbeiter der Überwachung zugestimmt haben.",
+          "b": "Wenn die E-Mail-Nutzung ausschließlich beruflich ist.",
+          "c": "Wenn die private Nutzung der geschäftlichen E-Mail-Konten erlaubt ist.",
+          "d": "Wenn der Administrator einen Verdacht auf Missbrauch hat."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Warum ist die Überwachung von E-Mails rechtlich problematisch?",
+        "antwort": "Weil E-Mails unter das Briefgeheimnis und den Datenschutz fallen und daher grundsätzlich vor dem Zugriff Dritter geschützt sind.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 27,
+    "original_frage": "Was ist im Bereich der IT-Sicherheit unter einem Honeypot zu verstehen?",
+    "original_antwort": "Im Bereich der IT-Sicherheit ist ein Honeypot ein speziell präpariertes System, welches gezielt Angreifer und Schadprogramme anlocken soll. Es simuliert z. B. einen Rechner, Netzwerkdienst oder Anwendungsprogramm, um Angriffsmethoden zu studieren, von anderen Systemen abzulenken oder um Angreifern eine Falle zu stellen.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie den Begriff 'Honeypot' in der IT-Sicherheit.",
+        "antwort": "Ein Honeypot ist ein Sicherheitssystem, das Angreifer anlocken und ihre Methoden analysieren soll.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist der Zweck eines Honeypots?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Daten zu verschlüsseln.",
+          "b": "Das Netzwerk zu schützen.",
+          "c": "Angreifer anzulocken und zu analysieren.",
+          "d": "Backups zu erstellen."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Wie trägt ein Honeypot zur IT-Sicherheit bei?",
+        "antwort": "Indem er Angreifer von echten Systemen ablenkt, Informationen über Angriffsmethoden liefert und als Frühwarnsystem dienen kann.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 28,
+    "original_frage": "Beschreiben Sie die Aufgabe einer Sandbox in Bezug auf die IT-Sicherheit.",
+    "original_antwort": "Eine Sandbox ist eine abgesicherte Umgebung in der Software oder Code ausgeführt werden kann, ohne dass das umliegende System oder Netzwerk beeinflusst wird. Diese Umgebung isoliert die Ausführung der Software, um sicherzustellen, dass möglicher schädlicher oder nicht verifizierter Code nicht auf das zugrundeliegende System oder Netzwerk zugreifen kann.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist eine Sandbox in der IT-Sicherheit?",
+        "antwort": "Eine isolierte Umgebung zum sicheren Ausführen von Software.",
+        "typ": "text"
+      },
+      {
+        "frage": "Warum werden Sandboxes in der IT-Sicherheit eingesetzt?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Um Software schneller auszuführen.",
+          "b": "Um Software zu entwickeln.",
+          "c": "Um potenziell schädlichen Code sicher zu testen.",
+          "d": "Um Daten dauerhaft zu speichern."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Wie schützt eine Sandbox das restliche System?",
+        "antwort": "Indem sie die ausgeführte Software isoliert und verhindert, dass sie auf das Hauptsystem oder das Netzwerk zugreift und dort Schaden anrichtet.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 29,
+    "original_frage": "Erklären Sie den Unterschied zwischen der differenziellen und der inkrementellen Datensicherung. Gehen Sie hierbei auch auf den Aufwand bei der Wiederherstellung von Daten ein.",
+    "original_antwort": "Differenzielle Datensicherung:\n- startet mit einer Vollsicherung\n- im Anschluss werden nur noch Daten gesichert, welche seit der letzten Vollsicherung verändert oder neu erstellt wurden\n- zur Wiederherstellung werden die letzte Vollsicherung und das letzte differenzielle Backup benötigt\nInkrementelle Datensicherung:\n- startet mit einer Vollsicherung\n- im Anschluss werden nur noch Daten gesichert, welche seit dem letzten Sicherungsdurchlauf (Vollsicherung oder inkrementell) verändert oder neu erstellt wurden\n- zur Wiederherstellung werden die letzte Vollsicherung und alle inkrementellen Sicherungen in der richtigen Reihenfolge benötigt",
+    "alternativfragen": [
+      {
+        "frage": "Was ist der Hauptunterschied zwischen differenzieller und inkrementeller Datensicherung?",
+        "antwort": "Differenziell sichert seit der letzten *Voll*sicherung, inkrementell seit der letzten Sicherung (egal ob voll oder inkrementell).",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Methode erfordert bei der Wiederherstellung in der Regel weniger Aufwand?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Inkrementelle Datensicherung",
+          "b": "Differenzielle Datensicherung",
+          "c": "Beide sind gleich aufwendig.",
+          "d": "Hängt von der Datenmenge ab."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Beschreiben sie den Wiederherstellungsprozess bei inkrementellen Backups",
+        "antwort": "Man benötigt die letzte Vollsicherung und *alle* inkrementellen Sicherungen seitdem, in der korrekten Reihenfolge.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 30,
+    "original_frage": "Beschreiben Sie die Datensicherungsstrategie „Generationenprinzip\" (Großvater-Vater-Sohn-Prinzip).",
+    "original_antwort": "Beim Generationenprinzip handelt es sich um eine Datensicherungsstrategie, bei welcher mehrere Sicherungen in verschiedenen zeitlichen Abstufungen vorliegen. Hierdurch kann z. B. ein kompletter Datenverlust durch die Beschädigung einer einzelnen Sicherung verhindert werden. Ein Konzept zum Überschreiben und Wiederverwenden der zur Sicherung genutzten Datenträger kann eingesetzt werden.\nEine mögliche Umsetzung wäre die Durchführung von täglichen, wöchentlichen und monatlichen Sicherungen. Hierbei wäre die tägliche Sicherung der „Sohn\", die wöchentliche Sicherung der „Vater\" und die monatliche Sicherung der „Großvater\".",
+    "alternativfragen": [
+      {
+        "frage": "Erklären Sie das Großvater-Vater-Sohn-Prinzip in der Datensicherung.",
+        "antwort": "Ein Prinzip, bei dem Sicherungen in täglichen (Sohn), wöchentlichen (Vater) und monatlichen (Großvater) Zyklen erstellt werden.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist der Vorteil des Generationenprinzips?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Es ist die schnellste Sicherungsmethode.",
+          "b": "Es benötigt am wenigsten Speicherplatz.",
+          "c": "Es bietet Schutz vor Datenverlust durch mehrere Generationen von Backups.",
+          "d": "Es ist die einfachste Methode."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Wie könnte ein konkreter Sicherungsplan nach dem Generationenprinzip aussehen?",
+        "antwort": "Tägliche Sicherungen (Sohn), die nach einer Woche überschrieben werden; wöchentliche Sicherungen (Vater), die nach einem Monat überschrieben werden; monatliche Sicherungen (Großvater), die länger aufbewahrt werden.",
+        "typ": "text"
+      }
+    ]
+  }
+]

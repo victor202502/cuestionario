@@ -1,0 +1,312 @@
+[
+  {
+    "karten_nummer": 31,
+    "original_frage": "Was besagt die 3-2-1-Regel in Bezug auf die Datensicherung?",
+    "original_antwort": "Die 3-2-1-Regel stellt sicher, dass die Daten sicher aufbewahrt werden. Sie besagt folgendes:\n- Es sollten mindestens drei Kopien der Daten aufbewahrt werden. Das schließt die ursprüngliche Datei und zwei Backup-Kopien ein.\n- Es sollten mindestens zwei verschiedene Speichermedien für die Backups verwenden werden.\n- Mindestens eine dieser Kopien sollte an einem anderen Ort aufbewahrt werden, um sich gegen lokale Katastrophen wie Feuer, Überschwemmungen oder Einbrüche zu schützen. Diese „Offsite\"-Kopie kann entweder in einem physisch entfernten Ort oder in einem Cloud-Speicherdienst aufbewahrt werden.",
+    "alternativfragen": [
+      {
+        "frage": "Erklären Sie die 3-2-1-Regel der Datensicherung.",
+        "antwort": "3 Kopien der Daten, 2 verschiedene Speichermedien, 1 Kopie außer Haus (offsite).",
+        "typ": "text"
+      },
+      {
+        "frage": "Warum ist es wichtig, Backups auf verschiedenen Speichermedien zu speichern (Teil der 3-2-1-Regel)?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Um Speicherplatz zu sparen.",
+          "b": "Um die Geschwindigkeit der Sicherung zu erhöhen.",
+          "c": "Um sich vor dem Ausfall eines bestimmten Mediums zu schützen (z.B. wenn alle Backups auf Festplatten sind und diese gleichzeitig ausfallen).",
+          "d": "Um die Daten besser zu organisieren."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Was bedeutet 'offsite' im Kontext der 3-2-1-Regel?",
+        "antwort": "'Offsite' bedeutet, dass eine Kopie der Daten an einem räumlich getrennten Ort aufbewahrt wird, um sie vor lokalen Ereignissen wie Feuer oder Diebstahl zu schützen.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 32,
+    "original_frage": "Worin liegt der Unterschied zwischen Datensicherung und Archivierung?",
+    "original_antwort": "Datensicherung ist der Prozess, regelmäßige Kopien von Daten zu erstellen, um diese im Falle eines Datenverlustes wiederherstellen zu können. Backups werden in der Regel regelmäßig erstellt und auf einem sicheren Medium oder an einem sicheren Ort aufbewahrt.\nArchivierung ist der Prozess der langfristigen Aufbewahrung von Daten, die nicht mehr aktiv verwendet werden, aber aus rechtlichen oder geschäftlichen Gründen aufbewahrt werden müssen. Archivierte Daten werden oft auf ein kosteneffizientes Medium verschoben und an einem sicheren Ort aufbewahrt. Archive dienen dazu ältere Daten zugänglich zu machen, wenn sie benötigt werden.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist der Hauptunterschied zwischen Datensicherung und Archivierung?",
+        "antwort": "Datensicherung dient der Wiederherstellung, Archivierung der langfristigen Aufbewahrung inaktiver Daten.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Aussage über Datensicherung und Archivierung ist korrekt?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Datensicherung und Archivierung sind Synonyme.",
+          "b": "Datensicherung ist für aktive Daten, Archivierung für inaktive Daten.",
+          "c": "Archivierung ist eine Form der Datensicherung.",
+          "d": "Datensicherung dient der langfristigen Aufbewahrung, Archivierung der kurzfristigen Wiederherstellung."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Warum werden Daten archiviert?",
+        "antwort": "Daten werden archiviert, um sie langfristig aufzubewahren, auch wenn sie nicht mehr aktiv genutzt werden, z.B. aus rechtlichen oder historischen Gründen.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 33,
+    "original_frage": "Was bedeutet Disaster Recovery in der Informationstechnologie und warum ist es für Unternehmen wichtig?",
+    "original_antwort": "Disaster Recovery (DR) bezieht sich auf Strategien und Maßnahmen, die Unternehmen zur Wiederherstellung und zum Schutz ihrer IT-Infrastruktur und -Daten im Falle eines „Desasters\" einsetzen. Ein Desaster kann eine Vielzahl von Ereignissen umfassen, wie zum Beispiel Naturkatastrophen, Cyberangriffe oder Hardwareausfälle.\nDie Disaster Recovery Strategie eines Unternehmens umfasst in der Regel einen Disaster Recovery Plan (DRP), der detaillierte Anweisungen und Verfahren für die Wiederherstellung von Systemen und Daten enthält. Dazu gehören in der Regel auch Vorkehrungen für redundante Systeme und Backups von Daten an sicheren Orten.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie 'Disaster Recovery' (DR).",
+        "antwort": "Strategien und Maßnahmen zur Wiederherstellung der IT nach einem schwerwiegenden Ausfall.",
+        "typ": "text"
+      },
+      {
+        "frage": "Warum ist Disaster Recovery für Unternehmen wichtig?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Um die IT-Kosten zu senken.",
+          "b": "Um die Leistung der IT-Systeme zu verbessern.",
+          "c": "Um die Geschäftskontinuität nach einem Notfall sicherzustellen.",
+          "d": "Um neue Mitarbeiter einzustellen."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Was ist ein Disaster Recovery Plan (DRP)?",
+        "antwort": "Ein DRP ist ein Dokument, das detaillierte Anweisungen für die Wiederherstellung der IT-Systeme und Daten nach einem Notfall enthält.",
+        "typ": "text"
+      }
+    ]
+  },
+    {
+    "karten_nummer": 34,
+    "original_frage": "Erläutern Sie die Bedeutung von „Recovery Time Objective\" (RTO) und „Recovery Point Objective\" (RPO).",
+    "original_antwort": "Recovery Time Objective (RTO) und Recovery Point Objective (RPO) sind zwei Schlüsselkonzepte im Bereich der Disaster Recovery Planung.\nRecovery Time Objective (RTO) ist die maximale tolerierbare Zeit, die ein System nach einem Ausfall oder einer Störung ausfallen darf, bevor es zu erheblichen Schäden kommt. Es ist die Zeit, die benötigt wird, um die Funktionsfähigkeit wiederherzustellen.\nDie Recovery Point Objective (RPO) bezieht sich auf die maximale Menge an Daten, die ein Unternehmen sich leisten kann zu verlieren, bevor es zu erheblichen Schäden kommt. Dies wird oft in Zeiteinheiten gemessen.",
+    "alternativfragen": [
+      {
+        "frage": "Was bedeuten RTO und RPO im Kontext von Disaster Recovery?",
+        "antwort": "RTO: Maximale Ausfallzeit. RPO: Maximal akzeptabler Datenverlust.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Aussage beschreibt den Unterschied zwischen RTO und RPO am besten?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "RTO und RPO sind Synonyme.",
+          "b": "RTO bezieht sich auf Datenverlust, RPO auf Ausfallzeit.",
+          "c": "RTO bezieht sich auf Ausfallzeit, RPO auf Datenverlust.",
+          "d": "RTO ist immer kürzer als RPO."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Warum sind RTO und RPO wichtige Kennzahlen für die Notfallplanung?",
+        "antwort": "Weil sie definieren, wie schnell ein System wiederhergestellt werden muss (RTO) und wie viel Datenverlust maximal akzeptabel ist (RPO), um die Geschäftskontinuität zu gewährleisten.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 35,
+    "original_frage": "Worin liegt der Unterschied zwischen den Messgrößen „Mean Time Between Failures\" (MTBF) und „Mean Time to Failure\" (MTTF)?",
+    "original_antwort": "MTBF steht für „Mean Time Between Failures\". Es ist die durchschnittliche Zeit zwischen reparierbaren Ausfällen. Eine hohe MTBF weist auf eine höhere Zuverlässigkeit und Langlebigkeit des Systems hin.\nMTTF steht für „Mean Time to Failure\". Es handelt sich dabei um die durchschnittliche Zeitspanne, die erwartungsgemäß vergeht, bevor ein Gerät oder System ausfällt. Im Gegensatz zu MTBF, das für Geräte verwendet wird, die repariert und wieder in Betrieb genommen werden können, wird MTTF normalerweise für Geräte verwendet, die nach einem Ausfall nicht repariert, sondern ersetzt werden müssen.",
+    "alternativfragen": [
+      {
+        "frage": "Erklären Sie den Unterschied zwischen MTBF und MTTF.",
+        "antwort": "MTBF: Zeit *zwischen* Ausfällen (reparierbar). MTTF: Zeit *bis* zum Ausfall (nicht reparierbar).",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Kennzahl wird typischerweise für Geräte verwendet, die nach einem Ausfall ersetzt werden?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "MTBF",
+          "b": "MTTF",
+          "c": "RTO",
+          "d": "RPO"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Was sagt eine hohe MTBF aus?",
+        "antwort": "Eine hohe MTBF deutet auf eine hohe Zuverlässigkeit und eine lange Lebensdauer eines Systems hin.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 36,
+    "original_frage": "Treffen Sie für die RAID-Systeme RAID 0, RAID 1, RAID 5, RAID 6 und RAID 10 jeweils eine Aussage zu:\n- Mindestanzahl Festplatten\n- Ausfallsicherheit\n- Berechnung der Nutzkapazität (Nettokapazität)",
+    "original_antwort": "RAID 0:\n- mindestens 2 Festplatten\n- keine Ausfallsicherheit\n- Anzahl Festplatten * Kapazität\nRAID 1:\n- mindestens 2 Festplatten\n- eine Festplatte darf ausfallen\n- (Anzahl Festplatten / 2) * Kapazität\nRAID 5:\n- mindestens 3 Festplatten\n- eine Festplatte darf ausfallen\n- (Anzahl Festplatten - 1) * Kapazität\nRAID 6:\n- mindestens 4 Festplatten\n- zwei Festplatten dürfen ausfallen\n- (Anzahl Festplatten - 2) * Kapazität\nRAID 10:\n- mindestens 4 Festplatten\n- eine Festplatte pro Subraid darf ausfallen\n- (Anzahl Festplatten / 2) * Kapazität",
+    "alternativfragen": [
+      {
+        "frage": "Beschreibe kurz die RAID-Level 0, 1, 5, 6 und 10 hinsichtlich Festplattenanzahl, Ausfallsicherheit und Kapazität.",
+        "antwort": "RAID 0: min. 2, keine Ausfallsicherheit, volle Kapazität. RAID 1: min. 2, Ausfall einer Platte, halbe Kapazität. RAID 5: min. 3, Ausfall einer Platte, Kapazität minus eine Platte. RAID 6: min. 4, Ausfall zweier Platten, Kapazität minus zwei Platten. RAID 10: min. 4, Ausfall einer Platte pro Sub-RAID, halbe Kapazität.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welches RAID-Level bietet *keine* Ausfallsicherheit?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "RAID 1",
+          "b": "RAID 5",
+          "c": "RAID 0",
+          "d": "RAID 6"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Wie berechnet sich die Nutzkapazität bei RAID 5?",
+        "antwort": "Die Nutzkapazität bei RAID 5 ist die Gesamtkapazität aller Festplatten minus der Kapazität einer einzelnen Festplatte. (Anzahl Festplatten - 1) * Kapazität",
+        "typ": "text"
+      }
+    ]
+  },
+	  {
+    "karten_nummer": 37,
+    "original_frage": "Beschreiben Sie Lastenheft und Pflichtenheft hinsichtlich Verfasser, Verwendung und Inhalt.",
+    "original_antwort": "Lastenheft:\n- Verfasser: Auftraggeber\n- Verwendung: Grundlage beim Einholen von Angeboten\n- Inhalt: beinhaltet alle Anforderungen des Auftraggebers hinsichtlich des Liefer- und Leistungsumfanges\nPflichtenheft:\n- Verfasser: Auftragnehmer\n- Verwendung: Basis für die vertraglich festgehaltenen Leistungen\n- Inhalt: beschreibt die Umsetzung aller Anforderungen aus dem Lastenheft",
+    "alternativfragen": [
+      {
+        "frage": "Was ist der Unterschied zwischen Lastenheft und Pflichtenheft?",
+        "antwort": "Lastenheft: Anforderungen des Auftraggebers. Pflichtenheft: Umsetzung durch den Auftragnehmer.",
+        "typ": "text"
+      },
+      {
+        "frage": "Wer erstellt das Lastenheft und wer das Pflichtenheft?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Lastenheft: Auftragnehmer; Pflichtenheft: Auftraggeber",
+          "b": "Lastenheft: Auftraggeber; Pflichtenheft: Auftragnehmer",
+          "c": "Beide werden vom Auftraggeber erstellt.",
+          "d": "Beide werden vom Auftragnehmer erstellt."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Wozu dient das Pflichtenheft?",
+        "antwort": "Das Pflichtenheft dient als Grundlage für den Vertrag und beschreibt detailliert, wie der Auftragnehmer die Anforderungen des Auftraggebers (aus dem Lastenheft) umsetzen wird.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 38,
+    "original_frage": "Erklären Sie die Bedeutung der folgenden Algorithmen:\n- DES\n- 3DES\n- AES-128\n- AES-256\n- SHA256\n- MD5",
+    "original_antwort": "DES - Data Encryption Standard\n- symmetrisches Verschlüsselungsverfahren\n- DES gilt als nicht mehr sicher\n- durch die dreifache Anwendung des DES wird die Schlüssellänge und Sicherheit vergrößert\nAES-128 - Advanced Encryption Standard\nAES-256 - symmetrisches Verschlüsselungsverfahren mit einer Schlüssellänge von 128 Bit, bzw. 256 Bit\nSHA256 - Secure Hash Algorithm\n- Hash-Verfahren mit 256 Bit Länge\nMD5 - Message-Digest Algorithm\n- Hash-Verfahren mit 128 Bit Länge\n- gilt als nicht mehr sicher",
+    "alternativfragen": [
+      {
+        "frage": "Ordnen Sie die genannten Algorithmen in die Kategorien 'Verschlüsselung' und 'Hashing' ein.",
+        "antwort": "Verschlüsselung: DES, 3DES, AES-128, AES-256. Hashing: SHA256, MD5.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche der genannten Algorithmen gelten heute als *nicht* mehr sicher?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "AES-256",
+          "b": "SHA256",
+          "c": "DES und MD5",
+          "d": "3DES"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Was ist der Unterschied zwischen einem symmetrischen und einem asymmetrischen Verschlüsselungsverfahren?",
+        "antwort": "Symmetrische Verfahren verwenden denselben Schlüssel zum Ver- und Entschlüsseln, während asymmetrische Verfahren ein Schlüsselpaar (öffentlich und privat) verwenden.",
+        "typ": "text"
+      }
+    ]
+  },
+	  {
+    "karten_nummer": 39,
+    "original_frage": "Welche Bestandteile beinhaltet ein digitales Zertifikat nach X.509?",
+    "original_antwort": "Typische Inhalte eines Zertifikates sind:\n- Version\n- Name des Zertifikatsinhabers\n- Signaturverfahren\n- Aussteller des Zertifikats (CA)\n- Seriennummer die von der CA zur Identifizierung des Zertifikats vergeben wird\n- Gültigkeitsdauer\n- Signature Algorithmus\n- Öffentlicher Schlüssel des Zertifikatsinhabers",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie fünf typische Bestandteile eines digitalen Zertifikats nach X.509.",
+        "antwort": "Version, Name des Inhabers, Aussteller (CA), Gültigkeitsdauer, öffentlicher Schlüssel.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Information ist *nicht* in einem digitalen Zertifikat nach X.509 enthalten?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Der öffentliche Schlüssel des Inhabers.",
+          "b": "Der private Schlüssel des Inhabers.",
+          "c": "Der Aussteller des Zertifikats.",
+          "d": "Die Gültigkeitsdauer des Zertifikats."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Wozu dient ein digitales Zertifikat?",
+        "antwort": "Ein digitales Zertifikat dient dazu, die Identität einer Person oder Organisation in der digitalen Welt zu bestätigen und sichere Kommunikation zu ermöglichen.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 40,
+    "original_frage": "Was ist eine Public Key Infrastructure (PKI)?",
+    "original_antwort": "Eine Public Key Infrastructure (PKI) ist ein Set von Rollen, 46\nRichtlinien und Verfahren, die benötigt werden, um digitale Zertifikate sicher auszustellen und zu verwalten. Sie dient der sicheren Identitätsprüfung in digitalen Netzwerken und nutzt dafür asymmetrische Kryptographie, bestehend aus einem öffentlichen und privaten Schlüsselpaar. Die Zertifikate werden von einer Zertifizierungsstelle (CA) ausgestellt, die als vertrauenswürdige dritte Partei fungiert.\n\nPKIs stellen die folgenden Funktionen bereit:\n- Zertifikatserstellung\n- Zertifikatsverteilung\n- Zertifikatsprüfung\n- Zertifikatswiderruf",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie den Begriff 'Public Key Infrastructure' (PKI).",
+        "antwort": "Ein System zum Erstellen, Verwalten und Verwenden digitaler Zertifikate.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Aufgabe hat eine Zertifizierungsstelle (CA) in einer PKI?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Sie verschlüsselt Daten.",
+          "b": "Sie stellt digitale Zertifikate aus und bestätigt deren Gültigkeit.",
+          "c": "Sie speichert private Schlüssel.",
+          "d": "Sie entwickelt Verschlüsselungsalgorithmen."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Nennen sie die vier grundlegenden Funktionen einer PKI",
+        "antwort": "Zertifikatserstellung, Zertifikatsverteilung, Zertifikatsprüfung, Zertifikatswiderruf.",
+        "typ": "text"
+      }
+    ]
+  }
+]

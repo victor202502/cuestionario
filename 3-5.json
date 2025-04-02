@@ -1,0 +1,312 @@
+[
+  {
+    "karten_nummer": 138,
+    "original_frage": "Wie können automatische Kompilierung und Bereitstellung (Continuous Integration und Continuous Deployment, kurz CI/CD) implementiert werden?",
+    "original_antwort": "Die folgenden Schritte sollten zur automatischen Kompilierung und Bereitstellung im Allgemeinen befolgt werden:\n1. Source Control Management (SCM): Alle Entwicklungsarbeit sollte in einem Versionskontrollsystem gespeichert werden.\n2. Automatische Kompilierung: Wenn Änderungen im Versionskontrollsystem vorgenommen werden, wird ein automatisierter Build-Prozess ausgelöst.\n3. Automatisierte Tests: Nach der Kompilierung sollte der Code automatisiert getestet werden.\n4. Automatisierte Bereitstellung: Nach erfolgreichem Build und Test wird der Code automatisch bereitgestellt.\n5. Monitoring und Feedback: Nach der Bereitstellung sollte der Zustand überwacht und bei Problemen Feedback gegeben werden.",
+    "alternativfragen": [
+      {
+        "frage": "Was sind die grundlegenden Schritte zur Implementierung von CI/CD?",
+        "antwort": "Versionskontrolle, automatische Kompilierung, automatisierte Tests, automatische Bereitstellung, Überwachung.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was löst typischerweise einen automatisierten Build-Prozess in einer CI/CD-Pipeline aus?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Ein manueller Befehl.",
+          "b": "Ein festgelegter Zeitplan.",
+          "c": "Eine Änderung im Versionskontrollsystem (z.B. ein Commit oder Push).",
+          "d": "Das Ende eines Sprints."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Was ist der Unterschied zwischen Continuous Integration (CI) und Continuous Deployment (CD)?",
+        "antwort": "CI konzentriert sich auf das regelmäßige Zusammenführen von Codeänderungen und deren automatische Überprüfung (Kompilierung, Tests). CD geht einen Schritt weiter und automatisiert auch die Bereitstellung (Deployment) der Software in einer Test- oder Produktionsumgebung.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 139,
+    "original_frage": "Welche Vorteile bietet die Verwendung einer 3-Schichten-Architektur bei der Entwicklung?",
+    "original_antwort": "Die Verwendung einer 3-Schichten-Architektur bei der Entwicklung von Anwendungen bietet mehrere Vorteile.\n- Sie ermöglicht eine klare Trennung zwischen der Präsentationsschicht, der Anwendungslogik und der Datenzugriffsschicht. Dadurch wird der Code besser strukturiert und Wartungsaufgaben werden vereinfacht.\n- Die Schichtung ermöglicht eine bessere Skalierbarkeit, da jede Schicht unabhängig von den anderen skaliert werden kann.\n- Die Schichtung erleichtert die Wiederverwendbarkeit von Komponenten, da jede Schicht unabhängig von den anderen entwickelt und leichter in anderen Projekten wiederverwendet werden kann.",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie die drei typischen Schichten einer 3-Schichten-Architektur.",
+        "antwort": "Präsentationsschicht (Darstellung), Anwendungslogikschicht (Verarbeitung), Datenzugriffsschicht (Datenhaltung).",
+        "typ": "text"
+      },
+      {
+        "frage": "Welchen Vorteil bietet die Trennung von Logik und Daten in einer 3-Schichten-Architektur?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Der Code wird schneller.",
+          "b": "Der Code wird sicherer.",
+          "c": "Der Code wird wartbarer, flexibler und wiederverwendbarer.",
+          "d": "Der Code benötigt weniger Speicherplatz."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Warum ist eine 3-Schichten-Architektur gut für die Skalierbarkeit einer Anwendung?",
+        "antwort": "Weil jede Schicht unabhängig von den anderen skaliert werden kann. Wenn z.B. die Auslastung der Anwendungslogik steigt, kann diese Schicht gezielt verstärkt werden, ohne die anderen Schichten zu beeinträchtigen.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 140,
+    "original_frage": "Wie arbeitet der Bubble-Sort-Algorithmus, um eine Liste von Elementen in aufsteigender Reihenfolge zu sortieren?",
+    "original_antwort": "Der Bubble-Sort-Algorithmus sortiert eine Liste, indem er benachbarte Elemente vergleicht und sie tauscht, wenn sie in der falschen Reihenfolge sind. Dieses wird wiederholt, bis die gesamte Liste sortiert ist.\n1. Vergleiche die ersten beiden Elemente in der Liste. Wenn das erste Element größer als das zweite ist, tausche sie.\n2. Gehe zur nächsten Position in der Liste und wiederhole den Vergleich und den Austausch mit dem nächsten Paar.\n3. Wiederhole diesen Prozess bis zum Ende der Liste.\n4. Wiederhole die Schritte 1 bis 3 für die restlichen Elemente (außer dem zuletzt sortierten), bis die gesamte Liste sortiert ist.",
+    "alternativfragen": [
+      {
+        "frage": "Beschreiben Sie das Grundprinzip von Bubble Sort.",
+        "antwort": "Benachbarte Elemente werden verglichen und ggf. getauscht; wiederholen, bis sortiert.",
+        "typ": "text"
+      },
+      {
+        "frage": "Ist Bubble Sort ein effizienter Sortieralgorithmus?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Ja, immer.",
+          "b": "Nein, er ist ineffizient für große Datenmengen.",
+          "c": "Ja, für kleine Datenmengen.",
+          "d": "Kommt auf die Daten an."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Warum heißt der Algorithmus 'Bubble Sort'?",
+        "antwort": "Weil die größeren Elemente in jeder Iteration wie Blasen (bubbles) an das Ende der Liste aufsteigen.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 141,
+    "original_frage": "Beschreibe den Ablauf des Suchalgorithmus „Lineare Suche\".",
+    "original_antwort": "Die lineare Suche ist eine Methode zum Finden eines bestimmten Wertes in einer Liste. Sie durchläuft sequenziell jedes Element in der Liste und prüft, ob es dem gesuchten Wert entspricht.\n1. Überprüfe das erste Element der Liste.\n2. Entspricht das Element dem gesuchten Wert, beende die Suche.\n3. Wenn das Element nicht dem gesuchten Wert entspricht, gehe zum nächsten Element in der Liste.\n4. Wiederhole Schritt 2 und 3, bis du entweder den gesuchten Wert gefunden hast oder bis das Ende der Liste erreicht ist.\n5. Wenn das Ende der Liste erreicht ist und der gesuchte Wert nicht gefunden wurde, gibt an, dass der gesuchte Wert nicht in der Liste ist.",
+    "alternativfragen": [
+      {
+        "frage": "Wie funktioniert die lineare Suche?",
+        "antwort": "Sie durchläuft die Liste Element für Element und vergleicht jedes mit dem Suchwert.",
+        "typ": "text"
+      },
+      {
+        "frage": "Ist die lineare Suche effizient für große Listen?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Ja, immer.",
+          "b": "Nein, sie kann sehr langsam werden.",
+          "c": "Ja, wenn die Liste sortiert ist.",
+          "d": "Kommt auf die Implementierung an."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Was ist der 'Worst-Case'-Fall für die lineare Suche?",
+        "antwort": "Der Worst-Case ist, wenn das gesuchte Element am Ende der Liste steht oder gar nicht in der Liste vorhanden ist. Dann muss die gesamte Liste durchlaufen werden.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 142,
+    "original_frage": "Wie funktioniert die binäre Suche?",
+    "original_antwort": "Die binäre Suche ist ein effizienter Suchalgorithmus, der auf sortierten Listen oder Arrays arbeitet. Er vergleicht den gesuchten Wert mit dem mittleren Element der Liste und teilt dann die Liste entsprechend in zwei Hälften. Dieser Prozess wird rekursiv fortgesetzt, bis der gesuchte Wert gefunden ist oder bis alle Elemente durchsucht wurden.\nDie binäre Suche ist sehr effizient und benötigt im schlimmsten Fall log2(n) Vergleiche, wobei n die Anzahl der Elemente in der Liste ist. Nachteilig ist, dass die binäre Suche voraussetzt, dass die Liste vor der Suche sortiert wird.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist die Voraussetzung für die Anwendung der binären Suche?",
+        "antwort": "Die Daten müssen sortiert sein.",
+        "typ": "text"
+      },
+      {
+        "frage": "Wie funktioniert die binäre Suche im Prinzip?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Sie durchläuft die Liste Element für Element.",
+          "b": "Sie vergleicht den Suchwert mit dem mittleren Element und halbiert dann den Suchbereich.",
+          "c": "Sie verwendet einen Hash-Wert, um das Element zu finden.",
+          "d": "Sie sortiert die Liste zuerst und sucht dann das Element."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Warum ist die binäre Suche effizienter als die lineare Suche (für sortierte Daten)?",
+        "antwort": "Weil sie bei jedem Schritt den Suchbereich halbiert und dadurch die Anzahl der benötigten Vergleiche drastisch reduziert.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 143,
+    "original_frage": "Beschreiben Sie die einzelnen Schritte, welche notwendig sind, um eine binäre Suche durchzuführen.",
+    "original_antwort": "Die grundlegenden Schritte des binären Suchalgorithmus:\n1. Finden Sie das mittlere Element der Liste.\n2. Vergleichen Sie es mit dem gesuchten Wert.\n3. Wenn sie gleich sind, ist die Suche abgeschlossen.\n4. Wenn der gesuchte Wert kleiner ist, suchen Sie in der linken Hälfte der Liste weiter.\n5. Wenn der gesuchte Wert größer ist, suchen Sie in der rechten Hälfte der Liste weiter.\n6. Wiederholen Sie die Schritte 1-5, bis der Wert gefunden wird oder die Liste vollständig durchsucht wurde.",
+    "alternativfragen": [
+      {
+        "frage": "Beschreiben Sie die Schritte der binären Suche.",
+        "antwort": "Mitte finden, vergleichen, Suchbereich halbieren, wiederholen.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was passiert, wenn der gesuchte Wert *nicht* in der Liste gefunden wird (bei binärer Suche)?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Das Programm stürzt ab.",
+          "b": "Es wird eine Fehlermeldung ausgegeben.",
+          "c": "Der Suchbereich wird immer kleiner, bis er leer ist. Dann steht fest, dass der Wert nicht vorhanden ist.",
+          "d": "Die Suche beginnt von vorne."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Muss die Liste für eine Binäre Suche immer Auf- oder Absteigend sortiert sein?",
+        "antwort": "Nein, die Liste muss sortiert sein. Ob die Sortierung Auf- oder Absteigend ist spielt keine Rolle für die Binäre Suche.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 144,
+    "original_frage": "Was ist das Observer Muster?",
+    "original_antwort": "Das Observer Muster ist ein Entwurfsmuster aus dem Bereich der Softwareentwicklung, das der Kategorie der Verhaltensmuster (Behavioral Patterns) zugeordnet wird. Es ermöglicht eine Einwegabhängigkeit zwischen Objekten, sodass, wenn ein Objekt seinen Zustand ändert, alle abhängigen Objekte benachrichtigt und automatisch aktualisiert werden.\nDieses Muster ist besonders nützlich in Situationen, in denen der Zustand eines Objekts von vielen anderen Objekten abhängig ist und eine enge Kopplung zwischen diesen Objekten vermieden werden soll.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie das Observer-Muster (Beobachter-Muster).",
+        "antwort": "Ein Entwurfsmuster, bei dem ein Objekt (Subjekt) eine Liste von Beobachtern führt und diese bei Zustandsänderungen automatisch benachrichtigt.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist der Hauptzweck des Observer-Musters?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Die Performance zu verbessern.",
+          "b": "Die Sicherheit zu erhöhen.",
+          "c": "Eine lose Kopplung zwischen Objekten zu ermöglichen, so dass Änderungen an einem Objekt automatisch andere Objekte informieren.",
+          "d": "Den Code zu verkürzen."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Geben Sie ein Beispiel für eine Anwendung des Observer-Musters.",
+        "antwort": "Ein typisches Beispiel ist die Implementierung von Ereignisbehandlung (Event Handling) in grafischen Benutzeroberflächen. Wenn ein Benutzer auf eine Schaltfläche klickt (das Subjekt ändert seinen Zustand), werden alle registrierten Listener (Observer) benachrichtigt und können darauf reagieren.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 145,
+    "original_frage": "Wie funktioniert das Oberserver Muster?",
+    "original_antwort": "Das Observer Muster funktioniert durch eine Einweg-Kommunikation von einem Subjekt zu mehreren anderen Objekten (Observer):\n1. Registrierung: Die Observer melden sich beim Subjekt für Updates an. Das Subjekt hält eine Liste aller seiner Observer.\n2. Änderung: Wenn das Subjekt seinen Zustand ändert, informiert es alle registrierten Observer über die Änderung.\n3. Benachrichtigung: Das Subjekt benachrichtigt die Observer über die Zustandsänderung, indem es eine Methode (häufig „update\" genannt) auf den Observern aufruft.\n4. Abmeldung: Observer können sich jederzeit vom Subjekt abmelden, wenn sie keine weiteren Benachrichtigungen erhalten möchten.",
+    "alternativfragen": [
+      {
+        "frage": "Beschreiben Sie die Rollen 'Subjekt' (Subject) und 'Beobachter' (Observer) im Observer-Muster.",
+        "antwort": "Subjekt: Hält eine Liste von Beobachtern und benachrichtigt sie bei Änderungen. Beobachter: Wird vom Subjekt über Änderungen informiert.",
+        "typ": "text"
+      },
+      {
+        "frage": "Wie meldet sich ein Observer beim Subject an, um Benachrichtigungen zu erhalten?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Durch Senden einer E-Mail.",
+          "b": "Durch Aufrufen einer Methode des Subjekts (z.B. 'registerObserver', 'subscribe').",
+          "c": "Durch Ändern des Codes des Subjekts.",
+          "d": "Automatisch, sobald das Objekt erstellt wird."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Was passiert, wenn das Subjekt seinen Zustand ändert?",
+        "antwort": "Das Subjekt durchläuft die Liste seiner registrierten Observer und ruft bei jedem Observer eine Benachrichtigungsmethode (z.B. 'update') auf, um ihn über die Änderung zu informieren.",
+        "typ": "text"
+      }
+    ]
+  },
+    {
+     "karten_nummer": 146,
+    "original_frage": "Welche Komponenten umfasst das MVC-Muster und wie interagieren sie miteinander?",
+    "original_antwort": "Das MVC-Muster ist ein Entwurfsmuster, das oft verwendet wird, um die Struktur von Softwareanwendungen zu organisieren. Es besteht aus den folgenden drei Komponenten:\n- Model: Verantwortlich für Daten und Geschäftslogik\n- View: Präsentiert Daten an den Benutzer\n- Controller: Verarbeitet Benutzereingaben und aktualisiert das Model\nDie Interaktion dieser Komponenten funktioniert wie folgt:\n1. Der Benutzer agiert mit der View.\n2. Der Controller erhält Benutzereingaben von der View, führt Aktionen im Model aus.\n3. Das Model benachrichtigt die View über Änderungen.\n4. Die View aktualisiert die Benutzeroberfläche.",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie die drei Hauptkomponenten des MVC-Musters.",
+        "antwort": "Model, View, Controller.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Komponente des MVC-Musters ist für die Darstellung der Daten für den Benutzer verantwortlich?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Model",
+          "b": "View",
+          "c": "Controller",
+          "d": "Alle drei"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Beschreibe den typischen Interaktionsfluss im MVC-Muster.",
+        "antwort": "1. Benutzer interagiert mit der View. 2. View leitet Aktion an den Controller weiter. 3. Controller aktualisiert ggf. das Model. 4. Model benachrichtigt die View über Änderungen (oder View fragt Model aktiv ab). 5. View aktualisiert die Darstellung.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 147,
+    "original_frage": "Was sind Smart Contracts und wie funktionieren sie?",
+    "original_antwort": "Smart Contracts sind computerbasierte Verträge, die automatisch ausgeführt werden, sobald die in ihnen festgelegten Bedingungen erfüllt sind. Sie werden auf Blockchain-Plattformen erstellt und sind programmierbare Verträge, die Transaktionen und Aktionen verwalten können. Sie nutzen die Blockchain-Technologie, um Transparenz, Sicherheit und Vertrauenswürdigkeit zu gewährleisten, da sie dezentralisiert und unveränderlich sind.\nSmart Contracts ermöglichen es Parteien, Vereinbarungen ohne einen Zwischenhändler umzusetzen und bieten eine effiziente, zuverlässige und automatisierte Methode zur Abwicklung von Verträgen.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren sie Smart Contracts",
+        "antwort": "Automatisierte, selbstausführende Verträge auf einer Blockchain.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Technologie liegt Smart Contracts zugrunde?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Künstliche Intelligenz",
+          "b": "Blockchain",
+          "c": "Cloud Computing",
+          "d": "Big Data"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Nennen Sie drei Vorteile der Nutzung von Smart Contracts.",
+        "antwort": "Automatisierung, Transparenz, Sicherheit, Effizienz, Kostenreduktion (durch Wegfall von Zwischenhändlern), Vertrauenswürdigkeit (da unveränderlich).",
+        "typ": "text"
+      }
+    ]
+  }
+]

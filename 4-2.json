@@ -1,0 +1,317 @@
+[
+  {
+    "karten_nummer": 165,
+    "original_frage": "Beschreiben Sie den Unterschied zwischen einer Paketfilter-Firewall und einer Applikationsfilter-Firewall.",
+    "original_antwort": "Eine Paketfilter-Firewall analysiert den Netzwerkverkehr auf der Ebene der Netzwerkpakete. Sie überprüft die Header-Informationen der Pakete, wie Quell- und Ziel-IP-Adressen, Portnummern und Protokolltypen, und entscheidet basierend auf vordefinierten Regeln, ob das Paket zugelassen oder blockiert wird.\nEine Applikationsfilter-Firewall arbeitet auf der Anwendungsschicht. Sie kann den Inhalt des Datenverkehrs analysieren und spezifische Anwendungsprotokolle verstehen. Dies ermöglicht es der Firewall, spezifische Angriffsmuster oder verdächtige Aktivitäten in den Anwendungsdaten zu erkennen und zu blockieren.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist der Hauptunterschied zwischen einer Paketfilter-Firewall und einer Application Firewall?",
+        "antwort": "Paketfilter: Arbeitet auf Netzwerkebene (IP-Adressen, Ports). Application Firewall: Arbeitet auf Anwendungsebene (Inhalte, Protokolle).",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Art von Firewall kann detailliertere Regeln basierend auf dem *Inhalt* des Datenverkehrs durchsetzen?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Paketfilter-Firewall",
+          "b": "Application Firewall (oder Proxy-Firewall)",
+          "c": "Stateful Inspection Firewall",
+          "d": "Alle gleich gut"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Kann eine Paketfilter-Firewall einen SQL-Injection-Angriff erkennen?",
+        "antwort": "Eine einfache Paketfilter-Firewall in der Regel nicht, da sie nur die Header-Informationen der Pakete untersucht, aber nicht den Inhalt. Eine Application Firewall, die den Anwendungsdatenverkehr versteht, kann potenziell SQL-Injection-Muster erkennen.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 166,
+    "original_frage": "Was ist eine Next-Generation Firewall (NGFW)?",
+    "original_antwort": "Eine Next-Generation Firewall (NGFW) ist eine fortschrittliche Firewall, die über die Funktionen herkömmlicher Firewalls hinausgeht. Sie kombiniert Funktionen wie Intrusion Detection/Prevention System (IDS/IPS), Content-Filtering, Anwendungssteuerung und mehr.\nDurch die Kombination dieser Funktionen ermöglicht eine Next-Generation Firewall eine effektive Sicherheitskontrolle und Bedrohungserkennung.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie 'Next-Generation Firewall' (NGFW).",
+        "antwort": "Eine Firewall, die über traditionelle Funktionen hinausgeht und zusätzliche Sicherheitsfunktionen integriert.",
+        "typ": "text"
+      },
+      {
+        "frage": "Nennen Sie drei Funktionen, die typischerweise in einer NGFW enthalten sind.",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Paketfilterung, E-Mail-Server, Webbrowser.",
+          "b": "Intrusion Prevention, Anwendungskontrolle, Content-Filterung.",
+          "c": "Textverarbeitung, Tabellenkalkulation, Präsentationssoftware.",
+          "d": "Spiele, Musik-Player, Videobearbeitung."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Was ist der Vorteil einer NGFW gegenüber einer traditionellen Firewall?",
+        "antwort": "Eine NGFW bietet umfassendere Sicherheitsfunktionen, die über die reine Paketfilterung hinausgehen. Sie kann Bedrohungen auf Anwendungsebene erkennen und blockieren, den Datenverkehr detaillierter kontrollieren und bietet oft zusätzliche Funktionen wie VPN, Intrusion Prevention und Content-Filterung.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 167,
+    "original_frage": "Was ist ein Penetrationstest und wie wird er durchgeführt?",
+    "original_antwort": "Ein Penetrationstest ist ein proaktiver Sicherheitstest, der durchgeführt wird, um die Schwachstellen und Sicherheitslücken eines Systems, Netzwerks oder einer Anwendung zu identifizieren. Das Hauptziel eines Penetrationstests besteht darin, die Sicherheit zu verbessern, indem potenzielle Angriffsszenarien simuliert und ausgewertet werden.\nEin Penetrationstest wird in mehreren Phasen durchgeführt:\n- Informationsbeschaffung\n- Aufdeckung von Schwachstellen\n- Ausnutzung von Schwachstellen\n- Ergebnisanalyse\n- Berichterstattung",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie 'Penetrationstest' (Pentest).",
+        "antwort": "Ein autorisierter simulierter Angriff auf ein System, um dessen Sicherheitslücken zu finden.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist das Hauptziel eines Penetrationstests?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Das System zu zerstören.",
+          "b": "Daten zu stehlen.",
+          "c": "Schwachstellen zu finden und die Sicherheit zu verbessern.",
+          "d": "Die Performance zu testen."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+          "frage": "Ist ein Penetrationstest ein legaler Vorgang?",
+        "antwort": "Ja, ein Penetrationstest ist legal, *wenn* er mit ausdrücklicher Genehmigung des Eigentümers des zu testenden Systems durchgeführt wird. Ohne Genehmigung wäre es ein illegaler Hacking-Angriff.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 168,
+    "original_frage": "Welche Aspekte werden bei einem Device Security Check überprüft?",
+    "original_antwort": "Ein Device Security Check ist eine Überprüfung der Sicherheitsmaßnahmen und -einstellungen eines Geräts, um potenzielle Schwachstellen zu identifizieren und die Sicherheit des Geräts zu verbessern. Dabei werden in der Regel folgende Aspekte überprüft:\n- Betriebssystem und Firmware\n- Benutzerkonten und Zugriffsrechte\n- Netzwerkkonfiguration\n- Anwendungen und Dienste\n- Physische Sicherheit\n- Verschlüsselung\nNach Abschluss des Device Security Checks werden Ergebnisse und Empfehlungen für die Verbesserung der Gerätesicherheit dokumentiert.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist das Ziel eines Device Security Checks?",
+        "antwort": "Die Sicherheit eines Geräts (z.B. Computer, Smartphone, Server) zu überprüfen und Schwachstellen zu finden.",
+        "typ": "text"
+      },
+      {
+        "frage": "Nennen Sie drei Aspekte, die typischerweise bei einem Device Security Check überprüft werden.",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Bildschirmgröße, Akkukapazität, Gewicht.",
+          "b": "Installierte Software, Betriebssystemversion, Netzwerkkonfiguration, Benutzerkonten.",
+          "c": "Farbe, Design, Preis.",
+          "d": "Prozessorgeschwindigkeit, Arbeitsspeichergröße, Festplattengröße."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Warum sind regelmäßige Device Security Checks wichtig?",
+        "antwort": "Weil sich Sicherheitsbedrohungen ständig weiterentwickeln und neue Schwachstellen entdeckt werden. Regelmäßige Checks helfen, Geräte vor aktuellen Bedrohungen zu schützen und Sicherheitslücken zu schließen.",
+        "typ": "text"
+      }
+    ]
+  },
+    {
+    "karten_nummer": 169,
+    "original_frage": "Wofür steht die Abkürzung RADIUS in der Netzwerktechnik?",
+    "original_antwort": "RADIUS (Remote Authentication Dial-In User Service) ist ein Protokoll zur Authentifizierung, Autorisierung und Abrechnung von Netzwerkzugriffen. Es wird häufig in drahtlosen Netzwerken wie WLANs eingesetzt, um Benutzer zu verifizieren und den Zugriff auf das Netzwerk zu kontrollieren.",
+    "alternativfragen": [
+      {
+        "frage": "Wofür steht die Abkürzung RADIUS?",
+        "antwort": "Remote Authentication Dial-In User Service.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist der Hauptzweck von RADIUS?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Die Geschwindigkeit des Netzwerks zu erhöhen.",
+          "b": "Die Sicherheit des Netzwerks zu erhöhen, indem Benutzer authentifiziert und autorisiert werden.",
+          "c": "Daten zu verschlüsseln.",
+          "d": "Webseiten zu hosten."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "In welchen Arten von Netzwerken wird RADIUS häufig eingesetzt?",
+        "antwort": "RADIUS wird häufig in drahtlosen Netzwerken (WLANs), VPNs (Virtual Private Networks) und bei der Einwahl über Modems oder DSL verwendet, um Benutzer zu authentifizieren und den Netzzugriff zu verwalten.",
+        "typ": "text"
+      }
+    ]
+  },
+      {
+    "karten_nummer": 170,
+    "original_frage": "In Zusammenhang mit RADIUS wird auch oft von RADIUS (AAA) gesprochen. Wofür stehen die drei A in der Abkürzung? Erläutern Sie diese drei Komponenten.",
+    "original_antwort": "Authentifizierung: RADIUS verifiziert die Identität von Benutzern, bevor sie Zugang zum Netzwerk erhalten. Dies wird oft durch Überprüfung eines Benutzernamens und Passworts erreicht.\nAutorisierung: Nachdem ein Benutzer authentifiziert wurde, steuert RADIUS, welchen Zugang der Benutzer zum Netzwerk hat. Dies kann beinhalten, welche Dienste der Benutzer nutzen darf, und andere Zugriffsbeschränkungen beinhalten.\nAccounting: RADIUS protokolliert die Aktivitäten der Benutzer im Netzwerk. Dies kann beinhalten, wann der Benutzer auf das Netzwerk zugegriffen hat, wie lange sie verbunden waren, die Menge der übertragenen Daten und andere Informationen.",
+    "alternativfragen": [
+      {
+        "frage": "Wofür stehen die drei 'A's in RADIUS (AAA)?",
+        "antwort": "Authentication (Authentifizierung), Authorization (Autorisierung), Accounting (Abrechnung/Protokollierung).",
+        "typ": "text"
+      },
+      {
+        "frage": "Was bedeutet 'Authentifizierung' im Kontext von RADIUS?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Die Erlaubnis, bestimmte Ressourcen zu nutzen.",
+          "b": "Die Überprüfung der Identität eines Benutzers.",
+          "c": "Die Protokollierung der Benutzeraktivitäten.",
+          "d": "Die Verschlüsselung der Kommunikation."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Was ist der Unterschied zwischen 'Autorisierung' und 'Authentifizierung'?",
+        "antwort": "Authentifizierung überprüft, *wer* jemand ist (Identität). Autorisierung legt fest, *was* diese Person tun darf (Zugriffsrechte).",
+        "typ": "text"
+      }
+    ]
+  },
+    {
+    "karten_nummer": 171,
+    "original_frage": "Was ist ein Pre-Shared Key (PSK) und wo wird er verwendet?",
+    "original_antwort": "Ein Pre-Shared Key (PSK) ist ein vorab vereinbarter Schlüssel, der in der Netzwerksicherheit verwendet wird, um die Authentifizierung und den sicheren Zugriff auf ein Netzwerk zu gewährleisten. Der PSK wird zwischen den Teilnehmern des Netzwerks im Voraus vereinbart und dient als gemeinsames Passwort.\nDer PSK wird z. B. in drahtlosen Netzwerken (WLANs) und Virtual Private Networks (VPNs) eingesetzt. In WLANs wird der PSK als Passwort verwendet, um den Zugriff auf das drahtlose Netzwerk zu kontrollieren. In VPNs wird der PSK verwendet, um die Kommunikation zwischen einem Client und einem VPN-Server zu verschlüsseln und zu authentifizieren.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie 'Pre-Shared Key' (PSK).",
+        "antwort": "Ein gemeinsames Geheimnis (Passwort), das vorab zwischen Kommunikationspartnern ausgetauscht wird.",
+        "typ": "text"
+      },
+      {
+        "frage": "Nennen Sie zwei Anwendungsbeispiele für PSKs.",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Webseiten und E-Mails.",
+          "b": "WLAN-Verschlüsselung (WPA/WPA2-Personal) und VPNs.",
+          "c": "Datenbanken und Betriebssysteme.",
+          "d": "Computerspiele und soziale Medien."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Warum ist es wichtig, einen starken (langen und komplexen) PSK zu wählen?",
+        "antwort": "Weil ein schwacher PSK leichter erraten oder durch Brute-Force-Angriffe geknackt werden kann, wodurch Unbefugte Zugriff auf das Netzwerk erhalten könnten.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 172,
+    "original_frage": "Beschreiben Sie den Aufbau einer IPv4- und einer IPv6-Adresse.",
+    "original_antwort": "Eine IPv4-Adresse besteht aus 32 Bits und wird in vier durch Punkte getrennten Oktetten dargestellt. Jedes Oktett repräsentiert einen Teil der Adresse und kann Werte von 0 bis 255 haben. IPv4-Adressen bestehen aus einem Netz- und einem Hostanteil.\nEine IPv6-Adresse besteht aus 128 Bits und wird in acht durch Doppelpunkte getrennten Hexadezimalblöcken dargestellt. Jeder Block besteht aus vier Hexadezimalzahlen und kann Werte von 0 bis F haben. Bei IPv6 werden die Adressen in drei Hauptkomponenten unterteilt: Standortpräfix, Teilnetz-ID und Interface-ID.",
+    "alternativfragen": [
+      {
+        "frage": "Wie viele Bits hat eine IPv4-Adresse, und wie wird sie typischerweise dargestellt?",
+        "antwort": "32 Bits, dargestellt in vier durch Punkte getrennten Dezimalzahlen (z.B. 192.168.1.1).",
+        "typ": "text"
+      },
+      {
+        "frage": "Wie viele Bits hat eine IPv6-Adresse, und wie wird sie dargestellt?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "32 Bits, dezimal",
+          "b": "64 Bits, hexadezimal",
+          "c": "128 Bits, hexadezimal",
+          "d": "256 Bits, binär"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Warum wurde IPv6 eingeführt?",
+        "antwort": "IPv6 wurde eingeführt, weil der Adressraum von IPv4 (ca. 4,3 Milliarden Adressen) begrenzt ist und nicht ausreicht, um alle internetfähigen Geräte zu adressieren. IPv6 bietet einen viel größeren Adressraum.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+          "karten_nummer": 160,
+          "original_frage": "Welche unterschiedlichen Bereitstellungsarten von Cloud-Diensten können unterschieden werden?",
+          "original_antwort": "Die **Public Cloud** bezieht sich auf eine Cloud-Umgebung, die von einem Cloud-Dienstleister betrieben wird und für die breite Öffentlichkeit zugänglich ist.\n\nDie **Private Cloud** bezieht sich auf eine Cloud-Umgebung, die speziell für ein einzelnes Unternehmen oder eine Organisation bereitgestellt wird. Im Gegensatz zur Public Cloud wird die Private Cloud hinter einer Firewall betrieben und kann nur von internen Mitarbeitenden genutzt werden.\n\nDie **Hybrid Cloud** ist eine Kombination aus Public Cloud und Private Cloud. Unternehmen nutzen sowohl die Ressourcen und Dienste der Public Cloud als auch ihre eigenen Private Cloud-Ressourcen.",
+          "alternativfragen": [
+            {
+              "frage": "Nennen und beschreiben Sie die drei Hauptmodelle für die Bereitstellung von Cloud-Diensten.",
+              "antwort": "Public Cloud: Für die Öffentlichkeit zugänglich. Private Cloud: Für eine einzelne Organisation. Hybrid Cloud: Kombination aus Public und Private.",
+              "typ": "text"
+            },
+            {
+              "frage": "Welches Cloud-Bereitstellungsmodell bietet die höchste Kontrolle über die Infrastruktur?",
+              "antwort": "",
+              "typ": "multiple_choice",
+              "optionen": {
+                "a": "Public Cloud",
+                "b": "Private Cloud",
+                "c": "Hybrid Cloud",
+                "d": "Community Cloud"
+              },
+              "korrekte_antworten": [
+                "b"
+              ]
+            },
+            {
+              "frage": "Was ist ein Vorteil der Public Cloud gegenüber der Private Cloud?",
+              "antwort": "Die Public Cloud ist in der Regel kostengünstiger, da die Infrastrukturkosten auf viele Nutzer verteilt werden. Außerdem ist sie oft einfacher zu skalieren und erfordert weniger eigenes IT-Personal.",
+              "typ": "text"
+            }
+          ]
+        },
+        {
+    "karten_nummer": 161,
+    "original_frage": "Was versteht man unter elektrischer Stromstärke und elektrischer Spannung?",
+    "original_antwort": "Elektrische Stromstärke ist die Menge an elektrischer Ladung, die pro Zeiteinheit durch einen Leiter fließt. Er wird in der Einheit Ampere (A) gemessen.\nElektrische Spannung ist die elektrische Potenzialdifferenz zwischen zwei Punkten in einem elektrischen System. Sie wird in der Einheit Volt (V) gemessen. Spannung erzeugt ein elektrisches Feld zwischen den beiden Punkten und treibt den elektrischen Strom an.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie 'elektrische Stromstärke'.",
+        "antwort": "Die Menge an elektrischer Ladung, die pro Zeiteinheit fließt.",
+        "typ": "text"
+      },
+      {
+           "frage": "Definieren Sie 'elektrische Spannung'",
+           "antwort": "Die elektrische Potentialdifferenz zwischen zwei Punkten.",
+           "typ": "text"
+      },
+      {
+        "frage": "In welchen Einheiten wird elektrische Stromstärke und Spannung gemessen?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Stromstärke: Volt, Spannung: Ampere",
+          "b": "Stromstärke: Ampere, Spannung: Volt",
+          "c": "Stromstärke: Watt, Spannung: Ohm",
+          "d": "Stromstärke: Ohm, Spannung: Watt"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Was treibt den elektrischen Strom in einem Stromkreis an?",
+        "antwort": "Die elektrische Spannung (Potentialdifferenz) treibt den Strom an.",
+        "typ": "text"
+      }
+    ]
+  }
+]

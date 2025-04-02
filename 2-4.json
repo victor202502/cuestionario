@@ -1,0 +1,312 @@
+[
+  {
+    "karten_nummer": 80,
+    "original_frage": "Was ist das Staging-Testing in Bezug auf Softwareentwicklung und -bereitstellung?",
+    "original_antwort": "Beim Staging-Testing werden Anwendungen in einer Staging-Umgebung getestet, bevor sie in der Produktionsumgebung bereitgestellt werden. Die Staging-Umgebung ist eine separate Umgebung, die der Produktionsumgebung ähnelt und oft als Zwischenschritt zwischen Entwicklung und Produktion fungiert.\nZweck des Staging-Testings ist es, sicherzustellen, dass die Software ordnungsgemäß funktioniert, bevor sie für die tatsächlichen Benutzer in der Produktionsumgebung verfügbar gemacht wird. Dieser Test ermöglicht es, potenzielle Probleme oder Fehler zu identifizieren und zu beheben, bevor die Software in den Live-Betrieb geht.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie 'Staging-Testing'.",
+        "antwort": "Testen einer Anwendung in einer Umgebung, die der Produktionsumgebung ähnelt, vor der endgültigen Bereitstellung.",
+        "typ": "text"
+      },
+      {
+        "frage": "Warum ist Staging-Testing wichtig?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Es beschleunigt die Entwicklung.",
+          "b": "Es ersetzt alle anderen Testarten.",
+          "c": "Es hilft, Fehler zu finden, bevor sie die Endbenutzer erreichen.",
+          "d": "Es macht die Software sicherer."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Was ist der Unterschied zwischen einer Staging-Umgebung und einer Produktionsumgebung?",
+        "antwort": "Die Produktionsumgebung ist die 'Live'-Umgebung, in der die Software von den Endbenutzern verwendet wird. Die Staging-Umgebung ist eine separate Umgebung, die der Produktionsumgebung so ähnlich wie möglich ist, aber dazu dient, die Software vor der endgültigen Veröffentlichung zu testen.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 81,
+    "original_frage": "Wie unterscheiden sich Komponententests, Funktionstests und Integrationstests im Softwareentwicklungsprozess voneinander?",
+    "original_antwort": "Komponententests überprüfen einzelne Softwarekomponenten, wie Funktionen, Klassen oder Module, isoliert voneinander. Sie sollen sicherzustellen, dass jede Komponente ordnungsgemäß funktioniert und die erwarteten Ergebnisse liefert.\nFunktionstests testen die Software auf die funktionalen Anforderungen. Sie überprüfen, ob das System als Ganzes die gewünschten Funktionen und Verhaltensweisen korrekt umsetzt.\nIntegrationstests prüfen die Interaktion zwischen verschiedenen Komponenten und stellen sicher, dass sie zusammenarbeiten und korrekt integriert sind. Sie testen die Schnittstellen und Kommunikation zwischen den Komponenten.",
+    "alternativfragen": [
+      {
+        "frage": "Erklären Sie den Unterschied zwischen Komponenten-, Funktions- und Integrationstests.",
+        "antwort": "Komponententests: Einzelne Module. Funktionstests: Gesamtsystem, Funktionalität. Integrationstests: Zusammenspiel der Module.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Art von Test würde überprüfen, ob sich ein Benutzer erfolgreich anmelden kann?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Komponententest",
+          "b": "Integrationstest",
+          "c": "Funktionstest",
+          "d": "Unit-Test"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Warum sind Integrationstests notwendig, selbst wenn alle Komponententests erfolgreich waren?",
+        "antwort": "Weil die einzelnen Komponenten zwar isoliert korrekt funktionieren können, aber Fehler im Zusammenspiel (z.B. in der Kommunikation oder an Schnittstellen) auftreten können, die nur durch Integrationstests aufgedeckt werden.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 82,
+    "original_frage": "Erläutern Sie die Methode des Blue-Green Deployments.",
+    "original_antwort": "Die Idee des Blue-Green Deployments besteht darin, zwei 82\nseparate und identische Umgebungen („Blue\" und „Green\") bereitzustellen.\n- Die aktuelle Produktionsversion (Blue) ist live.\n- Eine neue Version der Anwendung (Green) wird in der separaten Umgebung bereitgestellt und getestet.\n- Sobald die Tests erfolgreich abgeschlossen sind, kann der Datenverkehr von Blue auf Green umgeleitet werden.\n- Der Datenverkehr wird schrittweise umgeleitet, um sicherzustellen, dass das System in der Green-Umgebung ordnungsgemäß funktioniert.\n- Falls Probleme in der Green-Umgebung auftreten, kann der Datenverkehr schnell auf die Blue-Umgebung zurückgeleitet werden.",
+    "alternativfragen": [
+      {
+        "frage": "Beschreiben Sie das Prinzip des Blue-Green Deployments.",
+        "antwort": "Zwei identische Umgebungen (Blue/Green), wobei immer nur eine live ist; Wechsel zwischen den Umgebungen bei Updates.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist der Hauptvorteil von Blue-Green Deployments?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Es ist schneller als andere Deployment-Methoden.",
+          "b": "Es benötigt weniger Ressourcen.",
+          "c": "Es minimiert die Ausfallzeit bei Updates und ermöglicht ein schnelles Rollback bei Problemen.",
+          "d": "Es macht die Software sicherer."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Was passiert, wenn während eines Blue-Green Deployments ein Problem in der neuen Version (Green) auftritt?",
+        "antwort": "Der Datenverkehr wird einfach wieder auf die alte, funktionierende Version (Blue) umgeleitet, während das Problem in der Green-Umgebung behoben wird.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 83,
+    "original_frage": "Wofür steht die Abkürzung KVP im Qualitätsmanagement?",
+    "original_antwort": "KVP (kontinuierlicher Verbesserungsprozess) ist ein Ansatz zur permanenten Verbesserung in Organisationen. Das Ziel ist eine kontinuierliche Verbesserung in Prozessen, Produkten und Dienstleistungen, um die Effizienz und die Qualität im Unternehmen langfristig zu stärken. Der kontinuierliche Verbesserungsprozess wird niemals beendet.",
+    "alternativfragen": [
+      {
+        "frage": "Was bedeutet KVP?",
+        "antwort": "Kontinuierlicher Verbesserungsprozess.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist das Ziel von KVP?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Die Kosten zu senken.",
+          "b": "Die Mitarbeiterzahl zu reduzieren.",
+          "c": "Prozesse, Produkte und Dienstleistungen stetig zu verbessern.",
+          "d": "Neue Märkte zu erschließen."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Ist KVP ein einmaliger Vorgang oder ein fortlaufender Prozess?",
+        "antwort": "KVP ist ein *fortlaufender* Prozess, der darauf abzielt, ständige, inkrementelle Verbesserungen in allen Bereichen eines Unternehmens zu erzielen. Es ist nie wirklich 'abgeschlossen'.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 84,
+    "original_frage": "Erklären Sie den Unterschied zwischen den Begriffen Qualitätssicherung und Qualitätskontrolle.",
+    "original_antwort": "Qualitätssicherung ist ein proaktiver Prozess, der darauf abzielt, Fehler während der Produktion oder Bereitstellung von Dienstleistungen zu verhindern. Es handelt sich um systematische Maßnahmen, die dazu dienen, die Qualität eines Endprodukts von Beginn an zu gewährleisten.\nQualitätskontrolle ist ein reaktiver Prozess, bei dem Produkte oder Dienstleistungen nach ihrer Herstellung oder Bereitstellung auf Fehler geprüft werden. Es umfasst Maßnahmen wie Tests und Inspektionen, um sicherzustellen, dass das Endprodukt den Qualitätsstandards entspricht.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist der Hauptunterschied zwischen Qualitätssicherung und Qualitätskontrolle?",
+        "antwort": "Qualitätssicherung: Proaktiv, Fehlervermeidung. Qualitätskontrolle: Reaktiv, Fehlererkennung.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welcher Prozess findet *vor* der Produktion statt: Qualitätssicherung oder Qualitätskontrolle?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Qualitätssicherung",
+          "b": "Qualitätskontrolle",
+          "c": "Beide",
+          "d": "Keiner von beiden"
+        },
+        "korrekte_antworten": [
+          "a"
+        ]
+      },
+      {
+        "frage": "Nennen Sie ein Beispiel für eine Maßnahme der Qualitätssicherung und ein Beispiel für eine Maßnahme der Qualitätskontrolle.",
+        "antwort": "Qualitätssicherung: Schulung der Mitarbeiter, Festlegung von Standards, Prozessoptimierung. Qualitätskontrolle: Inspektion des fertigen Produkts, Tests, Überprüfung von Dokumenten.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 85,
+    "original_frage": "Nennen und erklären Sie die vier Phasen des PDCA-Zyklus.",
+    "original_antwort": "Plan:\n- Festlegung von Zielen und Planung der Aktivitäten zur Zielerreichung\n- Entwicklung eines Plans mit klaren Maßnahmen\nDo:\n- Implementierung der definierten Maßnahmen und Aktivitäten\n- Erfassung von Daten und Informationen während der Umsetzung\nCheck:\n- Überprüfung und Bewertung der Ergebnisse, die während der Umsetzung gesammelt wurden\n- Vergleich der tatsächlichen Ergebnisse mit den definierten Zielen\n- Analyse von Abweichungen und Ursachen von Problemen\nAct:\n- Basierend auf den Ergebnissen der Überprüfung werden geeignete Maßnahmen endgültig umgesetzt\n- Aktualisierung des Plans für den nächsten Zyklus, basierend auf den gewonnenen Erkenntnissen",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie die vier Phasen des PDCA-Zyklus.",
+        "antwort": "Plan, Do, Check, Act.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was passiert in der 'Check'-Phase des PDCA-Zyklus?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Die Maßnahmen werden geplant.",
+          "b": "Die Maßnahmen werden umgesetzt.",
+          "c": "Die Ergebnisse werden überprüft und mit den Zielen verglichen.",
+          "d": "Die Maßnahmen werden dauerhaft eingeführt."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Warum ist der PDCA-Zyklus ein *Zyklus* und nicht ein linearer Prozess?",
+        "antwort": "Weil die Ergebnisse der 'Act'-Phase in die Planung (Plan) des nächsten Durchlaufs einfließen, wodurch ein kontinuierlicher Verbesserungsprozess entsteht.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 86,
+    "original_frage": "Was bedeutet es, wenn eine Software als barrierefrei bezeichnet wird?",
+    "original_antwort": "Barrierefreie Software bedeutet, dass die Software so gestaltet ist, dass sie von allen Menschen, einschließlich Menschen mit Behinderungen, genutzt werden kann. Dies beinhaltet Funktionen wie Bildschirmleseprogramme für Blinde, Untertitel und Transkriptionen für Gehörlose, und die Fähigkeit, die Software mit einer Tastatur oder Spracherkennung anstelle einer Maus zu bedienen.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie 'Barrierefreiheit' im Kontext von Software.",
+        "antwort": "Zugänglichkeit und Nutzbarkeit für Menschen mit Behinderungen.",
+        "typ": "text"
+      },
+      {
+        "frage": "Nennen Sie drei Beispiele für Merkmale barrierefreier Software.",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Schnelle Ladezeiten, hohe Auflösung, viele Animationen.",
+          "b": "Komplexe Menüs, viele Funktionen, bunte Farben.",
+          "c": "Alternativtexte für Bilder, Tastaturbedienbarkeit, anpassbare Schriftgrößen.",
+          "d": "Viele Pop-ups, automatische Updates, ständige Benachrichtigungen."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Warum ist Barrierefreiheit in der Softwareentwicklung wichtig?",
+        "antwort": "Weil Software für *alle* Menschen zugänglich und nutzbar sein sollte, unabhängig von ihren körperlichen oder kognitiven Fähigkeiten. Barrierefreiheit ist nicht nur eine Frage der sozialen Verantwortung, sondern oft auch gesetzlich vorgeschrieben.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 87,
+    "original_frage": "Was versteht man unter Softwareergonomie und welche Prinzipien und Maßnahmen können angewendet werden, um die Benutzerfreundlichkeit von Softwareanwendungen zu verbessern?",
+    "original_antwort": "Softwareergonomie bezieht sich auf die Gestaltung von 87\nSoftware, die auf die menschlichen Fähigkeiten abgestimmt ist, um Benutzerfreundlichkeit und Effizienz zu maximieren.\nDazu gehören Prinzipien wie:\n- Nutzerzentrierung: Gestaltung mit Blick auf die Bedürfnisse und Fähigkeiten der Endnutzer\n- Einfachheit und Konsistenz: intuitive und konsistente Benutzeroberflächen\n- Rückmeldung: klare und zeitnahe Rückmeldung an die Benutzer über ihre Interaktionen\n- Anpassbarkeit: Flexibilität zur Anpassung an individuelle Bedürfnisse\n- Fehlervermeidung und -behandlung: Design, das die Fehleranfälligkeit minimiert und bei der Fehlerbehebung unterstützt",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie 'Softwareergonomie'.",
+        "antwort": "Gestaltung von Software unter Berücksichtigung menschlicher Bedürfnisse und Fähigkeiten.",
+        "typ": "text"
+      },
+      {
+        "frage": "Nennen Sie drei Prinzipien der Softwareergonomie.",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Viele Funktionen, komplexe Menüs, bunte Farben.",
+          "b": "Schnelle Ladezeiten, hohe Auflösung, viele Animationen.",
+          "c": "Nutzerzentrierung, Einfachheit und Konsistenz, klare Rückmeldung.",
+          "d": "Ständige Updates, viele Pop-ups, automatische Benachrichtigungen."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Warum ist Softwareergonomie wichtig?",
+        "antwort": "Weil sie die Benutzerfreundlichkeit und Effizienz von Software verbessert, die Zufriedenheit der Benutzer erhöht, Fehler reduziert und die Produktivität steigert.",
+        "typ": "text"
+      }
+    ]
+  },
+    {
+    "karten_nummer": 88,
+    "original_frage": "Nennen Sie in Bezug auf Softwareergonomie die Grundsätze der Dialoggestaltung.",
+    "original_antwort": "Die Grundsätze der Dialoggestaltung sind Richtlinien zur Verbesserung der Benutzer-Software-Interaktion:\n- Aufgabenangemessenheit: Software unterstützt Nutzer effektiv und stört nicht\n- Selbstbeschreibungsfähigkeit: jede Aktion sollte ohne zusätzliche Erklärung verständlich sein\n- Steuerbarkeit: Nutzer können Interaktionen steuern und beeinflussen\n- Erwartungskonformität: Software entspricht gängigen Standards und Erwartungen\n- Fehlertoleranz: Software verzeiht Fehler und unterstützt bei deren Behebung\n- Individualisierbarkeit: Nutzer können Software an ihre Bedürfnisse anpassen\n- Lernförderlichkeit: Software unterstützt den Lernprozess des Nutzers",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie fünf Grundsätze der Dialoggestaltung nach ISO 9241-110.",
+        "antwort": "Aufgabenangemessenheit, Selbstbeschreibungsfähigkeit, Steuerbarkeit, Erwartungskonformität, Fehlertoleranz.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was bedeutet 'Erwartungskonformität' im Kontext der Dialoggestaltung?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Die Software ist immer verfügbar.",
+          "b": "Die Software sieht gut aus.",
+          "c": "Die Software verhält sich so, wie der Benutzer es aufgrund seiner Vorkenntnisse und allgemeiner Standards erwartet.",
+          "d": "Die Software ist schnell."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Was versteht man unter 'Selbstbeschreibungsfähigkeit' einer Software?",
+        "antwort": "Selbstbeschreibungsfähigkeit bedeutet, dass die Software so gestaltet ist, dass ihre Funktionen und Bedienelemente für den Benutzer intuitiv verständlich sind, ohne dass er eine Anleitung oder ein Handbuch benötigt.",
+        "typ": "text"
+      }
+    ]
+  },
+      {
+    "karten_nummer": 89,
+      "original_frage": "Was sind Smart Contracts und wie funktionieren sie?",
+      "original_antwort": "Smart Contracts sind computerbasierte Verträge, die\nautomatisch ausgeführt werden, sobald die in ihnen festge-\nlegten Bedingungen erfüllt sind. Sie werden auf Blockchain-\nPlattformen erstellt und sind programmierbare Verträge, die\nTransaktionen und Aktionen verwalten können. Sie nutzen die\nBlockchain-Technologie, um Transparenz, Sicherheit und\nVertrauenswürdigkeit zu gewährleisten, da sie dezentralisiert\nund unveränderlich sind.\n\nSmart Contracts ermöglichen es Parteien, Vereinbarungen\nohne einen Zwischenhändler umzusetzen und bieten eine\neffiziente, zuverlässige und automatisierte Methode zur\nAbwicklung von Verträgen.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren sie Smart Contracts",
+        "antwort": "Automatisierte, selbstausführende Verträge auf einer Blockchain.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Technologie liegt Smart Contracts zugrunde?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Künstliche Intelligenz",
+          "b": "Blockchain",
+          "c": "Cloud Computing",
+          "d": "Big Data"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Nennen Sie drei Vorteile der Nutzung von Smart Contracts.",
+        "antwort": "Automatisierung, Transparenz, Sicherheit, Effizienz, Kostenreduktion (durch Wegfall von Zwischenhändlern), Vertrauenswürdigkeit (da unveränderlich).",
+        "typ": "text"
+      }
+    ]
+  }
+]

@@ -1,0 +1,314 @@
+[
+  {
+    "karten_nummer": 1,
+    "original_frage": "Erläutern Sie den Zusammenhang zwischen dem Prinzip der Zweckbindung, dem Prinzip der Datenminimierung und Speicherbegrenzung im Datenschutz.",
+    "original_antwort": "Das Grundprinzip der Zweckbindung besagt, dass personenbezogene Daten nur für den Zweck verwendet werden dürfen, für den sie erhoben worden sind. Eine Verarbeitung von personenbezogenen Daten zu anderen Zwecken ist unzulässig. Hierbei dürfen nur die Daten erfasst werden, welche auch wirklich für den genannten Zweck benötigt werden. \nDas Ziel des Prinzips der Datenminimierung und Speicherbegrenzung ist es, möglichst wenig personenbezogene Daten zu verarbeiten. Wenn die personenbezogenen Daten für den Zweck, für den sie erhoben wurden, nicht mehr notwendig sind, müssen diese gelöscht werden.",
+    "alternativfragen": [
+      {
+        "frage": "Was versteht man unter Zweckbindung, Datenminimierung und Speicherbegrenzung im Kontext des Datenschutzes?",
+        "antwort": "Zweckbindung bedeutet, dass personenbezogene Daten nur für den Erhebungszweck verwendet werden dürfen. Datenminimierung fordert, so wenig personenbezogene Daten wie möglich zu verarbeiten. Speicherbegrenzung schreibt vor, dass Daten zu löschen sind, wenn sie für den Zweck nicht mehr benötigt werden.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche der folgenden Aussagen sind im Kontext von Zweckbindung, Datenminimierung und Speicherbegrenzung korrekt?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Daten dürfen für beliebige Zwecke verwendet werden, solange sie verschlüsselt sind.",
+          "b": "Es sollen so viele Daten wie möglich gesammelt werden, um eine umfassende Analyse zu ermöglichen.",
+          "c": "Daten, die nicht mehr benötigt werden, müssen gelöscht werden.",
+          "d": "Die Zweckbindung erlaubt die Weitergabe von Daten an Dritte ohne Einschränkung."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Wie hängen die Prinzipien der Zweckbindung, Datenminimierung und Speicherbegrenzung zusammen?",
+        "antwort": "Sie sind komplementäre Prinzipien des Datenschutzes. Zweckbindung limitiert die Verwendung, Datenminimierung die Erhebung und Speicherbegrenzung die Aufbewahrung von personenbezogenen Daten.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 2,
+    "original_frage": "Das Datenschutzrecht basiert auf dem Verbotsprinzip mit Erlaubnisvorbehalt. Erklären Sie dieses Grundprinzip.",
+    "original_antwort": "Jegliche Erhebung, Verarbeitung und Nutzung von personenbezogenen Daten ist grundsätzlich verboten, außer die Einwilligung des Betroffenen liegt vor oder eine gesetzliche Regelung ist in Kraft.",
+    "alternativfragen": [
+      {
+        "frage": "Was bedeutet das Verbotsprinzip mit Erlaubnisvorbehalt im Datenschutz?",
+        "antwort": "Es bedeutet, dass die Verarbeitung personenbezogener Daten grundsätzlich verboten ist, es sei denn, es liegt eine explizite Erlaubnis (Einwilligung oder Gesetz) vor.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche der folgenden Bedingungen müssen erfüllt sein, damit die Verarbeitung personenbezogener Daten nach dem Verbotsprinzip mit Erlaubnisvorbehalt zulässig ist?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Die Daten sind anonymisiert.",
+          "b": "Es liegt eine Einwilligung des Betroffenen vor.",
+          "c": "Die Daten werden verschlüsselt gespeichert.",
+          "d": "Es existiert eine gesetzliche Grundlage."
+        },
+        "korrekte_antworten": [
+          "b",
+          "d"
+        ]
+      },
+      {
+        "frage": "In welchen Fällen ist die Verarbeitung personenbezogener Daten *nicht* erlaubt?",
+        "antwort": "Die Verarbeitung personenbezogener Daten ist immer dann nicht erlaubt, wenn weder eine Einwilligung der betroffenen Person noch eine gesetzliche Grundlage für die Verarbeitung vorliegt.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 3,
+    "original_frage": "Welche Betroffenenrechte gibt es laut DSGVO?",
+    "original_antwort": "Die DSGVO nennt die folgenden Betroffenenrechte:\n- Recht auf Information\n- Recht auf Auskunft\n- Recht auf Berichtigung\n- Recht auf Löschung\n- Recht auf Einschränkung der Verarbeitung\n- Recht auf Datenübertragbarkeit\n- Recht auf Widerspruch",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie fünf Rechte, die betroffene Personen gemäß der DSGVO haben.",
+        "antwort": "Recht auf Information, Auskunft, Berichtigung, Löschung und Widerspruch.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche der folgenden Rechte sind *keine* Betroffenenrechte gemäß DSGVO?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Recht auf Auskunft",
+          "b": "Recht auf Datenübertragbarkeit",
+          "c": "Recht auf unbeschränkte Weitergabe der Daten",
+          "d": "Recht auf Widerspruch"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Was beinhaltet das Recht auf Berichtigung nach der DSGVO?",
+        "antwort": "Das Recht auf Berichtigung beinhaltet, dass betroffene Personen die Korrektur falscher oder unvollständiger personenbezogener Daten verlangen können.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 4,
+    "original_frage": "Was ist der Unterschied zwischen den Begriffen Datenschutz und Datensicherheit?",
+    "original_antwort": "Beim Datenschutz geht es um den Schutz personenbezogener Daten von natürlichen Personen. Datenschutz zielt darauf ab, die Privatsphäre der Menschen zu schützen und Missbrauch von persönlichen Daten zu verhindern. Gesetze und Vorschriften, wie die Europäische Datenschutz-Grundverordnung (DSGVO), definieren, was im Datenschutz gilt und wie Unternehmen und Organisationen personenbezogene Daten behandeln müssen.\nDer Bereich der Datensicherheit umfasst den Schutz von Daten gegen Verlust, Manipulation, Beschädigung oder unautorisierten Zugriff, unabhängig davon, ob diese Daten einen Personenbezug aufweisen oder nicht.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie die Begriffe Datenschutz und Datensicherheit.",
+        "antwort": "Datenschutz schützt personenbezogene Daten vor Missbrauch und sichert die Privatsphäre. Datensicherheit schützt alle Daten vor Verlust, Manipulation und unbefugtem Zugriff.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Aussage beschreibt den Unterschied zwischen Datenschutz und Datensicherheit am besten?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Datenschutz und Datensicherheit sind Synonyme.",
+          "b": "Datenschutz bezieht sich auf technische Maßnahmen, Datensicherheit auf rechtliche Aspekte.",
+          "c": "Datenschutz betrifft personenbezogene Daten, Datensicherheit alle Arten von Daten.",
+          "d": "Datensicherheit ist ein Teilbereich des Datenschutzes."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Warum ist es wichtig, zwischen Datenschutz und Datensicherheit zu unterscheiden?",
+        "antwort": "Weil Datenschutz sich speziell auf den Schutz der Privatsphäre und den Umgang mit personenbezogenen Daten konzentriert, während Datensicherheit einen umfassenderen Schutz aller Daten beinhaltet, unabhängig von ihrem Bezug zu Personen.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 5,
+    "original_frage": "Erklären Sie den Grundsatz der Transparenz und den Grundsatz der Richtigkeit im Datenschutz.",
+    "original_antwort": "Die Prinzipien der Transparenz und Richtigkeit spielen eine wichtige Rolle bei der Einhaltung der Datenschutzgesetze und der Verarbeitung personenbezogener Daten.\nTransparenz bezieht sich darauf, dass Organisationen jederzeit offen und klar darüber informieren müssen, welche personenbezogene Daten durch wen und zu welchen Zwecken verarbeitet werden und wurden.\nDas Prinzip der Richtigkeit bedeutet, dass personenbezogene Daten korrekt sein sollten. Organisationen sind dafür verantwortlich sicherzustellen, dass die von ihnen verarbeiteten Daten richtig sind. Personen haben das Recht, ungenaue oder veraltete Daten korrigieren zu lassen.",
+    "alternativfragen": [
+      {
+        "frage": "Was bedeuten die Grundsätze der Transparenz und Richtigkeit im Datenschutz?",
+        "antwort": "Transparenz: Offenlegung der Datenverarbeitung. Richtigkeit: Daten müssen korrekt sein.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Pflichten ergeben sich für Organisationen aus den Grundsätzen der Transparenz und Richtigkeit?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Sie müssen Daten geheim halten.",
+          "b": "Sie müssen umfassend über die Datenverarbeitung informieren.",
+          "c": "Sie müssen falsche Daten auf Anfrage berichtigen.",
+          "d": "Sie müssen Daten nach Belieben ändern dürfen."
+        },
+        "korrekte_antworten": [
+          "b",
+          "c"
+        ]
+      },
+      {
+        "frage": "Wie können betroffene Personen von ihrem Recht auf Richtigkeit Gebrauch machen?",
+        "antwort": "Indem sie von der Organisation, die ihre Daten verarbeitet, die Berichtigung falscher oder unvollständiger Daten verlangen.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 6,
+    "original_frage": "Welche besonderen Kategorien personenbezogener Daten werden gemäß der Datenschutz-Grundverordnung (DSGVO) definiert?",
+    "original_antwort": "Die DSGVO unterscheidet zwischen „personenbezogenen Daten\" und „besonderen Kategorien personenbezogener Daten\". Zu den besonderen Kategorien personenbezogener Daten gehören Daten, die folgende Informationen enthalten:\n- Rassische oder ethnische Herkunft\n- Politische Meinungen\n- Religiöse oder philosophische Überzeugungen\n- Gewerkschaftszugehörigkeit\n- Genetische Daten\n- Biometrische Daten\n- Gesundheitsdaten\n- Daten zur sexuellen Orientierung\nDiese besonderen Kategorien personenbezogener Daten sind besonders schützenswert, da ihre Verarbeitung ein höheres Risiko für die Grundrechte und Freiheiten der betroffenen Personen darstellen könnte.",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie fünf Beispiele für besondere Kategorien personenbezogener Daten gemäß DSGVO.",
+        "antwort": "Rassische oder ethnische Herkunft, politische Meinungen, religiöse Überzeugungen, Gesundheitsdaten, biometrische Daten.",
+        "typ": "text"
+      },
+      {
+        "frage": "Warum sind besondere Kategorien personenbezogener Daten besonders schützenswert?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Weil sie leichter zu stehlen sind.",
+          "b": "Weil ihre Verarbeitung ein höheres Risiko für die Grundrechte und Freiheiten birgt.",
+          "c": "Weil sie wertvoller für Unternehmen sind.",
+          "d": "Weil sie immer verschlüsselt werden müssen."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Was ist der Unterschied zwischen 'personenbezogenen Daten' und 'besonderen Kategorien personenbezogener Daten' nach DSGVO?",
+        "antwort": "Besondere Kategorien personenbezogener Daten sind eine Untergruppe der personenbezogenen Daten, die aufgrund ihrer Sensibilität einen erhöhten Schutz genießen.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 7,
+    "original_frage": "Wer muss bei einer Datenschutzverletzung informiert werden?",
+    "original_antwort": "Bei einer Datenschutzverletzung müssen zwei Hauptparteien informiert werden:\n1. Die Datenschutzbehörde: Innerhalb von 72 Stunden nach Feststellung der Verletzung.\n2. Betroffene Einzelpersonen: Wenn die Verletzung ein hohes Risiko für ihre Rechte und Freiheiten darstellt.",
+    "alternativfragen": [
+      {
+        "frage": "Welche beiden Parteien müssen im Falle einer Datenschutzverletzung benachrichtigt werden?",
+        "antwort": "Die zuständige Datenschutzbehörde und, unter Umständen, die betroffenen Personen.",
+        "typ": "text"
+      },
+      {
+        "frage": "Unter welchen Umständen müssen betroffene Personen über eine Datenschutzverletzung informiert werden?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Immer, unabhängig vom Risiko.",
+          "b": "Nur, wenn die Daten verschlüsselt waren.",
+          "c": "Wenn die Verletzung ein hohes Risiko für ihre Rechte und Freiheiten darstellt.",
+          "d": "Nur auf ausdrücklichen Wunsch der betroffenen Person."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Innerhalb welchen Zeitraums muss die Datenschutzbehörde über eine Datenschutzverletzung informiert werden?",
+        "antwort": "Die Datenschutzbehörde muss innerhalb von 72 Stunden nach Feststellung der Datenschutzverletzung informiert werden.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 8,
+    "original_frage": "Was sind die Hauptaufgaben und Verantwortlichkeiten von Datenschutzbeauftragten?",
+    "original_antwort": "Datenschutzbeauftragte beraten das Unternehmen hinsichtlich der Einhaltung von Datenschutzgesetzen und -richtlinien. Sie überwachen die Einhaltung dieser Regeln innerhalb des Unternehmens. Sie sind die Schnittstelle zu Datenschutzaufsichtsbehörden und bearbeiten Anfragen und Beschwerden von Betroffenen in Bezug auf ihre Datenschutzrechte. Zudem beraten sie bei Datenschutzfolgenabschätzungen.",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie drei Hauptaufgaben eines Datenschutzbeauftragten.",
+        "antwort": "Beratung des Unternehmens, Überwachung der Einhaltung der Datenschutzgesetze, Ansprechpartner für Datenschutzbehörden.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche der folgenden Aussagen beschreibt die Rolle eines Datenschutzbeauftragten am besten?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Er ist für die IT-Sicherheit des Unternehmens verantwortlich.",
+          "b": "Er ist für die Einhaltung der Datenschutzbestimmungen im Unternehmen verantwortlich.",
+          "c": "Er ist für die Entwicklung neuer Produkte verantwortlich.",
+          "d": "Er ist für die Einstellung neuer Mitarbeiter verantwortlich."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "In welchen Situationen ist ein Datenschutzbeauftragter involviert?",
+        "antwort": "Ein Datenschutzbeauftragter ist involviert bei der Beratung des Unternehmens zu Datenschutzfragen, bei der Überwachung interner Prozesse, bei Anfragen von Betroffenen und Behörden sowie bei Datenschutzfolgenabschätzungen.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 9,
+    "original_frage": "Die Ziele der Datensicherheit sind Vertraulichkeit, Integrität, Verfügbarkeit und Authentizität. Erläutern Sie diese 4 Begriffe.",
+    "original_antwort": "Vertraulichkeit: Daten und Systeme dürfen nur berechtigten Personen zugänglich sein.\nIntegrität: Daten müssen immer korrekt sein und dürfen nicht unbemerkt verändert werden können.\nVerfügbarkeit: Daten und IT-Systeme müssen zur Verfügung stehen um von autorisierten Personen genutzt werden können.\nAuthentizität: Die Echtheit und Vertrauenswürdigkeit von Daten müssen gewährleistet sein.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie die vier Grundziele der Datensicherheit: Vertraulichkeit, Integrität, Verfügbarkeit und Authentizität.",
+        "antwort": "Vertraulichkeit: Schutz vor unbefugtem Zugriff. Integrität: Schutz vor Veränderung. Verfügbarkeit: Zugriff muss gewährleistet sein. Authentizität: Echtheit muss sichergestellt sein.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welches der folgenden Ziele der Datensicherheit ist *nicht* korrekt beschrieben?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Vertraulichkeit: Daten dürfen nur von autorisierten Personen eingesehen werden.",
+          "b": "Integrität: Daten dürfen verändert werden, solange die Änderungen protokolliert werden.",
+          "c": "Verfügbarkeit: Daten und Systeme müssen bei Bedarf zugänglich sein.",
+          "d": "Authentizität: Die Herkunft und Echtheit von Daten muss überprüfbar sein."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Warum ist die Integrität von Daten wichtig?",
+        "antwort": "Die Integrität von Daten ist wichtig, um sicherzustellen, dass Daten korrekt und unverfälscht sind und nicht unbemerkt manipuliert wurden.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 10,
+    "original_frage": "Nennen Sie drei Aufgaben von IT-Sicherheitsbeauftragten.",
+    "original_antwort": "Zu den Aufgaben von IT-Sicherheitsbeauftragten gehören:\n- Erstellung von Richtlinien zur Informationssicherheit\n- Praktische Umsetzung von Maßnahmen der IT-Sicherheit\n- Organisation von Schulungen und Trainings\n- Bearbeitung von IT-Sicherheitsvorfällen\n- Dokumentation und Überwachung der Sicherheitsmaßnahmen\n- Ansprechpartner im Bereich IT-Sicherheit für Mitarbeitende und Unternehmensleitung\n- u. a.",
+    "alternativfragen": [
+      {
+        "frage": "Welche drei Hauptaufgaben hat ein IT-Sicherheitsbeauftragter?",
+        "antwort": "Erstellung von Richtlinien, Umsetzung von Sicherheitsmaßnahmen, Schulung der Mitarbeiter.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was gehört *nicht* zu den typischen Aufgaben eines IT-Sicherheitsbeauftragten?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Entwicklung von Sicherheitsrichtlinien",
+          "b": "Schulung von Mitarbeitern in IT-Sicherheitsfragen",
+          "c": "Verkauf von IT-Sicherheitsprodukten",
+          "d": "Überwachung der Einhaltung von Sicherheitsmaßnahmen"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Wer ist typischerweise Ansprechpartner für Fragen zur IT-Sicherheit in einem Unternehmen?",
+        "antwort": "Der IT-Sicherheitsbeauftragte ist in der Regel der zentrale Ansprechpartner für Fragen zur IT-Sicherheit in einem Unternehmen.",
+        "typ": "text"
+      }
+    ]
+  }
+]

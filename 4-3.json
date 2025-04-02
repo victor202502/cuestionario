@@ -1,0 +1,343 @@
+[
+  {
+    "karten_nummer": 154,
+    "original_frage": "Was ist das Internet der Dinge (IoT) und welche Probleme sind damit verbunden?",
+    "original_antwort": "Das Internet der Dinge (IoT) bezieht sich auf die Vernetzung physischer Geräte, Sensoren und Objekte über das Internet. Hierdurch können diese Objekte miteinander kommunizieren, Daten sammeln und austauschen, sowie intelligente Aktionen ausführen.\nMit dem IoT sind auch neue Probleme verbunden:\n- Da das IoT eine Vielzahl von vernetzten Geräten umfasst, entstehen neue Sicherheitsrisiken.\n- Datenschutz: Das IoT generiert eine enorme Menge an Daten über nutzende Personen, ihre Gewohnheiten und ihr Verhalten.\n- Interoperabilität: Unterschiedliche Standards, Protokolle und Kommunikationswege erschweren die Zusammenarbeit der verschiedenen IoT-Komponenten.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie 'Internet der Dinge' (IoT).",
+        "antwort": "Vernetzung von physischen Geräten, die Daten sammeln und austauschen können.",
+        "typ": "text"
+      },
+      {
+        "frage": "Nennen Sie drei typische Probleme oder Herausforderungen im Zusammenhang mit dem IoT.",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Zu hohe Geschwindigkeit, zu geringe Kosten, zu wenig Daten.",
+          "b": "Sicherheit, Datenschutz, Interoperabilität.",
+          "c": "Zu einfache Bedienung, zu wenig Funktionen, zu kleine Bildschirme.",
+          "d": "Zu kurze Akkulaufzeit, zu großes Gewicht, zu hohe Auflösung."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Warum ist Datenschutz ein wichtiges Thema im Zusammenhang mit dem IoT?",
+        "antwort": "Weil IoT-Geräte oft große Mengen an persönlichen Daten sammeln, speichern und verarbeiten (z.B. Standortdaten, Gesundheitsdaten, Nutzungsgewohnheiten), die missbraucht werden könnten.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 155,
+    "original_frage": "Welche neuen Herausforderungen entstehen durch Big Data in der Speicherung und Verarbeitung von Daten?",
+    "original_antwort": "Herausforderungen, die durch Big Data entstehen:\n- Datenmengen: Die Speicherung und Verarbeitung großer Datenmengen erfordern leistungsfähige und skalierbare Infrastrukturen, die in der Lage sind, diese Datenmengen effizient zu verarbeiten.\n- Datenintegration: Die Integration von heterogenen Datenquellen kann eine Herausforderung sein, da sie unterschiedliche Formate und Strukturen aufweisen können.\n- Datenqualität: Große Datensätze können unvollständige, ungenaue oder inkonsistente Daten enthalten.\n- Datenschutz und Sicherheit: Große Datensätze enthalten oft sensible und persönliche Informationen.\n- Datenverarbeitungsgeschwindigkeit: Big Data-Anwendungen erfordern oft Echtzeitverarbeitung.",
+    "alternativfragen": [
+      {
+        "frage": "Was versteht man unter 'Big Data'?",
+        "antwort": "Extrem große und komplexe Datenmengen, die mit herkömmlichen Methoden nicht mehr effizient verarbeitet werden können.",
+        "typ": "text"
+      },
+      {
+        "frage": "Nennen Sie drei typische Herausforderungen im Zusammenhang mit Big Data.",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Zu wenig Daten, zu langsame Verarbeitung, zu einfache Analyse.",
+          "b": "Hohe Datenmengen, Datenvielfalt (unterschiedliche Formate), Datengeschwindigkeit (Echtzeitverarbeitung), Datenqualität, Datenschutz.",
+          "c": "Zu kleine Bildschirme, zu wenig Speicherplatz, zu geringe Rechenleistung.",
+          "d": "Zu hohe Kosten, zu wenig Personal, zu komplexe Bedienung."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Warum stellt die Datenqualität bei Big Data oft ein Problem dar?",
+        "antwort": "Weil große Datenmengen oft aus verschiedenen Quellen stammen, unvollständig, fehlerhaft oder inkonsistent sein können. Die Bereinigung und Aufbereitung dieser Daten ist ein wichtiger und oft aufwändiger Schritt.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 156,
+    "original_frage": "Was ist eine Blockchain und wie funktioniert sie?",
+    "original_antwort": "Eine Blockchain ist eine dezentrale digitale Datenbank, die Informationen in Form von Blöcken speichert und diese chronologisch zu einer Kette verbindet. Jeder Block enthält eine Liste von Transaktionen und einen eindeutigen Hash.\nDie Funktionsweise einer Blockchain beruht auf Konsensalgorithmen und kryptografischen Techniken. Wenn eine Transaktion stattfindet, wird sie von Teilnehmern des Netzwerks überprüft und dann in einen Block zusammengefasst. Dieser Block wird dann mithilfe des vorherigen Blocks und seines Hash-Werts verknüpft. Dadurch entsteht eine Kette von Blöcken, die eine unveränderliche Aufzeichnung aller Transaktionen bildet.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie 'Blockchain'.",
+        "antwort": "Eine verteilte, verkettete Datenbank, die Transaktionen in Blöcken speichert.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was macht eine Blockchain fälschungssicher?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Sie wird von einer zentralen Behörde kontrolliert.",
+          "b": "Sie verwendet starke Passwörter.",
+          "c": "Sie ist dezentral gespeichert, und jeder neue Block wird kryptographisch mit dem vorherigen verkettet (Hashing).",
+          "d": "Sie ist geheim."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+          "frage": "Nennen Sie einen bekannten Anwendungsfall für Blockchain-Technologie.",
+          "antwort": "Kryptowährungen wie Bitcoin sind ein bekannter Anwendungsfall. Weitere Anwendungen sind Lieferkettenmanagement, digitale Identitäten, Smart Contracts und das Gesundheitswesen.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 157,
+    "original_frage": "Was sind Smart Contracts und wie funktionieren sie?",
+    "original_antwort": "Smart Contracts sind computerbasierte Verträge, die automatisch ausgeführt werden, sobald die in ihnen festgelegten Bedingungen erfüllt sind. Sie werden auf Blockchain-Plattformen erstellt und sind programmierbare Verträge, die Transaktionen und Aktionen verwalten können. Sie nutzen die Blockchain-Technologie, um Transparenz, Sicherheit und Vertrauenswürdigkeit zu gewährleisten, da sie dezentralisiert und unveränderlich sind.\nSmart Contracts ermöglichen es Parteien, Vereinbarungen ohne einen Zwischenhändler umzusetzen und bieten eine effiziente, zuverlässige und automatisierte Methode zur Abwicklung von Verträgen.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren sie Smart Contracts",
+        "antwort": "Automatisierte, selbstausführende Verträge auf einer Blockchain.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Technologie liegt Smart Contracts zugrunde?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Künstliche Intelligenz",
+          "b": "Blockchain",
+          "c": "Cloud Computing",
+          "d": "Big Data"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Nennen Sie drei Vorteile der Nutzung von Smart Contracts.",
+        "antwort": "Automatisierung, Transparenz, Sicherheit, Effizienz, Kostenreduktion (durch Wegfall von Zwischenhändlern), Vertrauenswürdigkeit (da unveränderlich).",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 158,
+    "original_frage": "Nennen Sie drei Dienstleistungsmodelle im Cloud-Computing.",
+    "original_antwort": "Dienstleistungsmodelle von Cloud-Computing:\n- „Software-as-a-Service\" (SaaS): Servicemodell, bei dem Anwendungen über das Internet bereitgestellt werden\n- „Infrastructure-as-a-Service\" (IaaS): Servicemodell, bei dem virtuelle Ressourcen, wie z. B. Server und Speicher über das Internet bereitgestellt werden\n- „Platform-as-a-Service“ (PaaS): Servicemodell, das eine Entwicklungsplattform über das Internet bereitstellt\n- „Desktop-as-a-Service“ (DaaS): ist ein Servicemodell, bei dem ein virtueller Desktop über das Internet bereitgestellt wird\n- „Everything-as-a-Service“ (XaaS): ist ein erweitertes Konzept, bei dem alle IT-Dienstleistungen über das Internet bereitgestellt werden",
+    "alternativfragen": [
+      {
+        "frage": "Nennen und beschreiben Sie kurz die drei wichtigsten Cloud-Dienstmodelle (IaaS, PaaS, SaaS).",
+        "antwort": "IaaS: Infrastruktur. PaaS: Plattform. SaaS: Software.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welches Cloud-Dienstmodell stellt dem Benutzer eine vollständige Anwendung zur Verfügung, die er über das Internet nutzen kann?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "IaaS",
+          "b": "PaaS",
+          "c": "SaaS",
+          "d": "DaaS"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Was ist der Unterschied zwischen IaaS und PaaS?",
+        "antwort": "IaaS stellt grundlegende IT-Ressourcen (virtuelle Maschinen, Speicher, Netzwerke) bereit. PaaS stellt zusätzlich eine Entwicklungsumgebung bereit (Laufzeitumgebungen, Datenbanken, Entwicklungswerkzeuge), auf der Benutzer eigene Anwendungen entwickeln und betreiben können.",
+        "typ": "text"
+      }
+    ]
+  },
+    {
+    "karten_nummer": 159,
+    "original_frage": "Was sind die Unterschiede zwischen Cloud-, Fog- und Edge-Computing?",
+    "original_antwort": "Cloud-, Fog- und Edge-Computing unterscheiden sich in Bezug auf ihre Position in der Datenverarbeitungshierarchie und ihre jeweiligen Standorte:\n- Cloud-Computing bezieht sich auf die Bereitstellung von IT-Ressourcen über das Internet. Datenverarbeitung und -speicherung erfolgen in großen Rechenzentren, die von Cloud-Anbietern betrieben werden.\n- Fog-Computing ist eine dezentrale Ergänzung zur Cloud und liegt zwischen der Cloud und den Edge-Geräten. Es erfolgt eine dezentrale Verarbeitung der Daten am Rande des Netzwerks.\n- Edge-Computing bezieht sich auf die Datenverarbeitung und -speicherung in unmittelbarer Nähe zur Datenquelle.",
+    "alternativfragen": [
+      {
+        "frage": "Erklären Sie den Unterschied zwischen Cloud, Fog und Edge Computing.",
+        "antwort": "Cloud: Zentrale Datenverarbeitung in Rechenzentren. Fog: Dezentrale Verarbeitung näher am Netzwerkrand. Edge: Verarbeitung direkt am Entstehungsort der Daten.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welches dieser Konzepte (Cloud, Fog, Edge) ermöglicht die geringste Latenz (Verzögerung) bei der Datenverarbeitung?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Cloud Computing",
+          "b": "Fog Computing",
+          "c": "Edge Computing",
+          "d": "Alle gleich"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Warum ist Edge Computing wichtig für Anwendungen im Internet der Dinge (IoT)?",
+        "antwort": "Weil viele IoT-Geräte große Mengen an Daten in Echtzeit verarbeiten müssen (z.B. Sensoren in selbstfahrenden Autos). Edge Computing ermöglicht die Datenverarbeitung direkt vor Ort, reduziert die Latenz, spart Bandbreite und erhöht die Ausfallsicherheit, da die Geräte nicht auf eine ständige Verbindung zur Cloud angewiesen sind.",
+        "typ": "text"
+      }
+    ]
+  },
+      {
+    "karten_nummer": 173,
+    "original_frage": "Welche IP-Adresse repräsentiert die Adresse „127.0.0.1“ und was ist ihre Bedeutung?",
+    "original_antwort": "Die IP-Adresse 127.0.0.1 ist eine besondere IP-Adresse, die als „localhost“ bezeichnet wird. Diese IP-Adresse ist ein Standard-Adressraum für Loopback oder lokale Host-Kommunikation in einem Computer.\nIn einem Netzwerkkontext bedeutet „Loopback“, dass der Computer eine Netzwerkverbindung zu sich selbst herstellt. Diese Adresse wird normalerweise zum Testen von Netzwerkkommunikation verwendet, ohne tatsächlich Netzwerkpakete über das physische Netzwerk zu senden. Es ist eine Möglichkeit, den Netzwerk-Stack eines Systems zu prüfen und sicherzustellen, dass er korrekt funktioniert.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist die 'Loopback-Adresse'?",
+        "antwort": "127.0.0.1 (localhost), eine spezielle IP-Adresse, die auf den eigenen Computer verweist.",
+        "typ": "text"
+      },
+      {
+        "frage": "Wozu wird die Loopback-Adresse typischerweise verwendet?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Um auf das Internet zuzugreifen.",
+          "b": "Um andere Computer im Netzwerk zu erreichen.",
+          "c": "Um Netzwerkanwendungen auf dem lokalen Computer zu testen, ohne echtes Netzwerk-Interface.",
+          "d": "Um den Computer zu identifizieren."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Kann man über die Adresse 127.0.0.1 auf einen anderen Computer im Netzwerk zugreifen?",
+        "antwort": "Nein, 127.0.0.1 bezieht sich immer auf den *eigenen* Computer (localhost).",
+        "typ": "text"
+      }
+    ]
+  },
+      {
+    "karten_nummer": 174,
+    "original_frage": "Erklären Sie die Funktion des Standortpräfixes, der Teilnetz-ID und der Interface-ID einer IPv6 Adresse.",
+    "original_antwort": "Das Standortpräfix, oder auch Netzwerkpräfix, identifiziert das Netzwerk oder den Subnetzbereich in einer IPv6-Adresse. Er wird normalerweise vom Internetdienstanbieter (ISP) zugewiesen.\nDie Teilnetz-ID wird verwendet, um innerhalb eines größeren Netzwerks oder Subnetzes spezifische Teilnetze zu identifizieren. Sie wird normalerweise von den Netzwerkadministratoren definiert, um ihre internen Netzwerksegmente zu segmentieren und zu verwalten.\nDie Interface-ID identifiziert ein bestimmtes Gerät oder eine Netzwerkschnittstelle innerhalb eines Subnetzes. Sie wird normalerweise automatisch generiert oder manuell zugewiesen.",
+    "alternativfragen": [
+      {
+        "frage": "Nennen sie die 3 Hauptbestandteile einer IPv6 Adresse.",
+        "antwort": "Standortpräfix (Netzwerkpräfix), Teilnetz-ID (Subnetz-ID), Interface-ID.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welcher Teil einer IPv6-Adresse wird typischerweise vom Internetdienstanbieter (ISP) vergeben?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Interface-ID",
+          "b": "Teilnetz-ID",
+          "c": "Standortpräfix (Netzwerkpräfix)",
+          "d": "Alle drei"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Wie wird die Interface-ID einer IPv6-Adresse typischerweise generiert?",
+        "antwort": "Die Interface-ID wird oft automatisch generiert (z.B. basierend auf der MAC-Adresse der Netzwerkkarte) oder kann manuell konfiguriert werden.",
+        "typ": "text"
+      }
+    ]
+  },
+    {
+    "karten_nummer": 175,
+    "original_frage": "Nennen Sie drei Vorteile vom Protokoll IPv6 gegenüber dem Protokoll IPv4.",
+    "original_antwort": "Vorteile des IPv6-Protokolls gegenüber dem IPv4-Protokoll:\n- Größerer Adressraum: IPv6 bietet einen erheblich größeren Adressraum im Vergleich zu IPv4\n- Automatische Adresskonfiguration: IPv6 enthält Mechanismen für die automatische Konfiguration von IP-Adressen\n- Verbesserte Sicherheit: IPv6 integriert IPSec (Internet Protocol Security) standardmäßig in das Protokoll\n- Unterstützung für Quality of Service (QoS): IPv6 enthält integrierte Mechanismen zur Unterstützung von Quality of Service\n- Vereinfachtes Routing: Durch die Vereinfachung der Header-Struktur und die Verwendung von Hierarchien in IPv6 wird das Routing effizienter",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie drei Vorteile von IPv6 gegenüber IPv4.",
+        "antwort": "Größerer Adressraum, automatische Konfiguration, integrierte Sicherheit (IPsec).",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist der Hauptgrund für die Einführung von IPv6?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Es ist schneller.",
+          "b": "Es ist sicherer.",
+          "c": "Der Adressraum von IPv4 ist erschöpft.",
+          "d": "Es ist einfacher zu konfigurieren."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Bietet IPv6 integrierte Sicherheitsfunktionen?",
+        "antwort": "Ja, IPv6 enthält IPsec (Internet Protocol Security) als integralen Bestandteil, was die Verschlüsselung und Authentifizierung von Netzwerkverkehr erleichtert.",
+        "typ": "text"
+      }
+    ]
+  },
+          {
+    "karten_nummer": 176,
+    "original_frage": "Was ist der Unterschied zwischen den Protokollen TCP (Transmission Control Protocol) und UDP (User Datagram Protocol)?",
+    "original_antwort": "TCP und UDP sind beides Transportprotokolle, die in IP-Netzwerken verwendet werden, um Daten zu übertragen.\nTCP ist ein verbindungsorientiertes Protokoll, das eine zuverlässige Datenübertragung gewährleistet und Kontrollmechanismen wie Flusssteuerung und Überlastkontrolle bietet.\nUDP hingegen ist ein verbindungsloses Protokoll, bei dem keine Verbindung hergestellt wird und keine Garantie für die Zuverlässigkeit der Datenübertragung besteht. Es bietet keine eingebauten Kontrollmechanismen und eignet sich besser für Echtzeitkommunikation und Anwendungen, bei denen geringe Latenz wichtiger ist als die vollständige Übertragung aller Daten.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist der Hauptunterschied zwischen TCP und UDP?",
+        "antwort": "TCP: Verbindungsorientiert, zuverlässig. UDP: Verbindungslos, unzuverlässig.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welches Protokoll (TCP oder UDP) eignet sich besser für Anwendungen, bei denen die *Geschwindigkeit* wichtiger ist als die *vollständige* Übertragung aller Datenpakete?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "TCP",
+          "b": "UDP",
+          "c": "Beide gleich gut",
+          "d": "Keiner von beiden"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Nennen Sie ein Beispiel für eine Anwendung, die typischerweise TCP verwendet, und eine, die typischerweise UDP verwendet.",
+        "antwort": "TCP: Webbrowser (HTTP/HTTPS), E-Mail (SMTP), Dateiübertragung (FTP). UDP: Online-Spiele, Videostreaming, DNS, VoIP.",
+        "typ": "text"
+      }
+    ]
+  },
+        {
+    "karten_nummer": 177,
+    "original_frage": "Erklären Sie die Begriffe Routing und Switching.",
+    "original_antwort": "Routing bezieht sich auf den Prozess des Weiterleitens von Datenpaketen zwischen verschiedenen Netzwerken. Ein Router analysiert die IP-Adresse jedes Pakets und entscheidet, welchen Weg das Paket nehmen soll, um sein Zielnetzwerk zu erreichen. Routen werden normalerweise anhand verschiedener Faktoren wie der Netzwerkkentfernung, Qualität des Netzwerks, Priorität usw. ausgewählt.\nSwitching bezieht sich auf den Prozess des Weiterleitens von Datenpaketen innerhalb desselben Netzwerks. Ein Switch analysiert die MAC-Adresse jedes Pakets und verwendet eine Switching-Tabelle, um das Paket an das richtige Ziel weiterzuleiten.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist der Unterschied zwischen Routing und Switching?",
+        "antwort": "Routing: Vermittlung zwischen *verschiedenen* Netzwerken (anhand von IP-Adressen). Switching: Vermittlung *innerhalb* eines Netzwerks (anhand von MAC-Adressen).",
+        "typ": "text"
+      },
+      {
+        "frage": "Welches Gerät ist für das *Routing* zuständig?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Switch",
+          "b": "Router",
+          "c": "Hub",
+          "d": "Modem"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Arbeitet ein Switch auf der Netzwerk- oder der Sicherungsschicht des OSI-Modells?",
+        "antwort": "Ein Switch arbeitet hauptsächlich auf der Sicherungsschicht (Data Link Layer, Schicht 2) des OSI-Modells und verwendet MAC-Adressen zur Weiterleitung von Datenpaketen.",
+        "typ": "text"
+      }
+    ]
+  }
+]

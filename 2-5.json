@@ -1,0 +1,312 @@
+[
+  {
+    "karten_nummer": 89,
+    "original_frage": "Was sind relationale Datenbanken? Nennen Sie zwei Beispiele für nicht-relationale Datenbanktypen.",
+    "original_antwort": "Relationale Datenbanken sind Datenbanken, die auf dem relationalen Datenbankmodell basieren. Sie speichern Daten in Tabellen, die aus Zeilen und Spalten bestehen. Die Beziehungen zwischen den Tabellen werden durch Primärschlüssel-Fremdschlüssel-Beziehungen hergestellt.\nBeispiele für nicht-relationale Datenbanktypen sind:\n- Dokumentenorientierte Datenbanken\n- Schlüssel-Wert-Datenbanken\n- Spaltenorientierte Datenbanken\n- Graphdatenbanken\n- Zeitreihendatenbanken\n- Objektorientierte Datenbanken",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie den Begriff 'relationale Datenbank'.",
+        "antwort": "Datenbank, die Daten in Tabellen mit Zeilen und Spalten speichert und Beziehungen über Schlüssel herstellt.",
+        "typ": "text"
+      },
+      {
+        "frage": "Nennen Sie *drei* Beispiele für *nicht*-relationale Datenbanktypen (NoSQL).",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "MySQL, PostgreSQL, Oracle",
+          "b": "MongoDB, Cassandra, Redis",
+          "c": "SQL Server, DB2, Access",
+          "d": "SQLite, MariaDB, Firebird"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Was ist der Hauptunterschied in der Datenorganisation zwischen relationalen und nicht-relationalen Datenbanken?",
+        "antwort": "Relationale Datenbanken verwenden ein starres Tabellenschema mit vordefinierten Beziehungen. Nicht-relationale Datenbanken sind flexibler und verwenden unterschiedliche Datenmodelle (z.B. Dokumente, Graphen, Schlüssel-Wert-Paare).",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 90,
+    "original_frage": "Welche Unterschiede bestehen zwischen strukturierten, semi-strukturierten und unstrukturierten Daten?",
+    "original_antwort": "Strukturierte Daten haben eine klar definierte und erwartete Struktur. Sie können leicht in relationalen Datenbanken gespeichert und abgefragt werden.\nSemistrukturierte Daten fallen irgendwo zwischen strukturierte und unstrukturierte Daten. Sie haben eine gewisse Struktur, die aber nicht so streng definiert ist. Semistrukturierte Daten können Metadaten oder Tags enthalten, die den Daten Kontext und Bedeutung verleihen, wie z. B. XML und JSON-Dateien.\nUnstrukturierte Daten haben keine spezifische Struktur. Sie kommen in vielen verschiedenen Formaten vor. Beispiele für unstrukturierte Daten sind Bilder, Audio- und Videodateien und Webseiten.",
+    "alternativfragen": [
+      {
+        "frage": "Erklären Sie den Unterschied zwischen strukturierten, semi-strukturierten und unstrukturierten Daten.",
+        "antwort": "Strukturiert: Festes Format (z.B. Tabellen). Semi-strukturiert: Teilweise strukturiert (z.B. JSON). Unstrukturiert: Kein festes Format (z.B. Bilder).",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Art von Daten lässt sich am einfachsten in einer relationalen Datenbank speichern?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Unstrukturierte Daten",
+          "b": "Semi-strukturierte Daten",
+          "c": "Strukturierte Daten",
+          "d": "Alle gleich gut"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Geben Sie jeweils ein Beispiel für strukturierte, semi-strukturierte und unstrukturierte Daten.",
+        "antwort": "Strukturiert: Daten in einer relationalen Datenbanktabelle (z.B. Kunden mit Name, Adresse, Kundennummer). Semistrukturiert: Eine JSON-Datei mit Produktdaten (unterschiedliche Attribute pro Produkt möglich). Unstrukturiert: Ein Bild, eine Audiodatei, ein Textdokument.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 91,
+    "original_frage": "Was ist ein Data Warehouse?",
+    "original_antwort": "Ein Data Warehouse ist ein zentralisiertes Repository, das Daten aus mehreren Quellen sammelt, integriert und speichert, um komplexe Analysen und datengetriebene Entscheidungsfindung zu ermöglichen.\nEs handelt sich dabei um eine Art Datenbanksystem, das speziell für analytische Abfragen und Berichterstattung konzipiert ist, im Gegensatz zu traditionellen Datenbanksystemen, die für den täglichen Betrieb und die Transaktionsverarbeitung ausgelegt sind. Im Data Warehouse werden Daten oft über lange Zeiträume gespeichert, was die Durchführung historischer Analysen ermöglicht. Zudem sind die Daten typischerweise strukturiert und organisiert.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie den Begriff 'Data Warehouse'.",
+        "antwort": "Zentrale Datenbank für Analysezwecke, die Daten aus verschiedenen Quellen integriert.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist der Hauptzweck eines Data Warehouse?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Die täglichen Geschäftstransaktionen zu verarbeiten.",
+          "b": "Daten schnell zu sichern und wiederherzustellen.",
+          "c": "Umfassende Analysen und Berichte zu ermöglichen, um fundierte Geschäftsentscheidungen zu unterstützen.",
+          "d": "Webseiten zu hosten."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Wie unterscheidet sich ein Data Warehouse von einer operationalen Datenbank (OLTP-System)?",
+        "antwort": "Eine operationale Datenbank ist für die schnelle Verarbeitung von Transaktionen optimiert (z.B. Online-Banking, Bestellsysteme). Ein Data Warehouse ist für die Analyse großer Datenmengen optimiert, oft über längere Zeiträume.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 92,
+    "original_frage": "Was ist ein Data Lake und wie unterscheidet er sich von einem Data Warehouse?",
+    "original_antwort": "Ein Data Lake ist ein zentralisiertes Repository, das die Speicherung großer Mengen roher Daten in ihrem ursprünglichen Format ermöglicht.\nIm Gegensatz zu einem Data Warehouse, das strukturierte Daten speichert und ein vordefiniertes Schema für gespeicherte Daten benötigt, kann ein Data Lake sowohl strukturierte als auch unstrukturierte Daten (wie E-Mails, Video-, Log- und Social-Media-Daten) speichern.",
+    "alternativfragen": [
+      {
+        "frage": "Erklären Sie den Hauptunterschied zwischen einem Data Lake und einem Data Warehouse.",
+        "antwort": "Data Warehouse: Strukturierte Daten, festes Schema. Data Lake: Rohe Daten, Schema erst bei Bedarf.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Art von Daten kann in einem Data Lake gespeichert werden?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Nur strukturierte Daten.",
+          "b": "Nur unstrukturierte Daten.",
+          "c": "Sowohl strukturierte als auch unstrukturierte Daten.",
+          "d": "Nur semi-strukturierte Daten."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Was bedeutet 'Schema-on-Read' im Kontext von Data Lakes?",
+        "antwort": "Im Gegensatz zu Data Warehouses, die ein vordefiniertes Schema haben ('Schema-on-Write'), wird bei Data Lakes das Schema der Daten erst dann festgelegt, wenn die Daten gelesen und analysiert werden ('Schema-on-Read'). Dies bietet mehr Flexibilität.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 93,
+    "original_frage": "Welche Datentypen werden in SQL verwendet und welchen Zweck erfüllen sie?",
+    "original_antwort": "Zu den gängigen SQL-Datentypen gehören:\n- INTEGER (für Ganzzahlen)\n- FLOAT oder DECIMAL (für Gleitkommazahlen)\n- VARCHAR oder CHAR (für Zeichenketten)\n- DATE, Time oder TIMESTAMP (für Datum und Uhrzeit)\n- BOOLEAN (für boolesche Werte)\n- BINARY (Binär-String)\nJeder Datentyp hat spezifische Eigenschaften, wie die Größe des Wertebereichs oder die maximale Anzahl von Zeichen, die er speichern kann. Durch die Auswahl des richtigen Datentyps kann die Datenintegrität gewährleistet und die Speichereffizienz optimiert werden.",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie vier grundlegende Datentypen in SQL.",
+        "antwort": "INTEGER, VARCHAR, DATE, BOOLEAN.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welcher SQL-Datentyp eignet sich am besten für die Speicherung von Text variabler Länge?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "INTEGER",
+          "b": "CHAR",
+          "c": "VARCHAR",
+          "d": "DATE"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Warum ist die Wahl des richtigen Datentyps in SQL wichtig?",
+        "antwort": "Die Wahl des richtigen Datentyps ist wichtig für die Datenintegrität (es werden nur gültige Werte gespeichert), die Speichereffizienz (es wird nicht unnötig viel Platz verbraucht) und die Performance (Abfragen können schneller ausgeführt werden).",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 94,
+    "original_frage": "Erklären Sie in Bezug auf Datenbanken die Begriffe Primärschlüssel und Fremdschlüssel.",
+    "original_antwort": "In Bezug auf Datenbanken haben Primärschlüssel und Fremdschlüssel besondere Bedeutungen:\nEin Primärschlüssel ist ein Feld oder eine Kombination von Feldern in einer Tabelle, das bzw. die jede Zeile eindeutig identifiziert. Jeder Primärschlüssel ist eindeutig innerhalb der Tabelle und es darf keine Duplikate oder Nullwerte geben.\nEin Fremdschlüssel ist ein Feld oder eine Kombination von Feldern in einer Tabelle, das auf den Primärschlüssel einer anderen Tabelle verweist. Der Zweck eines Fremdschlüssels besteht darin, die Integrität der Daten zu gewährleisten und Beziehungen zwischen Tabellen herzustellen.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist ein Primärschlüssel in einer relationalen Datenbank?",
+        "antwort": "Ein eindeutiger Identifikator für jede Zeile (Datensatz) einer Tabelle.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist ein Fremdschlüssel?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Ein Schlüssel, der die Tabelle verschlüsselt.",
+          "b": "Ein Schlüssel, der die Tabelle eindeutig identifiziert.",
+          "c": "Ein Schlüssel, der auf den Primärschlüssel einer anderen Tabelle verweist.",
+          "d": "Ein Schlüssel, der doppelte Werte erlaubt."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Welchen Zweck erfüllen Fremdschlüssel in relationalen Datenbanken?",
+        "antwort": "Fremdschlüssel stellen Beziehungen zwischen Tabellen her und gewährleisten die referenzielle Integrität (d.h. sie verhindern, dass inkonsistente Daten gespeichert werden, z.B. eine Bestellposition, die auf eine nicht existierende Produkt-ID verweist).",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 95,
+    "original_frage": "Was ist referenzielle Integrität in Bezug auf Datenbanken?",
+    "original_antwort": "Referenzielle Integrität bezieht sich auf die Konsistenz von Beziehungen zwischen Tabellen. Die referenzielle Integrität soll sicherstellen, dass in einer Beziehung zwischen zwei Tabellen der Wert des Fremdschlüssels in der referenzierten Tabelle immer auf einen gültigen Wert verweist.\nWenn eine Änderung oder Löschung in einer Tabelle vorgenommen wird, überprüft die referenzielle Integrität, ob dies Auswirkungen auf andere Tabellen hat und ob die Konsistenz der Beziehungen erhalten bleibt.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie 'referenzielle Integrität' in relationalen Datenbanken.",
+        "antwort": "Stellt sicher, dass Beziehungen zwischen Tabellen gültig bleiben (Fremdschlüsselwerte existieren).",
+        "typ": "text"
+      },
+      {
+        "frage": "Was passiert, wenn die referenzielle Integrität verletzt wird?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Die Datenbank wird schneller.",
+          "b": "Die Datenbank wird sicherer.",
+          "c": "Es entstehen Inkonsistenzen in den Daten (z.B. 'verwaiste' Datensätze).",
+          "d": "Die Datenbank wird automatisch optimiert."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Nennen Sie eine typische Integritätsbedingung im Zusammenhang mit referenzieller Integrität.",
+        "antwort": "Eine typische Integritätsbedingung ist, dass ein Fremdschlüsselwert in einer Tabelle entweder NULL sein muss oder auf einen existierenden Primärschlüsselwert in der referenzierten Tabelle verweisen muss.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 96,
+    "original_frage": "Was sind Datenbankanomalien und welche Arten von Anomalien können auftreten?",
+    "original_antwort": "Datenbankanomalien sind Probleme, die in einer Datenbank auftreten und zu Inkonsistenzen oder unerwünschten Effekten führen können. Es gibt drei Arten von Datenbankanomalien:\n- Einfügeanomalie\n- Aktualisierungsanomalie\n- Löschanomalie\nDiese Anomalien können vermieden werden, indem man Normalisierungstechniken anwendet, wie beispielsweise das Aufteilen von Tabellen (Vermeiden von Redundanz) und die klare Definition von Beziehungen zwischen Tabellen.",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie die drei Arten von Datenbankanomalien.",
+        "antwort": "Einfüge-, Aktualisierungs- und Löschanomalie.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist eine Einfügeanomalie?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Daten können nicht gelöscht werden.",
+          "b": "Daten können nicht aktualisiert werden.",
+          "c": "Daten können nicht eingefügt werden, ohne Inkonsistenzen zu erzeugen.",
+          "d": "Daten werden doppelt gespeichert."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Warum treten Datenbankanomalien auf, und wie können sie vermieden werden?",
+        "antwort": "Anomalien treten aufgrund von Redundanz und ungünstigem Datenbankdesign auf. Sie können durch Normalisierung (Aufteilung von Tabellen und Definition klarer Beziehungen) vermieden werden.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 97,
+    "original_frage": "Beschreiben Sie die erste, zweite und dritte Normalform in relationalen Datenbanken.",
+    "original_antwort": "Eine Relation ist in der ersten Normalform, wenn jeder Attributwert atomar ist. Attribute mit Attributwerten, welche nicht atomar sind, müssen in mehrere Attribute aufgeteilt werden.\nDie zweite Normalform zielt darauf ab, Abhängigkeiten zwischen Nicht-Schlüsselattributen zu beseitigen. Datenfelder, die von einem Schlüsselkandidaten (Primärschlüssel) nicht vollständig funktional abhängig sind, müssen in weiteren Tabellen untergebracht werden.\nDie dritte Normalform beseitigt transitive Abhängigkeiten zwischen Nicht-Schlüsselattributen. Die transitiv abhängigen Datenfelder müssen in weitere Tabellen ausgelagert werden.",
+    "alternativfragen": [
+      {
+        "frage": "Erklären Sie kurz die ersten drei Normalformen (1NF, 2NF, 3NF).",
+        "antwort": "1NF: Atomare Werte. 2NF: Keine Teilabhängigkeiten von Nichtschlüsselattributen. 3NF: Keine transitiven Abhängigkeiten.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was bedeutet 'atomare Werte' im Kontext der ersten Normalform?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Die Werte sind sehr klein.",
+          "b": "Die Werte sind nicht weiter teilbar.",
+          "c": "Die Werte sind eindeutig.",
+          "d": "Die Werte sind wichtig."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Was ist eine transitive Abhängigkeit, die in der 3. Normalform vermieden wird?",
+        "antwort": "Eine transitive Abhängigkeit liegt vor, wenn ein Nichtschlüsselattribut nicht nur vom Primärschlüssel abhängt, sondern auch von einem anderen Nichtschlüsselattribut.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 98,
+    "original_frage": "Welche Schritte sind notwendig, um Datenstrukturen in einem ER-Diagramm zu modellieren?",
+    "original_antwort": "Ein Entity-Relationship-Diagramm (ER-Diagramm) wird zur Modellierung von Datenbanken wie folgt verwendet:\n1. Identifizieren der Entitäten: Das sind die Hauptobjekte oder Konzepte in der Datenbank.\n2. Bestimmen der Attribute: Das sind die Eigenschaften oder Merkmale der Entitäten.\n3. Identifizieren der Beziehungen: Das sind die Verbindungen und Interaktionen zwischen Entitäten.\n4. Bestimmen der Kardinalität: Das definiert, wie viele Instanzen einer Entität mit einer Instanz einer anderen Entität in Beziehung stehen können.",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie die vier grundlegenden Schritte bei der Erstellung eines ER-Diagramms.",
+        "antwort": "Entitäten identifizieren, Attribute bestimmen, Beziehungen identifizieren, Kardinalitäten festlegen.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist eine 'Entität' in einem ER-Diagramm?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Eine Beziehung zwischen zwei Tabellen.",
+          "b": "Ein Attribut einer Tabelle.",
+          "c": "Ein reales Objekt oder Konzept, über das Informationen gespeichert werden sollen.",
+          "d": "Ein Datentyp."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Was bedeutet 'Kardinalität' in einem ER-Diagramm?",
+        "antwort": "Die Kardinalität gibt an, in welcher Anzahl Entitäten miteinander in Beziehung stehen können (z.B. 1:1, 1:n, n:m).",
+        "typ": "text"
+      }
+    ]
+  }
+]

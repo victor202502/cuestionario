@@ -1,0 +1,312 @@
+[
+  {
+    "karten_nummer": 128,
+    "original_frage": "Was ist eine generische Klasse?",
+    "original_antwort": "Eine generische Klasse ist ein Konzept in der objektorientierten Programmierung, das es erlaubt, eine Klasse zu definieren, die auf Typen arbeiten kann, die beim Erstellen einer Instanz der Klasse spezifiziert werden.\nDer Hauptvorteil von generischen Klassen besteht darin, dass sie Code-Wiederverwendung und Typsicherheit ermöglichen. Sie können eine einzige generische Klasse definieren, die auf mehrere Datentypen angewendet werden kann, anstatt separate Klassen für jeden Datentyp erstellen zu müssen.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie den Begriff 'generische Klasse'.",
+        "antwort": "Eine Klasse, die mit verschiedenen Datentypen arbeiten kann, ohne für jeden Typ neu geschrieben zu werden.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist der Hauptvorteil der Verwendung generischer Klassen?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Sie machen den Code schneller.",
+          "b": "Sie machen den Code sicherer.",
+          "c": "Sie ermöglichen Code-Wiederverwendung und Typsicherheit.",
+          "d": "Sie machen den Code einfacher zu verstehen."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Geben Sie ein Beispiel für die Verwendung einer generischen Klasse in Java oder C#.",
+        "antwort": "In Java: `List<String> myList = new ArrayList<>();` Hier ist `List` eine generische Klasse, die mit dem Typ `String` parametrisiert wird. In C#: `List<int> myInts = new List<int>();`",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 129,
+    "original_frage": "Wie werden abstrakte Klassen in der Anwendungsentwicklung verwendet und welche Vorteile bieten sie?",
+    "original_antwort": "Abstrakte Klassen sind Klassen, die nicht instanziiert werden können und in der Regel eine oder mehrere abstrakte Methoden enthalten. Diese Methoden werden in den abgeleiteten Klassen implementiert. Abstrakte Klassen können jedoch auch konkrete Methoden (Methoden mit einer Implementierung) enthalten.\nDie Hauptanwendungen und Vorteile abstrakter Klassen sind:\n- Bereitstellung einer gemeinsamen Schnittstelle\n- Code-Wiederverwendung\n- Erwingung bestimmter Methoden\n- Polymorphismus kann realisiert werden",
+    "alternativfragen": [
+      {
+        "frage": "Was ist eine abstrakte Klasse?",
+        "antwort": "Eine Klasse, die nicht direkt instanziiert werden kann und oft als Basisklasse für andere Klassen dient.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist eine 'abstrakte Methode'?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Eine Methode, die keinen Code enthält.",
+          "b": "Eine Methode, die nicht aufgerufen werden kann.",
+          "c": "Eine Methode, die in der abstrakten Klasse deklariert, aber erst in Unterklassen implementiert wird.",
+          "d": "Eine Methode, die veraltet ist."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Nennen sie einen Vorteil der Nutzung abstrakter Klassen.",
+        "antwort": "Abstrakte Klassen erzwingen eine gemeinsame Struktur für Unterklassen, fördern die Wiederverwendung von Code und ermöglichen Polymorphie (vielgestaltigkeit).",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 130,
+    "original_frage": "Was ist ein Objekt in der objektorientierten Programmierung?",
+    "original_antwort": "Ein Objekt in der objektorientierten Programmierung ist eine konkrete Instanz einer Klasse. Es besitzt die Attribute und Methoden, die in seiner Klasse definiert sind. Jedes Objekt hat seinen eigenen Satz von Werten für die Attribute. Diese Attribute repräsentieren den Zustand des Objekts, während die Methoden das Verhalten definieren, das auf diesem Zustand operiert.\nEin Objekt ist also eine Verkapselung von Daten (Zustand) und den dazu gehörenden Operationen (Verhalten).",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie den Begriff 'Objekt' in der OOP.",
+        "antwort": "Eine Instanz einer Klasse, die Daten (Attribute) und Methoden (Verhalten) kombiniert.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist der Unterschied zwischen einer Klasse und einem Objekt?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Es gibt keinen Unterschied.",
+          "b": "Eine Klasse ist eine Instanz eines Objekts.",
+          "c": "Ein Objekt ist eine Instanz einer Klasse.",
+          "d": "Eine Klasse enthält Daten, ein Objekt nicht."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Hat jedes Objekt seinen eigenen Zustand?",
+        "antwort": "Ja, jedes Objekt hat seinen eigenen Satz von Werten für die in der Klasse definierten Attribute. Dieser Satz von Werten bildet den Zustand des Objekts.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 131,
+    "original_frage": "Was versteht man unter dem Konzept der Polymorphie in der objektorientierten Programmierung?",
+    "original_antwort": "Polymorphie ermöglicht es Objekten, sich abhängig von ihrem Datentyp oder ihrer Klasse unterschiedlich zu verhalten.\nIn der OOP können Klassen Methoden teilen, aber die Implementierungen dieser Methoden können je nach Klasse variieren. Dieses Konzept wird als Polymorphie bezeichnet. Die spezifische Implementierung, die ausgeführt wird, wird zur Laufzeit bestimmt, basierend auf dem tatsächlichen Objekttyp, der aufgerufen wird.\nSie verbessert die Flexibilität und Wiederverwendbarkeit von Code und erleichtert die Implementierung von Komponenten mit standardisierten Schnittstellen.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie 'Polymorphie' in der OOP.",
+        "antwort": "Die Fähigkeit von Objekten unterschiedlicher Klassen, auf denselben Methodenaufruf unterschiedlich zu reagieren ('Vielgestaltigkeit').",
+        "typ": "text"
+      },
+      {
+        "frage": "Wie wird Polymorphie in der OOP typischerweise erreicht?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Durch Datenkapselung.",
+          "b": "Durch Vererbung und Überschreiben von Methoden.",
+          "c": "Durch die Verwendung von Schleifen.",
+          "d": "Durch die Verwendung von Kommentaren."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Warum ist Polymorphie ein wichtiges Konzept in der OOP?",
+        "antwort": "Polymorphie erhöht die Flexibilität und Wiederverwendbarkeit von Code. Sie ermöglicht es, Code zu schreiben, der mit Objekten unterschiedlicher Klassen arbeiten kann, solange diese eine gemeinsame Schnittstelle (z.B. durch Vererbung von derselben Basisklasse oder Implementierung desselben Interface) bereitstellen.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 132,
+    "original_frage": "Wie beeinflussen die verschiedenen Sichtbarkeitsstufen (public, protected, private, package) den Zugriff auf Klassen, Methoden und Variablen in der objektorientierten Programmierung?",
+    "original_antwort": "Zugriffsmodifikatoren in der objektorientierten Programmierung bestimmen, wo auf Klassen, Methoden und Variablen zugegriffen werden kann:\n+ public: Der Zugriff ist überall erlaubt, sowohl innerhalb als auch außerhalb der Klasse.\n# protected: Der Zugriff ist nur innerhalb der Klasse, des Pakets und von abgeleiteten Klassen.\n~ package: Der Zugriff ist innerhalb der Klasse und in allen Klassen desselben Pakets erlaubt.\n- private: Der Zugriff ist nur innerhalb der Klasse erlaubt, in der sie definiert ist.\nDiese Modifikatoren sind wichtig, um die Datenintegrität zu schützen und unerwarteten Zugriff zu verhindern.",
+    "alternativfragen": [
+      {
+        "frage": "Erklären Sie die Bedeutung von 'public', 'protected', 'private' und 'package' (default) Sichtbarkeit in der OOP.",
+        "antwort": "Public: Überall zugreifbar. Protected: Zugriff innerhalb der Klasse, Unterklassen und desselben Pakets. Private: Nur innerhalb der Klasse. Package (default): Zugriff innerhalb des Pakets.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welcher Zugriffsmodifikator schränkt den Zugriff am stärksten ein?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "public",
+          "b": "protected",
+          "c": "private",
+          "d": "package (default)"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Warum sind unterschiedliche Sichtbarkeitsstufen wichtig?",
+        "antwort": "Sie sind ein wesentlicher Bestandteil der Datenkapselung und ermöglichen es, den Zugriff auf Klassenmember (Attribute und Methoden) zu steuern. Dadurch wird verhindert, dass Code von außerhalb der Klasse den internen Zustand eines Objekts auf unerwartete Weise verändert.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 133,
+    "original_frage": "Erklären Sie den Unterschied zwischen der Deklaration und der Initialisierung von Variablen.",
+    "original_antwort": "In der Programmierung sind Deklaration und Initialisierung zwei grundlegende Schritte bei der Verwendung von Variablen:\nDeklaration: Hierbei wird eine Variable durch Angabe ihres Typs und Namens definiert. Der Compiler reserviert dadurch Speicherplatz für die Variable. Zu diesem Zeitpunkt wird der Variable jedoch noch kein spezifischer Wert zugewiesen.\nInitialisierung: Bei der Initialisierung wird einer zuvor deklarierten Variablen ein erster Wert zugewiesen.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist der Unterschied zwischen Variablendeklaration und -initialisierung?",
+        "antwort": "Deklaration: Variable wird benannt und ihr Typ festgelegt. Initialisierung: Variable erhält einen Wert.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was passiert, wenn eine Variable deklariert, aber nicht initialisiert wird?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Sie erhält automatisch den Wert 0.",
+          "b": "Sie erhält automatisch den Wert NULL.",
+          "c": "Ihr Wert ist undefiniert (oder sie erhält einen Standardwert, abhängig von der Programmiersprache und dem Kontext).",
+          "d": "Es tritt ein Kompilierfehler auf."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Ist es möglich, eine Variable in einem Schritt zu deklarieren und zu initialisieren?",
+        "antwort": "Ja, in den meisten Programmiersprachen kann man eine Variable gleichzeitig deklarieren und initialisieren, z.B. `int x = 10;` in Java oder C++.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 134,
+    "original_frage": "Was ist die Rolle eines Konstruktors in der objektorientierten Programmierung?",
+    "original_antwort": "Ein Konstruktor ist eine spezielle Methode in der objektorientierten Programmierung, die zum Erzeugen und Initialisieren von Objekten einer Klasse verwendet wird. Ein Konstruktor wird automatisch aufgerufen, wenn ein neues Objekt einer Klasse erzeugt wird.\nDie Hauptaufgaben eines Konstruktors sind:\n- Speicher für das Objekt zu reservieren.\n- Die Instanzvariablen des Objekts zu initialisieren.\n- Eine Referenz auf das neu erstellte Objekt zurückzugeben.\nEin Konstruktor hat den gleichen Namen wie die Klasse, in der er definiert ist, und er hat keinen Rückgabewert.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie den Begriff 'Konstruktor' in der OOP.",
+        "antwort": "Eine spezielle Methode, die bei der Erzeugung eines Objekts aufgerufen wird und dieses initialisiert.",
+        "typ": "text"
+      },
+      {
+        "frage": "Wie heißt ein Konstruktor in Java oder C++?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "init()",
+          "b": "create()",
+          "c": "Der gleiche Name wie die Klasse.",
+          "d": "constructor()"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Kann eine Klasse mehrere Konstruktoren haben?",
+        "antwort": "Ja, eine Klasse kann mehrere Konstruktoren mit unterschiedlichen Parametern haben (Überladung). Dies ermöglicht es, Objekte der Klasse auf verschiedene Arten zu initialisieren.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 135,
+    "original_frage": "Was versteht man unter einer Klassenbibliothek in der Softwareentwicklung und welchen Vorteil bietet sie bei der Entwicklung von Anwendungen?",
+    "original_antwort": "Eine Klassenbibliothek in der Softwareentwicklung ist eine Sammlung von Klassen und Funktionen, die wiederverwendet werden können, um bestimmte Aufgaben zu erleichtern oder um komplexe Funktionalitäten bereitzustellen, ohne dass diese neu geschrieben werden müssen.\nKlassenbibliotheken werden oft als Frameworks oder APIs (Application Programming Interfaces) bereitgestellt und können Standardoperationen für Aufgaben wie Netzwerkommunikation, Datenzugriff, grafische Benutzeroberflächen und vieles mehr bereitstellen.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist eine Klassenbibliothek (oder 'Library')?",
+        "antwort": "Eine Sammlung von vorgefertigtem Code (Klassen, Funktionen), die wiederverwendet werden können.",
+        "typ": "text"
+      },
+      {
+        "frage": "Nennen Sie einen Vorteil der Verwendung von Klassenbibliotheken.",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Sie machen den Code schneller.",
+          "b": "Sie machen den Code sicherer.",
+          "c": "Sie reduzieren den Entwicklungsaufwand, da man vorhandenen Code wiederverwenden kann.",
+          "d": "Sie machen den Code kürzer."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Was ist der Unterschied zwischen einer Klassenbibliothek und einem Framework?",
+        "antwort": "Eine Klassenbibliothek ist eine Sammlung von Hilfsfunktionen und -klassen. Ein Framework gibt zusätzlich eine Struktur und einen Ablauf für die Anwendung vor und ruft den Anwendungscode auf (Inversion of Control). Ein Framework kann Bibliotheken enthalten.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 136,
+    "original_frage": "Was sind die Unterschiede zwischen der rekursiven und iterativen Vorgehensweise in der Softwareentwicklung?",
+    "original_antwort": "In einer iterativen Vorgehensweise wird eine Aufgabe wiederholt, indem Schleifenstrukturen wie for, while oder do-while in der Programmiersprache verwendet werden. Iterative Ansätze sind in der Regel einfacher zu verstehen und erfordern weniger Speicher.\nIn einer rekursiven Vorgehensweise ruft eine Funktion sich selbst auf, um ein Problem zu lösen, das in kleinere Teilprobleme unterteilt werden kann. Rekursion kann eleganter und intuitiver für Probleme sein, die natürlich in kleinere Teilprobleme zerlegt werden können. Allerdings kann Rekursion auch zu erhöhtem Speicherverbrauch führen.",
+    "alternativfragen": [
+      {
+        "frage": "Erklären Sie den Unterschied zwischen Rekursion und Iteration.",
+        "antwort": "Iteration: Wiederholung mit Schleifen. Rekursion: Funktion ruft sich selbst auf.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist ein Nachteil der rekursiven Vorgehensweise?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Sie ist immer langsamer als Iteration.",
+          "b": "Sie ist schwerer zu verstehen.",
+          "c": "Sie kann zu erhöhtem Speicherverbrauch führen (Stack Overflow).",
+          "d": "Sie funktioniert nur mit Zahlen."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+          "frage": "Geben sie ein Beispiel für eine Aufgabe, bei der sich Rekursion gut eignet.",
+          "antwort": "Rekursion eignet sich gut für Aufgaben, die sich in kleinere, gleichartige Teilaufgaben zerlegen lassen, z.B. die Berechnung der Fakultät, die Traversierung von Baumstrukturen (z.B. Dateisystem), oder Algorithmen wie Quicksort und Mergesort.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 137,
+    "original_frage": "Erklären Sie das Konzept der Modularisierung in der Softwareentwicklung.",
+    "original_antwort": "Modularisierung ist ein Konzept in der Softwareentwicklung, das darin besteht, einen umfangreichen Code in kleinere, unabhängige und verwaltbare Einheiten oder Module zu zerlegen. Jedes Modul fokussiert sich auf eine spezifische Funktion oder einen bestimmten Aspekt des Gesamtprojekts.\nDie Idee hinter der Modularisierung ist es, die Komplexität des Codes zu reduzieren und ihn einfacher zu verwalten, zu warten, zu testen und zu verstehen. Durch die Trennung des Codes in verschiedene Module kann jedes Modul unabhängig voneinander entwickelt, getestet und überarbeitet werden, was die Effizienz und Produktivität des Entwicklungsprozesses erhöht.",
+    "alternativfragen": [
+      {
+        "frage": "Was versteht man unter Modularisierung in der Softwareentwicklung?",
+        "antwort": "Aufteilung eines Programms in unabhängige, wiederverwendbare Module.",
+        "typ": "text"
+      },
+      {
+        "frage": "Nennen Sie drei Vorteile der Modularisierung.",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Weniger Code, schnellere Ausführung, automatische Fehlerkorrektur.",
+          "b": "Bessere Wartbarkeit, Wiederverwendbarkeit, bessere Testbarkeit, bessere Übersichtlichkeit.",
+          "c": "Keine Notwendigkeit für Dokumentation, automatische Skalierung, höhere Sicherheit.",
+          "d": "Plattformunabhängigkeit, einfachere Installation, automatische Updates."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Was ist ein 'Modul' im Kontext der Softwareentwicklung?",
+        "antwort": "Ein Modul ist ein in sich geschlossener Teil eines Programms, der eine bestimmte Aufgabe oder eine Gruppe zusammengehöriger Aufgaben erfüllt. Es hat in der Regel eine klar definierte Schnittstelle, über die es mit anderen Modulen interagiert.",
+        "typ": "text"
+      }
+    ]
+  }
+]

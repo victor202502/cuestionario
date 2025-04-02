@@ -1,0 +1,312 @@
+[
+  {
+    "karten_nummer": 178,
+    "original_frage": "Was ist eine MAC-Adresse?",
+    "original_antwort": "Eine MAC-Adresse (Media Access Control Address) ist eine eindeutige Kennung, die Netzwerkgeräten zugewiesen ist. Sie wird von Netzwerkkarten und anderen netzwerkfähigen Geräten verwendet, um sie eindeutig zu identifizieren und zu adressieren.\nDie MAC-Adresse besteht aus einer 48-Bit-Zahl, die in der Regel in hexadezimaler Notation dargestellt wird. Sie ist in zwei Teile unterteilt: die OUI (Organizationally Unique Identifier), die den Hersteller des Geräts identifiziert, und die NIC (Network Interface Controller) ID, die eine eindeutige Nummer für das Gerät darstellt.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie 'MAC-Adresse'.",
+        "antwort": "Eine eindeutige Hardware-Adresse eines Netzwerkgeräts (Media Access Control Address).",
+        "typ": "text"
+      },
+      {
+        "frage": "Ist eine MAC-Adresse weltweit eindeutig?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Ja, normalerweise.",
+          "b": "Nein, sie kann geändert werden.",
+          "c": "Nur innerhalb eines lokalen Netzwerks.",
+          "d": "Nur, wenn sie vom Hersteller vergeben wird."
+        },
+        "korrekte_antworten": [
+          "a"
+        ]
+      },
+      {
+        "frage": "Auf welcher Schicht des OSI-Modells wird die MAC-Adresse verwendet?",
+        "antwort": "Die MAC-Adresse wird auf der Sicherungsschicht (Data Link Layer, Schicht 2) des OSI-Modells verwendet.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 179,
+    "original_frage": "Wofür steht die Abkürzung ARP im Bereich der Netzwerktechnik?",
+    "original_antwort": "ARP steht für Address Resolution Protocol. Es ist ein Netzwerkprotokoll, das verwendet wird, um die IP-Adressen von Geräten in einem lokalen Netzwerk (LAN) in deren MAC-Adressen aufzulösen.\nARP wird hauptsächlich in IPv4-Netzwerken eingesetzt. Wenn ein Gerät in einem Netzwerk Daten an ein anderes Gerät senden möchte, benötigt es die MAC-Adresse des Zielgeräts, um das Datenpaket an den richtigen Empfänger weiterzuleiten. Das ARP-Protokoll ermöglicht es einem Gerät, die MAC-Adresse eines bestimmten Ziels anhand seiner IP-Adresse zu ermitteln.",
+    "alternativfragen": [
+      {
+        "frage": "Wofür steht die Abkürzung 'ARP'?",
+        "antwort": "Address Resolution Protocol.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist die Hauptfunktion von ARP?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "IP-Adressen zu konfigurieren.",
+          "b": "MAC-Adressen zu vergeben.",
+          "c": "IP-Adressen in MAC-Adressen aufzulösen (und umgekehrt).",
+          "d": "Daten zu verschlüsseln."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Warum ist ARP notwendig, obwohl IP-Adressen für die Kommunikation verwendet werden?",
+        "antwort": "IP-Adressen werden für die Kommunikation *zwischen* Netzwerken verwendet (Routing), aber innerhalb eines lokalen Netzwerks (LAN) erfolgt die direkte Kommunikation zwischen Geräten über MAC-Adressen. ARP stellt die Verbindung zwischen diesen beiden Adressierungsschemata her.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 180,
+    "original_frage": "Beschreiben Sie die Aufgabe des DHCP-Protokolls und nennen Sie drei Informationen, welche mittels DHCP übertragen werden können.",
+    "original_antwort": "DHCP steht für Dynamic Host Configuration Protocol. Die Aufgabe des DHCP-Protokolls besteht darin, die automatische Zuweisung von Netzwerkkonfigurationen an Geräte in einem Netzwerk zu ermöglichen. Es erleichtert die Konfiguration von IP-Adressen und anderen Netzwerkeinstellungen, indem es einen zentralen DHCP-Server verwendet, der diese Informationen an die Geräte verteilt.\nMittels DHCP können u. a. folgende Informationen übertragen werden:\n- IP-Adresse\n- Subnetzmaske\n- Lease-Dauer\n- Standardgateway\n- DNS-Server\n- NTP-Server",
+    "alternativfragen": [
+      {
+        "frage": "Was ist DHCP?",
+        "antwort": "Ein Protokoll zur automatischen Konfiguration von Netzwerkgeräten (Dynamic Host Configuration Protocol).",
+        "typ": "text"
+      },
+      {
+        "frage": "Nennen Sie drei Informationen, die ein DHCP-Server typischerweise an einen Client vergibt.",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "MAC-Adresse, Hostname, Betriebssystem.",
+          "b": "IP-Adresse, Subnetzmaske, Standardgateway, DNS-Server.",
+          "c": "Benutzername, Passwort, E-Mail-Adresse.",
+          "d": "Seriennummer, Modellbezeichnung, Hersteller."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Was ist der Vorteil von DHCP gegenüber der manuellen Konfiguration von IP-Adressen?",
+        "antwort": "DHCP vereinfacht die Netzwerkkonfiguration erheblich, reduziert das Risiko von Fehlkonfigurationen (z.B. doppelt vergebene IP-Adressen) und ermöglicht eine zentrale Verwaltung der IP-Adresszuweisung.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 181,
+    "original_frage": "Erklären den Ablauf der DHCP-Kommunikation nach dem DORA-Prinzip.",
+    "original_antwort": "DHCP-Discover: Ein Gerät, das eine Netzwerkverbindung herstellt, sendet eine Broadcast-Nachricht, um DHCP-Server im Netzwerk zu suchen.\nDHCP-Offer: Der DHCP-Server antwortet mit einer Broadcast-Nachricht, in der er dem Gerät eine IP-Adresse und andere Konfigurationsinformationen anbietet.\nDHCP-Request: Das Gerät wählt eine der angebotenen IP-Adressen aus und sendet eine Broadcast-Nachricht, um den ausgewählten DHCP-Server über seine Wahl zu informieren.\nDHCP-Acknowledgement: Der DHCP-Server antwortet mit einer Broadcast-Nachricht, in der er dem Gerät die zugewiesene IP-Adresse und andere Konfigurationsoptionen bestätigt.",
+    "alternativfragen": [
+      {
+        "frage": "Wofür steht das Akronym 'DORA' im Zusammenhang mit DHCP?",
+        "antwort": "Discover, Offer, Request, Acknowledgement.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Nachricht sendet ein Client, der eine IP-Adresse benötigt, zuerst in einem DHCP-basierten Netzwerk?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "DHCP-Offer",
+          "b": "DHCP-Request",
+          "c": "DHCP-Discover",
+          "d": "DHCP-Acknowledgement"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Warum verwendet DHCP in den meisten Schritten Broadcast-Nachrichten?",
+        "antwort": "Weil der Client zu Beginn des Prozesses noch keine eigene IP-Adresse hat und daher nicht direkt adressiert werden kann. Broadcast-Nachrichten erreichen alle Geräte im lokalen Netzwerk, einschließlich des DHCP-Servers.",
+        "typ": "text"
+      }
+    ]
+  },
+    {
+    "karten_nummer": 182,
+    "original_frage": "Geben Sie für die Abkürzung DNS die vollständige Schreibweise an und erklären Sie die Hauptaufgabe von DNS.",
+    "original_antwort": "DNS steht für Domain Name System. Es handelt sich um ein dezentrales System zur Auflösung von Domainnamen in IP-Adressen und umgekehrt.\nDas DNS funktioniert hierarchisch, wobei die oberste Ebene die Root-DNS-Server sind, die die Informationen für die Top-Level-Domains (TLDs) wie .com, .org, .net usw. enthalten. Unterhalb der Root-DNS-Server gibt es weitere DNS-Server, die für spezifische Domänen zuständig sind. Jede Domäne kann ihre eigenen DNS-Server haben, die als Autoritative DNS-Server bezeichnet werden und die DNS-Datensätze für die Domäne verwalten.",
+    "alternativfragen": [
+      {
+        "frage": "Wofür steht die Abkürzung 'DNS'?",
+        "antwort": "Domain Name System.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist die Hauptfunktion von DNS?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "IP-Adressen zu vergeben.",
+          "b": "Daten zu verschlüsseln.",
+          "c": "Domainnamen (z.B. www.example.com) in IP-Adressen (z.B. 192.0.2.1) aufzulösen.",
+          "d": "Webseiten zu hosten."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Warum ist DNS wichtig für die Funktionsweise des Internets?",
+        "antwort": "DNS macht das Internet benutzerfreundlich, da wir uns menschenlesbare Domainnamen merken können, anstatt uns numerische IP-Adressen merken zu müssen. DNS übersetzt diese Namen in die für die Computerkommunikation notwendigen IP-Adressen.",
+        "typ": "text"
+      }
+    ]
+  },
+    {
+    "karten_nummer": 183,
+    "original_frage": "Was ist ein Proxy-Server und wozu wird er verwendet?",
+    "original_antwort": "Ein Proxy-Server agiert als Vermittler zwischen einem Client und dem Zielserver. Wenn ein Client eine Anfrage stellt, leitet der Proxy-Server diese Anfrage im Namen des Clients weiter und empfängt die Antwort vom Zielserver. Dadurch kann der Proxy-Server den Datenverkehr überwachen, filtern, umleiten oder anonymisieren, um die Sicherheit und Effizienz der Verbindung zu verbessern.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren sie Proxy-Server",
+        "antwort": "Ein Server, der als Vermittler zwischen Clients und anderen Servern fungiert.",
+        "typ": "text"
+      },
+      {
+        "frage": "Nennen Sie drei mögliche Einsatzgebiete oder Vorteile eines Proxy-Servers.",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+        "a": "Schnellere Internetverbindung, Virenscannen, Verschlüsselung",
+        "b": "Caching (Zwischenspeicherung), Filterung von Inhalten, Anonymisierung, Zugriffskontrolle, Lastverteilung.",
+        "c": "E-Mail-Versand, Webdesign, Datenbankverwaltung",
+        "d": "Datensicherung, Softwareentwicklung, Spieleentwicklung"
+        },
+        "korrekte_antworten": [
+        "b"
+        ]
+        },
+      {
+        "frage": "Kann ein Proxy-Server die Sicherheit erhöhen?",
+        "antwort": "Ja, ein Proxy-Server kann die Sicherheit erhöhen, indem er die IP-Adresse des Clients verbirgt (Anonymisierung), den Datenverkehr filtert (z.B. schädliche Webseiten blockiert) und als zusätzliche Sicherheitsschicht zwischen dem Client und dem Internet fungiert.",
+        "typ": "text"
+      }
+    ]
+  },
+        {
+    "karten_nummer": 184,
+    "original_frage": "Für welche Aufgaben wird ein Reverse-Proxy-Server eingesetzt?",
+    "original_antwort": "Ein Reverse-Proxy-Server ist ein Server, der als Vermittler zwischen Clients und einem oder mehreren Back-End-Servern fungiert. Er nimmt Anfragen von Clients entgegen und leitet diese an die entsprechenden Server weiter. Nachdem der Server die Anfrage bearbeitet hat, sendet der Reverse-Proxy die Antwort zurück an den Client.\nEr kann u. a. die folgenden Funktionen übernehmen:\n- Lastverteilung (Load Balancing)\n- Caching\n- Verschlüsselung\n- Schutz der Identität der Back-End-Server\n- Kompression eingehender und ausgehender Daten",
+    "alternativfragen": [
+      {
+        "frage": "Was ist der Hauptunterschied zwischen einem Proxy-Server und einem Reverse-Proxy-Server?",
+        "antwort": "Proxy: Steht *vor* Clients, schützt Clients. Reverse-Proxy: Steht *vor* Servern, schützt Server.",
+        "typ": "text"
+      },
+      {
+        "frage": "Nennen Sie drei typische Einsatzgebiete für einen Reverse-Proxy.",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "E-Mail-Versand, Webdesign, Datenbankverwaltung.",
+          "b": "Lastverteilung, Caching, SSL-Verschlüsselung/Entschlüsselung, Schutz der Backend-Server.",
+          "c": "Spieleentwicklung, Softwareentwicklung, Datenanalyse.",
+          "d": "Betriebssysteminstallation, Hardwarekonfiguration, Benutzerschulung."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Wie kann ein Reverse-Proxy die Sicherheit einer Webanwendung erhöhen?",
+        "antwort": "Ein Reverse-Proxy kann die eigentlichen Webserver vor direkten Zugriffen aus dem Internet verbergen, SSL-Zertifikate verwalten (und somit die Webserver entlasten), Angriffe wie DDoS abwehren und als zusätzliche Sicherheitsschicht dienen.",
+        "typ": "text"
+      }
+    ]
+  },
+          {
+    "karten_nummer": 185,
+    "original_frage": "Was ist die Datenübertragungsrate und wie wird sie berechnet?",
+    "original_antwort": "Die Datenübertragungsrate bezieht sich auf die Menge an Daten, die innerhalb einer bestimmten Zeitspanne übertragen werden können. Sie gibt an, wie schnell Daten von einem Punkt zum anderen übertragen werden. Je höher die Datenübertragungsrate ist, desto schneller können Daten übertragen werden und desto weniger Zeit wird für die Übertragung großer Datenmengen benötigt.\nDatenübertragungsrate = Datenmenge / Zeitintervall",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie 'Datenübertragungsrate'.",
+        "antwort": "Die Menge an Daten, die pro Zeiteinheit übertragen wird (oft in Bit/s oder Byte/s).",
+        "typ": "text"
+      },
+      {
+        "frage": "In welchen Einheiten wird die Datenübertragungsrate typischerweise angegeben?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Bits pro Sekunde (bit/s, bps), Bytes pro Sekunde (B/s, Bps)",
+          "b": "Volt pro Sekunde",
+          "c": "Ampere pro Sekunde",
+          "d": "Ohm pro Sekunde"
+        },
+        "korrekte_antworten": [
+          "a"
+        ]
+      },
+      {
+        "frage": "Wie berechnet man die Übertragungszeit für eine bestimmte Datenmenge bei gegebener Datenübertragungsrate?",
+        "antwort": "Zeit = Datenmenge / Datenübertragungsrate",
+        "typ": "text"
+      }
+    ]
+  },
+    {
+    "karten_nummer": 186,
+    "original_frage": "Was sind die Unterschiede zwischen LAN, MAN, WAN und GAN?",
+    "original_antwort": "LAN (Local Area Network): Lokales Netzwerk, das in einem begrenzten geografischen Bereich eingerichtet ist.\nMAN (Metropolitan Area Network): Netzwerk, das sich über eine Stadt oder eine Metropolregion erstreckt. Es bietet eine größere Reichweite als ein LAN, aber eine kleinere als ein WAN.\nWAN (Wide Area Network): Weitläufiges Netzwerk, das über große Entfernungen verteilt ist. Es ermöglicht die Kommunikation zwischen entfernten Standorten.\nGAN (Global Area Network): Netzwerk, das sich über den gesamten Globus erstreckt. Es verbindet verschiedene WANs und ermöglicht die globale Kommunikation zwischen Standorten weltweit.",
+    "alternativfragen": [
+      {
+        "frage": "Ordnen Sie LAN, MAN, WAN und GAN nach ihrer geografischen Reichweite (von klein nach groß).",
+        "antwort": "LAN, MAN, WAN, GAN.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist der Hauptunterschied zwischen einem LAN und einem WAN?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Die Geschwindigkeit.",
+          "b": "Die verwendete Technologie.",
+          "c": "Die geografische Ausdehnung.",
+          "d": "Die Anzahl der angeschlossenen Geräte."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Welche Art von Netzwerk würde man typischerweise verwenden, um Computer in einem Bürogebäude zu verbinden?",
+        "antwort": "Ein LAN (Local Area Network).",
+        "typ": "text"
+      }
+    ]
+  },
+      {
+    "karten_nummer": 187,
+    "original_frage": "PAN (Personal Area Network) und WLAN (Wireless Local Area Network) sind zwei verschiedene Arten von Netzwerken mit unterschiedlichen Anwendungsbereichen und Funktionalitäten. Erklären Sie diese.",
+    "original_antwort": "Ein PAN ist ein Netzwerk, das sich auf den persönlichen oder lokalen Bereich einer Person beschränkt. Es ermöglicht die Verbindung zwischen Geräten in unmittelbarer Nähe zueinander. PANs werden häufig für den Austausch von Daten zwischen persönlichen Geräten, wie z. B. Smartphones, Tablets, Laptops oder Druckern, verwendet.\nEin WLAN ist ein drahtloses lokales Netzwerk, das eine größere Reichweite als ein PAN hat. Es ermöglicht die drahtlose Verbindung und Kommunikation zwischen Geräten über eine größere Fläche. WLANs basieren auf dem Wi-Fi-Standard und ermöglichen den drahtlosen Austausch von Daten zwischen Geräten im Netzwerk.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist der Hauptunterschied zwischen einem PAN und einem WLAN?",
+        "antwort": "PAN: Sehr kurze Reichweite (persönlicher Bereich). WLAN: Größere Reichweite (lokales Netzwerk).",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Technologie wird typischerweise für ein PAN verwendet?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Ethernet",
+          "b": "Glasfaser",
+          "c": "Bluetooth, Infrarot, USB",
+          "d": "Mobilfunk"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Was bedeutet 'Wi-Fi'?",
+        "antwort": "Wi-Fi ist ein Standard für drahtlose lokale Netzwerke (WLANs).",
+        "typ": "text"
+      }
+    ]
+  }
+]

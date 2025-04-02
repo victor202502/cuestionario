@@ -1,0 +1,281 @@
+[
+  {
+    "karten_nummer": 99,
+    "original_frage": "Welche speziellen Anforderungen in Bezug auf die Beziehungen zwischen den einzelnen Entitätstypen sind bei der Ableitung von Datentabellen aus einem ER-Diagramm zu beachten?",
+    "original_antwort": "Bei der Ableitung von Tabellen aus einem ER-Diagramm müssen Sie die Art der Beziehungen berücksichtigen:\n- 1:1: Eine Fremdschlüsselbeziehung in einer der beiden Tabellen erstellen.\n- 1:n: Der Primärschlüssel der „1\"-Tabelle wird als Fremdschlüssel in der „n\"-Tabelle verwendet.\n- n:m: Diese Art von Beziehungen müssen über eine zusätzliche Tabelle mit Fremdschlüsseln zu beiden beteiligten Tabellen aufgelöst werden.",
+    "alternativfragen": [
+      {
+        "frage": "Wie werden 1:1, 1:n und n:m Beziehungen in relationalen Datenbanktabellen umgesetzt?",
+        "antwort": "1:1: Fremdschlüssel in einer Tabelle. 1:n: Fremdschlüssel in der n-Tabelle. n:m: Zusätzliche Verknüpfungstabelle.",
+        "typ": "text"
+      },
+      {
+        "frage": "Wie wird eine 1:n-Beziehung in einer relationalen Datenbank abgebildet?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Durch eine zusätzliche Tabelle.",
+          "b": "Durch einen Fremdschlüssel in der Tabelle auf der 1-Seite.",
+          "c": "Durch einen Fremdschlüssel in der Tabelle auf der n-Seite.",
+          "d": "Durch einen gemeinsamen Primärschlüssel."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Warum benötigt man bei einer n:m-Beziehung eine zusätzliche Tabelle?",
+        "antwort": "Weil man in einer relationalen Datenbank nicht direkt eine n:m-Beziehung zwischen zwei Tabellen abbilden kann. Die zusätzliche Tabelle (auch Verknüpfungstabelle oder Kreuztabelle genannt) enthält Fremdschlüssel, die auf die Primärschlüssel der beiden ursprünglichen Tabellen verweisen.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 100,
+    "original_frage": "Was ist eine Stored Procedure und welche Vorteile bietet sie in der Datenbankentwicklung?",
+    "original_antwort": "Eine Stored Procedure ist eine vorbereitete SQL-Anweisung, die auf der Datenbank gespeichert ist. Sie kann parametrisiert werden und mehrere SQL-Anweisungen enthalten, die komplexe Operationen ausführen.\nVorteile von Stored Procedures:\n- Leistung: Sie sind effizienter bei wiederholten und komplexen Anfragen, da sie einmal kompiliert und direkt auf dem Server ausgeführt werden.\n- Wiederverwendbarkeit: Sie können in verschiedenen Anwendungen wiederverwendet werden.\n- Sicherheit: Sie begrenzen den direkten Zugriff auf die Datenbank.\n- Transaktionskontrolle: Sie erlauben es, mehrere Operationen als eine einzige Transaktion zu behandeln.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie 'Stored Procedure'.",
+        "antwort": "Vorkompilierter, benannter Satz von SQL-Anweisungen, der auf dem Datenbankserver gespeichert ist.",
+        "typ": "text"
+      },
+      {
+        "frage": "Nennen Sie drei Vorteile der Verwendung von Stored Procedures.",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Weniger Code, einfachere Syntax, automatische Datensicherung.",
+          "b": "Bessere Performance, Wiederverwendbarkeit, erhöhte Sicherheit.",
+          "c": "Keine Notwendigkeit für SQL-Kenntnisse, automatische Fehlerkorrektur, garantierte Datenintegrität.",
+          "d": "Plattformunabhängigkeit, einfachere Installation, automatische Skalierung"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Wie tragen Stored Procedures zur Sicherheit bei?",
+        "antwort": "Indem sie den direkten Zugriff auf die Datenbanktabellen einschränken und stattdessen den Zugriff über vordefinierte Prozeduren ermöglichen, kann das Risiko von SQL-Injection-Angriffen reduziert werden.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 101,
+    "original_frage": "Wie funktionieren Trigger in Datenbankumgebungen und wie können sie zur automatischen Ausführung von Aktionen verwendet werden?",
+    "original_antwort": "Ein Trigger in einer Datenbank ist eine Art von Stored Procedure, die automatisch in Reaktion auf bestimmte Ereignisse in einer spezifischen Tabelle oder Ansicht in der Datenbank ausgeführt wird. Die Ereignisse können das Einfügen, Aktualisieren oder Löschen von Daten sein.\nEin Trigger wird immer mit einer Tabelle verknüpft und aktiviert sich, wenn eine angegebene Datenmanipulationsoperation (DML) ausgeführt wird.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist ein Datenbank-Trigger?",
+        "antwort": "Eine spezielle Art von Stored Procedure, die automatisch bei bestimmten Datenbankereignissen ausgeführt wird.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Ereignisse können einen Trigger auslösen?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Nur INSERT-Anweisungen.",
+          "b": "Nur UPDATE-Anweisungen.",
+          "c": "Nur DELETE-Anweisungen.",
+          "d": "INSERT-, UPDATE- und DELETE-Anweisungen (und manchmal auch andere Ereignisse, je nach Datenbanksystem)."
+        },
+        "korrekte_antworten": [
+          "d"
+        ]
+      },
+      {
+        "frage": "Nennen Sie einen Anwendungsfall für einen Datenbank-Trigger",
+          "antwort": "Ein Trigger könnte verwendet werden, um automatisch ein Protokoll zu erstellen, wenn Daten in einer bestimmten Tabelle geändert werden (Audit-Trail), um Berechnungen durchzuführen und Werte in anderen Tabellen zu aktualisieren, oder um Integritätsbedingungen zu überprüfen und ggf. Aktionen abzubrechen.",
+          "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 102,
+    "original_frage": "Warum ist die Indizierung von Spalten in einer Datenbank wichtig und wie kann sie die Leistung von Abfragen verbessern?",
+    "original_antwort": "Ein Index bietet einen schnellen Zugriff auf die Daten. Er enthält eine sortierte Liste von Werten einer bestimmten Spalte und Verweise auf die Speicherorte der zugehörigen Daten. Wenn eine Abfrage eine indizierte Spalte verwendet, kann das Datenbanksystem den Index verwenden, um schnell zu den benötigten Daten zu navigieren, anstatt alle Zeilen durchsuchen zu müssen.\nDies kann die Leistung von Abfragen erheblich verbessern. Allerdings hat die Erstellung von Indizes auch einen gewissen Overhead, sowohl in Bezug auf den Speicherplatz als auch auf die Verarbeitungszeit bei Schreibvorgängen, da der Index immer aktualisiert werden muss.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist ein Datenbankindex?",
+        "antwort": "Eine Datenstruktur, die den schnellen Zugriff auf Daten in einer Tabelle ermöglicht (ähnlich einem Index in einem Buch).",
+        "typ": "text"
+      },
+      {
+        "frage": "Wie verbessert ein Index die Leistung von Datenbankabfragen?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Er verschlüsselt die Daten.",
+          "b": "Er komprimiert die Daten.",
+          "c": "Er ermöglicht einen schnellen Zugriff auf die relevanten Daten, ohne die gesamte Tabelle durchsuchen zu müssen.",
+          "d": "Er sichert die Daten automatisch."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Haben Indizes auch Nachteile?",
+        "antwort": "Ja, Indizes benötigen zusätzlichen Speicherplatz und können die Geschwindigkeit von Schreiboperationen (INSERT, UPDATE, DELETE) verlangsamen, da der Index bei jeder Änderung aktualisiert werden muss.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 103,
+    "original_frage": "Was versteht man unter dem Begriff „Transaktion\" im Kontext von SQL-Statements?",
+    "original_antwort": "Eine Transaktion in SQL bezeichnet eine Gruppe von miteinander verbundenen Anweisungen, die als eine einzelne Arbeitseinheit behandelt werden. Sie folgen dem ACID-Prinzip:\n- Atomarität: Alles oder nichts. Alle Operationen in der Transaktion werden erfolgreich ausgeführt oder gar keine.\n- Konsistenz: Die Transaktion bringt die Datenbank von einem konsistenten Zustand in einen anderen.\n- Isolation: Jede Transaktion wird so behandelt, als ob sie isoliert von anderen läuft.\n- Dauerhaftigkeit: Nachdem eine Transaktion abgeschlossen ist, sind ihre Auswirkungen dauerhaft.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie den Begriff 'Transaktion' in SQL.",
+        "antwort": "Eine Folge von Datenbankoperationen, die als eine Einheit behandelt werden (alles oder nichts).",
+        "typ": "text"
+      },
+      {
+        "frage": "Nennen Sie die vier Eigenschaften einer Transaktion (ACID).",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Atomarität, Konsistenz, Isolation, Dauerhaftigkeit",
+          "b": "Authentifizierung, Kontrolle, Integrität, Design",
+          "c": "Analyse, Kontrolle, Implementierung, Dokumentation",
+          "d": "Agilität, Klarheit, Innovation, Dynamik"
+        },
+        "korrekte_antworten": [
+          "a"
+        ]
+      },
+      {
+        "frage": "Warum sind Transaktionen wichtig für die Datenintegrität?",
+        "antwort": "Transaktionen stellen sicher, dass Datenbankoperationen entweder vollständig oder gar nicht durchgeführt werden, wodurch Dateninkonsistenzen vermieden werden. Sie schützen vor Fehlern, die während einer Operation auftreten könnten.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 104,
+    "original_frage": "Erklären Sie die Funktion und Verwendung der folgenden SQL-Befehle im Zusammenhang mit Transaktionen:\nBEGIN TRANSACTION\nCOMMIT\nROLLBACK",
+    "original_antwort": "Diese Befehle in SQL werden verwendet, um Transaktionen zu kontrollieren:\nBEGIN TRANSACTION: Dieser Befehl signalisiert den Beginn einer Transaktion.\nCOMMIT: Schließt die Transaktion ab und speichert alle Änderungen dauerhaft in der Datenbank. Nach einem COMMIT kann die Transaktion nicht mehr rückgängig gemacht werden.\nROLLBACK: Macht alle Änderungen, die in der aktuellen Transaktion gemacht wurden, rückgängig, wenn ein Fehler auftritt oder wenn die Transaktion aus irgendeinem Grund nicht abgeschlossen werden kann.",
+    "alternativfragen": [
+      {
+        "frage": "Beschreiben Sie die Funktion von BEGIN TRANSACTION, COMMIT und ROLLBACK in SQL.",
+        "antwort": "BEGIN: Startet eine Transaktion. COMMIT: Bestätigt Änderungen. ROLLBACK: Macht Änderungen rückgängig.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was passiert, wenn ein Fehler innerhalb einer Transaktion auftritt und kein ROLLBACK ausgeführt wird?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Die Änderungen werden automatisch gespeichert.",
+          "b": "Die Datenbank wird gesperrt.",
+          "c": "Das Verhalten ist abhängig vom Datenbanksystem, aber in der Regel werden die Änderungen *nicht* gespeichert (implizites Rollback).",
+          "d": "Die Datenbank wird beschädigt."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+          "frage": "Kann eine Transaktion nach einem COMMIT noch rückgängig gemacht werden?",
+          "antwort": "Nein, nach einem COMMIT sind die Änderungen dauerhaft in der Datenbank gespeichert und können nicht mehr mit ROLLBACK rückgängig gemacht werden.",
+          "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 105,
+    "original_frage": "Was sind SQL Joins?\nErklären Sie kurz „INNER JOIN\", „LEFT JOIN\", „RIGHT JOIN\" und „FULL JOIN\".",
+    "original_antwort": "SQL Joins werden verwendet, um Daten aus zwei oder mehr Tabellen basierend auf einer verwandten Spalte (Verbundbedingung) zu kombinieren. Ein Join wird typischerweise in einer SELECT-Anweisung verwendet und kann mehrere Bedingungen in der ON-Klausel haben.\nINNER JOIN: Gibt Zeilen zurück, bei denen es eine Übereinstimmung in beiden Tabellen gibt.\nLEFT JOIN: Gibt alle Zeilen der linken Tabelle und die übereinstimmenden Zeilen der rechten Tabelle zurück.\nRIGHT JOIN: Gibt alle Zeilen der rechten Tabelle und die übereinstimmenden Zeilen der linken Tabelle zurück.\nFULL JOIN: Gibt Zeilen zurück, wenn es eine Übereinstimmung in einer der Tabellen gibt.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist der Zweck von SQL Joins?",
+        "antwort": "Daten aus mehreren Tabellen basierend auf einer Beziehung zwischen Spalten zu kombinieren.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welcher Join-Typ gibt *alle* Zeilen der *linken* Tabelle zurück, auch wenn es keine Übereinstimmung in der rechten Tabelle gibt?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "INNER JOIN",
+          "b": "LEFT JOIN",
+          "c": "RIGHT JOIN",
+          "d": "FULL JOIN"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Erkläre den Unterschied zwischen LEFT JOIN und RIGHT JOIN",
+        "antwort": "LEFT JOIN gibt alle Zeilen der *linken* Tabelle und die passenden Zeilen der rechten Tabelle zurück (mit NULL für nicht übereinstimmende Spalten der rechten Tabelle). RIGHT JOIN macht das Gegenteil: alle Zeilen der *rechten* Tabelle und die passenden Zeilen der linken Tabelle (mit NULL für nicht übereinstimmende Spalten der linken Tabelle).",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 106,
+    "original_frage": "Was bedeutet der Begriff „NULL\" in Bezug auf Datenbanken und welche Rolle spielt es bei der Datenverarbeitung und -abfrage?",
+    "original_antwort": "In Datenbanken bedeutet „NULL\", dass ein Feld keinen Wert hat. Es ist weder 0 noch Leerzeichen, sondern repräsentiert fehlende oder unbekannte Daten.\nEinige Punkte zur Handhabung von NULL:\n- Bei fehlenden Daten kann NULL eingefügt werden.\n- In Abfragen wird „IS NULL\" oder „IS NOT NULL“ verwendet, um NULL-Werte zu finden.\n- Arithmetische Operationen mit NULL ergeben NULL.\n- Aggregatfunktionen wie COUNT oder SUM ignorieren NULL-Werte.\n- Oft werden NULL-Werte in Datenbankindizes nicht berücksichtigt.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie den Wert 'NULL' in SQL.",
+        "antwort": "NULL bedeutet 'kein Wert' oder 'unbekannter Wert'.",
+        "typ": "text"
+      },
+      {
+        "frage": "Wie prüft man in SQL, ob ein Wert NULL ist?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "feld = NULL",
+          "b": "feld == NULL",
+          "c": "feld IS NULL",
+          "d": "feld != NULL"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+          "frage": "Was ist das Ergebnis von `5 + NULL` in SQL?",
+          "antwort": "Das Ergebnis jeder arithmetischen Operation mit NULL ist ebenfalls NULL.",
+          "typ": "text"
+      }
+    ]
+  },
+    {
+    "karten_nummer": 107,
+    "original_frage": "Was sind die grundlegenden Operationen im digitalen Datenmanagement, die durch das Akronym CRUD abgedeckt werden?",
+     "original_antwort": "CRUD steht für Create, Read, Update and Delete.\nEs handelt sich um grundlegende Operationen,\ndie bei der Verwaltung digitaler Daten durchgeführt werden.\n-   Create (Erstellen): neue Daten werden erstellt und in das System eingefügt.\n-   Read (Lesen): bestehende Daten werden aus dem System abgerufen und angezeigt.\n-   Update (Aktualisieren): bestehende Daten werden geändert oder aktualisiert.\n-   Delete (Löschen): bestehende Daten werden aus dem System entfernt.",
+    "alternativfragen": [
+      {
+        "frage": "Wofür steht das Akronym CRUD?",
+        "antwort": "Create, Read, Update, Delete.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche CRUD-Operation entspricht dem SQL-Befehl INSERT?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Create",
+          "b": "Read",
+          "c": "Update",
+          "d": "Delete"
+        },
+        "korrekte_antworten": [
+          "a"
+        ]
+      },
+      {
+          "frage": "Beschreibe kurz die vier CRUD-Operationen",
+          "antwort": "Create: Erstellt neue Daten. Read: Liest vorhandene Daten. Update: Ändert vorhandene Daten. Delete: Löscht vorhandene Daten.",
+          "typ": "text"
+      }
+    ]
+  }
+]

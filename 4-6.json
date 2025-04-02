@@ -1,0 +1,343 @@
+[
+  {
+    "karten_nummer": 198,
+    "original_frage": "Welche Schichten des OSI-Modells gehören zu den anwendungsorientierten Schichten?\nErklären Sie auch kurz die Aufgaben dieser Schichten.",
+    "original_antwort": "Anwendungsorientierte Schichten:\nDie Sitzungsschicht etabliert, verwaltet und beendet Sitzungen zwischen Anwendungen. Sie ermöglicht die Synchronisierung von Datenübertragungen und bietet Mechanismen für den Aufbau und das Beenden von Verbindungen.\nDie Darstellungsschicht kümmert sich um die Datenrepräsentation und den Austausch von Datenformaten zwischen Anwendungen. Sie ist für die Datenkompression, Verschlüsselung sowie für die Datenkonvertierung zuständig.\nDie Anwendungsschicht ist die oberste Schicht des OSI-Modells und enthält Anwendungen und Dienste für Endbenutzer. Sie ermöglicht die Interaktion zwischen Benutzern und dem Netzwerk.",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie die anwendungsorientierten Schichten des OSI-Modells.",
+        "antwort": "Sitzungsschicht (Session), Darstellungsschicht (Presentation), Anwendungsschicht (Application).",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Schicht ist für die Datenverschlüsselung und -komprimierung zuständig?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Sitzungsschicht",
+          "b": "Darstellungsschicht",
+          "c": "Anwendungsschicht",
+          "d": "Transportschicht"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Welche Schicht des OSI-Modells stellt die Dienste bereit, die direkt von Anwendungen wie E-Mail-Programmen oder Webbrowsern genutzt werden?",
+        "antwort": "Die Anwendungsschicht (Application Layer).",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 199,
+    "original_frage": "Nennen Sie Beispiele für Protokolle, welche auf der Vermittlungsschicht und der Transportschicht der OSI-Modells arbeiten.",
+    "original_antwort": "Vermittlungsschicht:\n- IP\n- IPSec\n- ICMP\nTransportschicht:\n- TCP\n- UDP",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie zwei Protokolle, die auf der Vermittlungsschicht (Network Layer) des OSI-Modells arbeiten.",
+        "antwort": "IP (Internet Protocol), IPSec (Internet Protocol Security), ICMP (Internet Control Message Protocol).",
+        "typ": "text"
+      },
+      {
+        "frage": "Welches der folgenden Protokolle ist *kein* Transportschichtprotokoll?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "TCP",
+          "b": "UDP",
+          "c": "IP",
+          "d": "SCTP"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Was ist die Hauptaufgabe der Vermittlungsschicht?",
+        "antwort": "Die Vermittlungsschicht (Network Layer) ist für die logische Adressierung (z.B. mit IP-Adressen) und die Weiterleitung von Datenpaketen zwischen verschiedenen Netzwerken (Routing) zuständig.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 200,
+    "original_frage": "Orden Sie Hub, Bridge, Router, Switch und Repeater den entsprechenden Schichten des OSI-Modells zu.",
+    "original_antwort": "Bitübertragungsschicht:\n- Hub\n- Repeater\nSicherungsschicht:\n- Layer-2-Switch\n- Bridge\nVermittlungsschicht:\n- Router\n- Layer-3-Switch",
+    "alternativfragen": [
+      {
+        "frage": "Ordnen Sie die folgenden Netzwerkgeräte den Schichten 1, 2 und 3 des OSI-Modells zu: Hub, Switch, Router, Bridge, Repeater.",
+        "antwort": "Schicht 1: Hub, Repeater. Schicht 2: Switch, Bridge. Schicht 3: Router.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welches Gerät arbeitet hauptsächlich auf der Sicherungsschicht (Data Link Layer) des OSI-Modells?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Router",
+          "b": "Hub",
+          "c": "Switch",
+          "d": "Repeater"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Welches Gerät verstärkt ein Signal, ohne es zu interpretieren oder zu filtern?",
+        "antwort": "Ein Repeater arbeitet auf der Bitübertragungsschicht (Physical Layer) und verstärkt das Signal, um die Reichweite zu erhöhen.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 201,
+    "original_frage": "Erklären Sie den Unterschied zwischen einem Switch und einem Hub.",
+    "original_antwort": "Ein Hub leitet empfangene Datenpakete an alle angeschlossenen Geräte weiter. Dies kann zu erheblichem Netzwerk-Verkehr und Kollisionen führen, da die Daten an alle Geräte gesendet werden, unabhängig davon, für welches Gerät die Daten tatsächlich bestimmt sind.\nEin Switch ist in der Lage, den spezifischen Pfad zu bestimmen, auf dem Datenpakete weitergeleitet werden sollen. Bei Empfang eines Datenpakets sendet der Switch dieses nur an das Zielgerät weiter. Dies wird durch die Speicherung von MAC-Adressen der an den Switch angeschlossenen Geräte erreicht. Diese Funktionsweise verringert Kollisionen und ermöglicht eine bessere Bandbreitennutzung.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist der Hauptunterschied zwischen einem Hub und einem Switch?",
+        "antwort": "Hub: Sendet Daten an alle Ports. Switch: Sendet Daten nur an den Zielport (basierend auf MAC-Adresse).",
+        "typ": "text"
+      },
+      {
+        "frage": "Welches Gerät (Hub oder Switch) ist effizienter und sicherer in einem Netzwerk?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Hub",
+          "b": "Switch",
+          "c": "Beide gleich",
+          "d": "Hängt vom Netzwerk ab"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Warum verursacht ein Hub mehr Netzwerkkollisionen als ein Switch?",
+        "antwort": "Weil ein Hub alle empfangenen Datenpakete an *alle* angeschlossenen Geräte weiterleitet, was zu unnötigem Datenverkehr und Kollisionen führt, wenn mehrere Geräte gleichzeitig senden.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 202,
+    "original_frage": "Wofür wird das Network File System (NFS) verwendet?",
+    "original_antwort": "NFS ist ein Protokoll, das hauptsächlich in Unix- und Linux-Umgebungen eingesetzt wird. Es ermöglicht den transparenten Zugriff auf entfernte Dateisysteme und erleichtert die gemeinsame Nutzung von Dateien zwischen verschiedenen Betriebssystemen.\nNFS basiert auf dem Client-Server-Modell und ermöglicht es einem Computer, über ein Netzwerk auf Dateien zuzugreifen, als wären sie lokal gespeichert.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist NFS?",
+        "antwort": "Ein Protokoll für den Zugriff auf Dateien über ein Netzwerk (Network File System).",
+        "typ": "text"
+      },
+      {
+        "frage": "In welchen Betriebssystemumgebungen wird NFS hauptsächlich verwendet?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Windows",
+          "b": "Unix/Linux",
+          "c": "macOS",
+          "d": "DOS"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Was ist der Hauptvorteil von NFS?",
+        "antwort": "NFS ermöglicht es Benutzern und Anwendungen, auf Dateien auf entfernten Servern zuzugreifen, als wären sie lokal gespeichert. Dies vereinfacht die gemeinsame Nutzung von Dateien und die zentrale Verwaltung von Daten.",
+        "typ": "text"
+      }
+    ]
+  },
+    {
+    "karten_nummer": 203,
+    "original_frage": "Was ist die Aufgabe des SMB-Protokolls?",
+    "original_antwort": "SMB (Server Message Block) ist ein Protokoll, das ursprünglich von Microsoft entwickelt wurde und hauptsächlich in Windows-Umgebungen verwendet wird. Es ermöglicht die gemeinsame Nutzung von Dateien, Druckern und anderen Ressourcen in einem Netzwerk.\nSMB unterstützt Funktionen wie Authentifizierung, Datei- und Druckerdienste sowie den Zugriff auf Netzwerkfreigaben. Es ist das Standardprotokoll für die Dateifreigabe in Windows-Netzwerken.",
+    "alternativfragen": [
+      {
+        "frage": "Wofür steht die Abkürzung 'SMB'?",
+        "antwort": "Server Message Block.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist der Hauptzweck von SMB?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Webseiten zu hosten.",
+          "b": "E-Mails zu senden.",
+          "c": "Dateien und Drucker in einem Netzwerk freizugeben.",
+          "d": "Daten zu verschlüsseln."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "In welchen Betriebssystemumgebungen wird SMB hauptsächlich verwendet?",
+        "antwort": "SMB wurde ursprünglich für Windows entwickelt und ist das Standardprotokoll für die Dateifreigabe in Windows-Netzwerken. Es wird aber auch von anderen Betriebssystemen (z.B. über Samba in Linux/Unix) unterstützt.",
+        "typ": "text"
+      }
+    ]
+  },
+          {
+    "karten_nummer": 204,
+    "original_frage": "Erläutern Sie den Begriff Service Level Agreement (SLA).",
+    "original_antwort": "Ein Service Level Agreement (SLA) ist eine schriftliche Vereinbarung zwischen einem Dienstleister und einem Kunden, die die vereinbarten Leistungsparameter und -ziele für eine bestimmte Dienstleistung oder ein Produkt festlegt.\nEin SLA definiert die Erwartungen hinsichtlich Qualität, Reaktionszeiten, Verfügbarkeit, Support und anderen Aspekten des Services. Es dient als Grundlage für die Bewertung der Servicequalität.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist ein Service Level Agreement (SLA)?",
+        "antwort": "Eine Vereinbarung zwischen Dienstleister und Kunde, die die Leistungsmerkmale eines Dienstes festlegt.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Aspekte werden typischerweise in einem SLA festgelegt?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Nur der Preis.",
+          "b": "Nur die Verfügbarkeit.",
+          "c": "Qualitätsmerkmale, Verfügbarkeit, Reaktionszeiten, Support, usw.",
+          "d": "Nur die Vertragslaufzeit."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Was passiert, wenn die im SLA vereinbarten Ziele nicht erreicht werden?",
+        "antwort": "Die Folgen der Nichteinhaltung eines SLAs sind normalerweise im Vertrag selbst festgelegt. Dies können z.B. Vertragsstrafen, Preisnachlässe oder andere Kompensationen sein.",
+        "typ": "text"
+      }
+    ]
+  },
+        {
+    "karten_nummer": 205,
+    "original_frage": "Was sind die Aufgaben des First-Level-Supports?",
+    "original_antwort": "Der First-Level-Support ist der erste Kontakt für Kunden bei Supportanfragen. Die Aufgaben des 1st-Level Supports umfassen:\n- Entgegennahme von Supportanfragen\n- Klassifizierung und Priorisierung von Supportanfragen\n- grundlegende Unterstützung, um häufig auftretende Probleme zu lösen\n- Weiterleitung von Anfragen, wenn das Problem über den Bereich des 1st-Level Supports hinausgeht\n- Dokumentation der Supportanfragen in einem Ticketsystem oder einer Wissensdatenbank\n- professionelle und freundliche Kommunikation mit den Kunden",
+    "alternativfragen": [
+      {
+        "frage": "Was ist die Hauptaufgabe des First-Level-Supports?",
+        "antwort": "Erste Anlaufstelle für Benutzer/Kunden bei Problemen oder Fragen; einfache Probleme lösen, komplexere weiterleiten.",
+        "typ": "text"
+      },
+      {
+        "frage": "Nennen Sie drei typische Aufgaben des First-Level-Supports.",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Softwareentwicklung, Hardwareinstallation, Netzwerkadministration.",
+          "b": "Anrufannahme, Problemerfassung, einfache Problemlösung, Weiterleitung, Dokumentation.",
+          "c": "Vertrieb, Marketing, Buchhaltung.",
+          "d": "Schulungen, Projektmanagement, Forschung."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Was passiert, wenn der First-Level-Support ein Problem nicht lösen kann?",
+        "antwort": "Das Problem wird an den Second-Level-Support oder, falls nötig, an den Third-Level-Support eskaliert.",
+        "typ": "text"
+      }
+    ]
+  },
+   {
+    "karten_nummer": 206,
+    "original_frage": "Erklären Sie den Unterschied zwischen dem 2nd-Level- und 3rd-Level-Support.",
+    "original_antwort": "Der Second-Level-Support ist die erste Eskalationsstufe, wenn eine Anfrage nicht vom First-Level-Support gelöst werden kann. Er besteht aus erfahrenen Technikern oder Spezialisten. Sie können komplexere Anfragen bearbeiten, Fehlerdiagnosen durchführen und spezifischere Lösungen bereitstellen.\nDer Third-Level-Support ist die höchste Eskalationsstufe im Supportprozess. Er umfasst hochspezialisierte Fachleute, die über umfangreiches technisches Wissen und Expertise verfügen. Sie sind in der Lage, komplexe Probleme zu analysieren und umfassende Fehlerbehebung durchzuführen, die über die Möglichkeiten des Second-Level-Supports hinausgehen.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist der Hauptunterschied zwischen Second-Level- und Third-Level-Support?",
+        "antwort": "Second-Level: Tiefere technische Kenntnisse als First-Level. Third-Level: Höchste Expertise, oft Entwickler oder Produktspezialisten.",
+        "typ": "text"
+      },
+      {
+        "frage": "Wann wird ein Problem typischerweise vom Second-Level- zum Third-Level-Support eskaliert?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Wenn der Benutzer ungeduldig ist.",
+          "b": "Wenn das Problem sehr einfach ist.",
+          "c": "Wenn das Problem sehr komplex ist und spezielles Fachwissen oder Entwicklerressourcen erfordert.",
+          "d": "Wenn der Second-Level-Support keine Zeit hat."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Arbeitet der Second-Level Support direkt mit den Kunden/Anwendern zusammen?",
+        "antwort": "Der Second-Level-Support arbeitet oft indirekt mit Kunden, über den First Level Support, kann aber in komplexeren Fällen auch direkten Kontakt haben.",
+        "typ": "text"
+      }
+    ]
+  },
+      {
+    "karten_nummer": 207,
+    "original_frage": "Welchem Zweck dienen Standard Operating Procedures (SOP)?",
+    "original_antwort": "Standard Operating Procedures (SOP) sind schriftliche Anweisungen oder Leitfäden, die die spezifischen Schritte und Verfahren beschreiben, die in einer Organisation oder einem Unternehmen bei bestimmten Aufgaben oder Prozessen befolgt werden sollen.\nSie dienen dazu, eine klare Struktur, Einheitlichkeit und Effizienz in organisatorischen Abläufen zu gewährleisten, die Qualität zu kontrollieren und die Einhaltung von Standards sicherzustellen.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist eine Standard Operating Procedure (SOP)?",
+        "antwort": "Eine detaillierte, schriftliche Anweisung für wiederkehrende Arbeitsabläufe.",
+        "typ": "text"
+      },
+      {
+        "frage": "Nennen Sie drei Vorteile der Verwendung von SOPs.",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Kreativität fördern, Flexibilität erhöhen, Kommunikation reduzieren.",
+          "b": "Konsistenz sicherstellen, Fehler reduzieren, Einarbeitung neuer Mitarbeiter erleichtern, Qualität sichern.",
+          "c": "Kosten erhöhen, Zeit verschwenden, Bürokratie fördern.",
+          "d": "Alles wird schneller, einfacher und billiger."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "In welchen Bereichen werden SOPs typischerweise eingesetzt?",
+        "antwort": "SOPs werden in einer Vielzahl von Bereichen eingesetzt, z.B. in der Produktion, im Gesundheitswesen, in Laboren, im Kundenservice, in der IT und überall dort, wo standardisierte Abläufe wichtig sind.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 208,
+    "original_frage": "Beschreiben was unter dem ITIL-Framework zu verstehen ist.",
+    "original_antwort": "ITIL (Information Technology Infrastructure Library) ist ein Framework für das IT-Service-Management (ITSM), das bewährte Praktiken und Standards für die effektive Bereitstellung und Verwaltung von IT-Services bietet. Es wurde entwickelt, um die Qualität von IT-Services zu verbessern, die Kundenzufriedenheit zu steigern und die Effizienz der IT-Organisation zu maximieren.\nITIL besteht aus einer Sammlung von Best Practices, die in verschiedene Prozesse und Funktionen unterteilt sind. Es wird weltweit von Organisationen verschiedener Größen und Branchen eingesetzt und ist zu einem Industriestandard für das IT-Service-Management geworden.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist ITIL?",
+        "antwort": "Ein Framework (Sammlung von Best Practices) für das IT-Service-Management.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist das Hauptziel von ITIL?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Die Kosten für IT zu senken.",
+          "b": "Die Entwicklung neuer Technologien voranzutreiben.",
+          "c": "Die Qualität und Effizienz von IT-Services zu verbessern und an den Geschäftsanforderungen auszurichten.",
+          "d": "Die Anzahl der IT-Mitarbeiter zu reduzieren."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Ist ITIL ein verbindlicher Standard oder eine Sammlung von Empfehlungen?",
+        "antwort": "ITIL ist *kein* verbindlicher Standard, sondern eine Sammlung von *Best Practices* und Empfehlungen. Unternehmen können die für sie relevanten Teile von ITIL auswählen und an ihre Bedürfnisse anpassen.",
+        "typ": "text"
+      }
+    ]
+  }
+]

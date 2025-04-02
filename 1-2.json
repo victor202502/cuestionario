@@ -1,0 +1,312 @@
+[
+  {
+    "karten_nummer": 11,
+    "original_frage": "Welche gesetzlichen Bestimmungen regeln in der Bunderepublik Deutschland den Umgang mit personenbezogenen Daten?",
+    "original_antwort": "Die Datenschutz-Grundverordnung (DSGVO) ist eine europaweit gültige Verordnung, welche die Belange des Datenschutzes für alle Mitgliedsstaaten der Europäischen Union regelt.\nDas Bundesdatenschutzgesetz (BDSG-neu) ergänzt die Vorgaben der DSGVO, bzw. konkretisiert die dortigen Regelungen. Beide Vorschriften sind gemeinsam gültig und müssen umgesetzt werden. Hierbei ist zu beachten, dass die DSGVO Anwendungsvorrang vor dem BDSG hat.",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie die zwei wichtigsten Gesetze in Deutschland, die den Umgang mit personenbezogenen Daten regeln.",
+        "antwort": "Datenschutz-Grundverordnung (DSGVO) und Bundesdatenschutzgesetz (BDSG-neu).",
+        "typ": "text"
+      },
+      {
+        "frage": "Welches der folgenden Gesetze hat Vorrang bei der Regelung des Datenschutzes in Deutschland?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Bundesdatenschutzgesetz (BDSG-neu)",
+          "b": "Datenschutz-Grundverordnung (DSGVO)",
+          "c": "Telemediengesetz (TMG)",
+          "d": "Grundgesetz (GG)"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Wie verhalten sich DSGVO und BDSG-neu zueinander?",
+        "antwort": "Die DSGVO ist eine EU-Verordnung und hat Anwendungsvorrang. Das BDSG-neu ergänzt und konkretisiert die DSGVO für Deutschland.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 12,
+    "original_frage": "Womit beschäftigen sich die Standards ISO 27001 und BSI IT-Grundschutz?",
+    "original_antwort": "Die ISO 27001 und der BSI IT-Grundschutz sind Standards im Bereich der Informationssicherheit. Sie geben u. a. Empfehlungen und Regeln für den Aufbau und die Weiterentwicklung eines Informationssicherheitsmanagementsystems (ISMS).\nHierbei ist die ISO 27001 ein weit verbreiteter internationaler Standard, welcher weltweit für Unternehmen jeglicher Größe anwendbar ist.\nDer BSI IT-Grundschutz ist ein nationaler deutscher Standard. Er ist sehr gut geeignet für die Anwendung in Behörden und Unternehmen aus kritischen Bereichen (KRITIS).",
+    "alternativfragen": [
+      {
+        "frage": "Was ist ein Informationssicherheitsmanagementsystem (ISMS)?",
+        "antwort": "Ein ISMS ist ein System von Regeln und Verfahren, um die Informationssicherheit in einer Organisation zu gewährleisten.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welcher der genannten Standards ist international anerkannt und welcher ist spezifisch für Deutschland?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "ISO 27001: National (Deutschland); BSI IT-Grundschutz: International",
+          "b": "ISO 27001: International; BSI IT-Grundschutz: National (Deutschland)",
+          "c": "Beide sind internationale Standards.",
+          "d": "Beide sind nationale Standards (Deutschland)."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Für welche Arten von Organisationen eignen sich ISO 27001 und BSI IT-Grundschutz besonders?",
+        "antwort": "ISO 27001 eignet sich für Unternehmen jeder Größe weltweit. Der BSI IT-Grundschutz ist besonders geeignet für Behörden und Unternehmen in kritischen Infrastrukturen (KRITIS) in Deutschland.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 13,
+    "original_frage": "Wie werden Schutzbedarfskategorien wie „normal\", „hoch\" und „sehr hoch\" verwendet, um den Sicherheitsbedarf von Informationen, Systemen oder Infrastrukturen einzuschätzen?",
+    "original_antwort": "Die Schutzbedarfskategorien wie „normal\", „hoch\" und „sehr hoch\" helfen dabei, den Sicherheitsbedarf von Informationen oder Systemen zu bestimmen.\n- „Normal\": Begrenzte und überschaubare Schadensauswirkung bei einem Sicherheitsvorfall\n- „Hoch\": ein Sicherheitsvorfall würde zu erheblichen Schäden führen, oder könnte die Existenz der Organisation bedrohen\n- „Sehr hoch\": ein Sicherheitsvorfall würde zu katastrophalen Schäden führen oder existentiell bedrohlich sein\nDiese Kategorisierung ermöglicht es, angemessene Sicherheitsmaßnahmen zu implementieren, basierend auf dem Schutzbedarf.",
+    "alternativfragen": [
+      {
+        "frage": "Erklären Sie die Bedeutung der Schutzbedarfskategorien 'normal', 'hoch' und 'sehr hoch'.",
+        "antwort": "'Normal' bedeutet begrenzte Schäden, 'hoch' erhebliche Schäden und 'sehr hoch' katastrophale oder existenzbedrohende Schäden bei einem Sicherheitsvorfall.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Schutzbedarfskategorie wäre für ein System angemessen, dessen Ausfall die Existenz einer Organisation gefährden könnte?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Normal",
+          "b": "Hoch",
+          "c": "Sehr hoch",
+          "d": "Gering"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Wozu dienen Schutzbedarfskategorien?",
+        "antwort": "Schutzbedarfskategorien dienen dazu, den Sicherheitsbedarf von Informationen, Systemen oder Infrastrukturen zu klassifizieren und angemessene Sicherheitsmaßnahmen abzuleiten.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 14,
+    "original_frage": "Nennen Sie im Zusammenhang mit dem Thema Datenschutz jeweils drei Beispiele für geeignete technische und organisatorische Maßnahmen (TOM).",
+    "original_antwort": "TOMs sind technische und organisatorische Maßnahmen, welche die Sicherheit der Verarbeitung von personenbezogenen Daten gewährleisten sollen.\n- Verfahren zur Durchsetzung von Komplexitätsanforderungen von Passwörtern\n- Anonymisierung und Pseudonymisierung von personenbezogenen Daten\n- Verschlüsselung von Datenträgern und Datenübertragungen\n- Datensicherung\n- bauliche Absicherung von kritischen Bereichen\n- Zugangs- und Zutrittskontrolle\n- Alarmanlagen\n- Richtlinien für die Nutzung der IT, des Internets oder mobiler Geräte\n- Verfahren zur datenschutzkonformen Entsorgung von Datenträgern\n- Verpflichtungserklärung auf das Datengeheimnis\n- u. a.",
+    "alternativfragen": [
+      {
+        "frage": "Was sind TOMs im Kontext des Datenschutzes?",
+        "antwort": "Technische und organisatorische Maßnahmen zum Schutz personenbezogener Daten.",
+        "typ": "text"
+      },
+      {
+        "frage": "Nennen Sie drei *technische* Maßnahmen zum Datenschutz.",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Passwortrichtlinien, Schulungen, Zutrittskontrolle",
+          "b": "Verschlüsselung, Pseudonymisierung, Datensicherung",
+          "c": "Anonymisierung, Datenschutzbeauftragter, Notfallpläne",
+          "d": "Gebäudeüberwachung, Risikoanalyse, Verträge"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Geben Sie drei Beispiele für *organisatorische* Maßnahmen (TOM) zum Datenschutz.",
+        "antwort": "Beispiele für organisatorische Maßnahmen sind: Richtlinien für die IT-Nutzung, Verfahren zur datenschutzkonformen Entsorgung, Verpflichtungserklärung auf das Datengeheimnis.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 15,
+    "original_frage": "Erklären Sie was in der DSGVO unter dem Ausdruck „Stand der Technik\" zu verstehen ist.",
+    "original_antwort": "Gemäß Artikel 32 der DSGVO müssen Datenverantwortliche und Datenverarbeitende unter Berücksichtigung des Stands der Technik geeignete technische und organisatorische Maßnahmen treffen, um ein dem Risiko angemessenes Schutzniveau zu gewährleisten.\nDies bedeutet, dass Unternehmen und Organisationen, die personenbezogene Daten verarbeiten, dafür sorgen müssen, dass sie die neuesten und effektivsten Sicherheitsmaßnahmen und -technologien einsetzen, um ein angemessenes Schutzniveau für personenbezogene Daten zu gewährleisten. Der „Stand der Technik\" ist hierbei nicht statisch, sondern entwickelt sich mit dem Fortschritt der Technologie weiter.",
+    "alternativfragen": [
+      {
+        "frage": "Was fordert die DSGVO in Bezug auf den 'Stand der Technik'?",
+        "antwort": "Die DSGVO fordert, dass Unternehmen und Organisationen bei der Verarbeitung personenbezogener Daten stets aktuelle und wirksame Sicherheitsmaßnahmen einsetzen, die dem aktuellen Stand der Technik entsprechen.",
+        "typ": "text"
+      },
+      {
+        "frage": "Wie lässt sich der Begriff \"Stand der Technik\" im Kontext der DSGVO am besten beschreiben?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Veraltete Technologien, die kostengünstig sind.",
+          "b": "Die neuesten und effektivsten verfügbaren Sicherheitsmaßnahmen.",
+          "c": "Beliebige Sicherheitsmaßnahmen, die das Unternehmen auswählt.",
+          "d": "Gesetzlich vorgeschriebene, aber möglicherweise veraltete Technologien."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Ist der \"Stand der Technik\" ein fester Begriff oder dynamisch?",
+        "antwort": "Der \"Stand der Technik\" ist dynamisch und entwickelt sich mit dem technologischen Fortschritt weiter.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 16,
+    "original_frage": "Beschreiben Sie den grundsätzlichen Unterschied zwischen der Anonymisierung und der Pseudonymisierung von personenbezogenen Daten.",
+    "original_antwort": "Anonymisierung ist ein Prozess, bei dem alle identifizierenden Merkmale aus den Daten entfernt werden, sodass eine Person nicht mehr identifizierbar ist. Dies ist ein irreversibler Prozess. Sobald Daten anonymisiert sind, können sie nicht mehr zu einer bestimmten Person zurückverfolgt werden.\nPseudonymisierung ist ein Prozess, bei dem personenbezogene Daten so verändert werden, dass sie ohne zusätzliche Informationen nicht mehr einer spezifischen Person zugeordnet werden können. Identifizierende Merkmale werden durch ein Pseudonym ersetzt. Dieser Prozess ist reversibel. Mit der richtigen Information kann eine Person identifiziert werden.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist der Hauptunterschied zwischen Anonymisierung und Pseudonymisierung?",
+        "antwort": "Anonymisierung ist irreversibel, Pseudonymisierung ist reversibel (mit Zusatzinformationen).",
+        "typ": "text"
+      },
+      {
+        "frage": "Welcher der folgenden Prozesse macht eine Re-Identifizierung von Personen unmöglich?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Pseudonymisierung",
+          "b": "Anonymisierung",
+          "c": "Verschlüsselung",
+          "d": "Datenmaskierung"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Warum ist es wichtig, zwischen Anonymisierung und Pseudonymisierung zu unterscheiden?",
+        "antwort": "Weil Anonymisierung die Daten dauerhaft unkenntlich macht, während Pseudonymisierung eine spätere Zuordnung unter bestimmten Voraussetzungen ermöglicht, was unterschiedliche rechtliche Implikationen hat.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 17,
+    "original_frage": "Was versteht man unter dem Begriff Compliance?",
+    "original_antwort": "Compliance bezieht sich auf die Einhaltung von gesetzlichen Bestimmungen, branchenspezifischen Standards, internen Richtlinien und ethischen Prinzipien durch Unternehmen. Es umfasst die Umsetzung und Überwachung von Regeln und Vorschriften, um Risiken zu minimieren, Haftungsansprüche zu vermeiden und das Vertrauen von Kunden, Investoren und der Öffentlichkeit zu erhalten.\nDie Nichteinhaltung von Compliance kann zu rechtlichen Konsequenzen, finanziellen Verlusten und Reputationsschäden führen.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie den Begriff 'Compliance' im unternehmerischen Kontext.",
+        "antwort": "Einhaltung aller relevanten Gesetze, Regeln, Richtlinien und ethischen Standards durch ein Unternehmen.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was sind mögliche Folgen von Non-Compliance?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Steigende Umsätze",
+          "b": "Verbesserte Reputation",
+          "c": "Rechtliche Konsequenzen, finanzielle Verluste, Reputationsschäden",
+          "d": "Mehr Kundenvertrauen"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Warum ist Compliance für Unternehmen wichtig?",
+        "antwort": "Compliance ist wichtig, um rechtliche Risiken zu minimieren, Haftung zu vermeiden, das Vertrauen von Stakeholdern zu gewinnen und langfristig erfolgreich zu sein.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 18,
+    "original_frage": "Erklären Sie den Unterschied zwischen „Privacy by Design\" und „Privacy by Default\".",
+    "original_antwort": "Privacy by Design: Das Thema Datenschutz soll bereits im gesamten Entwicklungsprozess von Software, Hardware oder auch IT-Systemen berücksichtigt werden. Datenschutz wird hierdurch zu einem festen Bestandteil eines fertigen IT-Produktes. Man spricht hier auch von Datenschutz durch Technikgestaltung.\nPrivacy by Default: Der Schutz von personenbezogen Daten wird durch datenschutzfreundliche Voreinstellungen unterstützt. Der Grundgedanke hierbei ist, dass die Grundeinstellungen von Anwendungen bereits datenschutzfreundlich eingestellt sind. Hierdurch sollen vor allem Nutzerinnen und Nutzer geschützt werden, die weniger technikversiert sind.",
+    "alternativfragen": [
+      {
+        "frage": "Was bedeuten 'Privacy by Design' und 'Privacy by Default'?",
+        "antwort": "Privacy by Design: Datenschutz in der Produktentwicklung. Privacy by Default: Datenschutzfreundliche Voreinstellungen.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welches Prinzip schreibt vor, dass Produkte und Dienstleistungen von Anfang an datenschutzfreundlich konzipiert werden sollen?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Privacy by Default",
+          "b": "Privacy by Design",
+          "c": "Datensparsamkeit",
+          "d": "Zweckbindung"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Warum sind datenschutzfreundliche Voreinstellungen (Privacy by Default) wichtig?",
+        "antwort": "Datenschutzfreundliche Voreinstellungen schützen Nutzer, die sich nicht aktiv um Datenschutzeinstellungen kümmern (können), und stellen sicher, dass standardmäßig ein hohes Datenschutzniveau gewährleistet ist.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 19,
+    "original_frage": "Nennen Sie drei Komplexitätsanforderungen für Passwörter und erklären Sie, warum diese für eine höhere Passwortsicherheit sorgen.",
+    "original_antwort": "Typische Anforderungen an sichere Passwörter sind:\n- Verwendung von Kleinbuchstaben\n- Verwendung von Großbuchstaben\n- Verwendung von Zahlen\n- Verwendung von Sonderzeichen\n- ausreichende Passwortlänge\nDie Verwendung eines möglichst großen Zeichenvorrates erhöht die Anzahl der möglichen Variationen eines Passwortes. Die Nutzung von Sonderzeichen und Zahlen verhindert zusätzlich die Verwendung von „Dudenworten\" als Passwort. Ein möglichst langes Passwort erhöht nochmals den Aufwand für die Ermittlung eines Passwortes durch systematisches Probieren.",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie vier Elemente, die ein sicheres Passwort ausmachen.",
+        "antwort": "Groß- und Kleinbuchstaben, Zahlen, Sonderzeichen und eine ausreichende Länge.",
+        "typ": "text"
+      },
+      {
+        "frage": "Warum erhöht die Verwendung von Sonderzeichen die Sicherheit eines Passworts?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Weil Sonderzeichen leichter zu merken sind.",
+          "b": "Weil Sonderzeichen in Wörterbüchern stehen.",
+          "c": "Weil Sonderzeichen die Anzahl möglicher Zeichenkombinationen erhöhen.",
+          "d": "Weil Sonderzeichen von Hackern nicht verwendet werden können."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Warum ist die Länge eines Passworts wichtig für dessen Sicherheit?",
+        "antwort": "Ein längeres Passwort hat mehr mögliche Kombinationen und ist daher schwieriger durch Ausprobieren (Brute-Force-Angriffe) zu erraten.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 20,
+    "original_frage": "Nennen Sie Vorteile und Nachteile der Nutzung von Single Sign-On (SSO).",
+    "original_antwort": "Single Sign-On (SSO) ist ein Authentifizierungsdienst, der es erlaubt, mit einem Satz von Anmeldeinformationen auf mehrere Anwendungen zuzugreifen.\nVorteile:\n- einmalige Anmeldung, um auf mehrere Anwendungen zuzugreifen\n- reduziert das Risiko vergessener Passwörter\n- es besteht die Möglichkeit, schnell und zentralisiert auf Sicherheitsvorfälle zu reagieren\nNachteile:\n- ein Ausfall oder eine Kompromittierung des SSO-Dienstes kann den Zugriff auf alle Anwendungen beeinträchtigen\n- technisch komplex zu implementieren und zu verwalten\n- Anbieterabhängigkeit: Risiken im Zusammenhang mit der Verwendung eines externen SSO-Dienstleisters",
+    "alternativfragen": [
+      {
+        "frage": "Was ist Single Sign-On (SSO)?",
+        "antwort": "Ein Verfahren, das es Benutzern ermöglicht, sich mit einem einzigen Satz von Anmeldeinformationen bei mehreren Anwendungen anzumelden.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welches der folgenden Szenarien ist ein *Nachteil* von SSO?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Weniger Passwörter zu merken.",
+          "b": "Zentrale Verwaltung von Benutzerkonten.",
+          "c": "Ausfall des SSO-Systems blockiert Zugriff auf alle Anwendungen.",
+          "d": "Schnellerer Zugriff auf Anwendungen."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Nennen Sie einen Vorteil und einen Nachteil der Verwendung von SSO.",
+        "antwort": "Vorteil: Bequemer, da nur eine Anmeldung für mehrere Dienste nötig ist. Nachteil: Sicherheitsrisiko, da bei Kompromittierung des SSO-Zugangs alle verbundenen Dienste betroffen sind.",
+        "typ": "text"
+      }
+    ]
+  }
+]

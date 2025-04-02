@@ -1,0 +1,312 @@
+[
+  {
+    "karten_nummer": 70,
+    "original_frage": "Erklären Sie das Prinzip der Anweisungsüberdeckung.",
+    "original_antwort": "Das Prinzip der Anweisungsüberdeckung ist ein grundlegender Aspekt des Softwaretests. Es handelt sich dabei um eine Methode der Code-Überdeckungsanalyse, die darauf abzielt, jede Anweisung oder Zeile Code mindestens einmal während des Testprozesses auszuführen.\nHierdurch kann ein Tester oder Entwickler bestätigen, dass jeder Codeabschnitt ausgeführt und getestet wurde. Das Hauptziel ist es, sicherzustellen, dass jede Anweisung funktioniert wie erwartet und die korrekten Ergebnisse liefert. Dies beinhaltet auch das Aufdecken von „totem Code\", das sind Codeabschnitte, die nie ausgeführt werden und potenziell entfernt werden könnten.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie 'Anweisungsüberdeckung' im Kontext von Softwaretests.",
+        "antwort": "Ein Testabdeckungskriterium, das fordert, dass jede Anweisung im Code mindestens einmal ausgeführt wird.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was bedeutet 100% Anweisungsüberdeckung?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Alle Fehler im Code wurden gefunden.",
+          "b": "Der Code ist perfekt.",
+          "c": "Jede Anweisung im Code wurde mindestens einmal während der Tests ausgeführt.",
+          "d": "Der Code ist vollständig dokumentiert."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Warum ist Anweisungsüberdeckung allein nicht ausreichend für umfassende Tests?",
+        "antwort": "Weil 100% Anweisungsüberdeckung nicht garantiert, dass alle möglichen Pfade durch den Code getestet wurden, insbesondere bei Verzweigungen (Bedingungen) und Schleifen. Es können immer noch Fehler in der Logik vorhanden sein, die nicht durch die ausgeführten Anweisungen abgedeckt werden.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 71,
+    "original_frage": "Beschreiben Sie den Unterschied zwischen Zweigüberdeckung und Pfadüberdeckung.",
+    "original_antwort": "Zweigüberdeckung:\n- alle Entscheidungszweige im Code müssen durch Tests abgedeckt sein\n- ein Entscheidungszweig tritt auf, wenn ein Programm an einem Punkt zwischen zwei möglichen Wegen wählen muss\n- Ziel ist es, dass jeder mögliche Pfad durch die Bedingungsanweisungen im Code mindestens einmal getestet wird\nPfadüberdeckung:\n- jeder mögliche Pfad im Programm muss mindestens einmal durchlaufen werden\n- ein Pfad ist eine Sequenz von Anweisungen im Code, die von einem Startpunkt zu einem Endpunkt führen\n- Pfadüberdeckung berücksichtigt die vollständige Ausführung aller Anweisungen und die möglichen Verzweigungen",
+    "alternativfragen": [
+      {
+        "frage": "Was ist der Unterschied zwischen Zweig- und Pfadüberdeckung?",
+        "antwort": "Zweig: Jede Kante im Kontrollflussgraphen. Pfad: Jeder Weg durch den Kontrollflussgraphen.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Überdeckungsart ist umfassender: Zweig- oder Pfadüberdeckung?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Zweigüberdeckung",
+          "b": "Pfadüberdeckung",
+          "c": "Beide sind gleich umfassend.",
+          "d": "Das hängt vom Code ab."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Warum ist 100% Pfadüberdeckung in der Praxis oft nicht erreichbar?",
+        "antwort": "Weil die Anzahl der möglichen Pfade in einem Programm mit Schleifen und Verzweigungen exponentiell ansteigen kann, was es praktisch unmöglich macht, alle Pfade zu testen.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 72,
+    "original_frage": "Was sind Unit-Tests und warum sind sie wichtig in der Softwareentwicklung?",
+    "original_antwort": "Ein Unit-Test ist eine Methode in der Softwareentwicklung, bei der einzelne Komponenten des Codes (wie Funktionen oder Methoden) isoliert getestet werden. Der Zweck dieser Tests ist zu überprüfen, ob jede Komponente korrekt funktioniert. Sie helfen, Fehler frühzeitig zu erkennen und sicherzustellen, dass Änderungen im Code nicht zu unerwarteten Problemen führen. Unit Tests sind ein wichtiger Teil des Testprozesses, aber sie werden oft mit anderen Testmethoden kombiniert, um das Gesamtverhalten der Software zu überprüfen.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie 'Unit-Test'.",
+        "antwort": "Test einzelner, isolierter Code-Einheiten (z.B. Funktionen, Methoden).",
+        "typ": "text"
+      },
+      {
+        "frage": "Warum sind Unit-Tests wichtig?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Sie ersetzen alle anderen Testarten.",
+          "b": "Sie garantieren fehlerfreien Code.",
+          "c": "Sie helfen, Fehler frühzeitig zu finden und die Codequalität zu verbessern.",
+          "d": "Sie machen den Code schneller."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Was ist der Vorteil von Unit-Tests gegenüber dem Testen des gesamten Systems?",
+        "antwort": "Unit-Tests ermöglichen es, Fehler genauer zu lokalisieren und zu isolieren, da sie sich auf kleine, unabhängige Einheiten konzentrieren. Sie sind auch einfacher und schneller durchzuführen als umfangreiche Systemtests.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 73,
+    "original_frage": "Welche Eigenschaften sollten Unit-Tests erfüllen, um das FIRST-Prinzip zu befolgen?",
+    "original_antwort": "Das FIRST-Prinzip besagt, dass Unit-Tests folgende Eigenschaften aufweisen sollten:\n- Fast: Sie sollten schnell laufen, um den Entwicklungsprozess nicht zu verlangsamen.\n- Independent: Tests sollten unabhängig voneinander sein und in beliebiger Reihenfolge dasselbe Ergebnis liefern.\n- Repeatable: Sie sollten unter gleichen Bedingungen stets dasselbe Ergebnis liefern.\n- Self-Validating: Tests sollten selbst bestimmen können, ob sie erfolgreich waren oder nicht.\n- Timely: Unit-Tests sollten bereits vor der Entwicklung des Produktivcodes definiert werden.",
+    "alternativfragen": [
+      {
+        "frage": "Erklären Sie das FIRST-Prinzip für Unit-Tests.",
+        "antwort": "Fast, Independent, Repeatable, Self-Validating, Timely.",
+        "typ": "text"
+      },
+      {
+        "frage": "Warum sollten Unit-Tests 'schnell' (Fast) sein?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Damit die Entwickler schneller arbeiten können.",
+          "b": "Damit sie häufig ausgeführt werden können, ohne den Entwicklungsprozess zu verlangsamen.",
+          "c": "Damit sie weniger Speicherplatz benötigen.",
+          "d": "Damit sie einfacher zu schreiben sind."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Was bedeutet 'Self-Validating' im Kontext von Unit-Tests?",
+        "antwort": "Ein Unit-Test sollte selbst überprüfen können, ob das erwartete Ergebnis eingetreten ist, und ein klares 'bestanden' oder 'fehlgeschlagen' liefern, ohne dass manuelle Interpretation erforderlich ist.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 74,
+    "original_frage": "Was ist das Ziel eines Regressionstests?",
+    "original_antwort": "Ein Regressionstest dient dazu, die Stabilität und Zuverlässigkeit der Anwendung nach Durchführung einer Aktualisierung zu prüfen.\nEr wird durchgeführt, um sicherzustellen, dass neue Änderungen oder Updates an einer Software keine unerwünschten Auswirkungen auf bereits vorhandene Funktionen haben.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie 'Regressionstest'.",
+        "antwort": "Test, um sicherzustellen, dass Änderungen keine bestehenden Funktionen beeinträchtigen.",
+        "typ": "text"
+      },
+      {
+        "frage": "Wann sollte ein Regressionstest durchgeführt werden?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Nur am Anfang eines Projekts.",
+          "b": "Nur am Ende eines Projekts.",
+          "c": "Nach jeder Änderung oder Erweiterung der Software.",
+          "d": "Nur, wenn Fehler gefunden wurden."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Warum sind Regressionstests wichtig für die Softwarequalität?",
+        "antwort": "Sie helfen, unbeabsichtigte Nebenwirkungen von Codeänderungen (sogenannte Regressionen) zu erkennen und stellen sicher, dass die Software auch nach Updates und Erweiterungen stabil und zuverlässig funktioniert.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 75,
+    "original_frage": "Beim Programmtest stellen Sie fest, dass ein Programm nicht wie gewünscht funktioniert. Geben Sie die möglichen Vorgehensweisen an, die Fehlersuche mit Hilfe der Möglichkeiten eines Debuggers vorzunehmen.",
+    "original_antwort": "Zur Fehlersuche mit einem Debugger könnten Sie folgende Schritte befolgen:\n- Breakpoints setzen: Anhalten des Programms an gesetzten Punkten zur Überprüfung des aktuellen Zustands\n- Schritt-für-Schritt Ausführung: die genaue Kontrolle des Ablaufes zeigt, wann das Programm vom erwarteten Verhalten abweicht\n- Variablen beobachten: Überwachung der Werte von Variablen während der Programmausführung\n- Stack Inspektion: Überprüfen der Reihenfolge der aufgerufenen Funktionen und ihrer Parameter\n- Exception Handling: Identifikation der genauen Punkte im Code, an denen ein Fehler aufgetreten ist\n- Logging: Protokollierung von Programmaktivitäten",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie drei typische Funktionen eines Debuggers.",
+        "antwort": "Breakpoints, schrittweise Ausführung, Variableninspektion.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist ein 'Breakpoint' in einem Debugger?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Ein Fehler im Code.",
+          "b": "Eine Stelle im Code, an der die Ausführung des Programms angehalten wird.",
+          "c": "Eine Variable, die überwacht wird.",
+          "d": "Eine Funktion, die den Code analysiert."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Was kann man mit der 'Stack Inspektion' (oder 'Call Stack Inspection') in einem Debugger untersuchen?",
+        "antwort": "Man kann die Reihenfolge der aufgerufenen Funktionen und die Werte ihrer Parameter einsehen, um nachzuvollziehen, wie das Programm an die aktuelle Stelle gelangt ist.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 76,
+    "original_frage": "Warum ist Performance-Testing in der Softwareentwicklung wichtig?",
+    "original_antwort": "Performance-Testing ist wichtig, um sicherzustellen, dass eine Anwendung unter verschiedenen Lastbedingungen effizient und zuverlässig funktioniert. Durch Performance-Testing können folgende Fragen beantwortet werden:\n- Wie reagiert die Anwendung unter normaler oder erwarteter Last?\n- Wie skaliert die Anwendung mit steigender Last?\n- Wie reagiert die Anwendung unter Spitzenlastbedingungen?\n- Wie verhält sich die Anwendung über einen längeren Zeitraum?\n- Gibt es Engpässe oder Flaschenhälse in der Anwendung?",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie drei Aspekte, die beim Performance-Testing untersucht werden.",
+        "antwort": "Antwortzeit, Durchsatz, Ressourcenauslastung.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was wird beim Lasttest (Load Testing) untersucht?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Die Funktionalität der Software.",
+          "b": "Die Benutzerfreundlichkeit der Software.",
+          "c": "Das Verhalten der Software unter erwarteter oder normaler Last.",
+          "d": "Die Sicherheit der Software."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Was versteht man unter 'Skalierbarkeit' im Kontext von Performance?",
+        "antwort": "Skalierbarkeit ist die Fähigkeit einer Anwendung, mit wachsender Last (z.B. mehr Benutzer, mehr Daten) umzugehen, ohne dass die Leistung erheblich abnimmt.",
+        "typ": "text"
+      }
+    ]
+  },
+    {
+    "karten_nummer": 77,
+    "original_frage": "Nennen Sie sechs Kriterien zur Bewertung der Qualität von Software.",
+    "original_antwort": "Kriterien für Softwarequalität:\n- Benutzbarkeit\n- Übertragbarkeit\n- Änderbarkeit\n- Effizienz\n- Zuverlässigkeit\n- Funktionalität\n- Sicherheit",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie fünf Qualitätsmerkmale von Software nach ISO 9126 (bzw. ISO 25010).",
+        "antwort": "Funktionalität, Zuverlässigkeit, Benutzbarkeit, Effizienz, Änderbarkeit, Übertragbarkeit (Portabilität).",
+        "typ": "text"
+      },
+      {
+        "frage": "Welches Qualitätsmerkmal beschreibt, wie einfach eine Software an neue Umgebungen angepasst werden kann?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Benutzbarkeit",
+          "b": "Wartbarkeit",
+          "c": "Übertragbarkeit",
+          "d": "Effizienz"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Was versteht man unter 'Wartbarkeit' (Maintainability) einer Software?",
+        "antwort": "Wartbarkeit beschreibt, wie einfach Fehler in der Software gefunden und behoben, Änderungen und Erweiterungen vorgenommen und die Software an neue Anforderungen angepasst werden kann.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 78,
+    "original_frage": "Was ist der Unterschied zwischen funktionalen und nichtfunktionalen Anforderungen in der Systementwicklung?",
+    "original_antwort": "Funktionale und nichtfunktionale Anforderungen sind zwei Kategorien von Spezifikationen, die dazu beitragen, die Erwartungen an ein System, eine Anwendung oder ein Produkt zu definieren.\nFunktionale Anforderungen beschreiben, was ein System tun soll. Sie beziehen sich auf bestimmte Funktionen oder Aufgaben, die das System ausführen kann.\nNichtfunktionale Anforderungen beziehen sich auf Aspekte wie Leistung, Zuverlässigkeit, Sicherheit und andere Qualitätsmerkmale. Sie beschreiben, wie gut das System seine Aufgaben ausführen soll oder unter welchen Bedingungen es funktionieren soll.",
+    "alternativfragen": [
+      {
+        "frage": "Erklären Sie den Unterschied zwischen funktionalen und nichtfunktionalen Anforderungen.",
+        "antwort": "Funktional: *Was* das System tun soll. Nichtfunktional: *Wie* das System es tun soll.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche der folgenden Anforderungen ist eine *nichtfunktionale* Anforderung?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Der Benutzer soll sich mit einem Benutzernamen und Passwort anmelden können.",
+          "b": "Das System soll in der Lage sein, Berichte zu erstellen.",
+          "c": "Das System soll eine Antwortzeit von unter 2 Sekunden haben.",
+          "d": "Das System soll es dem Benutzer ermöglichen, seine Daten zu exportieren."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Geben Sie drei Beispiele für nichtfunktionale Anforderungen.",
+        "antwort": "Beispiele für nichtfunktionale Anforderungen sind: Performance (z.B. Antwortzeiten), Sicherheit (z.B. Verschlüsselung, Zugriffskontrollen), Skalierbarkeit (z.B. Unterstützung einer bestimmten Anzahl von Benutzern), Benutzbarkeit (Usability), Zuverlässigkeit, Wartbarkeit, Übertragbarkeit.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 79,
+    "original_frage": "Was ist der Zweck eines Mock-ups und wie kann es im Designprozess eingesetzt werden?",
+    "original_antwort": "Ein Mock-up hat den Zweck, ein visuelles Modell eines Produkts, einer Webseite oder einer Anwendung zu erstellen. Es wird im Designprozess eingesetzt, um das endgültige Design, die Funktionalität und das Erscheinungsbild zu veranschaulichen.\nMock-ups dienen dazu, Ideen zu präsentieren, Feedback zu sammeln und Designentscheidungen zu treffen, bevor die eigentliche Entwicklung beginnt. Sie ermöglichen es, das Konzept zu visualisieren, Benutzererfahrungen zu testen und potenzielle Probleme oder Verbesserungen frühzeitig zu erkennen.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie den Begriff 'Mock-up' im Kontext von Design.",
+        "antwort": "Ein statisches, visuelles Modell eines Designs, oft in hoher Detailtreue.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist der Hauptunterschied zwischen einem Mock-up und einem Prototyp?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Ein Mock-up ist interaktiv, ein Prototyp nicht.",
+          "b": "Ein Mock-up ist ein frühes Konzept, ein Prototyp eine spätere Version.",
+          "c": "Ein Mock-up ist ein visuelles Modell, ein Prototyp eine funktionsfähige (wenn auch oft eingeschränkte) Version.",
+          "d": "Es gibt keinen Unterschied."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Nennen Sie drei Vorteile der Verwendung von Mock-ups im Designprozess.",
+        "antwort": "Vorteile von Mock-ups sind: Visualisierung des Designs, frühzeitiges Feedback, erleichterte Kommunikation, Testen von Benutzerfreundlichkeit (eingeschränkt), Identifikation von Designproblemen vor der Entwicklung.",
+        "typ": "text"
+      }
+    ]
+  }
+]

@@ -1,0 +1,143 @@
+/* style.css */
+
+/* --- Custom Checkbox Styles (Bootstrap Compatible) --- */
+
+/* Hide the default browser checkbox */
+.form-check-input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+    margin: 0;
+    width: 1.3em; /* Give it size to influence layout slightly */
+    height: 1.3em;
+    z-index: -1; /* Put it behind */
+}
+
+/* Style the label to make space and act as the container */
+.form-check-label {
+    position: relative;      /* Needed for positioning pseudo-elements */
+    padding-left: 1.8em;     /* Make space for the custom checkbox */
+    cursor: pointer;
+    line-height: 1.4;        /* Adjust vertical alignment if needed */
+    min-height: 1.5em;       /* Ensure minimum height */
+    display: inline-block;   /* Consistent block behavior */
+    user-select: none;       /* Prevent text selection when clicking label */
+    margin-bottom: 0;        /* Override Bootstrap's label margin if needed */
+    vertical-align: top;     /* Align label text nicely with the box */
+}
+/* Adjust padding slightly if bootstrap version adds its own */
+.form-check .form-check-label {
+     padding-left: 1.8em; /* Reinforce padding */
+}
+
+/* Create the custom checkbox box ::before the label text */
+.form-check-label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.05em; /* Adjust vertical alignment - closer to top */
+    width: 1.3em;  /* Size of the custom box */
+    height: 1.3em; /* Size of the custom box */
+    border: 2px solid #adb5bd; /* Default border color */
+    border-radius: 0.25rem; /* Slightly rounded corners */
+    background-color: #fff; /* White background */
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+/* Style the box when the hidden checkbox is checked */
+/* Use the adjacent sibling selector (+) */
+.form-check-input[type="checkbox"]:checked + .form-check-label::before {
+    background-color: #0d6efd; /* Bootstrap primary blue */
+    border-color: #0d6efd;
+}
+
+/* Create the checkmark ::after the box (initially hidden) */
+.form-check-label::after {
+    content: '';
+    position: absolute;
+    left: 0.38em;  /* Position checkmark inside the box */
+    top: 0.18em;   /* Position checkmark inside the box */
+    width: 0.5em;  /* Checkmark width */
+    height: 0.9em; /* Checkmark height */
+    border: solid white; /* Checkmark color */
+    border-width: 0 0.2em 0.2em 0; /* Create checkmark shape */
+    transform: rotate(45deg); /* Rotate to form checkmark */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.1s ease-in-out;
+}
+
+/* Show the checkmark when the hidden checkbox is checked */
+/* Use the adjacent sibling selector (+) */
+.form-check-input[type="checkbox"]:checked + .form-check-label::after {
+    opacity: 1;
+}
+
+/* Add a focus style for accessibility */
+.form-check-input[type="checkbox"]:focus-visible + .form-check-label::before {
+    outline: 2px solid #86b7fe; /* Bootstrap focus outline color */
+    outline-offset: 1px;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25); /* Bootstrap focus shadow */
+}
+
+/* --- Disabled State --- */
+.form-check-input[type="checkbox"]:disabled + .form-check-label {
+    color: #6c757d; /* Bootstrap disabled text color */
+    cursor: not-allowed;
+}
+.form-check-input[type="checkbox"]:disabled + .form-check-label::before {
+    background-color: #e9ecef; /* Bootstrap disabled background */
+    border-color: #ced4da;
+}
+.form-check-input[type="checkbox"]:disabled:checked + .form-check-label::after {
+    border-color: #adb5bd; /* Grey checkmark */
+}
+
+/* --- Hover State --- */
+/* Apply hover effect to the container for background change */
+.form-check {
+    transition: background-color 0.2s ease-in-out;
+    border-radius: 0.25rem;
+}
+.form-check:has(input:not(:disabled)):hover {
+    background-color: #e9ecef; /* Light grey background on container hover */
+    /* Removed !important, should not be needed now */
+}
+/* Optional: Hover effect directly on the checkbox visual */
+.form-check-input[type="checkbox"]:not(:disabled) + .form-check-label:hover::before {
+   border-color: #5c636a; /* Slightly darker grey on hover */
+}
+
+/* --- Keep your feedback styles below --- */
+
+/* Style for correctly answered questions */
+.question-box.correct-answer {
+  background-color: #d4edda !important;
+  border-color: #c3e6cb !important;
+}
+/* Style for incorrectly answered questions */
+.question-box.incorrect-answer {
+  background-color: #f8d7da !important;
+  border-color: #f5c6cb !important;
+}
+/* Style for highlighting the correct option within an incorrect question */
+/* Make sure this targets the .form-check container */
+.question-box.incorrect-answer .form-check.highlight-correct {
+  background-color: #c3e6cb !important;
+  border: 1px solid #155724;
+  border-radius: 0.25rem; /* Match rounding */
+}
+/* Ensure labels inside highlighted options are readable */
+.question-box.incorrect-answer .form-check.highlight-correct .form-check-label {
+   color: #155724 !important; /* Dark green text, !important might be needed */
+}
+/* Highlight the custom checkbox border too */
+.question-box.incorrect-answer .form-check.highlight-correct .form-check-label::before {
+   border-color: #155724 !important;
+}
+
+/* Ensure highlighted correct answers don't get the hover effect */
+.form-check.highlight-correct:hover {
+    background-color: #c3e6cb !important; /* Keep the highlight color */
+}
+
+
+/* --- End Styles --- */

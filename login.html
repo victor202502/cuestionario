@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zugang - Datenschutz-Fragebogen</title>
+    <!-- Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Benutzerdefiniertes CSS -->
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="bg-light d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+
+<div class="container">
+    <h1 class="text-center text-primary mb-4">Datenschutz-Fragebogen</h1>
+
+    <!-- Container für Auth-Formulare -->
+    <div id="auth-section">
+        <div class="row justify-content-center">
+            <!-- Registrierungs-Spalte -->
+            <div class="col-md-6 mb-3">
+                <div class="p-4 bg-white shadow rounded">
+                    <h2>Registrierung</h2>
+                    <form id="register-form">
+                        <div class="mb-3">
+                            <label for="reg-username" class="form-label">Benutzername:</label>
+                            <input type="text" id="reg-username" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reg-password" class="form-label">Passwort:</label>
+                            <input type="password" id="reg-password" class="form-control" required minlength="6">
+                            <small class="form-text text-muted">Mindestens 6 Zeichen.</small>
+                        </div>
+                        <button type="submit" class="btn btn-success">Registrieren</button>
+                    </form>
+                    <div id="register-message" class="mt-3"></div>
+                </div>
+            </div>
+
+            <!-- Login-Spalte -->
+            <div class="col-md-6 mb-3">
+                <div class="p-4 bg-white shadow rounded">
+                    <h2>Anmeldung</h2>
+                    <form id="login-form">
+                        <div class="mb-3">
+                            <label for="login-username" class="form-label">Benutzername:</label>
+                            <input type="text" id="login-username" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="login-password" class="form-label">Passwort:</label>
+                            <input type="password" id="login-password" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Anmelden</button>
+                    </form>
+                    <div id="login-message" class="mt-3"></div>
+                </div>
+            </div>
+        </div> <!-- Ende .row -->
+    </div> <!-- Ende #auth-section -->
+</div> <!-- Ende .container -->
+
+<!-- Bootstrap und jQuery (Optional, wenn keine Bootstrap-JS-Komponenten verwendet werden) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- JavaScript-Datei (Gemeinsam für beide Seiten) -->
+<script src="login.js"></script>
+
+</body>
+</html>

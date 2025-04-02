@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuestionario de Datenschutz</title>
+  
+  <!-- Bootstrap -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- CSS personalizado -->
+  <link href="style.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container mt-4">
+  <h1 class="text-center text-primary">Cuestionario de Datenschutz</h1>
+  
+  <div id="question-container" class="mt-4"></div>
+
+  <div class="d-flex justify-content-between mt-4">
+    <button id="prev-btn" class="btn btn-outline-secondary">Anterior</button>
+    <button id="submit-btn" class="btn btn-primary" disabled>Enviar respuestas</button>
+    <button id="next-btn" class="btn btn-outline-secondary">Siguiente</button>
+  </div>
+
+  <div class="d-flex justify-content-between mt-3">
+    <button id="reset-questions-btn" class="btn btn-warning">Resetear Preguntas</button>
+    <button id="reset-score-btn" class="btn btn-danger">Resetear Puntos</button>
+  </div>
+
+  <div class="mt-4 p-3 bg-white shadow rounded text-center">
+    <h4 id="score" class="text-success">Aciertos: 0</h4>
+    <h4 id="mistakes" class="text-danger">Fallos: 0</h4>
+  </div>
+</div>
+
+<!-- Bootstrap y jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+<!-- Contenedor para formularios de Auth -->
+<div id="auth-section" class="container mt-4">
+    <div class="row">
+        <!-- Columna Registro -->
+        <div class="col-md-6 mb-3">
+            <div class="p-3 bg-white shadow rounded">
+                <h2>Registro</h2>
+                <form id="register-form">
+                    <div class="mb-3">
+                        <label for="reg-username" class="form-label">Nombre de Usuario:</label>
+                        <input type="text" id="reg-username" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="reg-password" class="form-label">Contraseña:</label>
+                        <input type="password" id="reg-password" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-success">Registrar</button>
+                </form>
+                <div id="register-message" class="mt-3"></div>
+            </div>
+        </div>
+
+        <!-- Columna Login -->
+        <div class="col-md-6 mb-3">
+            <div class="p-3 bg-white shadow rounded">
+                <h2>Iniciar Sesión</h2>
+                <form id="login-form">
+                    <div class="mb-3">
+                        <label for="login-username" class="form-label">Nombre de Usuario:</label>
+                        <input type="text" id="login-username" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="login-password" class="form-label">Contraseña:</label>
+                        <input type="password" id="login-password" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                </form>
+                <div id="login-message" class="mt-3"></div>
+            </div>
+        </div>
+    </div> <!-- Fin .row -->
+</div> <!-- Fin #auth-section -->
+
+<!-- Área de Bienvenida (oculta por defecto) -->
+<div id="welcome-section" class="container mt-4 p-3 bg-info text-white shadow rounded text-center" style="display: none;">
+    <h2 id="welcome-message"></h2>
+    <button id="logout-btn" class="btn btn-warning btn-sm mt-2">Cerrar Sesión</button>
+</div>
+
+<!-- Tu contenedor de preguntas -->
+<div id="questionnaire-section" class="container mt-4">
+     <h1 class="text-center text-primary">Cuestionario de Datenschutz</h1>
+     <div id="question-container" class="mt-4"></div>
+     <!-- ... (botones de prev/next/submit/reset, score) ... -->
+</div>
+
+
+<!-- Archivo JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>

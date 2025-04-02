@@ -1,0 +1,313 @@
+[
+  {
+    "karten_nummer": 118,
+    "original_frage": "Was stellt ein Sequenzdiagramm in UML dar und in welchen Szenarien wird es typischerweise verwendet?",
+    "original_antwort": "Ein Sequenzdiagramm in der Unified Modeling Language (UML) zeigt die Interaktionen zwischen Objekten in der Reihenfolge, in der sie auftreten. Ein Sequenzdiagramm besteht aus einer Reihe von vertikalen „Lebenslinien\", die Objekte oder Klassen repräsentieren, und horizontalen „Nachrichten\", die zwischen den Lebenslinien hin und her gehen. Die Nachrichten sind zeitlich von oben nach unten geordnet, sodass man sehen kann, in welcher Reihenfolge die Interaktionen stattfinden.\nSequenzdiagramme helfen dabei, die dynamischen Interaktionen in einem System darzustellen und zu analysieren.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist der Hauptzweck eines UML-Sequenzdiagramms?",
+        "antwort": "Zeitliche Abfolge von Interaktionen zwischen Objekten darstellen.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was stellt eine vertikale Linie in einem Sequenzdiagramm dar?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Eine Nachricht.",
+          "b": "Eine Zeitachse.",
+          "c": "Die Lebenslinie eines Objekts oder einer Klasse.",
+          "d": "Eine Bedingung."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "In welchen Situationen ist ein Sequenzdiagramm besonders nützlich?",
+        "antwort": "Sequenzdiagramme sind nützlich, um das Zusammenspiel mehrerer Objekte in einem bestimmten Szenario (z.B. einem Anwendungsfall) zu verstehen, um komplexe Abläufe zu visualisieren, um Kommunikationsprobleme zu identifizieren und um das Design von dynamischem Verhalten zu dokumentieren.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 119,
+    "original_frage": "Wofür wird das UML-Aktivitätsdiagramm bei der Modellierung genutzt?",
+    "original_antwort": "Ein UML-Aktivitätsdiagramm ist ein Verhaltensdiagramm, das die Reihenfolge und Bedingungen für die Ausführung verschiedener Aktivitäten in einem System darstellt. Es wird in der Modellierung verwendet, um Arbeitsabläufe zu visualisieren, das Verhalten von Systemteilen zu modellieren, Anforderungen zu analysieren und zu designen sowie um parallele Abläufe darzustellen. Es besteht aus Elementen wie Start- und Endknoten, Aktionsknoten, Entscheidungsknoten und Synchronisationsstangen.",
+    "alternativfragen": [
+      {
+        "frage": "Was wird mit einem UML-Aktivitätsdiagramm modelliert?",
+        "antwort": "Abläufe, Prozesse, Workflows (mit Fokus auf der Reihenfolge von Aktionen).",
+        "typ": "text"
+      },
+      {
+        "frage": "Welches der folgenden Elemente ist *kein* typischer Bestandteil eines Aktivitätsdiagramms?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Aktionsknoten",
+          "b": "Entscheidungsknoten",
+          "c": "Klassenknoten",
+          "d": "Startknoten"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Kann ein Aktivitätsdiagramm parallele Abläufe darstellen?",
+        "antwort": "Ja, Aktivitätsdiagramme können parallele Abläufe mit Hilfe von Verzweigungen (Fork-Knoten) und Zusammenführungen (Join-Knoten) darstellen.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 120,
+    "original_frage": "Erklären Sie die Verwendung des UML-Zustandsdiagramms zur Modellierung von Verhalten in einem System.",
+    "original_antwort": "In einem UML-Zustandsdiagramm wird der Lebenszyklus eines Objekts durch die Darstellung seiner verschiedenen Zustände und Übergänge dargestellt. Es ist besonders nützlich bei der Modellierung von Objekten, die komplexes Verhalten aufweisen und viele verschiedene Zustände haben können.\nUML-Zustandsdiagramme geben den aktuellen Zustand eines Objekts, die Aktionen, die beim Eintritt, während des Verweilens und beim Verlassen des Zustands durchgeführt werden, sowie die Bedingungen für den Übergang zu anderen Zuständen wieder. Hierdurch ermöglichen sie die Darstellung und das Verständnis komplexer verhaltensbasierter Systeme.",
+    "alternativfragen": [
+      {
+        "frage": "Was stellt ein UML-Zustandsdiagramm dar?",
+        "antwort": "Die möglichen Zustände eines Objekts und die Übergänge zwischen diesen Zuständen.",
+        "typ": "text"
+      },
+      {
+        "frage": "Wann ist ein Zustandsdiagramm besonders nützlich?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Wenn das Objekt nur einen einzigen Zustand hat.",
+          "b": "Wenn das Objekt sehr einfach ist.",
+          "c": "Wenn das Objekt ein komplexes Verhalten mit mehreren möglichen Zuständen und Übergängen hat.",
+          "d": "Wenn die Reihenfolge der Aktionen unwichtig ist."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+          "frage": "Was löst einen Zustandsübergang in einem Zustandsdiagramm aus?",
+          "antwort": "Ein Zustandsübergang wird durch ein *Ereignis* ausgelöst, oft in Verbindung mit einer *Bedingung*. Wenn das Ereignis eintritt und die Bedingung erfüllt ist, wechselt das Objekt vom aktuellen Zustand in den Folgezustand.",
+          "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 121,
+    "original_frage": "Welche Informationen kann man aus dem Klassendiagramm ableiten?",
+    "original_antwort": "Das Klassendiagramm zeigt Klassen, ihre Attribute und Methoden sowie Beziehungen zwischen den Klassen.\nAus einem Klassendiagramm kann man folgende Informationen ableiten:\n- Klassen und Objekte: Welche Klassen gibt es und welche Objekte repräsentieren sie?\n- Attribute und Operationen: Welche Eigenschaften und Verhaltensweisen haben die Klassen?\n- Beziehungen: Wie sind die Klassen miteinander verknüpft (z. B. durch Assoziationen oder Vererbungen)?\n- Sichtbarkeit: Welche Attribute und Operationen sind öffentlich, privat oder geschützt?\n- Kardinalität: Wie viele Instanzen einer Klasse können mit einer anderen in Beziehung stehen?",
+    "alternativfragen": [
+      {
+        "frage": "Was sind die Hauptelemente eines UML-Klassendiagramms?",
+        "antwort": "Klassen, Attribute, Operationen (Methoden) und Beziehungen.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was bedeutet ein Pluszeichen (+) vor einem Attribut in einem Klassendiagramm?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Das Attribut ist privat.",
+          "b": "Das Attribut ist geschützt.",
+          "c": "Das Attribut ist öffentlich.",
+          "d": "Das Attribut ist statisch."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Was stellt eine durchgezogene Linie mit einer Raute am Ende zwischen zwei Klassen in einem Klassendiagramm dar?",
+        "antwort": "Eine Komposition (eine starke Form der Assoziation, bei der das Teil ohne das Ganze nicht existieren kann).",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 122,
+    "original_frage": "In UML-Klassendiagrammen wird zwischen den Beziehungstypen Aggregation und Komposition unterschieden. Erläutern Sie den Unterschied zwischen diesen beiden Beziehungstypen.",
+    "original_antwort": "Bei der Aggregation handelt es sich um eine lose Beziehung zwischen zwei Klassen, bei der eine Klasse (das Ganze) eine Sammlung oder eine Gruppe von Objekten einer anderen Klasse (die Teile) enthält. Die Beziehung zwischen dem Ganzen und den Teilen ist in der Regel optional, das heißt, das Ganze kann ohne die Teile existieren.\nBei der Komposition handelt es sich um eine starke Beziehung zwischen zwei Klassen, bei der eine Klasse (das Ganze) aus einer anderen Klasse (dem Teil) besteht. Die Teile können nur als Teil des Ganzen existieren und haben keine eigenständige Existenz. Wenn das Ganze zerstört wird, werden auch die Teile zerstört.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist der Hauptunterschied zwischen Aggregation und Komposition in UML?",
+        "antwort": "Aggregation: Lose Beziehung, Teil kann ohne Ganzes existieren. Komposition: Starke Beziehung, Teil existiert nur mit Ganzem.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Art von Beziehung wird durch eine ausgefüllte Raute in einem UML-Klassendiagramm dargestellt?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Aggregation",
+          "b": "Komposition",
+          "c": "Vererbung",
+          "d": "Assoziation"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Geben Sie ein Beispiel für eine Aggregation und eine Komposition.",
+        "antwort": "Aggregation: Ein Auto *hat* Räder (aber die Räder können auch ohne das Auto existieren, z.B. im Lager). Komposition: Ein Haus *besteht aus* Räumen (die Räume können nicht ohne das Haus existieren).",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 123,
+    "original_frage": "Erklären Sie das Prinzip der Vererbung in der objektorientierten Programmierung.",
+    "original_antwort": "In der objektorientierten Programmierung ist Vererbung ein Schlüsselprinzip, das es ermöglicht, neue Klassen aus bereits existierenden Klassen zu erzeugen. Die neu erstellte Klasse wird als „Unterklasse\" oder „abgeleitete Klasse\" bezeichnet, während die existierende Klasse, von der sie erbt, als „Oberklasse\" oder „Basisklasse\" bezeichnet wird.\nDie Vererbung ist nützlich für die Wiederverwendung von Code und die Reduzierung von Redundanz. Sie ermöglicht es, dass Eigenschaften (Attribute) und Verhaltensweisen (Methoden), die in der Oberklasse definiert sind, an die Unterklasse weitergegeben werden.",
+    "alternativfragen": [
+      {
+        "frage": "Was versteht man unter Vererbung in der OOP?",
+        "antwort": "Eine Klasse (Unterklasse) erbt Eigenschaften und Methoden von einer anderen Klasse (Oberklasse).",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist der Hauptvorteil der Vererbung?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Sie macht den Code schneller.",
+          "b": "Sie macht den Code sicherer.",
+          "c": "Sie ermöglicht Code-Wiederverwendung und reduziert Redundanz.",
+          "d": "Sie macht den Code einfacher zu verstehen."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+          "frage": "Kann eine Unterklasse die geerbten Methoden der Oberklasse überschreiben?",
+        "antwort": "Ja, eine Unterklasse kann Methoden der Oberklasse überschreiben (Override), um ihr eigenes Verhalten zu definieren. Dies ist ein wichtiger Aspekt der Polymorphie.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 124,
+    "original_frage": "In welchem Zusammenhang steht das Konzept der Datenkapselung in der objektorientierten Programmierung mit den Prinzipien der Datenintegrität und der Code-Wartbarkeit?",
+    "original_antwort": "Datenkapselung ist ein zentraler Grundsatz der objektorientierten Programmierung. Sie verbirgt die Daten (Variablen) und die Methoden einer Klasse und schützt Daten vor dem direkten Zugriff von außen. Nur die öffentlichen Methoden der Klasse können auf die internen Daten zugreifen.\nDies schafft ein hohes Maß an Datenintegrität, da die Daten nur auf sichere und kontrollierte Weise manipuliert werden können. Darüber hinaus verbessert es die Wartbarkeit und Verständlichkeit des Codes, da Änderungen an der internen Implementierung der Klasse nicht die Teile des Programms beeinflussen, die die Klasse verwenden.",
+    "alternativfragen": [
+      {
+        "frage": "Was versteht man unter 'Datenkapselung' (Encapsulation) in der OOP?",
+        "antwort": "Verbergen der internen Daten und Methoden eines Objekts und Zugriff nur über eine öffentliche Schnittstelle.",
+        "typ": "text"
+      },
+      {
+        "frage": "Wie trägt Datenkapselung zur Datenintegrität bei?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Sie verschlüsselt die Daten.",
+          "b": "Sie sichert die Daten automatisch.",
+          "c": "Sie verhindert unkontrollierten Zugriff und Änderungen an den Daten.",
+          "d": "Sie macht die Daten schneller zugänglich."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Warum verbessert Datenkapselung die Wartbarkeit von Code?",
+        "antwort": "Weil Änderungen an der internen Implementierung einer Klasse keine Auswirkungen auf andere Teile des Codes haben, solange die öffentliche Schnittstelle der Klasse gleich bleibt. Dies reduziert das Risiko von unbeabsichtigten Nebenwirkungen.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 125,
+    "original_frage": "Was ist der Unterschied zwischen Prozeduren und Funktionen in der Programmierung?",
+    "original_antwort": "Eine Funktion ist Codeblock, der eine spezifische Aufgabe ausführt und in der Regel einen Wert zurückgibt.\nEine Prozedur ist auch ein Codeblock, der eine spezifische Aufgabe ausführt. Der Hauptunterschied besteht darin, dass eine Prozedur normalerweise keinen Wert zurückgibt. Eine Prozedur führt eine Aufgabe aus und kehrt dann zur aufrufenden Stelle im Code zurück.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist der Hauptunterschied zwischen einer Funktion und einer Prozedur?",
+        "antwort": "Funktion: Gibt einen Wert zurück. Prozedur: Gibt normalerweise keinen Wert zurück.",
+        "typ": "text"
+      },
+      {
+        "frage": "Können Prozeduren Parameter haben?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Ja",
+          "b": "Nein",
+          "c": "Nur manchmal",
+          "d": "Nur in bestimmten Programmiersprachen"
+        },
+        "korrekte_antworten": [
+          "a"
+        ]
+      },
+      {
+          "frage": "Können Funktionen Parameter haben?",
+          "antwort": "Ja, sowohl Funktionen als auch Prozeduren können Parameter haben (Eingabewerte), mit denen sie arbeiten.",
+          "typ": "text"
+      }
+
+    ]
+  },
+    {
+    "karten_nummer": 126,
+    "original_frage": "Wie unterscheiden sich prozedurale und objektorientierte Programmierung voneinander?",
+    "original_antwort": "Die prozedurale Programmierung ist auf den Gedanken aufgebaut, dass ein Programm eine Reihe von Aufgaben (Prozeduren) ausführt, die auf Daten operieren. Ein prozedurales Programm besteht i. d. R. aus einer Reihe von Prozeduren, die aufgerufen werden, um eine bestimmte Aufgabe zu erfüllen. Die Daten sind getrennt von den Prozeduren, und die Prozeduren bearbeiten diese Daten.\nIn der objektorientierten Programmierung (OOP) werden Daten und Funktionen zu Objekten zusammengefasst. Ein Objekt kann Attribute (Daten) und Methoden (Funktionen) enthalten. OOP fokussiert auf die drei Hauptprinzipien Vererbung, Kapselung und Polymorphie.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist der Hauptunterschied zwischen prozeduraler und objektorientierter Programmierung?",
+        "antwort": "Prozedural: Daten und Funktionen getrennt. Objektorientiert: Daten und Funktionen in Objekten zusammengefasst.",
+        "typ": "text"
+      },
+      {
+        "frage": "Nennen Sie die drei Hauptprinzipien der objektorientierten Programmierung.",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Vererbung, Kapselung, Polymorphie",
+          "b": "Prozeduren, Funktionen, Variablen",
+          "c": "Schleifen, Bedingungen, Zuweisungen",
+          "d": "Klassen, Objekte, Methoden"
+        },
+        "korrekte_antworten": [
+          "a"
+        ]
+      },
+      {
+        "frage": "Was ist ein 'Objekt' in der objektorientierten Programmierung?",
+        "antwort": "Ein Objekt ist eine Instanz einer Klasse. Es kombiniert Daten (Attribute) und die darauf operierenden Funktionen (Methoden).",
+        "typ": "text"
+      }
+    ]
+  },
+   {
+    "karten_nummer": 127,
+    "original_frage": "Was ist eine Klasse in der objektorientierten Programmierung?",
+    "original_antwort": "Eine Klasse in der objektorientierten Programmierung ist ein Bauplan für die Erstellung von Objekten. Sie definiert Eigenschaften (Variablen, die den Zustand repräsentieren) und Methoden (Funktionen, die das Verhalten repräsentieren) eines Objekts.\nEine Klasse ermöglicht die Erstellung mehrerer Objekte mit ähnlichen Merkmalen und Verhaltensweisen. Sie bildet die Grundlage für Vererbung und Polymorphie.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie den Begriff 'Klasse' in der OOP.",
+        "antwort": "Ein Bauplan oder eine Vorlage für Objekte.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist der Unterschied zwischen einer Klasse und einem Objekt?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Es gibt keinen Unterschied.",
+          "b": "Eine Klasse ist eine Instanz eines Objekts.",
+          "c": "Ein Objekt ist eine Instanz einer Klasse.",
+          "d": "Eine Klasse enthält Daten, ein Objekt nicht."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+          "frage": "Wozu dienen Klassen in der objektorientierten Programmierung?",
+          "antwort": "Klassen dienen dazu, die Struktur und das Verhalten von Objekten zu definieren, Code wiederzuverwenden (durch Instanziierung und Vererbung) und die Komplexität von Programmen zu reduzieren, indem sie eine logische Gruppierung von Daten und Funktionen ermöglichen.",
+        "typ": "text"
+      }
+    ]
+  }
+]

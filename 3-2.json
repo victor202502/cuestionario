@@ -1,0 +1,312 @@
+[
+  {
+    "karten_nummer": 108,
+    "original_frage": "Was ist der Unterschied zwischen einem Compiler und einem Interpreter?",
+    "original_antwort": "Ein Compiler ist ein Programm, das den gesamten Quellcode einer Programmiersprache analysiert und in einen ausführbaren Maschinencode übersetzt. Der übersetzte Code kann später unabhängig vom Compiler ausgeführt werden.\nEin Interpreter ist ein Programm, das den Quellcode einer Programmiersprache Zeile für Zeile ausführt. Im Gegensatz zum Compiler, der den gesamten Code vor der Ausführung übersetzt, übersetzt der Interpreter den Code zur Laufzeit. Der Interpreter analysiert und führt jede Anweisung einzeln aus, wodurch eine direkte Interpretation des Codes ermöglicht wird.",
+    "alternativfragen": [
+      {
+        "frage": "Erklären Sie den Hauptunterschied zwischen einem Compiler und einem Interpreter.",
+        "antwort": "Compiler: Übersetzt alles auf einmal (vorher). Interpreter: Übersetzt und führt Zeile für Zeile aus (währenddessen).",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Art von Programm übersetzt den Quellcode *vor* der Ausführung in Maschinencode?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Interpreter",
+          "b": "Compiler",
+          "c": "Debugger",
+          "d": "Editor"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Nennen Sie einen Vorteil und einen Nachteil eines Interpreters gegenüber einem Compiler.",
+        "antwort": "Vorteil Interpreter: Plattformunabhängiger (sofern ein Interpreter für die Zielplattform existiert), direkteres Feedback beim Entwickeln (kein separater Kompilierungsschritt). Nachteil Interpreter: In der Regel langsamer bei der Ausführung, da jede Zeile bei jeder Ausführung neu interpretiert werden muss.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 109,
+    "original_frage": "Nennen Sie je ein Beispiel für eine Compiler- und eine Interpretersprache.",
+    "original_antwort": "Compilersprachen:\n- C\n- C++\n- Pascal\nInterpretersprachen:\n- Perl\n- Python\n- BASIC",
+    "alternativfragen": [
+      {
+        "frage": "Geben Sie ein Beispiel für eine Sprache, die typischerweise kompiliert wird, und eine, die typischerweise interpretiert wird.",
+        "antwort": "Kompiliert: C++. Interpretiert: Python.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche der folgenden Sprachen ist eine typische *Interpreter*sprache?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "C",
+          "b": "C++",
+          "c": "Java",
+          "d": "Python"
+        },
+        "korrekte_antworten": [
+          "d"
+        ]
+      },
+      {
+          "frage": "Welche Art von Sprache (Compiler- oder Interpretersprache) eignet sich besser für die schnelle Entwicklung und Prototypenerstellung?",
+          "antwort": "Interpretersprachen eignen sich oft besser für die schnelle Entwicklung, da Änderungen am Code sofort ausgeführt werden können, ohne auf einen Kompilierungsschritt warten zu müssen.",
+          "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 110,
+    "original_frage": "Welche Vorteile bietet die Verwendung einer Versionsverwaltung in der Softwareentwicklung?",
+    "original_antwort": "Die Verwendung einer Versionsverwaltung in der Softwareentwicklung ...\n- ermöglicht die Nachverfolgung von Änderungen am Quellcode.\n- erlaubt das einfache Zurücksetzen auf frühere Versionen, falls Fehler auftreten oder unerwünschte Änderungen vorgenommen wurden.\n- ermöglicht die Zusammenarbeit mehrerer Entwickler an einem Projekt, da Änderungen nahtlos zusammengeführt werden können.\n- erleichtert das Testen neuer Funktionen oder Experimente, ohne die Integrität des Hauptprojekts zu gefährden.\n- trägt dazu bei, den Entwicklungsprozess transparenter zu gestalten.",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie drei Vorteile der Verwendung eines Versionsverwaltungssystems (z.B. Git).",
+        "antwort": "Änderungsverfolgung, einfaches Zurücksetzen, verbesserte Zusammenarbeit.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist ein 'Repository' in einem Versionsverwaltungssystem?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Eine Kopie des Codes auf dem lokalen Computer.",
+          "b": "Ein zentraler Ort, an dem der gesamte Code und seine Versionsgeschichte gespeichert werden.",
+          "c": "Ein Tool zum Kompilieren des Codes.",
+          "d": "Ein Tool zum Testen des Codes."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Was bedeutet 'Branching' in einem Versionsverwaltungssystem?",
+        "antwort": "Branching ist die Erstellung einer separaten Kopie des Codes (ein 'Branch'), um unabhängig von der Hauptentwicklungslinie (dem 'Main' oder 'Master' Branch) an neuen Funktionen oder Fehlerbehebungen zu arbeiten, ohne den Hauptcode zu beeinträchtigen.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 111,
+    "original_frage": "Was ist JSON und wo wird es verwendet?",
+    "original_antwort": "JSON (JavaScript Object Notation) ist ein Datenformat, das zur Speicherung und Übertragung strukturierter Daten verwendet wird. JSON speichert Daten in Form von Attribut-Wert-Paaren. Ein JSON-Dokument besteht aus geschweiften Klammern und enthält eine oder mehrere Eigenschaften. Jede Eigenschaft besteht aus einem Namen und einem Wert, die durch einen Doppelpunkt getrennt sind.\n{\n„name“: „Andreas Müller\",\n„age“: 30,\n„city“: „Hamburg\"\n}\nJSON wird häufig in Webanwendungen und APIs (Application Programming Interfaces) eingesetzt.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie 'JSON'.",
+        "antwort": "Ein leichtgewichtiges Datenformat für den Datenaustausch (JavaScript Object Notation).",
+        "typ": "text"
+      },
+      {
+        "frage": "In welchem Bereich wird JSON häufig verwendet?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Datenbankdesign",
+          "b": "Betriebssystementwicklung",
+          "c": "Webanwendungen und APIs (Datenaustausch)",
+          "d": "Computergrafik"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Wie ist ein JSON-Objekt grundlegend aufgebaut?",
+        "antwort": "Ein JSON-Objekt besteht aus Schlüssel-Wert-Paaren, die in geschweiften Klammern `{}` eingeschlossen sind. Schlüssel sind Strings, Werte können verschiedene Datentypen sein (Strings, Zahlen, Boolesche Werte, Arrays, oder weitere JSON-Objekte).",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 112,
+    "original_frage": "Was sind die Unterschiede zwischen den Datenformaten CSV und XML?",
+    "original_antwort": "CSV (Comma-Separated Values) und XML (eXtensible Markup Language) sind verschiedene Datenformate, die zur Speicherung und Übertragung von strukturierten Daten verwendet werden.\nCSV ist ein textbasiertes Format, bei dem Daten in Tabellenform organisiert sind. Jede Zeile repräsentiert einen Datensatz und die einzelnen Werte innerhalb einer Zeile sind durch Trennzeichen voneinander getrennt. CSV enthält normalerweise keine Strukturinformationen oder Hierarchie.\nXML ist eine Markup-Sprache, die eine hierarchische Struktur verwendet. Daten werden in Tags eingebettet und können ineinander verschachtelt werden, um komplexe Hierarchien darzustellen.",
+    "alternativfragen": [
+      {
+        "frage": "Erklären Sie den Hauptunterschied zwischen CSV und XML.",
+        "antwort": "CSV: Einfaches Textformat, tabellarisch. XML: Markup-Sprache, hierarchisch.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welches Format eignet sich besser für die Darstellung komplexer, verschachtelter Datenstrukturen?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "CSV",
+          "b": "XML",
+          "c": "Beide gleich gut",
+          "d": "Keiner von beiden"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Was ist ein Vorteil von CSV gegenüber XML?",
+        "antwort": "CSV ist in der Regel einfacher und kompakter als XML, was es effizienter für die Speicherung und Übertragung großer Mengen einfacher, tabellarischer Daten macht. XML ist jedoch flexibler und ausdrucksstärker für komplexe Datenstrukturen.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 113,
+    "original_frage": "Wozu dient die DTD (Dokumenttyp-Definition) bei der Verwendung von XML-Dateien?",
+    "original_antwort": "Die Dokumenttyp-Definition (DTD) ist eine Möglichkeit, die Struktur und den Inhalt von XML-Dokumenten zu definieren. Sie dient dazu, Regeln und Beschränkungen für die Elemente, Attribute und deren Beziehungen in einem XML-Dokument festzulegen.\nDie DTD stellt eine formale Beschreibung bereit, die es ermöglicht, die Gültigkeit und Konformität eines XML-Dokuments zu überprüfen.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie 'DTD' im Kontext von XML.",
+        "antwort": "Eine Datei, die die Struktur und die erlaubten Elemente und Attribute eines XML-Dokuments definiert (Document Type Definition).",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist der Hauptzweck einer DTD?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Die XML-Datei zu verschlüsseln.",
+          "b": "Die XML-Datei zu komprimieren.",
+          "c": "Sicherzustellen, dass die XML-Datei einem bestimmten Format entspricht (Validierung).",
+          "d": "Die XML-Datei in ein anderes Format zu konvertieren."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Ist eine DTD zwingend erforderlich für jede XML-Datei?",
+        "antwort": "Nein, eine XML-Datei kann auch ohne DTD 'wohlgeformt' (well-formed) sein, wenn sie den grundlegenden XML-Syntaxregeln entspricht. Eine DTD wird benötigt, um die XML-Datei zu *validieren*, d.h. zu prüfen, ob sie einem bestimmten Schema entspricht.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 114,
+    "original_frage": "Was sind die Unterschiede zwischen einer „well-formed“ und einer „valid“ XML-Datei?",
+    "original_antwort": "Eine „well-formed“ XML-Datei erfüllt die syntaktischen Regeln des XML-Formats. Sie folgt den XML-Konventionen wie dem korrekten Verschachteln von Elementen, der Verwendung von Tags und Attributen gemäß den XML-Spezifikationen. Eine „well-formed“ XML-Datei kann von einem XML-Parser gelesen werden, ohne dass Syntaxfehler auftreten.\nEine „valid“ XML-Datei erfüllt nicht nur die syntaktischen Anforderungen, sondern entspricht auch den Regeln und Einschränkungen einer definierten Dokumenttyp-Definition (DTD) oder eines XML-Schemas. Eine „valid“ XML-Datei wird auf Konformität mit den in der DTD oder im XML-Schema festgelegten Regeln überprüft.",
+    "alternativfragen": [
+      {
+        "frage": "Erklären Sie den Unterschied zwischen 'well-formed' und 'valid' in Bezug auf XML.",
+        "antwort": "Well-formed: Korrekte XML-Syntax. Valid: Entspricht zusätzlich einem Schema (DTD oder XSD).",
+        "typ": "text"
+      },
+      {
+        "frage": "Muss eine XML-Datei immer 'valid' sein?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Ja, immer.",
+          "b": "Nein, sie muss mindestens 'well-formed' sein.",
+          "c": "Ja, außer wenn sie sehr klein ist.",
+          "d": "Nein, das ist optional."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+          "frage": "Was benötigt man, um eine XML-Datei auf Gültigkeit ('validity') zu prüfen?",
+          "antwort": "Man benötigt ein Schema (DTD oder XML Schema), das die Struktur und die erlaubten Inhalte der XML-Datei definiert.",
+          "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 115,
+    "original_frage": "Beschreiben Sie die Eigenschaften von Struktogrammen in Bezug auf Allgemeingültigkeit, Deklaration von Variablen und Exklusivität.",
+    "original_antwort": "Allgemeingültigkeit: Struktogramme sollen keine spezifischen Syntaxelemente einer bestimmten Programmiersprache beinhalten. Ihr Design sollte allgemeingültig und universell sein, sodass die dargestellten Logiken leicht verstanden und in jede Programmiersprache übersetzt werden können.\nDeklaration von Variablen: Die Deklarationen von Variablen werden im ersten Anweisungsblock vorgenommen.\nExklusivität: Jede Anweisung in einem Struktogramm wird durch einen eigenen Strukturblock repräsentiert. Selbst bei Anweisungen, die ähnlich oder identisch sind, ist es nicht erlaubt, sie in einem einzigen Strukturblock zu kombinieren.",
+    "alternativfragen": [
+      {
+        "frage": "Was bedeutet 'Allgemeingültigkeit' im Kontext von Struktogrammen?",
+        "antwort": "Unabhängigkeit von einer bestimmten Programmiersprache.",
+        "typ": "text"
+      },
+      {
+        "frage": "Wo werden Variablen in einem Struktogramm typischerweise deklariert?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Am Ende des Struktogramms.",
+          "b": "In jedem Block, in dem sie verwendet werden.",
+          "c": "Im ersten Anweisungsblock.",
+          "d": "Variablen werden in Struktogrammen nicht deklariert."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Was besagt das Prinzip der 'Exklusivität' in Struktogrammen?",
+        "antwort": "Jede Anweisung, auch wenn sie ähnlich oder identisch zu anderen ist, muss in einem eigenen Block dargestellt werden. Zusammenfassungen sind nicht erlaubt.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 116,
+    "original_frage": "Der UML-Standard unterscheidet zwischen Strukturdiagrammen und Verhaltensdiagrammen. Nennen Sie jeweils zwei Beispiele aus diesen beiden Kategorien.",
+    "original_antwort": "Strukturdiagramme:\n- Klassendiagramm\n- Objektdiagramm\n- Paketdiagramm\n- Komponentendiagramm\n- Profildiagramm\n- Verteilungsdiagramm\n- Kompositionsstrukturdiagramm\nVerhaltensdiagramme:\n- Anwendungsfalldiagramm\n- Zustandsdiagramm\n- Aktivitätsdiagramm\n- Sequenzdiagramm\n- Kommunikationsdiagramm\n- Zeitdiagramm\n- Interaktionsübersichtsdiagramm",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie zwei Beispiele für Strukturdiagramme und zwei Beispiele für Verhaltensdiagramme in UML.",
+        "antwort": "Struktur: Klassendiagramm, Objektdiagramm. Verhalten: Anwendungsfalldiagramm, Aktivitätsdiagramm.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Art von UML-Diagramm würden Sie verwenden, um die Klassen und ihre Beziehungen in einem Softwaresystem darzustellen?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Anwendungsfalldiagramm",
+          "b": "Aktivitätsdiagramm",
+          "c": "Klassendiagramm",
+          "d": "Zustandsdiagramm"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+          "frage": "Welche Art von UML Diagramm verwendet man um Abläufe und Aktivitäten darzustellen?",
+          "antwort": "Aktivitätsdiagramme werden verwendet, um Arbeitsabläufe, Prozesse oder Algorithmen darzustellen. Sie zeigen die Abfolge von Aktionen, Entscheidungen und parallelen Ausführungen.",
+          "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 117,
+    "original_frage": "Ein UML-Anwendungsfalldiagramm visualisiert einen Ablauf in einem System, ist aber keine Ablaufbeschreibung. Erklären Sie diesen Zusammenhang.",
+    "original_antwort": "Ein Anwendungsfalldiagramm ist keine Ablaufbeschreibung sondern ein Verhaltensdiagramm, das die Funktionalität eines Systems aus der Sicht der Benutzerinnen und Benutzer darstellt. Es zeigt die verschiedenen Akteure, die mit dem System interagieren, und die Anwendungsfälle, also die spezifischen Funktionen oder Aufgaben, die das System ausführen kann. Es stellt die Beziehungen zwischen diesen Akteuren und Anwendungsfällen dar, zeigt aber nicht die genauen Abläufe oder den zeitlichen Verlauf dieser Interaktionen.\nDas Anwendungsfalldiagramm dient zur Identifizierung und Darstellung der funktionalen Anforderungen an ein System.",
+    "alternativfragen": [
+      {
+        "frage": "Was stellt ein UML-Anwendungsfalldiagramm (Use-Case-Diagramm) dar?",
+        "antwort": "Funktionalität eines Systems aus Benutzersicht (Akteure und Anwendungsfälle).",
+        "typ": "text"
+      },
+      {
+        "frage": "Zeigt ein Anwendungsfalldiagramm den *zeitlichen* Ablauf von Aktionen?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Ja, immer.",
+          "b": "Nein, es zeigt nur, *welche* Interaktionen möglich sind, nicht *wann* sie stattfinden.",
+          "c": "Manchmal, wenn es explizit angegeben ist.",
+          "d": "Ja, aber nur in vereinfachter Form."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Was ist der Unterschied zwischen einem 'Akteur' und einem 'Anwendungsfall' in einem Anwendungsfalldiagramm?",
+        "antwort": "Ein Akteur ist eine Person, eine Rolle oder ein externes System, das mit dem zu entwickelnden System interagiert. Ein Anwendungsfall ist eine spezifische Funktionalität oder Aufgabe, die das System aus Benutzersicht ausführt.",
+        "typ": "text"
+      }
+    ]
+  }
+]

@@ -1,0 +1,312 @@
+[
+  {
+    "karten_nummer": 188,
+    "original_frage": "Nennen Sie zwei Vorteile, die für den Einsatz von VLANs sprechen.",
+    "original_antwort": "Vorteile des Einsatzes von VLANs:\n- VLANs ermöglichen die logische Segmentierung eines physischen Netzwerks in mehrere virtuelle Netzwerke\n- in VLANs kann der Datenverkehr priorisiert und optimiert werden\n- es können unterschiedliche Sicherheitsrichtlinien auf verschiedene VLANs angewendet werden\n- kleinere Broadcastdomänen\n- bessere Verwaltung und Konfiguration des Netzwerks",
+    "alternativfragen": [
+      {
+        "frage": "Was ist ein VLAN (Virtual LAN)?",
+        "antwort": "Ein logisches Netzwerk, das Geräte unabhängig von ihrer physischen Verbindung gruppiert.",
+        "typ": "text"
+      },
+      {
+        "frage": "Nennen Sie drei Vorteile von VLANs.",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Höhere Geschwindigkeit, größere Reichweite, einfachere Verkabelung.",
+          "b": "Netzwerksegmentierung, verbesserte Sicherheit, bessere Organisation, reduzierte Broadcast-Domänen.",
+          "c": "Geringere Kosten, weniger Stromverbrauch, automatische Konfiguration.",
+          "d": "Keine Notwendigkeit für Router, einfachere Installation, automatische Updates."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Warum ist die Netzwerksegmentierung durch VLANs wichtig für die Sicherheit?",
+        "antwort": "Durch die Segmentierung können unterschiedliche Sicherheitsrichtlinien auf verschiedene VLANs angewendet werden. So kann man z.B. den Zugriff zwischen sensiblen Bereichen (z.B. Serverraum) und weniger kritischen Bereichen (z.B. Gast-WLAN) einschränken.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 189,
+    "original_frage": "Was ist der Unterschied zwischen statischen und dynamischen VLANs?",
+    "original_antwort": "Statische VLANs werden manuell konfiguriert. Jeder Port am Switch wird einem bestimmten VLAN zugeordnet. Diese Zuordnung bleibt unverändert.\nDynamische VLANs verwenden eine dynamische Zuordnung von Ports zu VLANs. Die Zuordnung basiert auf bestimmten Merkmalen der Netzwerkgeräte, wie z. B. MAC-Adresse, Protokoll oder anderen Attributen. Wenn ein Gerät an den Switch angeschlossen wird, identifiziert der Switch automatisch das VLAN, dem der Port zugeordnet werden soll.",
+    "alternativfragen": [
+      {
+        "frage": "Erklären Sie den Unterschied zwischen statischen und dynamischen VLANs.",
+        "antwort": "Statisch: Port-basierte, manuelle Zuweisung. Dynamisch: Automatische Zuweisung basierend auf Kriterien (z.B. MAC-Adresse).",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Art von VLAN erfordert mehr administrativen Aufwand?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Statische VLANs",
+          "b": "Dynamische VLANs",
+          "c": "Beide gleich",
+          "d": "Hängt von der Netzwerktopologie ab"
+        },
+        "korrekte_antworten": [
+          "a"
+        ]
+      },
+      {
+        "frage": "Was ist ein Vorteil dynamischer VLANs?",
+        "antwort": "Dynamische VLANs bieten mehr Flexibilität, da Geräte beim Umstecken in einen anderen Switch-Port automatisch dem richtigen VLAN zugeordnet werden können (basierend auf konfigurierten Kriterien).",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 190,
+    "original_frage": "Was sind tagged Ports?",
+    "original_antwort": "Tagged Ports sind Netzwerkports, die den Datenverkehr von mehreren VLANs verarbeiten können. Im Gegensatz zu ungetaggten (untagged) Ports, die nur den Datenverkehr eines einzigen VLANs übertragen können, können tagged Ports Datenpakete aus verschiedenen VLANs empfangen und weiterleiten.\nWenn ein Switch-Port als tagged konfiguriert ist, werden den Datenpaketen VLAN-Tags hinzugefügt, die anzeigen, zu welchem VLAN sie gehören. Dies ermöglicht es dem Switch, den Datenverkehr zwischen den VLANs zu steuern. Der Switch verwendet die VLAN-Tags, um sicherzustellen, dass Datenpakete in den richtigen VLANs zugestellt werden.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist der Hauptunterschied zwischen tagged und untagged Ports in einem VLAN-Kontext?",
+        "antwort": "Tagged: Kann Datenverkehr mehrerer VLANs verarbeiten. Untagged: Nur für ein einzelnes VLAN.",
+        "typ": "text"
+      },
+      {
+        "frage": "Was ist ein VLAN-Tag?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Ein physisches Etikett am Port.",
+          "b": "Eine Information im Datenpaket, die angibt, zu welchem VLAN es gehört.",
+          "c": "Eine Sicherheitsfunktion.",
+          "d": "Eine Art von Kabel."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Wozu werden tagged Ports typischerweise verwendet?",
+        "antwort": "Tagged Ports werden verwendet, um Verbindungen zwischen Switches herzustellen (Trunk-Ports), die Datenverkehr für mehrere VLANs transportieren müssen. Sie werden auch verwendet, um Server oder andere Geräte anzuschließen, die Zugriff auf mehrere VLANs benötigen.",
+        "typ": "text"
+      }
+    ]
+  },
+    {
+    "karten_nummer": 191,
+    "original_frage": "Erläutern Sie, warum Quality of Service (QoS) bei der Übertragung von Telefonie- und Videodaten eine wichtige Rolle spielt.",
+    "original_antwort": "Quality of Service (QoS) bezieht sich auf die Fähigkeit eines Netzwerks, unterschiedlichen Anwendungen, Nutzern oder Datentypen unterschiedliche Prioritäten zu gewähren. Das Ziel von QoS ist es, eine bessere und vorhersehbarere Netzwerkleistung zu liefern, indem bestimmte Arten von Netzwerkverkehr bevorzugt werden.\nBei der Übertragung von Telefonie- und Videodaten spielt QoS eine besonders wichtige Rolle. Diese Arten von Daten erfordern eine Echtzeit-Kommunikation und sind empfindlich gegenüber Verzögerungen (Latenz), Paketverlusten und Jitter.",
+    "alternativfragen": [
+      {
+        "frage": "Was versteht man unter 'Quality of Service' (QoS)?",
+        "antwort": "Mechanismen zur Priorisierung bestimmter Arten von Netzwerkverkehr.",
+        "typ": "text"
+      },
+      {
+        "frage": "Warum ist QoS besonders wichtig für Echtzeitanwendungen wie VoIP und Videokonferenzen?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Weil sie mehr Bandbreite benötigen.",
+          "b": "Weil sie sicherer sind.",
+          "c": "Weil sie empfindlich gegenüber Verzögerungen, Paketverlust und Jitter sind.",
+          "d": "Weil sie einfacher zu implementieren sind."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Nennen Sie drei Netzwerkparameter, die die Qualität von Echtzeitkommunikation beeinflussen.",
+        "antwort": "Latenz (Verzögerung), Jitter (Varianz der Verzögerung) und Paketverlust.",
+        "typ": "text"
+      }
+    ]
+  },
+    {
+    "karten_nummer": 192,
+    "original_frage": "Welche verschiedenen VPN-Modelle gibt es?",
+    "original_antwort": "End-to-Site-VPN: Auch als Remote Access VPN bezeichnet. Ermöglicht es einem einzelnen Benutzer oder einer entfernten Einheit, eine sichere Verbindung zu einem privaten Netzwerk herzustellen.\nSite-to-Site-VPN: Auch LAN-to-LAN-VPN genannt. Verbindet zwei oder mehr physische Netzwerke miteinander. Der Fokus liegt hierbei auf der Verbindung von Netzwerken oder Standorten.\nEnd-to-End-VPN: Der Begriff „End-to-End-VPN“ wird verwendet, um eine VPN-Lösung zu beschreiben, die von einem Endpunkt zum anderen Endpunkt einer Kommunikation verwendet wird.",
+    "alternativfragen": [
+      {
+        "frage": "Nennen und beschreiben Sie kurz drei Arten von VPNs.",
+        "antwort": "End-to-Site (Remote Access): Einzelner Benutzer verbindet sich mit Netzwerk. Site-to-Site: Verbindet zwei Netzwerke. End-to-End: Direkte Verbindung zwischen zwei Endpunkten.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Art von VPN würden Sie verwenden, um einen Heimarbeitsplatz sicher mit dem Firmennetzwerk zu verbinden?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Site-to-Site-VPN",
+          "b": "End-to-Site-VPN (Remote Access VPN)",
+          "c": "End-to-End-VPN",
+          "d": "Kein VPN"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Was ist der Hauptunterschied zwischen einem Site-to-Site-VPN und einem End-to-Site-VPN?",
+        "antwort": "Ein Site-to-Site-VPN verbindet *Netzwerke* miteinander (z.B. zwei Unternehmensstandorte). Ein End-to-Site-VPN verbindet einen einzelnen *Benutzer* (oder ein einzelnes Gerät) mit einem Netzwerk.",
+        "typ": "text"
+      }
+    ]
+  },
+    {
+    "karten_nummer": 193,
+    "original_frage": "Was ist der Unterschied zwischen Tunnelmodus und Transportmodus bei VPNs?",
+    "original_antwort": "Im Tunnelmodus wird der gesamte IP-Datenverkehr eines Netzwerkpakets verschlüsselt und in ein neues IP-Paket eingekapselt. Dieses neue IP-Paket enthält sowohl den verschlüsselten ursprünglichen IP-Datenverkehr als auch den VPN-Header. Der VPN-Header enthält Informationen über die Verschlüsselung, Authentifizierung und andere VPN-spezifische Parameter.\nIm Transportmodus wird nur der Nutzlastteil eines IP-Pakets verschlüsselt. Der IP-Header des ursprünglichen Pakets bleibt unverschlüsselt, während die Nutzlast verschlüsselt wird.",
+    "alternativfragen": [
+      {
+        "frage": "Erklären Sie den Unterschied zwischen Tunnelmodus und Transportmodus bei IPsec-VPNs.",
+        "antwort": "Tunnelmodus: Gesamtes Paket verschlüsselt und gekapselt. Transportmodus: Nur Nutzlast verschlüsselt, Header bleibt gleich.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welcher Modus (Tunnel oder Transport) bietet eine höhere Sicherheit?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Transportmodus",
+          "b": "Tunnelmodus",
+          "c": "Beide gleich sicher",
+          "d": "Kommt auf die Verschlüsselung an"
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Welcher Modus (Tunnel oder Transport) wird typischerweise für Site-to-Site-VPNs verwendet?",
+        "antwort": "Der Tunnelmodus wird typischerweise für Site-to-Site-VPNs verwendet, da er den gesamten Verkehr zwischen den Netzwerken verschlüsselt und kapselt.",
+        "typ": "text"
+      }
+    ]
+  },
+      {
+    "karten_nummer": 194,
+    "original_frage": "Beschreiben Sie die zusätzlichen Sicherheitsvorteile die Zero Trust Network Access (ZTNA) im Vergleich zu traditionellen VPN-Verbindungen bietet.",
+    "original_antwort": "Zero Trust Network Access (ZTNA) verbessert die Sicherheit gegenüber VPNs durch Mikrosegmentierung und begrenzt so den Netzwerkzugriff auf genau die benötigten Ressourcen. ZTNA verwendet identitäts- und kontextbasierte Richtlinien, die mehr Informationen berücksichtigen als nur den Standort. ZTNA reduziert die Angriffsfläche, da keine direkte Netzwerkverbindung benötigt wird, und bietet eine Always-On-Sicherheit, die konsistente Schutzmaßnahmen gewährleistet. Durch Echtzeitüberwachung und adaptive Reaktionen auf mögliche Vorfälle erhöht ZTNA die Sicherheit erheblich.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist das Grundprinzip von Zero Trust Network Access (ZTNA)?",
+        "antwort": "'Never trust, always verify' - Jeder Zugriff, egal von wo, wird überprüft.",
+        "typ": "text"
+      },
+      {
+        "frage": "Wie unterscheidet sich ZTNA von einem herkömmlichen VPN in Bezug auf den Zugriff auf Netzwerkressourcen?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "VPN gewährt Zugriff auf das gesamte Netzwerk, ZTNA nur auf spezifische Anwendungen/Ressourcen.",
+          "b": "ZTNA ist langsamer als VPN.",
+          "c": "VPN ist sicherer als ZTNA.",
+          "d": "ZTNA erfordert keine Authentifizierung."
+        },
+        "korrekte_antworten": [
+          "a"
+        ]
+      },
+      {
+        "frage": "Nennen Sie drei Vorteile von ZTNA gegenüber herkömmlichen VPNs.",
+        "antwort": "Geringere Angriffsfläche (Mikrosegmentierung), stärkere Authentifizierung (Identität + Kontext), bessere Überwachung und Kontrolle des Zugriffs, Always-On Sicherheit.",
+        "typ": "text"
+      }
+    ]
+  },
+    {
+    "karten_nummer": 195,
+    "original_frage": "Erklären Sie die Aufgaben des IPsec Protokolls.",
+    "original_antwort": "IPsec (Internet Protocol Security): IPsec ist eine Protokollsuite, die auf der Netzwerkschicht des TCP/IP-Protokollstapels arbeitet. Sie bietet Mechanismen zur Sicherung des IP-Datenverkehrs, insbesondere in VPN-Umgebungen. IPsec ermöglicht die Verschlüsselung, Authentifizierung und Integritätssicherung von IP-Paketen, um eine sichere Übertragung über unsichere Netzwerke wie das Internet zu gewährleisten.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist IPsec?",
+        "antwort": "Eine Protokollsuite zur Sicherung der IP-Kommunikation (Verschlüsselung, Authentifizierung, Integrität).",
+        "typ": "text"
+      },
+      {
+        "frage": "Auf welcher Schicht des TCP/IP-Modells arbeitet IPsec?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Anwendungsschicht",
+          "b": "Transportschicht",
+          "c": "Netzwerkschicht (Internet Layer)",
+          "d": "Sicherungsschicht (Data Link Layer)"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Wird IPsec hauptsächlich für VPNs verwendet?",
+        "antwort": "Ja, IPsec ist ein weit verbreitetes Protokoll für die Implementierung von VPNs (Virtual Private Networks), kann aber auch für andere sichere Kommunikationszwecke verwendet werden.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 196,
+    "original_frage": "Nennen Sie die 7 Schichten des OSI-Modells in aufsteigender Reihenfolge.",
+    "original_antwort": "Die 7 Schichten des OSI-Modells (Open Systems Interconnection Model) sind:\n- Bitübertragungsschicht (Physical Layer)\n- Sicherungsschicht (Data Link Layer)\n- Vermittlungsschicht (Network Layer)\n- Transportschicht (Transport Layer)\n- Sitzungsschicht (Session Layer)\n- Darstellungsschicht (Presentation Layer)\n- Anwendungsschicht (Application Layer)",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie die sieben Schichten des OSI-Modells (von unten nach oben).",
+        "antwort": "Physical, Data Link, Network, Transport, Session, Presentation, Application.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Schicht des OSI-Modells ist für die *Adressierung und Weiterleitung* von Datenpaketen zwischen verschiedenen Netzwerken zuständig?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Physical Layer",
+          "b": "Data Link Layer",
+          "c": "Network Layer",
+          "d": "Transport Layer"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Was ist der Hauptzweck des OSI-Modells?",
+        "antwort": "Das OSI-Modell ist ein Referenzmodell, das die Kommunikation in Netzwerken in sieben Schichten unterteilt. Es dient dazu, die verschiedenen Funktionen und Protokolle in einem Netzwerk zu standardisieren und das Verständnis und die Entwicklung von Netzwerktechnologien zu erleichtern.",
+        "typ": "text"
+      }
+    ]
+  },
+        {
+        "karten_nummer": 197,
+        "original_frage": "Welche Schichten des OSI-Modells gehören zu den transportorientierten Schichten? Erklären Sie auch kurz die Aufgaben dieser Schichten.",
+        "original_antwort": "Transportorientierte Schichten:\nDie **Bitübertragungsschicht** beschäftigt sich mit der physischen Übertragung von Datenbits über das Übertragungsmedium.\nDie **Sicherungsschicht** kümmert sich um die fehlerfreie Übertragung von Datenframes zwischen benachbarten Netzwerkgeräten. Sie bietet Mechanismen zur Fehlererkennung und Fehlerkorrektur.\nDie **Vermittlungsschicht** ist für die Adressierung, das Routing und die Weiterleitung von Datenpaketen im Netzwerk verantwortlich.\nDie **Transportschicht** regelt die Zuordnung der Datenpakete zu einer Anwendung. Sie stellt sicher, dass Datenpakete in der richtigen Reihenfolge ankommen, überwacht die Datenintegrität und regelt den Datenfluss.",
+        "alternativfragen": [
+        {
+            "frage": "Nennen sie die Transportorientierten Schichten.",
+            "antwort": "Bitübertragungsschicht, Sicherungsschicht, Vermittlungsschicht, Transportschicht.",
+            "typ": "text"
+        },
+        {
+            "frage": "Welche dieser Schichten ist für die Ende-zu-Ende-Kommunikation zwischen Anwendungen zuständig, einschließlich der Segmentierung, Flusskontrolle und Fehlerbehandlung?",
+            "antwort": "",
+            "typ": "multiple_choice",
+            "optionen": {
+            "a": "Sicherungsschicht",
+            "b": "Vermittlungsschicht",
+            "c": "Transportschicht",
+            "d": "Bitübertragungsschicht"
+            },
+            "korrekte_antworten": [
+            "c"
+            ]
+            },
+        {
+            "frage": "Welche Schicht ist für die physische Übertragung der Datenbits zuständig?",
+            "antwort": "Die Bitübertragungsschicht (Physical Layer) ist für die Übertragung der rohen Datenbits über das physische Medium (Kabel, Funk usw.) zuständig.",
+            "typ": "text"
+        }
+        ]
+    }
+]

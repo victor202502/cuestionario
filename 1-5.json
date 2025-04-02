@@ -1,0 +1,405 @@
+[
+  {
+    "karten_nummer": 37,
+    "original_frage": "Erklären Sie anhand eines Beispiels, warum ein RAID keine Datensicherung ersetzt.",
+    "original_antwort": "Ein RAID schützt in den folgenden Fällen nicht vor einem Datenverlust:\n- Virenbefall eines Systems\n- versehentlich gelöschte oder veränderte Daten\n- physikalische Beschädigung durch Feuer, Wasser oder Vandalismus",
+    "alternativfragen": [
+      {
+        "frage": "Warum ist ein RAID-System allein kein ausreichender Schutz vor Datenverlust?",
+        "antwort": "Weil ein RAID nur vor Hardware-Ausfällen schützt, aber nicht vor logischen Fehlern, Viren oder Naturkatastrophen.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Art von Datenverlust kann ein RAID-System *nicht* verhindern?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Ausfall einer einzelnen Festplatte.",
+          "b": "Ausfall von zwei Festplatten in einem RAID 6.",
+          "c": "Versehentliches Löschen von Dateien.",
+          "d": "Ausfall einer Festplatte in einem RAID 5."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Nennen Sie ein Szenario, in dem ein RAID-System Daten *nicht* schützen kann, und erläutern sie warum",
+        "antwort": "Ein Virus infiziert alle Dateien auf einem RAID-System. Da das RAID die Daten über mehrere Festplatten verteilt, aber keine separaten Kopien erstellt, werden alle Festplatten gleichzeitig vom Virus betroffen, und es gibt keine Möglichkeit, die Daten aus dem RAID selbst wiederherzustellen.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 38,
+    "original_frage": "In einem RAID-5-Verbund wurde eine zusätzliche Hot-Spare-Festplatte verbaut. Erklären Sie die Funktion einer Hot-Spare-Festplatte.",
+    "original_antwort": "Eine Hot-Spare-Festplatte ist eine zusätzliche Festplatte, die in einem RAID-Verbund installiert wird, um als Ersatz für eine ausgefallene Festplatte zu dienen.\nWenn eine Festplatte in dem RAID-Verbund ausfällt, übernimmt die Hot-Spare-Festplatte automatisch die Rolle der ausgefallenen Festplatte, ohne dass manuelle Eingriffe erforderlich sind. Die Hot-Spare-Festplatte wird sofort in das RAID-System integriert und beginnt mit der Wiederherstellung der Daten, um den ursprünglichen Redundanzgrad des Verbunds wiederherzustellen.",
+    "alternativfragen": [
+      {
+        "frage": "Was ist eine Hot-Spare-Festplatte in einem RAID-System?",
+        "antwort": "Eine zusätzliche Festplatte, die bei Ausfall einer anderen automatisch deren Platz einnimmt.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welchen Vorteil bietet eine Hot-Spare-Festplatte in einem RAID-Verbund?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Sie erhöht die Speicherkapazität des RAID-Verbunds.",
+          "b": "Sie beschleunigt den Zugriff auf die Daten.",
+          "c": "Sie ermöglicht eine automatische Wiederherstellung der Redundanz nach einem Festplattenausfall.",
+          "d": "Sie verhindert jeglichen Datenverlust."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Wie funktioniert der automatische Austausch einer defekten Festplatte durch eine Hot-Spare?",
+        "antwort": "Das RAID-System erkennt den Ausfall einer Festplatte, aktiviert die Hot-Spare, und beginnt sofort mit der Rekonstruktion der Daten auf der Hot-Spare, basierend auf den Paritätsinformationen (bei RAID 5 oder 6) oder dem Spiegel (bei RAID 1 oder 10).",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 39,
+    "original_frage": "Was ist der Unterschied zwischen symmetrischen und asymmetrischen Verschlüsselungsverfahren?",
+    "original_antwort": "Symmetrische Verschlüsselung:\n- arbeitet nur mit einem einzigen Schlüssel\n- der Schlüssel muss dem Sender und Empfänger bekannt sein\n- Vorteil: funktioniert schnell und effizient\n- Nachteil: die Übergabe und Verwaltung des Schlüssels sind schwierig\nAsymmetrische Verschlüsselung:\n- arbeitet mit Schlüsselpaaren bestehend aus einem privaten (Private Key) und einem öffentlichen Schlüssel (Public Key)\n- Nachrichten werden mit dem Public Key verschlüsselt\n- der Private Key dient zum Entschlüsseln von Nachrichten\n- Vorteil: löst das Problem der Schlüsselübergabe\n- Nachteil: sind erheblich langsamer als die symmetrischen Verschlüsselungsverfahren",
+    "alternativfragen": [
+      {
+        "frage": "Erklären Sie den Hauptunterschied zwischen symmetrischer und asymmetrischer Verschlüsselung.",
+        "antwort": "Symmetrisch: Ein Schlüssel für Ver- und Entschlüsselung. Asymmetrisch: Zwei Schlüssel (öffentlich und privat).",
+        "typ": "text"
+      },
+      {
+        "frage": "Welches Verfahren ist in der Regel schneller: symmetrische oder asymmetrische Verschlüsselung?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Symmetrische Verschlüsselung",
+          "b": "Asymmetrische Verschlüsselung",
+          "c": "Beide sind gleich schnell.",
+          "d": "Das hängt von der Schlüssellänge ab."
+        },
+        "korrekte_antworten": [
+          "a"
+        ]
+      },
+      {
+        "frage": "Wie wird das Problem des Schlüsselaustauschs bei asymmetrischen Verfahren gelöst?",
+        "antwort": "Durch die Verwendung eines öffentlichen Schlüssels, der frei verteilt werden kann, und eines privaten Schlüssels, der geheim gehalten wird. Der öffentliche Schlüssel verschlüsselt, der private entschlüsselt.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 40,
+    "original_frage": "Wie ist die Funktionsweise von hybriden Verschlüsselungsverfahren?",
+    "original_antwort": "Hybride Verschlüsselungsverfahren vereinen die Vorteile von symmetrischen und asymmetrischen Verschlüsselungsverfahren. Die eigentliche Nachricht wird zunächst mit einem symmetrischen Verfahren verschlüsselt. Der hierbei verwendete Schlüssel wird mit einem asymmetrischen Verfahren verschlüsselt und an den Empfänger übertragen. Hierdurch ist dieses Verfahren schneller als die asymmetrischen Verfahren.",
+    "alternativfragen": [
+      {
+        "frage": "Beschreiben Sie, wie hybride Verschlüsselung funktioniert.",
+        "antwort": "Kombination aus symmetrischer Verschlüsselung (für die Daten) und asymmetrischer Verschlüsselung (für den Schlüsselaustausch).",
+        "typ": "text"
+      },
+      {
+        "frage": "Warum werden hybride Verschlüsselungsverfahren eingesetzt?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Weil sie sicherer sind als rein symmetrische oder asymmetrische Verfahren.",
+          "b": "Weil sie die Vorteile beider Verfahren kombinieren: Geschwindigkeit (symmetrisch) und sicheren Schlüsselaustausch (asymmetrisch).",
+          "c": "Weil sie einfacher zu implementieren sind.",
+          "d": "Weil sie weniger Rechenleistung benötigen."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+          "frage": "Erkläre den Ablauf einer hybriden verschlüsselung mit Fokus auf die verwendeten Schlüssel",
+          "antwort": "1. Ein zufälliger symmetrischer Schlüssel (Session Key) wird generiert. 2. Die Nachricht wird mit diesem Session Key symmetrisch verschlüsselt. 3. Der Session Key wird mit dem öffentlichen Schlüssel des Empfängers asymmetrisch verschlüsselt. 4. Die verschlüsselte Nachricht und der verschlüsselte Session Key werden an den Empfänger gesendet. 5. Der Empfänger entschlüsselt den Session Key mit seinem privaten Schlüssel. 6. Der Empfänger entschlüsselt die Nachricht mit dem entschlüsselten Session Key.",
+          "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 41,
+    "original_frage": "Welche Schutzmechanismen beinhaltet das TLS-Protokoll?",
+    "original_antwort": "Transport Layer Security (TLS) ist ein Protokoll, das dazu dient, eine sichere Kommunikation über ein Netzwerk zu ermöglichen. TLS funktioniert, indem es eine verschlüsselte Verbindung zwischen zwei Parteien herstellt, über die Daten sicher übertragen werden können.\nAufgaben von TLS sind:\n- Verschlüsselung: TLS verwendet das hybride Verschlüsselungsverfahren, um Verbindungen zu sichern.\n- Authentifizierung: TLS verwendet digitale Zertifikate, um die Identität der kommunizierenden Parteien zu überprüfen\n- Integrität: TLS beinhaltet Mechanismen zur Überprüfung der Integrität von Nachrichten",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie die drei Hauptschutzmechanismen von TLS.",
+        "antwort": "Verschlüsselung, Authentifizierung und Integritätsschutz.",
+        "typ": "text"
+      },
+      {
+        "frage": "Wie stellt TLS die Vertraulichkeit der übertragenen Daten sicher?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Durch digitale Signaturen.",
+          "b": "Durch Hash-Verfahren.",
+          "c": "Durch Verschlüsselung.",
+          "d": "Durch Zugriffskontrollen."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Wie authentifiziert TLS die Kommunikationspartner?",
+        "antwort": "TLS verwendet digitale Zertifikate, die von vertrauenswürdigen Zertifizierungsstellen (CAs) ausgestellt wurden, um die Identität der Kommunikationspartner zu überprüfen.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 42,
+    "original_frage": "Digitale Signaturen stützen sich auf Hashverfahren und basieren auf der asymmetrischen Kryptografie. Erklären Sie diesen Zusammenhang.",
+    "original_antwort": "Bei digitalen Signaturen wird die asymmetrische Kryptografie umgekehrt angewandt. Die Signatur wird vom Sender einer Nachricht mit Hilfe seines privaten Schlüssels erzeugt. Vom Empfänger kann die Korrektheit einer Signatur über den öffentlichen Schlüssel des Senders überprüft werden.\nUm die Effizienz des Signaturverfahrens zu steigern, wird die digitale Signatur nur auf dem Hashwert einer Nachricht erzeugt.",
+    "alternativfragen": [
+      {
+        "frage": "Wie werden digitale Signaturen erstellt und verifiziert?",
+        "antwort": "Erstellung: Privater Schlüssel signiert Hash. Verifizierung: Öffentlicher Schlüssel prüft Signatur.",
+        "typ": "text"
+      },
+      {
+        "frage": "Warum werden Hash-Werte in digitalen Signaturen verwendet?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Um die Nachricht zu verschlüsseln.",
+          "b": "Um die Nachricht zu komprimieren.",
+          "c": "Um die Effizienz zu steigern und die Integrität der Nachricht sicherzustellen.",
+          "d": "Um die Identität des Empfängers zu überprüfen."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Beschreibe den gesamten Prozess einer digitalen Signatur, von der Erstellung bis zu Verifizierung",
+        "antwort": "1. Der Sender berechnet den Hash-Wert der Nachricht. 2. Der Sender verschlüsselt den Hash-Wert mit seinem *privaten* Schlüssel. Dies ist die digitale Signatur. 3. Der Sender sendet die Nachricht und die digitale Signatur an den Empfänger. 4. Der Empfänger berechnet den Hash-Wert der empfangenen Nachricht. 5. Der Empfänger entschlüsselt die digitale Signatur mit dem *öffentlichen* Schlüssel des Senders. 6. Der Empfänger vergleicht den berechneten Hash-Wert mit dem entschlüsselten Hash-Wert. Stimmen sie überein, ist die Signatur gültig und die Nachricht wurde nicht verändert.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 43,
+    "original_frage": "Nennen Sie drei Eigenschaften, die ein sicheres Hash-Verfahren aufweisen sollte.",
+    "original_antwort": "Bei einem sicheren Hash-Verfahren...\n- sollte sich der Hashwert bereits bei kleinsten Änderungen im Eingabetext stark ändern\n- darf es zu verschiedenen Eingabetexten nicht den gleichen Hashwert geben\n- darf eine Rückrechnung auf den Quelltext nicht möglich sein\n- sollte die Länge des Hashwertes immer konstant sein, unabhängig von der Länge des Eingabetextes",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie drei wichtige Eigenschaften eines sicheren Hash-Verfahrens.",
+        "antwort": "Einwegfunktion (nicht umkehrbar), Kollisionsresistenz, hohe Änderungsempfindlichkeit (kleine Änderungen im Input führen zu großen Änderungen im Hash).",
+        "typ": "text"
+      },
+      {
+        "frage": "Was bedeutet 'Kollisionsresistenz' bei einem Hash-Verfahren?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Dass der Hash-Wert immer gleich lang ist.",
+          "b": "Dass es sehr unwahrscheinlich ist, zwei verschiedene Eingaben zu finden, die denselben Hash-Wert ergeben.",
+          "c": "Dass der Hash-Wert nicht erraten werden kann.",
+          "d": "Dass der Hash-Wert verschlüsselt ist."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Warum ist es wichtig, dass ein Hash-Verfahren eine Einwegfunktion ist?",
+        "antwort": "Weil es sonst möglich wäre, aus dem Hash-Wert den ursprünglichen Klartext zu berechnen, was die Sicherheit von z.B. Passwörtern, die als Hash gespeichert sind, gefährden würde.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 44,
+    "original_frage": "Was ist „Salting\" in der Kryptographie und wie verbessert es die Sicherheit von gespeicherten Passwörtern?",
+    "original_antwort": "Salting ist eine Technik, die häufig bei der Speicherung von Passwörtern verwendet wird. Ein „Salt\" ist eine zufällige Zeichenfolge, die zu einem Passwort hinzugefügt wird, bevor das Passwort gehasht wird. Dies hat den Zweck, den Hash-Wert des Passworts zu verändern, sodass selbst wenn zwei Accounts das gleiche Passwort haben, ihre gehashten Passwörter (die in der Datenbank gespeichert werden) unterschiedlich sind.\nSalting erhöht die Sicherheit, da es den Nutzen von vorgefertigten Hash-Listen für Angreifer erheblich reduziert und es schwieriger macht, Passwörter durch Brute-Force-Angriffe zu entschlüsseln.",
+    "alternativfragen": [
+      {
+        "frage": "Erklären Sie das Prinzip des 'Saltings' bei der Passwortspeicherung.",
+        "antwort": "Zufälliger Wert wird vor dem Hashen zum Passwort hinzugefügt.",
+        "typ": "text"
+      },
+      {
+        "frage": "Warum ist Salting wichtig für die Passwortsicherheit?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Es macht Passwörter kürzer.",
+          "b": "Es macht Passwörter leichter zu merken.",
+          "c": "Es schützt vor Rainbow-Table-Angriffen und macht es schwieriger, mehrere Passwörter gleichzeitig zu knacken.",
+          "d": "Es verschlüsselt das Passwort."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Wie funktioniert Salting im Detail?",
+        "antwort": "Für jeden Benutzer wird ein zufälliger, eindeutiger 'Salt' (eine Zeichenkette) generiert und zusammen mit dem Passwort-Hash in der Datenbank gespeichert. Bevor das Passwort gehasht wird, wird der Salt an das Passwort angehängt. Dadurch ist der resultierende Hash einzigartig, selbst wenn zwei Benutzer dasselbe Passwort wählen.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 45,
+    "original_frage": "Was ist die Rolle einer Certificate Authority (CA) im Kontext der Netzwerksicherheit?",
+    "original_antwort": "Eine Certificate Authority (CA), oder Zertifizierungsstelle, ist eine vertrauenswürdige Organisation, die digitale Zertifikate ausstellt und verwaltet. Diese Zertifikate sind entscheidend für die Sicherheit im Internet, da sie die Identität von Personen, Computern und Organisationen bestätigen. Wenn eine CA ein Zertifikat ausstellt, bestätigt sie die Identität des Inhabers und signiert das Zertifikat mit ihrem privaten Schlüssel. Dies ermöglicht es jedem, der das Zertifikat erhält, die Authentizität durch Überprüfung der CA-Signatur zu bestätigen.",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie die Aufgabe einer Certificate Authority (CA).",
+        "antwort": "Eine CA ist eine vertrauenswürdige Stelle, die digitale Zertifikate ausstellt und deren Gültigkeit bestätigt.",
+        "typ": "text"
+      },
+      {
+        "frage": "Warum sind CAs wichtig für die Sicherheit im Internet?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Sie verschlüsseln den gesamten Internetverkehr.",
+          "b": "Sie entwickeln neue Sicherheitsstandards.",
+          "c": "Sie ermöglichen die Überprüfung der Identität von Webseiten und anderen Online-Diensten.",
+          "d": "Sie blockieren den Zugriff auf unsichere Webseiten."
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Wie bestätigt eine CA die Identität des Antragstellers eines Zertifikats?",
+        "antwort": "Der Prozess variiert, aber im Allgemeinen fordert die CA vom Antragsteller Nachweise, die seine Identität belegen (z.B. Dokumente, Domain-Inhaberschaft). Die CA prüft diese Nachweise, bevor sie das Zertifikat ausstellt.",
+        "typ": "text"
+      }
+    ]
+  },
+      {
+    "karten_nummer": 46,
+    "original_frage": "Was ist eine Public Key Infrastructure (PKI)?",
+    "original_antwort": "Eine Public Key Infrastructure (PKI) ist ein Set von Rollen,\nRichtlinien und Verfahren, die benötigt werden, um digitale\nZertifikate sicher auszustellen und zu verwalten. Sie dient der\nsicheren Identitätsprüfung in digitalen Netzwerken und nutzt\ndafür asymmetrische Kryptographie, bestehend aus einem\nöffentlichen und privaten Schlüsselpaar. Die Zertifikate werden\nvon einer Zertifizierungsstelle (CA) ausgestellt, die als vertrau-\nenswürdige dritte Partei fungiert.\n\nPKIs stellen die folgenden Funktionen bereit:\n- Zertifikatserstellung\n- Zertifikatsverteilung\n- Zertifikatsprüfung\n- Zertifikatswiderruf",
+    "alternativfragen": [
+      {
+        "frage": "Definieren Sie den Begriff 'Public Key Infrastructure' (PKI).",
+        "antwort": "Ein System zum Erstellen, Verwalten und Verwenden digitaler Zertifikate.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Aufgabe hat eine Zertifizierungsstelle (CA) in einer PKI?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Sie verschlüsselt Daten.",
+          "b": "Sie stellt digitale Zertifikate aus und bestätigt deren Gültigkeit.",
+          "c": "Sie speichert private Schlüssel.",
+          "d": "Sie entwickelt Verschlüsselungsalgorithmen."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Nennen sie die vier grundlegenden Funktionen einer PKI",
+        "antwort": "Zertifikatserstellung, Zertifikatsverteilung, Zertifikatsprüfung, Zertifikatswiderruf.",
+        "typ": "text"
+      }
+    ]
+  },
+      {
+    "karten_nummer": 47,
+    "original_frage": "Welche Bestandteile beinhaltet ein digitales Zertifikat nach X.509?",
+    "original_antwort": "Typische Inhalte eines Zertifikates sind:\n- Version\n- Name des Zertifikatsinhabers\n- Signaturverfahren\n- Aussteller des Zertifikats (CA)\n- Seriennummer die von der CA zur Identifizierung des Zertifikats vergeben wird\n- Gültigkeitsdauer\n- Signature Algorithmus\n- Öffentlicher Schlüssel des Zertifikatsinhabers",
+    "alternativfragen": [
+      {
+        "frage": "Nennen Sie fünf typische Bestandteile eines digitalen Zertifikats nach X.509.",
+        "antwort": "Version, Name des Inhabers, Aussteller (CA), Gültigkeitsdauer, öffentlicher Schlüssel.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche Information ist *nicht* in einem digitalen Zertifikat nach X.509 enthalten?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Der öffentliche Schlüssel des Inhabers.",
+          "b": "Der private Schlüssel des Inhabers.",
+          "c": "Der Aussteller des Zertifikats.",
+          "d": "Die Gültigkeitsdauer des Zertifikats."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Wozu dient ein digitales Zertifikat?",
+        "antwort": "Ein digitales Zertifikat dient dazu, die Identität einer Person oder Organisation in der digitalen Welt zu bestätigen und sichere Kommunikation zu ermöglichen.",
+        "typ": "text"
+      }
+    ]
+  },
+  {
+    "karten_nummer": 48,
+    "original_frage": "Erklären Sie die Bedeutung der folgenden Algorithmen:\n- DES\n- 3DES\n- AES-128\n- AES-256\n- SHA256\n- MD5",
+    "original_antwort": "DES - Data Encryption Standard\n- symmetrisches Verschlüsselungsverfahren\n- DES gilt als nicht mehr sicher\n- durch die dreifache Anwendung des DES wird die Schlüssellänge und Sicherheit vergrößert\nAES-128 - Advanced Encryption Standard\nAES-256 - symmetrisches Verschlüsselungsverfahren mit einer Schlüssellänge von 128 Bit, bzw. 256 Bit\nSHA256 - Secure Hash Algorithm\n- Hash-Verfahren mit 256 Bit Länge\nMD5 - Message-Digest Algorithm\n- Hash-Verfahren mit 128 Bit Länge\n- gilt als nicht mehr sicher",
+    "alternativfragen": [
+      {
+        "frage": "Ordnen Sie die genannten Algorithmen in die Kategorien 'Verschlüsselung' und 'Hashing' ein.",
+        "antwort": "Verschlüsselung: DES, 3DES, AES-128, AES-256. Hashing: SHA256, MD5.",
+        "typ": "text"
+      },
+      {
+        "frage": "Welche der genannten Algorithmen gelten heute als *nicht* mehr sicher?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "AES-256",
+          "b": "SHA256",
+          "c": "DES und MD5",
+          "d": "3DES"
+        },
+        "korrekte_antworten": [
+          "c"
+        ]
+      },
+      {
+        "frage": "Was ist der Unterschied zwischen einem symmetrischen und einem asymmetrischen Verschlüsselungsverfahren?",
+        "antwort": "Symmetrische Verfahren verwenden denselben Schlüssel zum Ver- und Entschlüsseln, während asymmetrische Verfahren ein Schlüsselpaar (öffentlich und privat) verwenden.",
+        "typ": "text"
+      }
+    ]
+  },
+	  {
+    "karten_nummer": 49,
+    "original_frage": "Beschreiben Sie Lastenheft und Pflichtenheft hinsichtlich Verfasser, Verwendung und Inhalt.",
+    "original_antwort": "Lastenheft:\n- Verfasser: Auftraggeber\n- Verwendung: Grundlage beim Einholen von Angeboten\n- Inhalt: beinhaltet alle Anforderungen des Auftraggebers hinsichtlich des Liefer- und Leistungsumfanges\nPflichtenheft:\n- Verfasser: Auftragnehmer\n- Verwendung: Basis für die vertraglich festgehaltenen Leistungen\n- Inhalt: beschreibt die Umsetzung aller Anforderungen aus dem Lastenheft",
+    "alternativfragen": [
+      {
+        "frage": "Was ist der Unterschied zwischen Lastenheft und Pflichtenheft?",
+        "antwort": "Lastenheft: Anforderungen des Auftraggebers. Pflichtenheft: Umsetzung durch den Auftragnehmer.",
+        "typ": "text"
+      },
+      {
+        "frage": "Wer erstellt das Lastenheft und wer das Pflichtenheft?",
+        "antwort": "",
+        "typ": "multiple_choice",
+        "optionen": {
+          "a": "Lastenheft: Auftragnehmer; Pflichtenheft: Auftraggeber",
+          "b": "Lastenheft: Auftraggeber; Pflichtenheft: Auftragnehmer",
+          "c": "Beide werden vom Auftraggeber erstellt.",
+          "d": "Beide werden vom Auftragnehmer erstellt."
+        },
+        "korrekte_antworten": [
+          "b"
+        ]
+      },
+      {
+        "frage": "Wozu dient das Pflichtenheft?",
+        "antwort": "Das Pflichtenheft dient als Grundlage für den Vertrag und beschreibt detailliert, wie der Auftragnehmer die Anforderungen des Auftraggebers (aus dem Lastenheft) umsetzen wird.",
+        "typ": "text"
+      }
+    ]
+  }
+]

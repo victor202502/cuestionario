@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutz-Fragebogen</title>
+
+    <!-- Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Benutzerdefiniertes CSS -->
+    <link href="style.css" rel="stylesheet">
+
+    <style>
+        /* Sicherstellen, dass Abschnitte zunächst per CSS ausgeblendet werden */
+        #welcome-section, #questionnaire-section {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+<!-- Begrüßungsbereich (wird per JS angezeigt, wenn eingeloggt) -->
+<div id="welcome-section" class="container mt-4 p-3 bg-primary text-white shadow rounded d-flex justify-content-between align-items-center">
+    <h2 id="welcome-message" class="mb-0 h4"></h2> 
+    <button id="logout-btn" class="btn btn-warning btn-sm">Abmelden</button>
+</div>
+
+<!-- Container für den Fragebogen (wird per JS angezeigt, wenn eingeloggt) -->
+<div id="questionnaire-section" class="container mt-4">
+    <h1 class="text-center text-secondary mb-4">Datenschutz-Fragebogen</h1>
+
+    <div id="question-container" class="mt-4">
+        <div class="text-center text-muted">
+            Fragen werden geladen...
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-between mt-4">
+        <button id="prev-btn" class="btn btn-outline-secondary" disabled>Zurück</button>
+        <button id="submit-btn" class="btn btn-primary" disabled>Antworten senden</button>
+        <button id="next-btn" class="btn btn-outline-secondary" disabled>Weiter</button>
+    </div>
+
+    <div class="d-flex justify-content-center mt-3"> 
+        <button id="reset-questions-btn" class="btn btn-warning mr-2">Fragen zurücksetzen</button> 
+        <button id="reset-score-btn" class="btn btn-danger">Punkte zurücksetzen</button>
+    </div>
+
+    <div class="mt-4 p-3 bg-white shadow rounded text-center">
+        <h4 id="score" class="text-success d-inline-block mr-4">Richtige Antworten: 0</h4> 
+        <h4 id="mistakes" class="text-danger d-inline-block">Falsche Antworten: 0</h4> 
+    </div>
+</div>
+
+<!-- Bootstrap und jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- JavaScript-Datei (Gemeinsam für beide Seiten) -->
+<script src="script.js"></script>
+
+</body>
+</html>
