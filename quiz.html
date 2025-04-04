@@ -16,14 +16,28 @@
         #welcome-section, #questionnaire-section {
             display: none;
         }
+        /* Add styles for correct/incorrect feedback if not in style.css */
+        .correct-answer {
+            border-left: 5px solid #28a745; /* Green border for correct */
+        }
+        .incorrect-answer {
+            border-left: 5px solid #dc3545; /* Red border for incorrect */
+        }
+        .highlight-correct .form-check-label {
+            font-weight: bold;
+            color: #28a745; /* Highlight correct option text */
+        }
+        .question-box {
+            transition: border-left 0.3s ease-in-out; /* Smooth transition for feedback */
+        }
     </style>
 </head>
 <body class="bg-light">
 
 <!-- Begrüßungsbereich (wird per JS angezeigt, wenn eingeloggt) -->
 <div id="welcome-section" class="container mt-4 p-3 bg-primary text-white shadow rounded d-flex justify-content-between align-items-center">
-    <h2 id="welcome-message" class="mb-0 h4"></h2> 
-    <button id="logout-btn" class="btn btn-warning btn-sm">Abmelden</button>
+    <h2 id="welcome-message" class="mb-0 h4"></h2>
+    <button id="logout-btn" type="button" class="btn btn-warning btn-sm">Abmelden</button> <!-- type added -->
 </div>
 
 <!-- Container für den Fragebogen (wird per JS angezeigt, wenn eingeloggt) -->
@@ -37,19 +51,19 @@
     </div>
 
     <div class="d-flex justify-content-between mt-4">
-        <button id="prev-btn" class="btn btn-outline-secondary" disabled>Zurück</button>
-        <button id="submit-btn" class="btn btn-primary" disabled>Antworten senden</button>
-        <button id="next-btn" class="btn btn-outline-secondary" disabled>Weiter</button>
+        <button id="prev-btn" type="button" class="btn btn-outline-secondary" disabled>Zurück</button> <!-- type added -->
+        <button id="submit-btn" type="button" class="btn btn-primary" disabled>Antworten senden</button> <!-- type added -->
+        <button id="next-btn" type="button" class="btn btn-outline-secondary" disabled>Weiter</button> <!-- type added -->
     </div>
 
-    <div class="d-flex justify-content-center mt-3"> 
-        <button id="reset-questions-btn" class="btn btn-warning mr-2">Fragen zurücksetzen</button> 
-        <button id="reset-score-btn" class="btn btn-danger">Punkte zurücksetzen</button>
+    <div class="d-flex justify-content-center mt-3">
+        <button id="reset-questions-btn" type="button" class="btn btn-warning mr-2">Fragen zurücksetzen</button> <!-- type added -->
+        <button id="reset-score-btn" type="button" class="btn btn-danger">Punkte zurücksetzen</button> <!-- type added -->
     </div>
 
     <div class="mt-4 p-3 bg-white shadow rounded text-center">
-        <h4 id="score" class="text-success d-inline-block mr-4">Richtige Antworten: 0</h4> 
-        <h4 id="mistakes" class="text-danger d-inline-block">Falsche Antworten: 0</h4> 
+        <h4 id="score" class="text-success d-inline-block mr-4">Richtige Antworten: 0</h4>
+        <h4 id="mistakes" class="text-danger d-inline-block">Falsche Antworten: 0</h4>
     </div>
 </div>
 
@@ -59,6 +73,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <!-- JavaScript-Datei (Gemeinsam für beide Seiten) -->
+<!-- Ensure this path is correct relative to your HTML file -->
 <script src="script.js"></script>
 
 </body>

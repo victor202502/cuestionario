@@ -1,172 +1,202 @@
 // server.js
 const express = require('express');
 const bcrypt = require('bcrypt');
-const fs = require('fs'); // Para guardar en archivo (¡muy básico!)
-const cors = require('cors'); // Para permitir comunicación frontend <-> backend
+const fs = require('fs');
+const path = require('path');
+const cors = require('cors');
 
 const app = express();
-const port = 3000; // Puerto donde correrá el backend
+const port = 3000;
 
 // --- Middlewares ---
-// These should appear only ONCE, before routes
-app.use(cors()); // Habilita CORS para todas las rutas
-app.use(express.json()); // Permite al servidor entender datos JSON enviados desde el frontend
+app.use(cors());
+app.use(express.json());
 
-// --- Almacenamiento MUY BÁSICO (en un archivo JSON) ---
-// ¡¡¡NO RECOMENDADO PARA PRODUCCIÓN!!! Usa una base de datos real.
-const DB_FILE = './users.json';
+// --- Basic File Storage ---
+const DB_FILE = path.join(__dirname, 'users.json');
 
-// Función para leer usuarios del archivo
+// --- getUsers & saveUsers functions (remain the same) ---
 function getUsers() {
   try {
-    // Check if file exists synchronously
     if (fs.existsSync(DB_FILE)) {
-      const data = fs.readFileSync(DB_FILE, 'utf8'); // Specify encoding
-      // Prevent parsing empty file
-      if (data.trim() === '') {
+      const data = fs.readFileSync(DB_FILE, 'utf8');
+      if (data.trim() === '') return [];
+      try {
+          const users = JSON.parse(data);
+           if (!Array.isArray(users)) {
+               console.error(`Data in ${DB_FILE} is not a JSON array. Returning empty array.`);
+               return [];
+           }
+           return users;
+      } catch (parseError) {
+          console.error(`Error parsing JSON from ${DB_FILE}:`, parseError.message);
           return [];
       }
-      return JSON.parse(data);
     }
   } catch (err) {
-    // Handle specific errors like JSON parsing errors
-    if (err instanceof SyntaxError) {
-        console.error("Error parsing JSON from users file:", err.message);
-        // Decide how to handle: return empty array, or throw/log differently
-        // For simplicity, returning empty might prevent crashes but hides data corruption
-        return [];
-    } else {
-        console.error("Error reading the user 'database' file:", err);
-    }
+    console.error(`Error reading the user 'database' file (${DB_FILE}):`, err);
   }
-  // Return empty array if file doesn't exist or on other errors
   return [];
 }
 
-// Función para guardar usuarios en el archivo
 function saveUsers(users) {
   try {
-    // Ensure users is an array before stringifying
-    if (!Array.isArray(users)) {
-        console.error("Attempted to save non-array data to users file.");
-        return; // Or throw an error
-    }
-    fs.writeFileSync(DB_FILE, JSON.stringify(users, null, 2), 'utf8'); // Specify encoding
-    console.log(`Users saved to ${DB_FILE}`); // Confirmation log
+    if (!Array.isArray(users)) return false;
+    fs.writeFileSync(DB_FILE, JSON.stringify(users, null, 2), 'utf8');
+    console.log(`Users data saved successfully to ${DB_FILE}`);
+    return true;
   } catch (err) {
-    console.error("Error writing to the user 'database' file:", err);
+    console.error(`Error writing to the user 'database' file (${DB_FILE}):`, err);
+    return false;
   }
 }
 
-// --- Rutas (Endpoints) ---
-
-// Ruta para registrar un nuevo usuario (usaremos POST)
-// This should appear only ONCE
+// --- /register & /login routes (remain the same) ---
 app.post('/register', async (req, res) => {
-  console.log('Received request on /register. Body:', req.body);
   const { username, password } = req.body;
-
-  // Simple Validation
-  if (!username || !password) {
-    console.log('/register: Validation failed - Missing username or password.');
-    return res.status(400).json({ message: 'Nombre de usuario y contraseña son requeridos' });
+  if (!username || !password || password.length < 6) {
+    return res.status(400).json({ message: 'Valid username and password (min 6 chars) required.' });
   }
-  // Add password length validation (example)
-  if (password.length < 6) {
-    console.log('/register: Validation failed - Password too short.');
-    return res.status(400).json({ message: 'La contraseña debe tener al menos 6 caracteres.' });
-  }
-
-
   const users = getUsers();
-  console.log(`/register: Found ${users.length} existing users.`);
-
-  // Check if user already exists
-  const existingUser = users.find(user => user.username === username);
-  if (existingUser) {
-    console.log(`/register: Username "${username}" already exists.`);
-    return res.status(409).json({ message: 'El nombre de usuario ya existe' }); // 409 Conflict
+  if (users.find(user => user.username === username)) {
+    return res.status(409).json({ message: 'El nombre de usuario ya existe' });
   }
-
   try {
-    console.log(`/register: Hashing password for "${username}"...`);
-    const saltRounds = 10;
-    const hashedPassword = await bcrypt.hash(password, saltRounds);
-    console.log(`/register: Password hashed successfully.`);
-
+    const hashedPassword = await bcrypt.hash(password, 10);
     const newUser = {
-      id: Date.now().toString(), // Simple unique ID example
-      username: username,
-      password: hashedPassword
+      id: Date.now().toString(), username, password: hashedPassword,
+      quizState: { score: 0, mistakes: 0, currentSection: 1, currentIndex: 1, submittedAnswersByPage: {}, lastSaved: null }
     };
-
     users.push(newUser);
-    saveUsers(users); // Attempt to save
-
-    console.log(`/register: User "${username}" registered successfully.`);
-    res.status(201).json({ message: 'Usuario registrado exitosamente' }); // 201 Created
-
+    if (saveUsers(users)) res.status(201).json({ message: 'Usuario registrado exitosamente' });
+    else res.status(500).json({ message: 'Error interno del servidor al guardar usuario' });
   } catch (error) {
-    console.error("/register: Error during hashing or saving:", error);
-    res.status(500).json({ message: 'Error interno del servidor al registrar' });
+    console.error("/register Error:", error); res.status(500).json({ message: 'Error interno del servidor al registrar' });
   }
 });
 
-
-// --- Ruta para INICIAR SESIÓN (usaremos POST) ---
-// This should appear only ONCE
 app.post('/login', async (req, res) => {
-  console.log('Received request on /login. Body:', req.body);
-  const { username, password } = req.body;
-
-  // Simple Validation
-  if (!username || !password) {
-    console.log('/login: Validation failed - Missing username or password.');
-    return res.status(400).json({ message: 'Nombre de usuario y contraseña son requeridos' });
-  }
-
-  const users = getUsers();
-  console.log(`/login: Found ${users.length} existing users.`);
-
-  // Find user by username
-  const user = users.find(u => u.username === username);
-
-  if (!user) {
-    console.log(`/login: Login failed - User "${username}" not found.`);
-    // Generic message for security
-    return res.status(401).json({ message: 'Usuario o contraseña incorrectos' }); // 401 Unauthorized
-  }
-
-  console.log(`/login: User "${username}" found. Comparing password...`);
-  try {
-    // Compare submitted password with stored hash
-    const isMatch = await bcrypt.compare(password, user.password);
-
-    if (!isMatch) {
-      console.log(`/login: Login failed - Incorrect password for user "${username}".`);
-      // Generic message
-      return res.status(401).json({ message: 'Usuario o contraseña incorrectos' });
+    const { username, password } = req.body;
+    if (!username || !password) return res.status(400).json({ message: 'Nombre de usuario y contraseña son requeridos' });
+    const users = getUsers();
+    const user = users.find(u => u.username === username);
+    if (!user) return res.status(401).json({ message: 'Usuario o contraseña incorrectos' });
+    try {
+        const isMatch = await bcrypt.compare(password, user.password);
+        if (!isMatch) return res.status(401).json({ message: 'Usuario o contraseña incorrectos' });
+        // Ensure structure exists
+        if (!user.quizState) user.quizState = { score: 0, mistakes: 0, currentSection: 1, currentIndex: 1, submittedAnswersByPage: {}, lastSaved: null };
+        else if (!user.quizState.submittedAnswersByPage) user.quizState.submittedAnswersByPage = {};
+        res.status(200).json({ message: 'Login exitoso', username: user.username });
+    } catch (error) {
+        console.error(`/login Error for "${username}":`, error); res.status(500).json({ message: 'Error interno del servidor' });
     }
-
-    // Login Successful!
-    console.log(`/login: Login successful for user "${username}".`);
-    // Send success response WITH username for the frontend
-    res.status(200).json({ message: 'Login exitoso', username: user.username });
-
-  } catch (error) {
-    console.error(`/login: Error during password comparison for "${username}":`, error);
-    res.status(500).json({ message: 'Error interno del servidor durante el login' });
-  }
 });
 
+// --- Save Quiz State ---
+app.post('/api/save-quiz-state', (req, res) => {
+    console.log('Received request on /api/save-quiz-state.');
+    // ** Destructure new flag **
+    const { username, score, mistakes, currentSection, currentIndex, lastSubmittedAnswers, clearAllAnswers, clearCurrentPageAnswers, resetScoreAndMistakesOnly } = req.body;
 
-// --- Iniciar el servidor ---
-// app.listen(...) should be at the end and only ONCE
+    // Validation
+    if (!username || typeof currentSection !== 'number' || typeof currentIndex !== 'number') { // Score/mistakes might be sent as 0 during reset
+         console.log('/api/save-quiz-state: Validation failed - Missing username or location.');
+         return res.status(400).json({ message: 'Usuario, sección e índice son requeridos.' });
+    }
+     // Validate score/mistakes only if not explicitly resetting them
+     if (!resetScoreAndMistakesOnly && (typeof score !== 'number' || typeof mistakes !== 'number')) {
+         console.log('/api/save-quiz-state: Validation failed - Missing or invalid score/mistakes.');
+         return res.status(400).json({ message: 'Datos de puntuación inválidos.' });
+     }
+
+
+    const users = getUsers();
+    const userIndex = users.findIndex(u => u.username === username);
+    if (userIndex === -1) return res.status(404).json({ message: `Usuario '${username}' no encontrado.` });
+
+    try {
+        const user = users[userIndex];
+        // Ensure structure
+        if (!user.quizState) user.quizState = { submittedAnswersByPage: {} };
+        if (!user.quizState.submittedAnswersByPage) user.quizState.submittedAnswersByPage = {};
+
+        // --- Update general state (Location, Timestamp) ---
+        // Always update location based on request
+        user.quizState.currentSection = currentSection;
+        user.quizState.currentIndex = currentIndex;
+        user.quizState.lastSaved = new Date().toISOString();
+
+        // --- Handle Score/Mistakes ---
+        // If specifically resetting score/mistakes only
+        if (resetScoreAndMistakesOnly === true) {
+            console.log(`Resetting score/mistakes ONLY for user ${username}.`);
+            user.quizState.score = 0;
+            user.quizState.mistakes = 0;
+        }
+        // Otherwise, update score/mistakes from request (covers normal saves and clearAll)
+        else {
+             // Use score/mistakes from request body (they will be 0 if clearAll was requested from frontend)
+             user.quizState.score = score;
+             user.quizState.mistakes = mistakes;
+        }
+
+        // --- Logic for handling ANSWERS based on flags (Order matters!) ---
+        // 1. Check if clearing ALL answers (takes precedence over other answer actions)
+        if (clearAllAnswers === true) {
+            console.log(`Clearing ALL submitted answers for user ${username}.`);
+            user.quizState.submittedAnswersByPage = {};
+        }
+        // 2. Else IF NOT clearing all, check if clearing only the CURRENT page's answers
+        else if (clearCurrentPageAnswers === true) {
+            const pageKeyToClear = `${currentSection}-${currentIndex}`;
+            if (user.quizState.submittedAnswersByPage[pageKeyToClear]) {
+                console.log(`Clearing answers for current page key: ${pageKeyToClear} for user ${username}.`);
+                delete user.quizState.submittedAnswersByPage[pageKeyToClear];
+            } else {
+                console.log(`No answers found for page key ${pageKeyToClear} to clear for user ${username}.`);
+            }
+        }
+        // 3. Else IF NOT clearing anything, check if submitting answers for the CURRENT page
+        else if (lastSubmittedAnswers !== null && lastSubmittedAnswers !== undefined) {
+            const pageKeyToAdd = `${currentSection}-${currentIndex}`;
+            console.log(`Saving answers for page key: ${pageKeyToAdd} for user ${username}`);
+            user.quizState.submittedAnswersByPage[pageKeyToAdd] = lastSubmittedAnswers;
+        }
+        // 4. Else (navigating, or resetScoreOnly=true), leave submittedAnswersByPage as is.
+
+
+        // Save updated user data
+        if (saveUsers(users)) {
+            res.status(200).json({ message: 'Estado del quiz guardado exitosamente.' });
+        } else {
+             res.status(500).json({ message: 'Error interno del servidor al guardar el estado.' });
+        }
+
+    } catch (error) {
+         console.error(`/api/save-quiz-state Error for "${username}":`, error);
+         res.status(500).json({ message: 'Error interno del servidor.' });
+    }
+});
+
+// --- Get Quiz State (remains the same) ---
+app.get('/api/get-quiz-state', (req, res) => {
+    const { username } = req.query;
+    if (!username) return res.status(400).json({ message: 'Nombre de usuario es requerido.' });
+    const users = getUsers();
+    const user = users.find(u => u.username === username);
+    if (!user) return res.status(404).json({ message: `Usuario '${username}' no encontrado.` });
+    if (user.quizState) {
+         if (!user.quizState.submittedAnswersByPage) user.quizState.submittedAnswersByPage = {};
+        res.status(200).json(user.quizState);
+    } else {
+        return res.status(404).json({ message: `No hay estado guardado para '${username}'.` });
+    }
+});
+
+// --- Start Server ---
 app.listen(port, () => {
   console.log(`Servidor backend escuchando en http://localhost:${port}`);
-  // Check if users file exists on startup, create if not
-  if (!fs.existsSync(DB_FILE)) {
-      console.log(`Users file (${DB_FILE}) not found, creating an empty one.`);
-      saveUsers([]); // Create file with empty array
-  }
+  if (!fs.existsSync(DB_FILE)) saveUsers([]);
+  else console.log(`Users file (${DB_FILE}) found.`);
 });
