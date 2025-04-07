@@ -1,21 +1,25 @@
-// server.js
+// server.js (MODIFICADO)
 const express = require('express');
 const bcrypt = require('bcrypt');
 const fs = require('fs');
-const path = require('path');
+const path = require('path'); // Necesitamos 'path'
 const cors = require('cors');
 
 const app = express();
 const port = 3000;
 
 // --- Middlewares ---
-app.use(cors());
-app.use(express.json());
+app.use(cors()); // Mantenemos CORS por si acaso (no estrictamente necesario si todo es mismo origen, pero no daña)
+app.use(express.json()); // Para parsear cuerpos JSON de API requests
+
+// --- ¡NUEVO: Servir archivos estáticos desde la carpeta 'public'! ---
+// Esto debe ir ANTES de tus rutas de API
+app.use(express.static(path.join(__dirname, 'public')));
 
 // --- Basic File Storage ---
 const DB_FILE = path.join(__dirname, 'users.json');
 
-// --- getUsers & saveUsers functions (remain the same) ---
+// --- Funciones getUsers & saveUsers (SIN CAMBIOS) ---
 function getUsers() {
   try {
     if (fs.existsSync(DB_FILE)) {
@@ -51,7 +55,10 @@ function saveUsers(users) {
   }
 }
 
-// --- /register & /login routes (remain the same) ---
+
+// --- RUTAS DE LA API (SIN CAMBIOS EN SU LÓGICA INTERNA) ---
+// Ahora serán accedidas vía http://localhost:3000/register, http://localhost:3000/login, etc.
+
 app.post('/register', async (req, res) => {
   const { username, password } = req.body;
   if (!username || !password || password.length < 6) {
@@ -93,23 +100,19 @@ app.post('/login', async (req, res) => {
     }
 });
 
-// --- Save Quiz State ---
 app.post('/api/save-quiz-state', (req, res) => {
     console.log('Received request on /api/save-quiz-state.');
-    // ** Destructure new flag **
     const { username, score, mistakes, currentSection, currentIndex, lastSubmittedAnswers, clearAllAnswers, clearCurrentPageAnswers, resetScoreAndMistakesOnly } = req.body;
 
-    // Validation
-    if (!username || typeof currentSection !== 'number' || typeof currentIndex !== 'number') { // Score/mistakes might be sent as 0 during reset
+    // Validación (sin cambios)
+    if (!username || typeof currentSection !== 'number' || typeof currentIndex !== 'number') {
          console.log('/api/save-quiz-state: Validation failed - Missing username or location.');
          return res.status(400).json({ message: 'Usuario, sección e índice son requeridos.' });
     }
-     // Validate score/mistakes only if not explicitly resetting them
      if (!resetScoreAndMistakesOnly && (typeof score !== 'number' || typeof mistakes !== 'number')) {
          console.log('/api/save-quiz-state: Validation failed - Missing or invalid score/mistakes.');
          return res.status(400).json({ message: 'Datos de puntuación inválidos.' });
      }
-
 
     const users = getUsers();
     const userIndex = users.findIndex(u => u.username === username);
@@ -117,37 +120,26 @@ app.post('/api/save-quiz-state', (req, res) => {
 
     try {
         const user = users[userIndex];
-        // Ensure structure
         if (!user.quizState) user.quizState = { submittedAnswersByPage: {} };
         if (!user.quizState.submittedAnswersByPage) user.quizState.submittedAnswersByPage = {};
 
-        // --- Update general state (Location, Timestamp) ---
-        // Always update location based on request
         user.quizState.currentSection = currentSection;
         user.quizState.currentIndex = currentIndex;
         user.quizState.lastSaved = new Date().toISOString();
 
-        // --- Handle Score/Mistakes ---
-        // If specifically resetting score/mistakes only
         if (resetScoreAndMistakesOnly === true) {
             console.log(`Resetting score/mistakes ONLY for user ${username}.`);
             user.quizState.score = 0;
             user.quizState.mistakes = 0;
-        }
-        // Otherwise, update score/mistakes from request (covers normal saves and clearAll)
-        else {
-             // Use score/mistakes from request body (they will be 0 if clearAll was requested from frontend)
+        } else {
              user.quizState.score = score;
              user.quizState.mistakes = mistakes;
         }
 
-        // --- Logic for handling ANSWERS based on flags (Order matters!) ---
-        // 1. Check if clearing ALL answers (takes precedence over other answer actions)
         if (clearAllAnswers === true) {
             console.log(`Clearing ALL submitted answers for user ${username}.`);
             user.quizState.submittedAnswersByPage = {};
         }
-        // 2. Else IF NOT clearing all, check if clearing only the CURRENT page's answers
         else if (clearCurrentPageAnswers === true) {
             const pageKeyToClear = `${currentSection}-${currentIndex}`;
             if (user.quizState.submittedAnswersByPage[pageKeyToClear]) {
@@ -157,29 +149,23 @@ app.post('/api/save-quiz-state', (req, res) => {
                 console.log(`No answers found for page key ${pageKeyToClear} to clear for user ${username}.`);
             }
         }
-        // 3. Else IF NOT clearing anything, check if submitting answers for the CURRENT page
         else if (lastSubmittedAnswers !== null && lastSubmittedAnswers !== undefined) {
             const pageKeyToAdd = `${currentSection}-${currentIndex}`;
             console.log(`Saving answers for page key: ${pageKeyToAdd} for user ${username}`);
             user.quizState.submittedAnswersByPage[pageKeyToAdd] = lastSubmittedAnswers;
         }
-        // 4. Else (navigating, or resetScoreOnly=true), leave submittedAnswersByPage as is.
 
-
-        // Save updated user data
         if (saveUsers(users)) {
             res.status(200).json({ message: 'Estado del quiz guardado exitosamente.' });
         } else {
              res.status(500).json({ message: 'Error interno del servidor al guardar el estado.' });
         }
-
     } catch (error) {
          console.error(`/api/save-quiz-state Error for "${username}":`, error);
          res.status(500).json({ message: 'Error interno del servidor.' });
     }
 });
 
-// --- Get Quiz State (remains the same) ---
 app.get('/api/get-quiz-state', (req, res) => {
     const { username } = req.query;
     if (!username) return res.status(400).json({ message: 'Nombre de usuario es requerido.' });
@@ -190,13 +176,31 @@ app.get('/api/get-quiz-state', (req, res) => {
          if (!user.quizState.submittedAnswersByPage) user.quizState.submittedAnswersByPage = {};
         res.status(200).json(user.quizState);
     } else {
-        return res.status(404).json({ message: `No hay estado guardado para '${username}'.` });
+        // Devuelve un estado inicial si no existe, en lugar de 404
+        // Esto simplifica la lógica del cliente en loadQuizStateFromBackend
+         console.log(`No saved state found for '${username}'. Returning default initial state.`);
+         res.status(200).json({
+             score: 0,
+             mistakes: 0,
+             currentSection: 1,
+             currentIndex: 1,
+             submittedAnswersByPage: {},
+             lastSaved: null
+         });
+        // Alternativa (comportamiento anterior):
+        // return res.status(404).json({ message: `No hay estado guardado para '${username}'.` });
     }
 });
 
+
 // --- Start Server ---
 app.listen(port, () => {
-  console.log(`Servidor backend escuchando en http://localhost:${port}`);
-  if (!fs.existsSync(DB_FILE)) saveUsers([]);
-  else console.log(`Users file (${DB_FILE}) found.`);
+  console.log(`Servidor escuchando en http://localhost:${port}`);
+  // Asegurarse que el archivo de usuarios existe al iniciar
+  if (!fs.existsSync(DB_FILE)) {
+      console.log(`Users file (${DB_FILE}) not found. Creating empty file.`);
+      saveUsers([]);
+  } else {
+      console.log(`Users file (${DB_FILE}) found.`);
+  }
 });

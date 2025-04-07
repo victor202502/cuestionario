@@ -10,7 +10,7 @@ let score = 0;
 let mistakes = 0;
 let loadedServerState = null; // Stores the entire state object from backend
 
-const LOGIN_PAGE = 'login.html';
+const LOGIN_PAGE = 'index.html';
 const QUIZ_PAGE = 'quiz.html';
 const SAVE_ENDPOINT = 'http://localhost:3000/api/save-quiz-state';
 const LOAD_ENDPOINT = 'http://localhost:3000/api/get-quiz-state';

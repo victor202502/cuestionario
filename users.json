@@ -19,12 +19,64 @@
   {
     "id": "1743594855354",
     "username": "user24",
-    "password": "$2b$10$HrjeVM5ElkpeQIeEdHCKd.bZOAaniQo1AArcJv1bIwPOawY18JUaW"
+    "password": "$2b$10$HrjeVM5ElkpeQIeEdHCKd.bZOAaniQo1AArcJv1bIwPOawY18JUaW",
+    "quizState": {
+      "submittedAnswersByPage": {
+        "1-1": {
+          "1": [
+            "c"
+          ],
+          "2": [
+            "b",
+            "d"
+          ],
+          "3": [],
+          "4": [],
+          "5": [],
+          "6": [],
+          "7": [],
+          "8": [],
+          "9": [],
+          "10": []
+        }
+      },
+      "currentSection": 1,
+      "currentIndex": 1,
+      "lastSaved": "2025-04-07T09:01:44.765Z",
+      "score": 2,
+      "mistakes": 8
+    }
   },
   {
     "id": "1743595741529",
     "username": "user25",
-    "password": "$2b$10$5GuGjHAKN7bulnEaPXtDzOMhiyAVsVBScvJ4ed2MS8QwD2qEckvfW"
+    "password": "$2b$10$5GuGjHAKN7bulnEaPXtDzOMhiyAVsVBScvJ4ed2MS8QwD2qEckvfW",
+    "quizState": {
+      "submittedAnswersByPage": {
+        "1-1": {
+          "1": [
+            "c"
+          ],
+          "2": [
+            "b",
+            "d"
+          ],
+          "3": [],
+          "4": [],
+          "5": [],
+          "6": [],
+          "7": [],
+          "8": [],
+          "9": [],
+          "10": []
+        }
+      },
+      "currentSection": 1,
+      "currentIndex": 2,
+      "lastSaved": "2025-04-07T09:02:42.119Z",
+      "score": 2,
+      "mistakes": 8
+    }
   },
   {
     "id": "1743597717497",
