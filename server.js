@@ -1,110 +1,160 @@
-// server.js (MODIFICADO)
+// server.js (CORREGIDO PARA USAR POSTGRESQL)
+
+require('dotenv').config(); // Carga .env si existe (para desarrollo local)
 const express = require('express');
 const bcrypt = require('bcrypt');
-const fs = require('fs');
-const path = require('path'); // Necesitamos 'path'
+const path = require('path');
 const cors = require('cors');
+const db = require('./db'); // Importar el módulo de conexión a la BD
 
 const app = express();
-const port = 3000;
+// Usar el puerto proporcionado por Render o 3000 localmente
+const port = process.env.PORT || 3000;
 
 // --- Middlewares ---
-app.use(cors()); // Mantenemos CORS por si acaso (no estrictamente necesario si todo es mismo origen, pero no daña)
+app.use(cors());
 app.use(express.json()); // Para parsear cuerpos JSON de API requests
 
-// --- ¡NUEVO: Servir archivos estáticos desde la carpeta 'public'! ---
-// Esto debe ir ANTES de tus rutas de API
+// Servir archivos estáticos desde la carpeta 'public'
 app.use(express.static(path.join(__dirname, 'public')));
 
-// --- Basic File Storage ---
-const DB_FILE = path.join(__dirname, 'users.json');
+// --- ¡SE ELIMINAN LAS FUNCIONES getUsers/saveUsers/DB_FILE! ---
+// --- Se reemplazan con funciones que interactúan con la BD ---
 
-// --- Funciones getUsers & saveUsers (SIN CAMBIOS) ---
-function getUsers() {
+// --- Funciones de Base de Datos ---
+
+async function findUserByUsername(username) {
+  const queryText = 'SELECT * FROM users WHERE username = $1';
   try {
-    if (fs.existsSync(DB_FILE)) {
-      const data = fs.readFileSync(DB_FILE, 'utf8');
-      if (data.trim() === '') return [];
-      try {
-          const users = JSON.parse(data);
-           if (!Array.isArray(users)) {
-               console.error(`Data in ${DB_FILE} is not a JSON array. Returning empty array.`);
-               return [];
-           }
-           return users;
-      } catch (parseError) {
-          console.error(`Error parsing JSON from ${DB_FILE}:`, parseError.message);
-          return [];
-      }
+    const result = await db.query(queryText, [username]);
+    return result.rows[0]; // Devuelve el usuario encontrado o undefined
+  } catch (err) {
+    console.error('Error finding user by username:', err);
+    throw err;
+  }
+}
+
+async function createUser(username, hashedPassword) {
+  const queryText = `
+    INSERT INTO users (username, password, quiz_state)
+    VALUES ($1, $2, DEFAULT)
+    RETURNING id, username, quiz_state`; // 'DEFAULT' usará '{}'::jsonb definido en la tabla
+  try {
+    // El quiz_state se inicializa con el DEFAULT de la tabla
+    const result = await db.query(queryText, [username, hashedPassword]);
+    return result.rows[0];
+  } catch (err) {
+    console.error('Error creating user:', err);
+    // Manejar error si el usuario ya existe (violación de UNIQUE constraint)
+    if (err.code === '23505') {
+        throw new Error('Username already exists'); // Lanzar error específico
+    }
+    throw err; // Relanzar otros errores
+  }
+}
+
+async function getUserQuizState(username) {
+  const queryText = 'SELECT quiz_state FROM users WHERE username = $1';
+   try {
+    const result = await db.query(queryText, [username]);
+    if (result.rows.length > 0) {
+      // La columna quiz_state tiene un DEFAULT, así que no debería ser null.
+      // Pero por seguridad, si es null, devolvemos el objeto por defecto.
+      return result.rows[0].quiz_state || { score: 0, mistakes: 0, currentSection: 1, currentIndex: 1, submittedAnswersByPage: {}, lastSaved: null };
+    } else {
+      // Usuario no encontrado
+      return null;
     }
   } catch (err) {
-    console.error(`Error reading the user 'database' file (${DB_FILE}):`, err);
+    console.error('Error getting user quiz state:', err);
+    throw err;
   }
-  return [];
 }
 
-function saveUsers(users) {
-  try {
-    if (!Array.isArray(users)) return false;
-    fs.writeFileSync(DB_FILE, JSON.stringify(users, null, 2), 'utf8');
-    console.log(`Users data saved successfully to ${DB_FILE}`);
-    return true;
+async function updateUserQuizState(username, newQuizState) {
+  const queryText = 'UPDATE users SET quiz_state = $1 WHERE username = $2 RETURNING username';
+   try {
+    // El objeto newQuizState se pasará directamente, el driver pg lo convierte a JSONB
+    const result = await db.query(queryText, [newQuizState, username]);
+     if (result.rowCount === 0) {
+       // El usuario no existía para actualizar
+       throw new Error('User not found, cannot update quiz state');
+     }
+     console.log(`Quiz state updated successfully in DB for user: ${username}`);
+     return true;
   } catch (err) {
-    console.error(`Error writing to the user 'database' file (${DB_FILE}):`, err);
-    return false;
+    console.error('Error updating user quiz state:', err);
+    throw err;
   }
 }
 
-
-// --- RUTAS DE LA API (SIN CAMBIOS EN SU LÓGICA INTERNA) ---
-// Ahora serán accedidas vía http://localhost:3000/register, http://localhost:3000/login, etc.
+// --- Rutas de API Modificadas para usar la Base de Datos ---
 
 app.post('/register', async (req, res) => {
   const { username, password } = req.body;
   if (!username || !password || password.length < 6) {
     return res.status(400).json({ message: 'Valid username and password (min 6 chars) required.' });
   }
-  const users = getUsers();
-  if (users.find(user => user.username === username)) {
-    return res.status(409).json({ message: 'El nombre de usuario ya existe' });
-  }
   try {
+    // Verificar si el usuario ya existe en la BD
+    const existingUser = await findUserByUsername(username);
+    if (existingUser) {
+      console.log(`Registration failed: Username "${username}" already exists.`);
+      return res.status(409).json({ message: 'El nombre de usuario ya existe' });
+    }
+
+    // Hashear contraseña y crear usuario en la BD
     const hashedPassword = await bcrypt.hash(password, 10);
-    const newUser = {
-      id: Date.now().toString(), username, password: hashedPassword,
-      quizState: { score: 0, mistakes: 0, currentSection: 1, currentIndex: 1, submittedAnswersByPage: {}, lastSaved: null }
-    };
-    users.push(newUser);
-    if (saveUsers(users)) res.status(201).json({ message: 'Usuario registrado exitosamente' });
-    else res.status(500).json({ message: 'Error interno del servidor al guardar usuario' });
+    const newUser = await createUser(username, hashedPassword);
+    console.log(`User "${username}" registered successfully.`);
+    res.status(201).json({ message: 'Usuario registrado exitosamente', username: newUser.username });
+
   } catch (error) {
-    console.error("/register Error:", error); res.status(500).json({ message: 'Error interno del servidor al registrar' });
+     // Capturar el error específico de 'Username already exists' lanzado por createUser
+     if (error.message === 'Username already exists') {
+        console.log(`Registration failed (duplicate): Username "${username}" already exists.`);
+        return res.status(409).json({ message: 'El nombre de usuario ya existe' });
+     }
+     // Capturar otros errores
+     console.error("/register Error:", error);
+     res.status(500).json({ message: 'Error interno del servidor al registrar' });
   }
 });
 
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
     if (!username || !password) return res.status(400).json({ message: 'Nombre de usuario y contraseña son requeridos' });
-    const users = getUsers();
-    const user = users.find(u => u.username === username);
-    if (!user) return res.status(401).json({ message: 'Usuario o contraseña incorrectos' });
+
     try {
+        // Buscar usuario en la BD
+        const user = await findUserByUsername(username);
+        if (!user) {
+            console.log(`Login attempt failed: User "${username}" not found.`);
+            return res.status(401).json({ message: 'Usuario o contraseña incorrectos' });
+        }
+
+        // Comparar contraseña hasheada
         const isMatch = await bcrypt.compare(password, user.password);
-        if (!isMatch) return res.status(401).json({ message: 'Usuario o contraseña incorrectos' });
-        // Ensure structure exists
-        if (!user.quizState) user.quizState = { score: 0, mistakes: 0, currentSection: 1, currentIndex: 1, submittedAnswersByPage: {}, lastSaved: null };
-        else if (!user.quizState.submittedAnswersByPage) user.quizState.submittedAnswersByPage = {};
+        if (!isMatch) {
+             console.log(`Login attempt failed: Incorrect password for user "${username}".`);
+             return res.status(401).json({ message: 'Usuario o contraseña incorrectos' });
+        }
+
+        // Login exitoso
+        console.log(`Login successful for user "${username}".`);
         res.status(200).json({ message: 'Login exitoso', username: user.username });
+
     } catch (error) {
-        console.error(`/login Error for "${username}":`, error); res.status(500).json({ message: 'Error interno del servidor' });
+        console.error(`/login Error for "${username}":`, error);
+        res.status(500).json({ message: 'Error interno del servidor' });
     }
 });
 
-app.post('/api/save-quiz-state', (req, res) => {
+app.post('/api/save-quiz-state', async (req, res) => {
     console.log('Received request on /api/save-quiz-state.');
     const { username, score, mistakes, currentSection, currentIndex, lastSubmittedAnswers, clearAllAnswers, clearCurrentPageAnswers, resetScoreAndMistakesOnly } = req.body;
 
-    // Validación (sin cambios)
+    // Validación (igual que antes)
     if (!username || typeof currentSection !== 'number' || typeof currentIndex !== 'number') {
          console.log('/api/save-quiz-state: Validation failed - Missing username or location.');
          return res.status(400).json({ message: 'Usuario, sección e índice son requeridos.' });
@@ -114,93 +164,99 @@ app.post('/api/save-quiz-state', (req, res) => {
          return res.status(400).json({ message: 'Datos de puntuación inválidos.' });
      }
 
-    const users = getUsers();
-    const userIndex = users.findIndex(u => u.username === username);
-    if (userIndex === -1) return res.status(404).json({ message: `Usuario '${username}' no encontrado.` });
-
     try {
-        const user = users[userIndex];
-        if (!user.quizState) user.quizState = { submittedAnswersByPage: {} };
-        if (!user.quizState.submittedAnswersByPage) user.quizState.submittedAnswersByPage = {};
+        // 1. Obtener el estado ACTUAL del quiz desde la BD
+        let currentState = await getUserQuizState(username);
 
-        user.quizState.currentSection = currentSection;
-        user.quizState.currentIndex = currentIndex;
-        user.quizState.lastSaved = new Date().toISOString();
-
-        if (resetScoreAndMistakesOnly === true) {
-            console.log(`Resetting score/mistakes ONLY for user ${username}.`);
-            user.quizState.score = 0;
-            user.quizState.mistakes = 0;
-        } else {
-             user.quizState.score = score;
-             user.quizState.mistakes = mistakes;
+        // Verificar si el usuario existe (si currentState es null)
+        if (!currentState) {
+             console.log(`/api/save-quiz-state: User "${username}" not found when trying to save state.`);
+             return res.status(404).json({ message: `Usuario '${username}' no encontrado.` });
         }
 
+        // 2. Construir el NUEVO objeto quizState aplicando los cambios del request
+        const newQuizState = {
+            // Empezar con el estado actual como base
+            ...currentState,
+            // Actualizar campos generales según el request
+            currentSection: currentSection,
+            currentIndex: currentIndex,
+            lastSaved: new Date().toISOString(),
+            // Actualizar score/mistakes según flags y el request
+            score: resetScoreAndMistakesOnly ? 0 : score,
+            mistakes: resetScoreAndMistakesOnly ? 0 : mistakes,
+            // Empezar con las respuestas actuales, luego modificarlas si es necesario
+            submittedAnswersByPage: { ...(currentState.submittedAnswersByPage || {}) } // Asegura que sea un objeto
+        };
+
+        // Aplicar lógica para modificar las respuestas guardadas en newQuizState
         if (clearAllAnswers === true) {
             console.log(`Clearing ALL submitted answers for user ${username}.`);
-            user.quizState.submittedAnswersByPage = {};
+            newQuizState.submittedAnswersByPage = {};
         }
         else if (clearCurrentPageAnswers === true) {
             const pageKeyToClear = `${currentSection}-${currentIndex}`;
-            if (user.quizState.submittedAnswersByPage[pageKeyToClear]) {
+            if (newQuizState.submittedAnswersByPage[pageKeyToClear]) {
                 console.log(`Clearing answers for current page key: ${pageKeyToClear} for user ${username}.`);
-                delete user.quizState.submittedAnswersByPage[pageKeyToClear];
+                delete newQuizState.submittedAnswersByPage[pageKeyToClear];
             } else {
                 console.log(`No answers found for page key ${pageKeyToClear} to clear for user ${username}.`);
             }
         }
-        else if (lastSubmittedAnswers !== null && lastSubmittedAnswers !== undefined) {
+        // Guardar respuestas de la página actual SI se enviaron Y NO estamos solo reseteando score/mistakes
+        else if (lastSubmittedAnswers !== null && lastSubmittedAnswers !== undefined && !resetScoreAndMistakesOnly) {
             const pageKeyToAdd = `${currentSection}-${currentIndex}`;
             console.log(`Saving answers for page key: ${pageKeyToAdd} for user ${username}`);
-            user.quizState.submittedAnswersByPage[pageKeyToAdd] = lastSubmittedAnswers;
+            newQuizState.submittedAnswersByPage[pageKeyToAdd] = lastSubmittedAnswers;
         }
+        // Si no se cumple ninguna condición de modificación de respuestas, se quedan como estaban.
 
-        if (saveUsers(users)) {
-            res.status(200).json({ message: 'Estado del quiz guardado exitosamente.' });
-        } else {
-             res.status(500).json({ message: 'Error interno del servidor al guardar el estado.' });
-        }
+        // 3. Guardar el objeto newQuizState COMPLETO en la base de datos
+        await updateUserQuizState(username, newQuizState);
+
+        res.status(200).json({ message: 'Estado del quiz guardado exitosamente.' });
+
     } catch (error) {
          console.error(`/api/save-quiz-state Error for "${username}":`, error);
-         res.status(500).json({ message: 'Error interno del servidor.' });
+         if (error.message.includes('User not found')) {
+              return res.status(404).json({ message: `Usuario '${username}' no encontrado al guardar estado.` });
+         }
+         res.status(500).json({ message: 'Error interno del servidor al guardar el estado.' });
     }
 });
 
-app.get('/api/get-quiz-state', (req, res) => {
+app.get('/api/get-quiz-state', async (req, res) => {
     const { username } = req.query;
     if (!username) return res.status(400).json({ message: 'Nombre de usuario es requerido.' });
-    const users = getUsers();
-    const user = users.find(u => u.username === username);
-    if (!user) return res.status(404).json({ message: `Usuario '${username}' no encontrado.` });
-    if (user.quizState) {
-         if (!user.quizState.submittedAnswersByPage) user.quizState.submittedAnswersByPage = {};
-        res.status(200).json(user.quizState);
-    } else {
-        // Devuelve un estado inicial si no existe, en lugar de 404
-        // Esto simplifica la lógica del cliente en loadQuizStateFromBackend
-         console.log(`No saved state found for '${username}'. Returning default initial state.`);
-         res.status(200).json({
-             score: 0,
-             mistakes: 0,
-             currentSection: 1,
-             currentIndex: 1,
-             submittedAnswersByPage: {},
-             lastSaved: null
-         });
-        // Alternativa (comportamiento anterior):
-        // return res.status(404).json({ message: `No hay estado guardado para '${username}'.` });
+
+    try {
+        // Obtener estado desde la BD
+        const quizState = await getUserQuizState(username);
+
+        if (quizState) {
+            // Usuario y estado encontrados, devolver el estado
+            res.status(200).json(quizState);
+        } else {
+            // Usuario no encontrado
+             console.log(`No user or state found for '${username}' in get-quiz-state.`);
+             // Devolver un estado inicial por defecto consistentemente
+             res.status(200).json({
+                 score: 0, mistakes: 0, currentSection: 1, currentIndex: 1,
+                 submittedAnswersByPage: {}, lastSaved: null
+             });
+            // O si prefieres indicar explícitamente que no se encontró:
+            // res.status(404).json({ message: `Usuario '${username}' no encontrado.` });
+        }
+    } catch (error) {
+        console.error(`/api/get-quiz-state Error for "${username}":`, error);
+        res.status(500).json({ message: 'Error interno del servidor.' });
     }
 });
 
 
 // --- Start Server ---
+// ¡Se elimina el chequeo de fs.existsSync(DB_FILE)!
 app.listen(port, () => {
-  console.log(`Servidor escuchando en http://localhost:${port}`);
-  // Asegurarse que el archivo de usuarios existe al iniciar
-  if (!fs.existsSync(DB_FILE)) {
-      console.log(`Users file (${DB_FILE}) not found. Creating empty file.`);
-      saveUsers([]);
-  } else {
-      console.log(`Users file (${DB_FILE}) found.`);
-  }
+  console.log(`Servidor escuchando en http://localhost:${port} o en la URL de Render`);
+  // No necesitamos hacer nada con archivos aquí
 });
