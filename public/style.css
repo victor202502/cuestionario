@@ -1,143 +1,865 @@
-/* style.css */
+:root {
+    --bg-main: #07111f;
+    --bg-soft: #101b2a;
+    --panel: rgba(15, 23, 42, 0.72);
+    --panel-strong: rgba(15, 23, 42, 0.9);
+    --card: rgba(255, 255, 255, 0.06);
+    --card-inner: rgba(17, 24, 39, 0.88);
+    --line: rgba(148, 163, 184, 0.18);
+    --text: #e5eefc;
+    --muted: #a3b2c9;
+    --primary: #7c3aed;
+    --primary-strong: #5b21b6;
+    --secondary: #22c55e;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --shadow: 0 24px 60px rgba(15, 23, 42, 0.45);
+}
 
-/* --- Custom Checkbox Styles (Bootstrap Compatible) --- */
+* {
+    box-sizing: border-box;
+}
 
-/* Hide the default browser checkbox */
+html, body {
+    margin: 0;
+    min-height: 100%;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: var(--text);
+}
+
+body.auth-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top left, rgba(124, 58, 237, 0.30), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(34, 197, 94, 0.18), transparent 30%),
+        linear-gradient(135deg, #050b14 0%, #0d1728 50%, #0b1120 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 15px;
+}
+
+body.quiz-page {
+    min-height: 100vh;
+    background:
+        linear-gradient(180deg, rgba(6, 10, 18, 0.96), rgba(17, 24, 39, 0.96)),
+        radial-gradient(circle at top, rgba(124, 58, 237, 0.22), transparent 30%);
+    padding-bottom: 40px;
+}
+
+.auth-shell {
+    max-width: 1080px;
+    width: 100%;
+}
+
+.auth-header {
+    margin-bottom: 30px;
+}
+
+.brand-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: rgba(124, 58, 237, 0.15);
+    color: #d7c7ff;
+    border: 1px solid rgba(168, 139, 250, 0.35);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.auth-header h1 {
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    margin: 0;
+    color: white;
+}
+
+.auth-header p {
+    max-width: 700px;
+    margin: 12px auto 0;
+    color: var(--muted);
+    font-size: 1.04rem;
+}
+
+.auth-section {
+    position: relative;
+}
+
+.auth-section {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.auth-switcher {
+    display: flex;
+    gap: 10px;
+    padding: 8px;
+    margin-bottom: 16px;
+    border-radius: 18px;
+    background: rgba(15, 23, 42, 0.58);
+    border: 1px solid rgba(148, 163, 184, 0.16);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.18);
+}
+
+.auth-tab {
+    flex: 1;
+    border: 0;
+    border-radius: 12px;
+    background: transparent;
+    color: var(--muted);
+    font-weight: 700;
+    min-height: 46px;
+    transition: all 0.2s ease;
+}
+
+.auth-tab.active {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.2), rgba(59, 130, 246, 0.2));
+    color: white;
+    box-shadow: inset 0 0 0 1px rgba(167, 139, 250, 0.2);
+}
+
+.auth-card {
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--line);
+    border-radius: 28px;
+    padding: 30px 26px 24px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    min-height: 470px;
+}
+
+.auth-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(167, 139, 250, 0.5);
+}
+
+.auth-form {
+    display: none;
+    animation: fadeIn 0.2s ease;
+}
+
+.auth-form.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-badge {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.card-badge.green {
+    background: rgba(34, 197, 94, 0.15);
+    color: #a7f3d0;
+    border: 1px solid rgba(74, 222, 128, 0.35);
+}
+
+.card-badge.blue {
+    background: rgba(59, 130, 246, 0.12);
+    color: #bfdbfe;
+    border: 1px solid rgba(96, 165, 250, 0.35);
+}
+
+.auth-card h2 {
+    margin-bottom: 22px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.form-label {
+    color: #dbe9ff;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.form-control {
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 14px;
+    color: #f8fbff;
+    min-height: 48px;
+    padding: 12px 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.form-control::placeholder {
+    color: rgba(203, 213, 225, 0.6);
+}
+
+.form-control:focus {
+    background: rgba(15, 23, 42, 0.82);
+    border-color: rgba(139, 92, 246, 0.9);
+    box-shadow: 0 0 0 0.2rem rgba(124, 58, 237, 0.2);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.form-control.is-invalid {
+    border-color: rgba(239, 68, 68, 0.9);
+    box-shadow: 0 0 0 0.2rem rgba(239, 68, 68, 0.14);
+}
+
+.form-control.is-valid {
+    border-color: rgba(34, 197, 94, 0.9);
+    box-shadow: 0 0 0 0.2rem rgba(34, 197, 94, 0.14);
+}
+
+.password-field {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    border: 0;
+    background: transparent;
+    color: #cbd5e1;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 6px 8px;
+    border-radius: 8px;
+}
+
+.password-toggle:hover {
+    background: rgba(148, 163, 184, 0.08);
+    color: white;
+}
+
+.form-text {
+    color: var(--muted) !important;
+}
+
+.btn {
+    border-radius: 14px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-auth {
+    width: 100%;
+    min-height: 48px;
+    border: 0;
+    color: white;
+    box-shadow: 0 14px 30px rgba(76, 98, 211, 0.25);
+}
+
+.btn-primary,
+.btn-success {
+    background: linear-gradient(135deg, var(--primary) 0%, #8b5cf6 100%);
+    border: 0;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+}
+
+#login-message,
+#register-message {
+    color: var(--muted);
+    min-height: 22px;
+    font-weight: 600;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+#login-message.text-success,
+#register-message.text-success {
+    color: #86efac !important;
+}
+
+#login-message.text-danger,
+#register-message.text-danger {
+    color: #fca5a5 !important;
+}
+
+#login-message.text-info,
+#register-message.text-info {
+    color: #93c5fd !important;
+}
+
+#login-message.show,
+#register-message.show {
+    transform: translateY(-1px);
+}
+
+.text-success {
+    color: #86efac !important;
+}
+
+.text-danger {
+    color: #fca5a5 !important;
+}
+
+.text-info {
+    color: #93c5fd !important;
+}
+
+.welcome-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 28px;
+    padding: 22px 26px;
+    border-radius: 22px;
+    background: linear-gradient(135deg, rgba(91, 33, 182, 0.92), rgba(14, 165, 233, 0.78));
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 20px 40px rgba(91, 33, 182, 0.3);
+    color: #fff;
+}
+
+.panel-kicker {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+#welcome-message {
+    font-size: clamp(1.3rem, 2vw, 2rem);
+    font-weight: 700;
+}
+
+.btn-logout {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 10px 18px;
+    font-weight: 700;
+}
+
+.quiz-shell {
+    max-width: 1060px;
+    margin-top: 26px;
+    padding: 26px 22px 24px;
+    border-radius: 28px;
+    background: rgba(15, 23, 42, 0.68);
+    border: 1px solid rgba(148, 163, 184, 0.16);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(8px);
+}
+
+.quiz-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.quiz-topbar h1 {
+    margin: 8px 0 0;
+    font-size: clamp(2rem, 2.8vw, 3rem);
+    font-weight: 800;
+    color: white;
+    letter-spacing: -0.04em;
+}
+
+.quiz-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.quiz-chip {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    min-width: 110px;
+    padding: 10px 12px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.quiz-chip.accent {
+    background: rgba(124, 58, 237, 0.1);
+    border-color: rgba(167, 139, 250, 0.18);
+}
+
+.chip-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.quiz-chip strong {
+    font-size: 0.96rem;
+    font-weight: 700;
+    color: white;
+}
+
+.progress-block {
+    margin-top: 20px;
+    padding: 14px 16px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.progress-copy {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-bottom: 10px;
+}
+
+.progress-track {
+    width: 100%;
+    height: 12px;
+    border-radius: 999px;
+    background: rgba(148, 163, 184, 0.12);
+    overflow: hidden;
+    border: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 100%);
+    box-shadow: 0 0 24px rgba(124, 58, 237, 0.35);
+    transition: width 0.25s ease;
+}
+
+.results-panel {
+    margin-top: 20px;
+    padding: 24px 20px;
+    border-radius: 22px;
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.12), rgba(124, 58, 237, 0.08));
+    border: 1px solid rgba(34, 197, 94, 0.18);
+    text-align: center;
+    box-shadow: 0 20px 28px rgba(15, 23, 42, 0.16);
+}
+
+.results-panel.hidden {
+    display: none;
+}
+
+.results-header h3 {
+    margin: 10px 0 0;
+    color: white;
+    font-size: clamp(1.5rem, 2vw, 2.1rem);
+    font-weight: 800;
+}
+
+.panel-kicker.small {
+    margin-bottom: 0;
+    font-size: 0.65rem;
+    padding: 6px 10px;
+}
+
+.results-score {
+    margin: 18px 0 8px;
+    color: white;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.05em;
+}
+
+.results-divider {
+    opacity: 0.65;
+    margin: 0 6px;
+}
+
+#final-message {
+    margin: 0 0 18px;
+    color: var(--muted);
+    font-size: 1rem;
+}
+
+.quiz-main-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.7fr) minmax(220px, 0.7fr);
+    gap: 20px;
+    align-items: start;
+    margin-top: 24px;
+}
+
+.quiz-question-list {
+    display: grid;
+    gap: 18px;
+}
+
+.quiz-sidebar {
+    display: grid;
+    gap: 12px;
+    position: sticky;
+    top: 24px;
+}
+
+.sidebar-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 18px 16px;
+    border-radius: 18px;
+    background: rgba(15, 23, 42, 0.62);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
+}
+
+.sidebar-card h3 {
+    margin: 0;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.sidebar-label {
+    color: var(--muted);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.sidebar-card strong {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.question-box {
+    background: rgba(15, 23, 42, 0.72);
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    border-radius: 20px;
+    padding: 24px 22px;
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.18);
+    transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.question-box:hover {
+    transform: translateY(-1px);
+    border-color: rgba(167, 139, 250, 0.35);
+    background: rgba(17, 24, 39, 0.8);
+}
+
+.question-box h3 {
+    color: #f4f8ff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    line-height: 1.45;
+}
+
+.question-box .form-check {
+    display: flex;
+    align-items: center;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    border-radius: 14px;
+    background: rgba(15, 23, 42, 0.4);
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.question-box .form-check:hover {
+    background: rgba(124, 58, 237, 0.08);
+    border-color: rgba(139, 92, 246, 0.35);
+}
+
+.quiz-footer-panel {
+    margin-top: 26px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.quiz-actions {
+    gap: 16px;
+    margin-top: 18px;
+    align-items: center;
+}
+
+.btn-ghost,
+.btn-modern,
+.quiz-secondary-actions .btn {
+    min-height: 48px;
+    padding: 12px 22px;
+    border-radius: 14px;
+    font-weight: 700;
+}
+
+.btn-ghost {
+    background: rgba(148, 163, 184, 0.12);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    color: white;
+}
+
+.btn-modern {
+    background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 100%);
+    border: 0;
+    color: #fff;
+    box-shadow: 0 18px 30px rgba(59, 130, 246, 0.22);
+}
+
+.quiz-secondary-actions {
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.quiz-secondary-actions .btn {
+    min-width: 170px;
+}
+
+.btn.shake {
+    animation: shake 0.35s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    50% { transform: translateX(4px); }
+    75% { transform: translateX(-3px); }
+}
+
+.score-panel {
+    padding: 18px 22px;
+    border-radius: 18px;
+    background: rgba(71, 85, 105, 0.22);
+    border: 1px solid rgba(148, 163, 184, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.score-panel h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+#score {
+    color: #86efac !important;
+}
+
+#mistakes {
+    color: #fca5a5 !important;
+}
+
+.loading-box {
+    padding: 28px;
+    border-radius: 18px;
+    background: rgba(148, 163, 184, 0.06);
+    border: 1px dashed rgba(148, 163, 184, 0.18);
+    color: var(--muted);
+}
+
 .form-check-input[type="checkbox"] {
     opacity: 0;
     position: absolute;
     margin: 0;
-    width: 1.3em; /* Give it size to influence layout slightly */
+    width: 1.3em;
     height: 1.3em;
-    z-index: -1; /* Put it behind */
+    z-index: -1;
 }
 
-/* Style the label to make space and act as the container */
 .form-check-label {
-    position: relative;      /* Needed for positioning pseudo-elements */
-    padding-left: 1.8em;     /* Make space for the custom checkbox */
+    position: relative;
+    padding-left: 1.8em;
     cursor: pointer;
-    line-height: 1.4;        /* Adjust vertical alignment if needed */
-    min-height: 1.5em;       /* Ensure minimum height */
-    display: inline-block;   /* Consistent block behavior */
-    user-select: none;       /* Prevent text selection when clicking label */
-    margin-bottom: 0;        /* Override Bootstrap's label margin if needed */
-    vertical-align: top;     /* Align label text nicely with the box */
-}
-/* Adjust padding slightly if bootstrap version adds its own */
-.form-check .form-check-label {
-     padding-left: 1.8em; /* Reinforce padding */
+    line-height: 1.5;
+    min-height: 1.5em;
+    display: inline-block;
+    user-select: none;
+    margin-bottom: 0;
+    vertical-align: top;
+    color: #edf4ff;
 }
 
-/* Create the custom checkbox box ::before the label text */
+.form-check .form-check-label {
+    padding-left: 1.8em;
+}
+
 .form-check-label::before {
     content: '';
     position: absolute;
     left: 0;
-    top: 0.05em; /* Adjust vertical alignment - closer to top */
-    width: 1.3em;  /* Size of the custom box */
-    height: 1.3em; /* Size of the custom box */
-    border: 2px solid #adb5bd; /* Default border color */
-    border-radius: 0.25rem; /* Slightly rounded corners */
-    background-color: #fff; /* White background */
-    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    top: 0.1em;
+    width: 1.3em;
+    height: 1.3em;
+    border: 2px solid rgba(148, 163, 184, 0.7);
+    border-radius: 0.45rem;
+    background-color: rgba(15, 23, 42, 0.9);
+    transition: all 0.15s ease-in-out;
 }
 
-/* Style the box when the hidden checkbox is checked */
-/* Use the adjacent sibling selector (+) */
 .form-check-input[type="checkbox"]:checked + .form-check-label::before {
-    background-color: #0d6efd; /* Bootstrap primary blue */
-    border-color: #0d6efd;
+    background: linear-gradient(135deg, var(--primary) 0%, #8b5cf6 100%);
+    border-color: var(--primary);
 }
 
-/* Create the checkmark ::after the box (initially hidden) */
 .form-check-label::after {
     content: '';
     position: absolute;
-    left: 0.38em;  /* Position checkmark inside the box */
-    top: 0.18em;   /* Position checkmark inside the box */
-    width: 0.5em;  /* Checkmark width */
-    height: 0.9em; /* Checkmark height */
-    border: solid white; /* Checkmark color */
-    border-width: 0 0.2em 0.2em 0; /* Create checkmark shape */
-    transform: rotate(45deg); /* Rotate to form checkmark */
-    opacity: 0; /* Hidden by default */
-    transition: opacity 0.1s ease-in-out;
+    left: 0.38em;
+    top: 0.18em;
+    width: 0.5em;
+    height: 0.9em;
+    border: solid white;
+    border-width: 0 0.2em 0.2em 0;
+    transform: rotate(45deg);
+    opacity: 0;
 }
 
-/* Show the checkmark when the hidden checkbox is checked */
-/* Use the adjacent sibling selector (+) */
 .form-check-input[type="checkbox"]:checked + .form-check-label::after {
     opacity: 1;
 }
 
-/* Add a focus style for accessibility */
 .form-check-input[type="checkbox"]:focus-visible + .form-check-label::before {
-    outline: 2px solid #86b7fe; /* Bootstrap focus outline color */
+    outline: 2px solid rgba(96, 165, 250, 0.9);
     outline-offset: 1px;
-    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25); /* Bootstrap focus shadow */
+    box-shadow: 0 0 0 0.2rem rgba(96, 165, 250, 0.2);
 }
 
-/* --- Disabled State --- */
 .form-check-input[type="checkbox"]:disabled + .form-check-label {
-    color: #6c757d; /* Bootstrap disabled text color */
+    color: #7b8ca8;
     cursor: not-allowed;
 }
+
 .form-check-input[type="checkbox"]:disabled + .form-check-label::before {
-    background-color: #e9ecef; /* Bootstrap disabled background */
-    border-color: #ced4da;
+    background-color: rgba(148, 163, 184, 0.1);
+    border-color: rgba(148, 163, 184, 0.2);
 }
+
 .form-check-input[type="checkbox"]:disabled:checked + .form-check-label::after {
-    border-color: #adb5bd; /* Grey checkmark */
+    border-color: rgba(148, 163, 184, 0.5);
 }
 
-/* --- Hover State --- */
-/* Apply hover effect to the container for background change */
 .form-check {
-    transition: background-color 0.2s ease-in-out;
-    border-radius: 0.25rem;
-}
-.form-check:has(input:not(:disabled)):hover {
-    background-color: #e9ecef; /* Light grey background on container hover */
-    /* Removed !important, should not be needed now */
-}
-/* Optional: Hover effect directly on the checkbox visual */
-.form-check-input[type="checkbox"]:not(:disabled) + .form-check-label:hover::before {
-   border-color: #5c636a; /* Slightly darker grey on hover */
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    border-radius: 0.5rem;
 }
 
-/* --- Keep your feedback styles below --- */
+.form-check:hover {
+    background-color: rgba(124, 58, 237, 0.06);
+}
 
-/* Style for correctly answered questions */
 .question-box.correct-answer {
-  background-color: #d4edda !important;
-  border-color: #c3e6cb !important;
+    background: linear-gradient(180deg, rgba(21, 128, 61, 0.16), rgba(15, 23, 42, 0.8)) !important;
+    border-color: rgba(34, 197, 94, 0.8) !important;
+    box-shadow: 0 12px 25px rgba(21, 128, 61, 0.12);
 }
-/* Style for incorrectly answered questions */
+
 .question-box.incorrect-answer {
-  background-color: #f8d7da !important;
-  border-color: #f5c6cb !important;
+    background: linear-gradient(180deg, rgba(185, 28, 28, 0.12), rgba(15, 23, 42, 0.8)) !important;
+    border-color: rgba(239, 68, 68, 0.8) !important;
+    box-shadow: 0 12px 25px rgba(185, 28, 28, 0.12);
 }
-/* Style for highlighting the correct option within an incorrect question */
-/* Make sure this targets the .form-check container */
+
 .question-box.incorrect-answer .form-check.highlight-correct {
-  background-color: #c3e6cb !important;
-  border: 1px solid #155724;
-  border-radius: 0.25rem; /* Match rounding */
+    background: rgba(34, 197, 94, 0.14) !important;
+    border: 1px solid rgba(34, 197, 94, 0.7);
+    border-radius: 0.5rem;
 }
-/* Ensure labels inside highlighted options are readable */
+
 .question-box.incorrect-answer .form-check.highlight-correct .form-check-label {
-   color: #155724 !important; /* Dark green text, !important might be needed */
+    color: #d9fbe4 !important;
+    font-weight: 700;
 }
-/* Highlight the custom checkbox border too */
+
 .question-box.incorrect-answer .form-check.highlight-correct .form-check-label::before {
-   border-color: #155724 !important;
+    border-color: rgba(34, 197, 94, 0.9) !important;
 }
 
-/* Ensure highlighted correct answers don't get the hover effect */
 .form-check.highlight-correct:hover {
-    background-color: #c3e6cb !important; /* Keep the highlight color */
+    background: rgba(34, 197, 94, 0.14) !important;
 }
 
+@media (max-width: 768px) {
+    .auth-card,
+    .quiz-shell,
+    .welcome-panel {
+        border-radius: 20px;
+    }
 
-/* --- End Styles --- */
+    .quiz-main-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .quiz-sidebar {
+        position: static;
+    }
+
+    .quiz-topbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .quiz-meta {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .quiz-actions {
+        flex-direction: column;
+    }
+
+    .quiz-actions .btn {
+        width: 100%;
+    }
+
+    .quiz-secondary-actions {
+        flex-direction: column;
+    }
+
+    .quiz-secondary-actions .btn {
+        width: 100%;
+    }
+
+    .welcome-panel {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .btn-logout {
+        width: 100%;
+    }
+}

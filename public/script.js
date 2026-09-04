@@ -3,7 +3,7 @@
 console.log("--- script.js (Quiz Logic) Loaded ---");
 
 // ==========================================
-// Global Variables & Constants (Quiz Specific)
+// Globale Variablen und Konstanten (Quiz)
 // ==========================================
 let currentSection = 1;
 let currentIndex = 1;
@@ -19,7 +19,7 @@ const SAVE_ENDPOINT = '/api/save-quiz-state'; // <-- CORREGIDO: Ruta relativa
 const LOAD_ENDPOINT = '/api/get-quiz-state'; // <-- CORREGIDO: Ruta relativa
 
 // ==========================================
-// Utility Functions
+// Hilfsfunktionen
 // ==========================================
 function arraysEqual(arr1, arr2) {
     // Función para comparar si dos arrays tienen los mismos elementos (independiente del orden)
@@ -29,8 +29,64 @@ function arraysEqual(arr1, arr2) {
     return sortedArr1.every((value, index) => value === sortedArr2[index]);
 }
 
+function getTotalQuestionPages() {
+    return Object.values(totalFilesPerSection).reduce((total, value) => total + value, 0);
+}
+
+function updateProgressDisplay() {
+    const totalPages = getTotalQuestionPages();
+    const currentPageNumber = Object.keys(totalFilesPerSection)
+        .filter((sectionKey) => Number(sectionKey) < currentSection)
+        .reduce((count, sectionKey) => count + totalFilesPerSection[Number(sectionKey)], 0) + currentIndex;
+
+    const percentage = Math.min(100, Math.round((currentPageNumber / totalPages) * 100));
+    const progressFill = document.getElementById('progress-fill');
+    const progressLabel = document.getElementById('progress-label');
+    const sectionChipValue = document.getElementById('section-chip-value');
+    const sidebarSection = document.getElementById('sidebar-section');
+    const sidebarProgress = document.getElementById('sidebar-progress');
+    const sidebarScore = document.getElementById('sidebar-score');
+    const sidebarMistakes = document.getElementById('sidebar-mistakes');
+
+    if (progressFill) progressFill.style.width = `${percentage}%`;
+    if (progressLabel) progressLabel.textContent = `${percentage}%`;
+    if (sectionChipValue) sectionChipValue.textContent = `${currentSection} / ${Object.keys(totalFilesPerSection).length}`;
+    if (sidebarSection) sidebarSection.textContent = `${currentSection} / ${Object.keys(totalFilesPerSection).length}`;
+    if (sidebarProgress) sidebarProgress.textContent = `${percentage}%`;
+    if (sidebarScore) sidebarScore.textContent = String(score);
+    if (sidebarMistakes) sidebarMistakes.textContent = String(mistakes);
+}
+
+function showResultsSummary() {
+    const resultsPanel = document.getElementById('results-panel');
+    const finalScoreEl = document.getElementById('final-score');
+    const finalTotalEl = document.getElementById('final-total');
+    const finalMessageEl = document.getElementById('final-message');
+    const totalQuestions = getTotalQuestionPages();
+
+    if (!resultsPanel || !finalScoreEl || !finalTotalEl || !finalMessageEl) return;
+
+    finalScoreEl.textContent = String(score);
+    finalTotalEl.textContent = String(totalQuestions);
+
+    if (score >= totalQuestions * 0.7) {
+        finalMessageEl.textContent = 'Sehr gut! Du hast die meisten Fragen richtig beantwortet.';
+    } else if (score >= totalQuestions * 0.4) {
+        finalMessageEl.textContent = 'Gute Arbeit, aber es gibt noch Raum für Verbesserungen.';
+    } else {
+        finalMessageEl.textContent = 'Übe weiter und versuche es noch einmal.';
+    }
+
+    resultsPanel.classList.remove('hidden');
+}
+
+function hideResultsSummary() {
+    const resultsPanel = document.getElementById('results-panel');
+    if (resultsPanel) resultsPanel.classList.add('hidden');
+}
+
 // ==========================================
-// Backend Interaction Functions
+// Backend-Interaktionen
 // ==========================================
 
 /**
@@ -226,7 +282,7 @@ async function loadQuizStateFromBackend() {
 }
 
 // ==========================================
-// Quiz Display and Interaction Functions
+// Quiz-Anzeige und Interaktionen
 // ==========================================
 async function loadQuestions() {
     const questionContainer = document.getElementById('question-container');
@@ -264,7 +320,7 @@ async function loadQuestions() {
         jsonData.forEach((item) => {
             // Crear el contenedor principal para la pregunta
             const questionDiv = document.createElement('div');
-            questionDiv.className = 'mb-4 p-4 border rounded bg-white shadow-sm question-box';
+            questionDiv.className = 'mb-4 p-4 border rounded question-box';
             // Obtener el ID de la pregunta
             const questionId = item.karten_nummer?.toString();
             if (!questionId) { console.warn("Skipping question item missing karten_nummer:", item); return; }
@@ -347,6 +403,16 @@ function captureAnswers(event) {
     const questionContainer = document.getElementById('question-container');
     if (!questionContainer) { console.warn("captureAnswers: container missing."); return; }
 
+    const hasAnySelection = Array.from(questionContainer.querySelectorAll('input[type="checkbox"]')).some((input) => input.checked);
+    if (!hasAnySelection) {
+        const submitBtn = document.getElementById('submit-btn');
+        if (submitBtn) {
+            submitBtn.classList.add('shake');
+            setTimeout(() => submitBtn.classList.remove('shake'), 400);
+        }
+        return;
+    }
+
     let correctCount = 0, incorrectCount = 0;
     const currentQuestionnaireAnswers = {}; // Objeto para guardar las respuestas de esta página
 
@@ -399,6 +465,11 @@ function captureAnswers(event) {
 
     // Guardar el estado (incluyendo las respuestas de esta página) en el backend
     saveQuizStateToBackend(currentQuestionnaireAnswers, false, false, false); // Acción 'SubmitPage'
+
+    const isLastPage = currentSection === Math.max(...Object.keys(totalFilesPerSection).map(Number)) && currentIndex === totalFilesPerSection[currentSection];
+    if (isLastPage) {
+        showResultsSummary();
+    }
 }
 
 // Actualiza los contadores de puntuación en la UI
@@ -538,6 +609,8 @@ function updateButtons() {
         nextBtn.disabled = isLastPage; // Deshabilitado si es la última página
     }
 
+    updateProgressDisplay();
+
     // Habilitar/deshabilitar botón "Antwort senden"
     // Habilitado solo si hay checkboxes activos (no deshabilitados) en la página actual
     let inputsEnabled = questionContainer?.querySelector('input[type="checkbox"]:not(:disabled)');
@@ -557,8 +630,19 @@ async function handleLogout() {
      window.location.href = LOGIN_PAGE_PATH;
 }
 
+function restartQuiz() {
+    currentSection = 1;
+    currentIndex = 1;
+    score = 0;
+    mistakes = 0;
+    hideResultsSummary();
+    updateScoreDisplay();
+    saveQuizStateToBackend(null, false, false, false);
+    loadQuestions();
+}
+
 // ==========================================
-// Page Initialization Logic (DOMContentLoaded)
+// Initialisierungslogik der Seite (DOMContentLoaded)
 // ==========================================
 document.addEventListener('DOMContentLoaded', async () => {
     console.log("--- [Frontend] DOMContentLoaded Fired ---");
@@ -587,9 +671,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Mostrar mensaje de bienvenida y sección del cuestionario
     const welcomeSection = document.getElementById('welcome-section');
     const welcomeMessage = document.getElementById('welcome-message');
+    const headerUserName = document.getElementById('header-user-name');
     const questionnaireSection = document.getElementById('questionnaire-section');
     if (welcomeSection) welcomeSection.style.display = 'flex'; // O 'block' según tu layout
     if (welcomeMessage) welcomeMessage.textContent = `Willkommen, ${user}!`;
+    if (headerUserName) headerUserName.textContent = user;
     if (questionnaireSection) questionnaireSection.style.display = 'block';
 
     // Añadir listeners a los botones (asegurándose de no añadirlos múltiples veces)
@@ -604,6 +690,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.getElementById('prev-btn')?.addEventListener('click', prevQuestionnaire);
     document.getElementById('reset-questions-btn')?.addEventListener('click', resetQuestions);
     document.getElementById('reset-score-btn')?.addEventListener('click', resetScore);
+    document.getElementById('restart-quiz-btn')?.addEventListener('click', restartQuiz);
 
     // Cargar el estado del quiz guardado para este usuario desde el backend
     await loadQuizStateFromBackend(); // Esperar a que el estado se cargue

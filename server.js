@@ -1,8 +1,5 @@
-// server.js (COMPLETO Y CORREGIDO PARA USAR POSTGRESQL)
-
-require('dotenv').config(); // Carga .env si existe (para desarrollo local)
 const express = require('express');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const path = require('path');
 const cors = require('cors');
 const db = require('./db'); // Importar el módulo de conexión a la BD
@@ -23,10 +20,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 // (Estas funciones interactúan con la base de datos PostgreSQL)
 
 async function findUserByUsername(username) {
-  const queryText = 'SELECT * FROM users WHERE username = $1';
   try {
-    const result = await db.query(queryText, [username]);
-    return result.rows[0]; // Devuelve el usuario encontrado o undefined
+    return db.findUserByUsername(username);
   } catch (err) {
     console.error('Error finding user by username:', err);
     throw err; // Propaga el error para manejarlo en la ruta
@@ -34,18 +29,12 @@ async function findUserByUsername(username) {
 }
 
 async function createUser(username, hashedPassword) {
-  // Inserta el nuevo usuario. quiz_state usará el DEFAULT de la tabla ('{}'::jsonb)
-  const queryText = `
-    INSERT INTO users (username, password, quiz_state)
-    VALUES ($1, $2, DEFAULT)
-    RETURNING id, username, quiz_state`;
   try {
-    const result = await db.query(queryText, [username, hashedPassword]);
-    return result.rows[0]; // Devuelve los datos básicos del usuario creado
+    return db.createUser(username, hashedPassword);
   } catch (err) {
     console.error('Error creating user:', err);
     // Manejo específico para violación de constraint UNIQUE (usuario ya existe)
-    if (err.code === '23505') {
+      if (err.code === 'SQLITE_CONSTRAINT_UNIQUE') {
         throw new Error('Username already exists');
     }
     throw err; // Relanza otros errores
@@ -53,14 +42,12 @@ async function createUser(username, hashedPassword) {
 }
 
 async function getUserQuizState(username) {
-  // Selecciona solo la columna quiz_state
-  const queryText = 'SELECT quiz_state FROM users WHERE username = $1';
    try {
-    const result = await db.query(queryText, [username]);
-    if (result.rows.length > 0) {
+    const quizState = db.getUserQuizState(username);
+    if (quizState) {
       // Si el usuario existe, devuelve su quiz_state.
       // Si quiz_state es null en la BD (no debería por el DEFAULT), devuelve un objeto vacío por seguridad.
-      return result.rows[0].quiz_state || { score: 0, mistakes: 0, currentSection: 1, currentIndex: 1, submittedAnswersByPage: {}, lastSaved: null };
+      return quizState;
     } else {
       // Si el usuario no existe, devuelve null.
       return null;
@@ -72,17 +59,13 @@ async function getUserQuizState(username) {
 }
 
 async function updateUserQuizState(username, newQuizState) {
-  // Actualiza la columna quiz_state para el usuario especificado
-  const queryText = 'UPDATE users SET quiz_state = $1 WHERE username = $2 RETURNING username'; // RETURNING para confirmar
    try {
-    // El driver 'pg' convierte automáticamente el objeto JS 'newQuizState' a formato JSONB
-    const result = await db.query(queryText, [newQuizState, username]);
-     if (result.rowCount === 0) {
+  if (!db.updateUserQuizState(username, newQuizState)) {
        // Si rowCount es 0, significa que no se encontró ningún usuario con ese username para actualizar.
        throw new Error('User not found, cannot update quiz state');
      }
      console.log(`[DB Update] Quiz state updated successfully in DB for user: ${username}`);
-     return true; // Indica éxito
+    return true;
   } catch (err) {
     console.error(`Error updating quiz state for user "${username}":`, err);
     throw err;
@@ -95,14 +78,14 @@ app.post('/register', async (req, res) => {
   const { username, password } = req.body;
   // Validación básica
   if (!username || !password || password.length < 6) {
-    return res.status(400).json({ message: 'Valid username and password (min 6 chars) required.' });
+    return res.status(400).json({ message: 'Gültiger Benutzername und Passwort (mindestens 6 Zeichen) erforderlich.' });
   }
   try {
     // Verificar si el usuario ya existe
     const existingUser = await findUserByUsername(username);
     if (existingUser) {
       console.log(`Registration failed: Username "${username}" already exists.`);
-      return res.status(409).json({ message: 'El nombre de usuario ya existe' });
+      return res.status(409).json({ message: 'Der Benutzername existiert bereits.' });
     }
 
     // Hashear contraseña y crear usuario
@@ -110,24 +93,24 @@ app.post('/register', async (req, res) => {
     const newUser = await createUser(username, hashedPassword);
     console.log(`User "${username}" registered successfully.`);
     // Responder al cliente
-    res.status(201).json({ message: 'Usuario registrado exitosamente', username: newUser.username });
+    res.status(201).json({ message: 'Benutzer erfolgreich registriert', username: newUser.username });
 
   } catch (error) {
      // Manejar error específico de duplicado
      if (error.message === 'Username already exists') {
         console.log(`Registration failed (duplicate): Username "${username}" already exists.`);
-        return res.status(409).json({ message: 'El nombre de usuario ya existe' });
+          return res.status(409).json({ message: 'Der Benutzername existiert bereits.' });
      }
      // Manejar otros errores internos
      console.error("/register Error:", error);
-     res.status(500).json({ message: 'Error interno del servidor al registrar' });
+        res.status(500).json({ message: 'Interner Serverfehler bei der Registrierung.' });
   }
 });
 
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
     if (!username || !password) {
-        return res.status(400).json({ message: 'Nombre de usuario y contraseña son requeridos' });
+          return res.status(400).json({ message: 'Benutzername und Passwort werden benötigt.' });
     }
     try {
         // Buscar usuario por username
@@ -135,7 +118,7 @@ app.post('/login', async (req, res) => {
         // Si no se encuentra el usuario
         if (!user) {
             console.log(`Login attempt failed: User "${username}" not found.`);
-            return res.status(401).json({ message: 'Usuario o contraseña incorrectos' });
+          return res.status(401).json({ message: 'Benutzername oder Passwort falsch.' });
         }
 
         // Comparar la contraseña proporcionada con la hasheada en la BD
@@ -143,16 +126,16 @@ app.post('/login', async (req, res) => {
         // Si las contraseñas no coinciden
         if (!isMatch) {
              console.log(`Login attempt failed: Incorrect password for user "${username}".`);
-             return res.status(401).json({ message: 'Usuario o contraseña incorrectos' });
+             return res.status(401).json({ message: 'Benutzername oder Passwort falsch.' });
         }
 
         // Si todo es correcto, login exitoso
         console.log(`Login successful for user "${username}".`);
-        res.status(200).json({ message: 'Login exitoso', username: user.username });
+        res.status(200).json({ message: 'Anmeldung erfolgreich', username: user.username });
 
     } catch (error) {
         console.error(`/login Error for "${username}":`, error);
-        res.status(500).json({ message: 'Error interno del servidor' });
+        res.status(500).json({ message: 'Interner Serverfehler.' });
     }
 });
 
@@ -167,12 +150,12 @@ app.post('/api/save-quiz-state', async (req, res) => {
     // Validación de datos esenciales
     if (!username || typeof currentSection !== 'number' || typeof currentIndex !== 'number') {
          console.log('[Save State] Validation failed: Missing username, currentSection, or currentIndex.');
-         return res.status(400).json({ message: 'Usuario, sección actual e índice actual son requeridos.' });
+          return res.status(400).json({ message: 'Benutzer, aktuelle Sektion und aktueller Index werden benötigt.' });
     }
      // Validar score y mistakes solo si no estamos reseteándolos explícitamente
      if (!resetScoreAndMistakesOnly && (typeof score !== 'number' || typeof mistakes !== 'number')) {
          console.log('[Save State] Validation failed: Missing or invalid score/mistakes when not resetting.');
-         return res.status(400).json({ message: 'Datos de puntuación inválidos.' });
+          return res.status(400).json({ message: 'Ungültige Bewertungsdaten.' });
      }
 
     try {
@@ -184,7 +167,7 @@ app.post('/api/save-quiz-state', async (req, res) => {
         // Si el usuario no existe (getUserQuizState devolvió null)
         if (!currentState) {
              console.log(`[Save State] ERROR: User "${username}" not found when trying to save state.`);
-             return res.status(404).json({ message: `Usuario '${username}' no encontrado.` });
+             return res.status(404).json({ message: `Benutzer '${username}' wurde nicht gefunden.` });
         }
 
         // 2. Construir el NUEVO objeto quizState basado en el estado actual y los cambios del request
@@ -235,7 +218,7 @@ app.post('/api/save-quiz-state', async (req, res) => {
         console.log(`[Save State] Update successful call returned for ${username}.`);
 
         // Responder al cliente con éxito
-        res.status(200).json({ message: 'Estado del quiz guardado exitosamente.' });
+        res.status(200).json({ message: 'Quizstatus wurde erfolgreich gespeichert.' });
         console.log('--- SAVE QUIZ STATE END (SUCCESS) ---');
 
     } catch (error) {
@@ -243,10 +226,10 @@ app.post('/api/save-quiz-state', async (req, res) => {
          console.error(`!!! [Save State] CATCH BLOCK ERROR for "${username}":`, error);
          // Manejar error específico si el usuario no se encontró durante el UPDATE
          if (error.message.includes('User not found')) {
-              return res.status(404).json({ message: `Usuario '${username}' no encontrado al intentar guardar estado.` });
+              return res.status(404).json({ message: `Benutzer '${username}' wurde beim Speichern des Status nicht gefunden.` });
          }
          // Responder con error genérico del servidor
-         res.status(500).json({ message: 'Error interno del servidor al guardar el estado.' });
+            res.status(500).json({ message: 'Interner Serverfehler beim Speichern des Quizstatus.' });
          console.log('--- SAVE QUIZ STATE END (WITH CATCH ERROR) ---');
     }
 });
@@ -260,7 +243,7 @@ app.get('/api/get-quiz-state', async (req, res) => {
     // Validar que el username fue proporcionado
     if (!username) {
         console.log('[Get State] Validation failed: Username is required.');
-        return res.status(400).json({ message: 'Nombre de usuario es requerido.' });
+      return res.status(400).json({ message: 'Benutzername ist erforderlich.' });
     }
 
     try {

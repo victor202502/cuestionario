@@ -5,75 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datenschutz-Fragebogen</title>
 
-    <!-- Bootstrap -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Benutzerdefiniertes CSS -->
     <link href="style.css" rel="stylesheet">
 
     <style>
-        /* Sicherstellen, dass Abschnitte zunächst per CSS ausgeblendet werden */
         #welcome-section, #questionnaire-section {
             display: none;
         }
-        /* Add styles for correct/incorrect feedback if not in style.css */
-        .correct-answer {
-            border-left: 5px solid #28a745; /* Green border for correct */
-        }
-        .incorrect-answer {
-            border-left: 5px solid #dc3545; /* Red border for incorrect */
-        }
-        .highlight-correct .form-check-label {
-            font-weight: bold;
-            color: #28a745; /* Highlight correct option text */
-        }
-        .question-box {
-            transition: border-left 0.3s ease-in-out; /* Smooth transition for feedback */
-        }
     </style>
 </head>
-<body class="bg-light">
+<body class="quiz-page">
 
-<!-- Begrüßungsbereich (wird per JS angezeigt, wenn eingeloggt) -->
-<div id="welcome-section" class="container mt-4 p-3 bg-primary text-white shadow rounded d-flex justify-content-between align-items-center">
-    <h2 id="welcome-message" class="mb-0 h4"></h2>
-    <button id="logout-btn" type="button" class="btn btn-warning btn-sm">Abmelden</button> <!-- type added -->
+<div id="welcome-section" class="container welcome-panel">
+    <div>
+        <span class="panel-kicker">Aktivität</span>
+        <h2 id="welcome-message" class="mb-0"></h2>
+    </div>
+    <button id="logout-btn" type="button" class="btn btn-logout">Abmelden</button>
 </div>
 
-<!-- Container für den Fragebogen (wird per JS angezeigt, wenn eingeloggt) -->
-<div id="questionnaire-section" class="container mt-4">
-    <h1 class="text-center text-secondary mb-4">Datenschutz-Fragebogen</h1>
-
-    <div id="question-container" class="mt-4">
-        <div class="text-center text-muted">
-            Fragen werden geladen...
+<div id="questionnaire-section" class="container quiz-shell">
+    <div class="quiz-topbar">
+        <div>
+            <span class="panel-kicker">Fragebogen</span>
+            <h1>Datenschutz-Fragebogen</h1>
+        </div>
+        <div class="quiz-meta">
+            <div class="quiz-chip">
+                <span class="chip-label">Abschnitt</span>
+                <strong id="section-chip-value">1 / 4</strong>
+            </div>
+            <div class="quiz-chip accent">
+                <span class="chip-label">Benutzer</span>
+                <strong id="header-user-name">Benutzer</strong>
+            </div>
         </div>
     </div>
 
-    <div class="d-flex justify-content-between mt-4">
-        <button id="prev-btn" type="button" class="btn btn-outline-secondary" disabled>Zurück</button> <!-- type added -->
-        <button id="submit-btn" type="button" class="btn btn-primary" disabled>Antworten senden</button> <!-- type added -->
-        <button id="next-btn" type="button" class="btn btn-outline-secondary" disabled>Weiter</button> <!-- type added -->
+    <div class="progress-block">
+        <div class="progress-copy">
+            <span>Fortschritt</span>
+            <strong id="progress-label">0%</strong>
+        </div>
+        <div class="progress-track">
+            <div id="progress-fill" class="progress-fill" style="width: 0%"></div>
+        </div>
     </div>
 
-    <div class="d-flex justify-content-center mt-3">
-        <button id="reset-questions-btn" type="button" class="btn btn-warning mr-2">Fragen zurücksetzen</button> <!-- type added -->
-        <button id="reset-score-btn" type="button" class="btn btn-danger">Punkte zurücksetzen</button> <!-- type added -->
+    <div class="quiz-main-layout">
+        <div id="question-container" class="mt-4 quiz-question-list">
+            <div class="text-center text-muted loading-box">
+                Fragen werden geladen...
+            </div>
+        </div>
+
+        <aside class="quiz-sidebar">
+            <div class="sidebar-card">
+                <span class="sidebar-label">Statistiken</span>
+                <h3>Zusammenfassung</h3>
+            </div>
+            <div class="sidebar-card">
+                <span class="sidebar-label">Abschnitt</span>
+                <strong id="sidebar-section">1 / 4</strong>
+            </div>
+            <div class="sidebar-card">
+                <span class="sidebar-label">Treffer</span>
+                <strong id="sidebar-score">0</strong>
+            </div>
+            <div class="sidebar-card">
+                <span class="sidebar-label">Fehler</span>
+                <strong id="sidebar-mistakes">0</strong>
+            </div>
+            <div class="sidebar-card">
+                <span class="sidebar-label">Fortschritt</span>
+                <strong id="sidebar-progress">0%</strong>
+            </div>
+        </aside>
     </div>
 
-    <div class="mt-4 p-3 bg-white shadow rounded text-center">
-        <h4 id="score" class="text-success d-inline-block mr-4">Richtige Antworten: 0</h4>
-        <h4 id="mistakes" class="text-danger d-inline-block">Falsche Antworten: 0</h4>
+    <div id="results-panel" class="results-panel hidden">
+        <div class="results-header">
+            <span class="panel-kicker small">Ergebnis</span>
+            <h3>Fragebogen abgeschlossen!</h3>
+        </div>
+        <div class="results-score">
+            <span id="final-score">0</span>
+            <span class="results-divider">/</span>
+            <span id="final-total">0</span>
+        </div>
+        <p id="final-message">Du hast den Fragebogen abgeschlossen.</p>
+        <button id="restart-quiz-btn" type="button" class="btn btn-primary btn-modern">Wiederholen</button>
+    </div>
+
+    <div class="quiz-footer-panel">
+        <div class="score-panel text-center">
+            <h4 id="score" class="d-inline-block mr-4">Richtige Antworten: 0</h4>
+            <h4 id="mistakes" class="d-inline-block">Falsche Antworten: 0</h4>
+        </div>
+
+        <div class="quiz-actions d-flex justify-content-between">
+            <button id="prev-btn" type="button" class="btn btn-ghost" disabled>Zurück</button>
+            <button id="submit-btn" type="button" class="btn btn-primary btn-modern" disabled>Antworten senden</button>
+            <button id="next-btn" type="button" class="btn btn-ghost" disabled>Weiter</button>
+        </div>
+
+        <div class="d-flex justify-content-center flex-wrap quiz-secondary-actions">
+            <button id="reset-questions-btn" type="button" class="btn btn-warning mr-2">Fragen zurücksetzen</button>
+            <button id="reset-score-btn" type="button" class="btn btn-danger">Punkte zurücksetzen</button>
+        </div>
     </div>
 </div>
 
-<!-- Bootstrap und jQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<!-- JavaScript-Datei (Gemeinsam für beide Seiten) -->
-<!-- Ensure this path is correct relative to your HTML file -->
 <script src="script.js"></script>
 
 </body>

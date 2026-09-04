@@ -2,16 +2,49 @@
 console.log("--- login.js Loaded ---");
 
 // ==========================================
-// Constants
+// Konstanten
 // ==========================================
-// Ya no necesitamos BACKEND_URL explícito, usaremos rutas relativas
+// Wir benötigen keine explizite BACKEND_URL mehr, da wir relative Routen verwenden.
 // const BACKEND_URL = 'http://localhost:3000';
-const LOGIN_PAGE_PATH = '/'; // Ruta a la página de login (ahora index.html en la raíz)
-const QUIZ_PAGE_PATH = '/quiz.html'; // Ruta a la página del quiz
+const LOGIN_PAGE_PATH = '/'; // Pfad zur Login-Seite (jetzt index.html im Root)
+const QUIZ_PAGE_PATH = '/quiz.html'; // Pfad zur Quiz-Seite
 
 // ==========================================
-// Authentication Functions
+// Authentifizierungsfunktionen
 // ==========================================
+function setFieldState(input, isValid) {
+    if (!input) return;
+    input.classList.remove('is-invalid', 'is-valid');
+    if (input.value.trim() === '') {
+        input.classList.add('is-invalid');
+        return false;
+    }
+    input.classList.add(isValid ? 'is-valid' : 'is-invalid');
+    return isValid;
+}
+
+function setMessage(element, text, type) {
+    if (!element) return;
+    element.textContent = text;
+    element.className = `mt-3 ${type} show`;
+}
+
+function validateLoginForm() {
+    const usernameInput = document.getElementById('login-username');
+    const passwordInput = document.getElementById('login-password');
+    const usernameValid = !!usernameInput && setFieldState(usernameInput, usernameInput.value.trim().length > 0);
+    const passwordValid = !!passwordInput && setFieldState(passwordInput, passwordInput.value.trim().length >= 1);
+    return usernameValid && passwordValid;
+}
+
+function validateRegisterForm() {
+    const usernameInput = document.getElementById('reg-username');
+    const passwordInput = document.getElementById('reg-password');
+    const usernameValid = !!usernameInput && setFieldState(usernameInput, usernameInput.value.trim().length > 0);
+    const passwordValid = !!passwordInput && setFieldState(passwordInput, passwordInput.value.trim().length >= 6);
+    return usernameValid && passwordValid;
+}
+
 async function handleRegister(event) {
     console.log("handleRegister: Event listener triggered.");
     if (event && typeof event.preventDefault === 'function') {
@@ -25,31 +58,32 @@ async function handleRegister(event) {
     const passwordInput = document.getElementById('reg-password');
     if (!usernameInput || !passwordInput) { console.error("Register inputs missing."); return; }
 
-    const username = usernameInput.value;
+    if (!validateRegisterForm()) {
+        setMessage(currentRegisterMessage, 'Bitte fülle alle Felder korrekt aus.', 'text-danger');
+        return;
+    }
+
+    const username = usernameInput.value.trim();
     const password = passwordInput.value;
     console.log("handleRegister: Attempting registration for", username);
-    currentRegisterMessage.textContent = 'Registrando...';
-    currentRegisterMessage.className = 'mt-3 text-info';
+    setMessage(currentRegisterMessage, 'Registrierung läuft...', 'text-info');
     try {
-        // --- URL Relativa ---
-        const response = await fetch(`/register`, { // Cambiado
+        const response = await fetch(`/register`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username, password })
         });
-        const result = await response.json(); // Asume que siempre es JSON (ajusta si no)
+        const result = await response.json();
         if (response.ok) {
-            currentRegisterMessage.textContent = result.message + " Ahora puedes iniciar sesión.";
-            currentRegisterMessage.className = 'mt-3 text-success';
+            setMessage(currentRegisterMessage, result.message + " Du kannst dich jetzt anmelden.", 'text-success');
             currentRegisterForm.reset();
+            document.querySelectorAll('#register-form .form-control').forEach((field) => field.classList.remove('is-valid', 'is-invalid'));
         } else {
-            currentRegisterMessage.textContent = `Error: ${result.message || 'Error desconocido'}`;
-            currentRegisterMessage.className = 'mt-3 text-danger';
+            setMessage(currentRegisterMessage, `Fehler: ${result.message || 'Unbekannter Fehler'}`, 'text-danger');
         }
     } catch (error) {
         console.error('Register Fetch Error:', error);
-        currentRegisterMessage.textContent = 'Error de conexión al registrar.';
-        currentRegisterMessage.className = 'mt-3 text-danger';
+        setMessage(currentRegisterMessage, 'Verbindungsfehler beim Registrieren.', 'text-danger');
     }
 }
 
@@ -66,11 +100,15 @@ async function handleLogin(event) {
     const passwordInput = document.getElementById('login-password');
      if (!usernameInput || !passwordInput) { console.error("Login inputs missing."); return; }
 
-    const username = usernameInput.value;
+    if (!validateLoginForm()) {
+        setMessage(currentLoginMessage, 'Bitte Benutzername und Passwort eingeben.', 'text-danger');
+        return;
+    }
+
+    const username = usernameInput.value.trim();
     const password = passwordInput.value;
     console.log("handleLogin: Attempting login for", username);
-    currentLoginMessage.textContent = 'Iniciando sesión...';
-    currentLoginMessage.className = 'mt-3 text-info';
+    setMessage(currentLoginMessage, 'Anmeldung läuft...', 'text-info');
     try {
         // --- URL Relativa ---
         const response = await fetch(`/login`, { // Cambiado
@@ -91,42 +129,41 @@ async function handleLogin(event) {
                  return;
              } else {
                  console.error("Username missing in login response.");
-                 currentLoginMessage.textContent = 'Error: Respuesta inválida.';
+                 currentLoginMessage.textContent = 'Fehler: Ungültige Antwort.';
                  currentLoginMessage.className = 'mt-3 text-danger';
              }
         } else if (!response.ok) {
-             let errorMsg = 'Usuario o contraseña incorrectos.';
+             let errorMsg = 'Benutzername oder Passwort falsch.';
              // Intenta parsear JSON incluso si no es OK, backend podría enviar {message: ...} con 401/409 etc.
              if (contentType && contentType.includes("application/json")) {
                  try { const errRes = await response.json(); errorMsg = errRes.message || errorMsg; }
                  catch(e){ console.warn("Could not parse JSON error response although Content-Type was JSON."); }
              } else { console.warn("Login failed response is not JSON. Status:", response.status); }
              console.warn("Login failed:", errorMsg);
-             currentLoginMessage.textContent = `Error: ${errorMsg}`;
+             currentLoginMessage.textContent = `Fehler: ${errorMsg}`;
              currentLoginMessage.className = 'mt-3 text-danger';
         } else {
              console.error("Login OK but response not JSON?");
-             currentLoginMessage.textContent = 'Error: Respuesta inesperada.';
+             currentLoginMessage.textContent = 'Fehler: Unerwartete Antwort.';
              currentLoginMessage.className = 'mt-3 text-danger';
         }
      } catch (error) {
         console.error('Login Fetch Error:', error);
-        currentLoginMessage.textContent = 'Error de conexión al iniciar sesión.';
+        currentLoginMessage.textContent = 'Verbindungsfehler beim Anmelden.';
         currentLoginMessage.className = 'mt-3 text-danger';
      }
 }
 
 // ==========================================
-// Page Initialization Logic
+// Initialisierungslogik der Seite
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
     console.log("--- login.js: DOMContentLoaded Fired ---");
 
     const loginFormEl = document.getElementById('login-form');
-    if (!loginFormEl) {
-        // Si login.js se carga en otra página por error, no hagas nada.
-        // Esto es más robusto que comprobar la URL actual.
-        console.log("login.js: No login form found on this page. Exiting init.");
+    const registerFormEl = document.getElementById('register-form');
+    if (!loginFormEl || !registerFormEl) {
+        console.log("login.js: No auth forms found on this page. Exiting init.");
         return;
     }
     console.log("login.js: Executing login page specific logic.");
@@ -136,27 +173,76 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (loggedInUser) {
         console.log("login.js: User is already logged in, redirecting to quiz page:", QUIZ_PAGE_PATH);
-        window.location.href = QUIZ_PAGE_PATH; // Cambiado
+        window.location.href = QUIZ_PAGE_PATH;
         return;
-    } else {
-        // Attach listeners only if not logged in
-        const registerFormEl = document.getElementById('register-form');
-
-        if (registerFormEl && !registerFormEl.dataset.listenerAttached) {
-            console.log("login.js: Attaching listener to register form.");
-            registerFormEl.addEventListener('submit', handleRegister);
-            registerFormEl.dataset.listenerAttached = 'true';
-        } else if (!registerFormEl) {
-             console.warn("login.js: Register form element NOT found!");
-        }
-
-        // loginFormEl ya sabemos que existe por la comprobación inicial
-        if (!loginFormEl.dataset.listenerAttached) {
-            console.log("login.js: Attaching listener to login form.");
-            loginFormEl.addEventListener('submit', handleLogin);
-            loginFormEl.dataset.listenerAttached = 'true';
-        }
     }
+
+    const authTabs = document.querySelectorAll('.auth-tab');
+    const authForms = document.querySelectorAll('.auth-form');
+    const allInputs = document.querySelectorAll('.form-control');
+
+    function setActiveAuthView(view) {
+        authTabs.forEach((tab) => {
+            const isActive = tab.dataset.authTab === view;
+            tab.classList.toggle('active', isActive);
+            tab.setAttribute('aria-selected', String(isActive));
+        });
+
+        authForms.forEach((form) => {
+            const isActive = form.id === `${view}-panel`;
+            form.classList.toggle('active', isActive);
+        });
+    }
+
+    function bindInputValidation() {
+        allInputs.forEach((input) => {
+            input.addEventListener('input', () => {
+                if (input.id === 'login-username' || input.id === 'reg-username') {
+                    setFieldState(input, input.value.trim().length > 0);
+                }
+                if (input.id === 'login-password') {
+                    setFieldState(input, input.value.trim().length >= 1);
+                }
+                if (input.id === 'reg-password') {
+                    setFieldState(input, input.value.trim().length >= 6);
+                }
+            });
+        });
+    }
+
+    function bindPasswordToggles() {
+        document.querySelectorAll('.password-toggle').forEach((button) => {
+            button.addEventListener('click', () => {
+                const targetId = button.dataset.target;
+                const targetInput = document.getElementById(targetId);
+                if (!targetInput) return;
+                const isPassword = targetInput.type === 'password';
+                targetInput.type = isPassword ? 'text' : 'password';
+                button.textContent = isPassword ? 'Verbergen' : 'Anzeigen';
+            });
+        });
+    }
+
+    authTabs.forEach((tab) => {
+        tab.addEventListener('click', () => setActiveAuthView(tab.dataset.authTab));
+    });
+
+    bindInputValidation();
+    bindPasswordToggles();
+
+    if (registerFormEl && !registerFormEl.dataset.listenerAttached) {
+        console.log("login.js: Attaching listener to register form.");
+        registerFormEl.addEventListener('submit', handleRegister);
+        registerFormEl.dataset.listenerAttached = 'true';
+    }
+
+    if (!loginFormEl.dataset.listenerAttached) {
+        console.log("login.js: Attaching listener to login form.");
+        loginFormEl.addEventListener('submit', handleLogin);
+        loginFormEl.dataset.listenerAttached = 'true';
+    }
+
+    setActiveAuthView('login');
 
     console.log("--- login.js: DOMContentLoaded processing finished ---");
 });
