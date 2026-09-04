@@ -162,6 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const loginFormEl = document.getElementById('login-form');
     const registerFormEl = document.getElementById('register-form');
+    const demoLoginButton = document.getElementById('demo-login-btn');
     if (!loginFormEl || !registerFormEl) {
         console.log("login.js: No auth forms found on this page. Exiting init.");
         return;
@@ -240,6 +241,14 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("login.js: Attaching listener to login form.");
         loginFormEl.addEventListener('submit', handleLogin);
         loginFormEl.dataset.listenerAttached = 'true';
+    }
+
+    if (demoLoginButton) {
+        demoLoginButton.addEventListener('click', () => {
+            document.getElementById('login-username').value = 'test';
+            document.getElementById('login-password').value = 'test1234';
+            loginFormEl.requestSubmit();
+        });
     }
 
     setActiveAuthView('login');

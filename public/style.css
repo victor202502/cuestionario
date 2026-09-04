@@ -278,6 +278,26 @@ body.quiz-page {
     box-shadow: 0 14px 30px rgba(76, 98, 211, 0.25);
 }
 
+.btn-demo-login {
+    width: 100%;
+    min-height: 42px;
+    margin-top: 10px;
+    border: 1px solid rgba(125, 211, 252, 0.35);
+    background: rgba(14, 165, 233, 0.1);
+    color: #bae6fd;
+}
+
+.btn-demo-login:hover {
+    background: rgba(14, 165, 233, 0.18);
+    color: #fff;
+}
+
+.demo-login-hint {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+
 .btn-primary,
 .btn-success {
     background: linear-gradient(135deg, var(--primary) 0%, #8b5cf6 100%);

@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const bcrypt = require('bcryptjs');
 const { DatabaseSync } = require('node:sqlite');
 
 const dataDirectory = path.join(__dirname, 'data');
@@ -14,6 +15,17 @@ database.exec(`
     quiz_state TEXT NOT NULL DEFAULT '{}'
   )
 `);
+
+// Testkonto bei jedem Start anlegen, falls die lokale Datenbank leer ist.
+const testUsername = 'test';
+const testPassword = 'test1234';
+const testUserExists = database.prepare('SELECT id FROM users WHERE username = ?').get(testUsername);
+if (!testUserExists) {
+  const hashedTestPassword = bcrypt.hashSync(testPassword, 10);
+  database.prepare(
+    'INSERT INTO users (username, password, quiz_state) VALUES (?, ?, ?)'
+  ).run(testUsername, hashedTestPassword, '{}');
+}
 
 function parseQuizState(value) {
   try {
